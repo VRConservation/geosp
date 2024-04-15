@@ -1,0 +1,47 @@
+# Introduction
+Welcome! Free and Open Source Geospatial Solutions provides resources and examples of open source geospatial software and solutions. Please cite as 
+
+Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org.
+
+I would like to cite earth engine {cite}`Gorelick2017-mz`.
+
+## Support
+This book is a free to use resource to anyone. If you would like to support me, provide a donation, or buy me a coffee, please go to #####.com. I will be adding chapters and resources in the future. Thank you!
+
+## Why this book
+Accessing, processing, and analyzing geospatial data can be daunting tasks, often hindered by issues such as data accessibility, compatibility, and cost constraints. There are a lot of geospatial resources, tutorials, and books out there but most focus on specific tools, such as Spatial SQL by Matt Forrest or the Google Earth Engine remote sensing book at eefa.org. This book is a resource to provide a beginners guide to getting going with each of those and compare free and open source software to paid resources and books.
+
+At the software level, many tutorials, github repositories, and software sites assume you have familiarity with installing software or running code. They'll use acronyms such as CLI and IDE, and if you're a beginner, you will have no idea what they're talking about. Once you decipher the terms, running into errors and tying to fix them can be trying, or just a downright deterrence to using free and open space geospatial software. Don't be put off by entering this new world and keep at it when errors occur.
+
+The "Navigating Geospatial Data Challenges in Conservation Science" book aims to address these challenges head-on by providing practical solutions and resources. Because you want to analyze and visualize data, not spend time looking through stack exchange or asking ChatGPT how to fix an obscure error when your code doesn't run or your laptop won't install a package correctly.
+
+## Audience & Learning
+The intended audience for this book is beginners to geospatial analysis with some knowledge of desktop tools such as ArcGIS Pro or QGIS and limited knowledge of coding using Javascript or Python. Ideally you will have taken an introductory geography and computer science course introducing you to software and languages. If not, you can still get by and get started in each chapter, but some background work will be required, e.g., installing Leafmap or Geemap. Nevertheless, resources and tutorials will be offered in each chapter to get you up to speed.
+
+## Chapters
+The book contains the following chapters:
+
+1. **FOSS**. Free and open source software introduction and a little about my journey in this field and using these tools.
+2. **GEE**. Google Earth Engine is an incredible resource for cloud geospatial computer. Here's how to get started.
+3. Proscons.
+4. Python.
+5. QGIS
+6. SQL
+7. AIML
+8. R
+9. Next
+
+## jupyter{book}
+This book was made using [Jupyter Books](https://jupyterbook.org/) a free and open source package that lets anyone build beautiful, publication quality books and articles from computational content. Thank you Jupyter Books for this wonderful resource!
+
+## Acknowledgements
+I would like thank and acknowledge many of the free and open source geospatial pioneers out there offering their incredible resources and dedication to the trade. I've learned so much from you, not just geospatial analysis, but about the value of geographic information, analysis, and generosity.
+
+A great portion of this book is adapted from Quisheng Wu's extensive, innovative, and useful geospatial resources such as Geemap and Leafmap. Dr. Wu's vast geospatial knowledge, tutorials, videos and courses are an incredible learning resource. Thank you Quisheng! I only hope this complements your work.
+
+Thanks to reviewers.
+
+Thank you to my family.
+
+```{tableofcontents}
+```

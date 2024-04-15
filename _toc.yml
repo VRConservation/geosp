@@ -1,0 +1,24 @@
+format: jb-book
+root: index
+parts:
+  - caption: Introduction
+    chapters:
+      - file: chapters/intro
+      - file: chapters/author
+  - caption: Chapters
+    numbered: true
+    maxdepth: 2
+    chapters:
+      - file: chapters/01_foss
+      - file: chapters/02_gee
+      - file: chapters/03_proscons
+      - file: chapters/04_python
+      - file: chapters/05_qgis
+      - file: chapters/06_sql
+      - file: chapters/07_aiml
+      - file: chapters/08_R
+      - file: chapters/09_next
+  - caption: Appendices
+    chapters:
+      - file: chapters/bibliography
+      - file: chapters/issues

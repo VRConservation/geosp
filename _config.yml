@@ -1,0 +1,68 @@
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# See the documentation for help and more options:
+# https://jupyterbook.org/customize/config.html
+
+#######################################################################################
+# Book settings
+title: FOSS Resources # The title of the book. Will be placed in the left navbar.
+author: Vance Russell # The author of the book
+copyright: "2024" # Copyright year to be placed in the footer
+logo: logo.png # A path to the book logo
+# Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+# Auto-exclude files not in the toc
+only_build_toc_files: true
+
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks: "off" # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache: "" # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
+  exclude_patterns: [] # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
+  timeout: 100 # The maximum time (in seconds) each notebook cell is allowed to run.
+  run_in_temp:
+    false # If `True`, then a temporary directory will be created and used as the command working directory (cwd),
+    # otherwise the notebook's parent directory will be the cwd.
+  allow_errors: false # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
+  stderr_output: show # One of 'show', 'remove', 'remove-warn', 'warn', 'error', 'severe'
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+
+#######################################################################################
+# HTML-specific settings
+html:
+  favicon: "icon.png"
+  baseurl: "vrconservation.github.io/geosp/" # The base URL where your book will be hosted.
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  use_download_button: true
+
+#######################################################################################
+# Launch button settings
+repository:
+  url: https://github.com/VRConservation/geosp
+  # path_to_book: "./" # A path to your book's folder, relative to the repository root.
+  branch: master # Which branch of the repository should be used when creating links
+
+sphinx:
+  config:
+    html_extra_path: ["CNAME"]
+    html_theme_options:
+      use_download_button: false
+      repository_url: https://github.com/VRConservation/geosp
+      use_issues_button: true
+      use_repository_button: true
+      use_edit_page_button: true
+      launch_buttons: {
+        binderhub_url: "https://mybinder.org",
+        colab_url: "https://colab.research.google.com",
+    }
+    bibtex_reference_style: author_year
+
+bibtex_bibfiles:
+  - chapters/references.bib
