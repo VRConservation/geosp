@@ -1,31 +1,29 @@
+# # Geospatial Python
+#
+# Python is widely applicable and used in the geospatial community. ArcGIS Pro has a python package called Arcpy and QGIS has a packaged named PYQGIS. However, Arcpy is not easy or intuitive to use, even though it's a python package. I tried it, I read an entire book on it, I struggled using the notebooks, which are slow to load and not easy to link to VS Code.
+#
+# Then I found geemap and leafmap, incredible user friendly python packages developed by Qiushen Wu and available on github at GISWQS, along with clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me and it opened up another world to using Python to rapidly analyse data.
+#
+# ## Getting Started
+#
+# See the 5.4 Resources for more information.
+#
+# ## Sentinel-2 Data
+#
+# Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Open [colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
+#
+# ```{note} 'Uncommenting' a line in python means removing the hashtag before the command, or click on the line then click control or command plus back slash (/).
+# ```
+#
+# Install the dependencies:
 
-# Geospatial Python
-
-Python is widely applicable and used in the geospatial community. ArcGIS Pro has a python package called Arcpy and QGIS has a packaged named PYQGIS. However, Arcpy is not easy or intuitive to use, even though it's a python package. I tried it, I read an entire book on it, I struggled using the notebooks, which are slow to load and not easy to link to VS Code.
-
-Then I found geemap and leafmap, incredible user friendly python packages developed by Qiushen Wu and available on github at GISWQS, along with clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me and it opened up another world to using Python to rapidly analyse data.
-
-## Getting Started
-
-See the 5.4 Resources for more information.
-
-## Sentinel-2 Data
-
-Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Open [colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
-
-```{note} 'Uncommenting' a line in python means removing the hashtag before the command, or click on the line then click control or command plus back slash (/).
-```
-
-Install the dependencies:
-
-```{code-cell} ipython3
+# +
 # Uncomment line below to install pystac and odc
 # pip install pystac-client odc-stac odc-geo
-```
+# -
+# Access data and create a bounding box:
 
-Access data and create a bounding box:
-
-```{code-cell} ipython3
+# +
 # Earth search is managed by Element-84 and provides access to a wide range of data sources
 client = Client.open("https://earth-search.aws.element84.com/v1")
 collection = "sentinel-2-l2a"
@@ -33,11 +31,10 @@ collection = "sentinel-2-l2a"
 # Create a bounding box centered near New River Lagoon in Tasmania
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
 bbox = [146.5, -43.6, 146.7, -43.4]
-```
+# -
+# Search and load the data:
 
-Search and load the data:
-
-```{code-cell} ipython3
+# +
 # Datetime can be a single date, like YEAR, YEAR-MONTH or YEAR-MONTH-DAY
 # or a range, like YEAR-MONTH/YEAR-MONTH
 datetime = "2023-12"
@@ -47,35 +44,32 @@ search = client.search(collections=[collection], bbox=bbox, datetime=datetime)
 
 # Pass the search results to the load function, which will lazy-load the data
 data = load(search.items(), bbox=bbox, groupby="solar_day", chunks={}, crs="EPSG:8857", resolution=10)
-```
+# -
+# Visualize it:
 
-Visualize it:
-
-```{code-cell} ipython3
+# +
 # Visualize the data
 # Time=2 is an arbitrary time slice picked because there's few clouds
 data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=1500)
 
 # Alternately, we could visualise using odc.geo.xr's explore function
 # data.isel(time=2).explore(bands=["red", "green", "blue"], vmin=0, vmax=1500)
-```
+# -
+# Sentinel-2 true color image:
+#
+# ![](https://i.imgur.com/ea6GCzY.png)
+#
+# The access and sharing of this code is another example of why free and open source is special, the community is willing to share it it is reproduceable, and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
+#
+# ## Geemap
+# Compared to using Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a python package environment developed by [Quisheng Wu](https://github.com/giswqs).
+#
+# ```{admonition} Getting Started
+# Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
+# ```
+#
+# Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a jupyter notebook and add the following codeblock:
 
-Sentinel-2 true color image:
-
-![](https://i.imgur.com/ea6GCzY.png)
-
-The access and sharing of this code is another example of why free and open source is special, the community is willing to share it it is reproduceable, and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
-
-## Geemap
-Compared to using Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a python package environment developed by [Quisheng Wu](https://github.com/giswqs).
-
-```{admonition} Getting Started
-Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
-```
-
-Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a jupyter notebook and add the following codeblock:
-
-```{code-cell} ipython3
 # Import geemap and create an interactive map
 import ee
 import geemap
@@ -91,9 +85,8 @@ m
 # ![](https://i.imgur.com/XXdWssh.png)
 #
 # Go to your Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new codeblock and comment out the definition function on lines 4-6:
-```
 
-```{code-cell} ipython3
+# +
 # Add global carbon density map
 dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1')
 
@@ -120,29 +113,25 @@ vis_b = {
 m.setCenter(-120.2348, 38.8744, 9)
 m.addLayer(dataset, vis_a, 'Aboveground biomass carbon')
 m.addLayer(dataset, vis_b, 'Belowground biomass carbon')
-```
+# -
+# Running that block will give you the following:
+#
+# ![](https://i.imgur.com/uAQ9wBz.jpeg)
+#
+# If you return to the wrench icon and select the layers icon to the left you can switch layers on and off
+#
+# ![](https://i.imgur.com/RzJfVjV.png)
+#
+# Add a new code block and add an area of interest called bbox, short for bounding box:
+#
+# ```{tip} To run the code in a code block click ctrl/command + enter. To run the code and add a new code block click alt + enter.
+# ```
 
-Running that block will give you the following:
-
-![](https://i.imgur.com/uAQ9wBz.jpeg)
-
-If you return to the wrench icon and select the layers icon to the left you can switch layers on and off
-
-![](https://i.imgur.com/RzJfVjV.png)
-
-Add a new code block and add an area of interest called bbox, short for bounding box:
-
-```{tip} To run the code in a code block click ctrl/command + enter. To run the code and add a new code block click alt + enter.
-```
-
-```{code-cell} ipython3
 # Add an area of interest
 bbox = [-121.1874, 38.2931, -119.5262, 39.2884]
 bbox = ee.Geometry.Rectangle(bbox)
 # Then clip the carbon raster to the AOI:
-```
 
-```{code-cell} ipython3
 # Clip the dataset to the area of interest
 aoi = dataset.map(lambda image: image.clip(bbox))
 # Now add the clipped rasters:
@@ -155,9 +144,7 @@ m
 # ![](https://i.imgur.com/DDRJeDF.png)
 #
 # Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to codeblock to
-```
 
-```{code-cell} ipython3
 # Center map and add layers
 m.setCenter(-120.2348, 38.8744, 9)
 m.addLayer(dataset, vis_a, 'Aboveground biomass carbon', False)
@@ -189,4 +176,3 @@ m.addLayer(dataset, vis_b, 'Belowground biomass carbon', False)
 # - [Open Geospatial Solutions](https://github.com/opengeos) host many open-source geospatial software projects and datasets.
 # - [Spatial Thoughts](https:spatialthoughts.com) run by Ujaval Gandhi has a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site has many other free and paid courses and tutorials for geospatial analysis.
 # - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
-```

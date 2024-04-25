@@ -1,3 +1,13 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.16.1
+---
+
 # Google Earth Engine
 
 **Your intro to geospatial analysis in the cloud**.
@@ -23,7 +33,7 @@ Once you log into [Earth Engine](https://code.earthengine.google.com/), search f
 
 That will open a new code editor with the following javascript code:
 
-```javascript
+```python
 var dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1');
 
 var visualization = {
@@ -48,7 +58,7 @@ You can zoom in or out and click the layer on or off. Selecting the inspector in
 
 In this case the Mosaic image has 4 bands related to above and belowground carbon, the latitude, longitude of a point clicked is (-68.16, 1.83) and the pixel size is 10km. Add in the belowground (bgb) carbon with
 
-```javascript
+```python
 var vis_b = {
   bands: ['bgb'],
   min: -50.0,
@@ -60,13 +70,13 @@ Map.addLayer(dataset, vis_b, 'Belowground biomass carbon');
 
 You can zoom the map out and center to approximately world level by changing line 10 of the code:
 
-```javascript
+```python
 Map.setCenter(-24.83, 19.88, 2)
 ```
 
 Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does and standard coding practice (the double back slash allows you to add a comment that does not run when the code executes and is equivalent to the hash tag for python). You can comment out any line of code by clicking on the line and typing control/command enter on your keyboard. Reorganization will give you the following code and image:
 
-```javascript
+```python
 // Add global carbon density map
 var dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1');
 
@@ -90,11 +100,12 @@ Map.setCenter(-24.83, 19.88, 2);
 Map.addLayer(dataset, vis_a, 'Aboveground biomass carbon');
 Map.addLayer(dataset, vis_b, 'Belowground biomass carbon');
 ```
+
 ![](https://i.imgur.com/7hkdrV0.png)
 
 Note the belowground now shows up on top--turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can also control visible layers by altering the Map.addLayer function to add the layer but it won't be visible when you run the code:
 
-```javascript
+```python
 Map.addLayer(dataset, vis_b, 'Belowground biomass carbon', false);
 ```
 
@@ -111,7 +122,7 @@ Enter a search in the box at the top of Earth Engine such as 'South Lake Tahoe, 
 
 This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it 'bbox' (double-click geometry, type in bbox and hit enter), but you can use the name geometry, remember to change the name from the code offered below from bbox to geometry. Under the dataset variable change the code to the ImageCollection as follows:
 
-```javascript
+```python
 // Add global carbon density map
 var dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1')
                     .map(function(image){return image.clip(bbox)});
@@ -119,7 +130,7 @@ var dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1')
 
 Note the end of the dataset line no longer has a semicolon since the end of the code line is now following the bbox clip. Change the map center and zoom into your bounding box by changing the Map.setCenter function (line 21):
 
-```javascript
+```python
 // Center map and add layers
 Map.setCenter(-120.2348, 38.8744, 9);
 ```
@@ -130,7 +141,7 @@ Alternatively, change the line to Map.centerObject(bbox, 9) for more memorable w
 
 Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to [Snazzy Maps](https://snazzymaps.com/), selecting a basemap you like and copying the javascript can make your work easier. In Snazzy we'll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but don't be scared, just paste it below everything and add a couple of code lines as follows
 
-```javascript
+```python
 // Change basemap to snazzymaps.com subtle gray
 var gray = [
 'paste in the lines of javascript code from Snazzy'
@@ -160,4 +171,4 @@ There are many resources for getting started to advanced use of Google Earth Eng
 - **Remote Sensing with GEE**. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine [book](https://www.eefabook.org/) by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex using Earth Engine.
 - **Awesome-GEE**. An incredible curated list of GEE resources can be found in at the opengeos [Awesome-GEE](https://github.com/opengeos/Awesome-GEE) github repo. This incredible resource has everything from getting started to courses, papers, datasets, and much more. You could lose yourself for days in here!
 - **GEE Google Group**. For answers to many other questions the Google Earth Engine Developers [listserv](https://groups.google.com/g/google-earth-engine-developers) is quite useful.
-- **Awesome-GEE-Community-Catalog**. Not to be confused with Awesome-GEE is the equally awesome 'treasure-trove' of datasets at [awesome-gee-community-catalog](https://gee-community-catalog.org/). 
+- **Awesome-GEE-Community-Catalog**. Not to be confused with Awesome-GEE is the equally awesome 'treasure-trove' of datasets at [awesome-gee-community-catalog](https://gee-community-catalog.org/).

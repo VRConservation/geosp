@@ -1,3 +1,13 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.16.1
+---
+
 # SQL
 The language you must learn for geospatial analysis!
 
@@ -12,7 +22,7 @@ Add photo of a def query before and after in Arc (with and w/o SQL)
 ## DuckDB
 We'll use [DuckDB](https://duckdb.org/) for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.
 
-A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/) that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.
+A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/), which has excellent tutorials on Python, Earth Engine, DuckDB, and PostGIS.
 
 ## Installation
 Adapt the installation from the [geog414 duck db page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation)?

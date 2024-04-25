@@ -1,3 +1,13 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.16.1
+---
+
 # Introduction
 
 Welcome! Free and Open Source Geospatial Solutions provides resources and examples of open source geospatial software and solutions. Please cite as 

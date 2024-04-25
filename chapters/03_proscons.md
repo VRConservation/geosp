@@ -1,7 +1,25 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.16.1
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
 # Pros & Cons
 
+## Key takeaways
+- Free still has a price. You'll have to do our own troubleshooting and solve problems that paid software doesn't often feature. However, most FOSSs have great communities and help/chat forums and you can often message the creator of a library or repository and get a quick answer to solve your problem.
+- 
+
 ## Open source vs. paid
-Navigating the world of open source and subscription-based geospatial tools is challenging. It can also be costly when you pay for software, imagery, and technicians to conduct your analyses. Increasingly for-profit companies are monetizing software and imagery use that is proprietary to their products. Increased costs and limited access makes it difficult for nonprofits, communities, and individuals to access important geospatial data and decreases the democratization and use of this information in a world where it needs to be freely availalbe and acessible.
+Navigating the world of open-source and subscription-based geospatial tools is challenging. It can also be costly when you pay for software, imagery, and technicians to conduct your analyses. Increasingly, for-profit companies are monetizing software and imagery use that is proprietary to their products. Increased costs and limited access make it difficult for nonprofits, communities, and individuals to access important geospatial data and decrease the democratization and use of this information in a world where it needs to be freely available and accessible.
 
 ## False dichotomy
 In truth, it's a false dichotomy to pit FOSS vs. paid geospatial tools. Your work flow may involve data analysis in GEE then import datasets into ArcGIS pro for further analysis and creating layouts, web apps or online maps. You may find that working with many government agencies requires use of Arc products because it's what their employees know and their agencies have license to use (*Cf. the [Modern Geospatial](https://mapscaping.com/podcast/modern-geospatial/) Mapscaping Podcast on using FOSS with different clients*).  See [Chapter 1][01_foss] for more discussion on this aspect of using multiple tools.
