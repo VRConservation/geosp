@@ -1,6 +1,16 @@
 # Future
 
-There's a lot to learn hear and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next.
+There's a lot to learn hear and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next, plus several examples of where it is now (and software I don't know well enough to write a full chapter!).
+
+## Hybrid
+Use case of CMP analog conceptual model development with fine scale veg map and planning such as Marin Forest Health Strategy. Adapt/paste the storymap.
+
+## Marxan
+https://marxansolutions.org/
+
+## Online
+[rapid editor](https://rapideditor.org/edit)
+[kepler.gl](https://kepler.gl/)
 
 ## GDAL/PDAL
 I didn't cover the Geospatial Data Abstraction Library, or GDAL, in this version because I have only used it a couple of times, one of which completely broke my IDE set up and required deleting and reinstalling env's and other items (I probably would not make the same mistake again nor used the scorched earth fix). Here are some resources to convince you to use these powerful tools
