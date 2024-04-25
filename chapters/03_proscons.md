@@ -15,7 +15,8 @@ jupyter:
 # Pros & Cons
 
 ## Key takeaways
-- Free still has a price. You'll have to do our own troubleshooting and solve problems that paid software doesn't often feature. However, most FOSSs have great communities and help/chat forums and you can often message the creator of a library or repository and get a quick answer to solve your problem.
+- Free still has a price. You'll have to do our own troubleshooting and solve problems that paid software doesn't often feature. 
+- However, most open source software developers or products have great communities and help/chat forums and you can often message the creator of a library or repository and get a quick answer to solve your problem.
 - 
 
 ## Open source vs. paid

@@ -1,6 +1,7 @@
 ---
 jupyter:
   jupytext:
+    main_language: python
     text_representation:
       extension: .md
       format_name: markdown
@@ -25,20 +26,19 @@ We'll use [DuckDB](https://duckdb.org/) for examples in this chapters. The softw
 A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/), which has excellent tutorials on Python, Earth Engine, DuckDB, and PostGIS.
 
 ## Installation
-Adapt the installation from the [geog414 duck db page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation)?
+Follow the installation instructions at the [geog414 duckDB page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation).
 
 ## Penguins
 OK, we're going to shift to penguins but use Ducks to analyze them. The repo is at the [palmerpenguins](https://github.com/allisonhorst/palmerpenguins/blob/main/README.md) repo on Github. We'll use this in the R chapter as well.
 
 csv files are at inst/extdata/penguins_raw.csv
 
-Maybe not? Get another dataset from Marin? or Canada forests? Might be better to forests.
+Maybe not--the palmer penguin dataset doesn't really have spatial data? Get another dataset from Marin? or Canada forests? Might be better to forests.
 
 [lonboard](https://github.com/developmentseed/lonboard)
 [overture map data](https://docs.overturemaps.org/) is mostly buildings and infrastructure
     [query data and load to kepler.gl](https://docs.overturemaps.org/examples/kepler-gl/) using duckdb
     [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
-
 
 [open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
 use the cleaned LEWO sets and upload to a github page
