@@ -1,14 +1,3 @@
----
-jupyter:
-  jupytext:
-    main_language: python
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.16.1
----
-
 # Future
 
 There's a lot to learn hear and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next, plus several examples of where it is now (and software I don't know well enough to write a full chapter!).
