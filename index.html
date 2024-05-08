@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -61,7 +61,7 @@
     <link rel="canonical" href="vrconservation.github.io/geosp/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="chapters/intro.html" />
+    <link rel="next" title="Introduction" href="chapters/01_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -172,20 +172,20 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="chapters/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/01_intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/author.html">Author</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="chapters/01_foss.html">1. FOSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/02_gee.html">2. Google Earth Engine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/03_proscons.html">3. Pros &amp; Cons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/04_python.html">4. Geospatial Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/05_qgis.html">5. QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/06_sql.html">6. SQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/07_aiml.html">7. AI &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/08_R.html">8. R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/09_next.html">9. Next?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/02_foss.html">1. FOSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/03_gee.html">2. Google Earth Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/04_proscons.html">3. Pros &amp; Cons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/05_python.html">4. Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/06_qgis.html">5. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/07_sql.html">6. SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/08_aiml.html">7. AI &amp; ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/09_R.html">8. R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/10_future.html">9. Future</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -244,7 +244,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/index.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/index.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +262,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/index.md" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/index.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +310,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/edit/main/index.md" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp/edit/main/index.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +407,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="foss-geospatial-resources">
 <h1>FOSS GEOSPATIAL RESOURCES<a class="headerlink" href="#foss-geospatial-resources" title="Link to this heading">#</a></h1>
-<p>I would like to cite earth engine <span id="id1">[<a class="reference internal" href="chapters/bibliography.html#id4" title="Noel Gorelick, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing of Environment, 202:18–27, 1 December 2017. doi:10.1016/j.rse.2017.06.031.">Gorelick <em>et al.</em>, 2017</a>]</span>.</p>
+<p>I would like to cite earth engine <span id="id1">[]</span>.</p>
 <p><img alt="logo" src="_images/logo.png" /></p>
 <div class="toctree-wrapper compound">
 </div>
@@ -448,7 +448,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="chapters/intro.html"
+       href="chapters/01_intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>

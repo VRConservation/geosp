@@ -57,12 +57,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06_sql';</script>
-    <link rel="canonical" href="vrconservation.github.io/geosp/chapters/06_sql.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07_sql';</script>
+    <link rel="canonical" href="vrconservation.github.io/geosp/chapters/07_sql.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. AI &amp; ML" href="07_aiml.html" />
-    <link rel="prev" title="5. QGIS" href="05_qgis.html" />
+    <link rel="next" title="7. AI &amp; ML" href="08_aiml.html" />
+    <link rel="prev" title="5. QGIS" href="06_qgis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,19 +171,20 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="author.html">Author</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_foss.html">1. FOSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_gee.html">2. Google Earth Engine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_proscons.html">3. Pros &amp; Cons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_python.html">4. Geospatial Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_foss.html">1. FOSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_gee.html">2. Google Earth Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_proscons.html">3. Pros &amp; Cons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_python.html">4. Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_qgis.html">5. QGIS</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. SQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_R.html">8. R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_aiml.html">7. AI &amp; ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_R.html">8. R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_future.html">9. Future</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -242,7 +243,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/chapters/07_sql.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +261,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/chapters/07_sql.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +309,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/edit/main/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp/edit/main/chapters/07_sql.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +326,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/issues/new?title=Issue%20on%20page%20%2Fchapters/06_sql.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp/issues/new?title=Issue%20on%20page%20%2Fchapters/07_sql.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,6 +406,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -439,8 +441,14 @@ document.write(`
 </section>
 <section id="penguins">
 <h2><span class="section-number">6.4. </span>Penguins<a class="headerlink" href="#penguins" title="Link to this heading">#</a></h2>
+<p>Use a dataset from <a class="reference external" href="http://movebank.org">movebank.org</a>? Barnacle geese in downloads
+kaggle dataset
+methane emissions dataset
+FRAP wildfire database
+WCMC PA database. csv in downloads
+PADDD database if able to download</p>
 <p>OK, we’re going to shift to penguins but use Ducks to analyze them. The repo is at the <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins/blob/main/README.md">palmerpenguins</a> repo on Github. We’ll use this in the R chapter as well.</p>
-<p>csv files are at inst/extdata/penguins_raw.csv</p>
+<p>csv files are at inst/extdata/penguins_raw.csv on the github site</p>
 <p>Maybe not? Get another dataset from Marin? or Canada forests? Might be better to forests.</p>
 <p><a class="reference external" href="https://github.com/developmentseed/lonboard">lonboard</a>
 <a class="reference external" href="https://docs.overturemaps.org/">overture map data</a> is mostly buildings and infrastructure
@@ -449,6 +457,15 @@ document.write(`
 <p><a class="reference external" href="https://github.com/opengeos/geospatial-data-catalogs">open geospatial</a> datasets
 use the cleaned LEWO sets and upload to a github page</p>
 <p>youtube course from freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
+</section>
+<section id="resources">
+<h2><span class="section-number">6.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.</p></li>
+<li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.</p></li>
+<li><p><strong><a class="reference external" href="https://twitter.com/spatialthoughts/status/1774833044396081189">SQL-QGIS Tip</a></strong>. You can use the ‘Execute SQL’ processing algorithm to run SQL queries on ANY vector layer within QGIS. Here’s an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.</p></li>
+<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and gis blog that features several tutorial running the DuckDB spatial extension.</p></li>
+</ul>
 </section>
 </section>
 
@@ -483,7 +500,7 @@ use the cleaned LEWO sets and upload to a github page</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05_qgis.html"
+       href="06_qgis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -492,7 +509,7 @@ use the cleaned LEWO sets and upload to a github page</p>
       </div>
     </a>
     <a class="right-next"
-       href="07_aiml.html"
+       href="08_aiml.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -520,6 +537,7 @@ use the cleaned LEWO sets and upload to a github page</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
 </ul>
   </nav></div>
 
