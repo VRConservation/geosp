@@ -4,16 +4,16 @@
 
 ## TL;DR
 - See the [Cloud-Based Remote Sensing with Google Earth Engine](https://www.eefabook.org/go-to-the-book.html) book or the [GEE Course](https://spatialthoughts.com/courses/google-earth-engine/) from Spatial Thoughts to get started.
-- GEE's strength is cloud-based analysis; not visualization. See Chapters 4, 5, and 8 for better visualization/cartographic tools.
-- See Chapter 4 and [Geemap](https://geemap.org/) for an easier way to deploy GEE.
+GEE's strength is cloud-based analysis, not visualization. For better visualization/cartographic tools, see Chapters 4, 5, and 8.
+- See Chapter 4 and [Geemap](https://geemap.org/) for a way to deploy GEE using Python.
 
 ## Scenario
-You need to do a quick exploratory data analysis of above and below ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to this by end of the week. You go down the hall to the right where the map plotters are and ask the GIS guy. He peers up above his array of screens, says he's busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Enginge.
+You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are, and ask the GIS guy. He peers up above his array of screens, says he's busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.
 
-Yes! You've heard of this, you're thinking Google Earth, it will be easy, but you check out Earth Engine and find a console with an empty map and the required Javascript coding is another universe, let alone language, to you. 
+Yes! You've heard of this, and you think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language. 
 
 ## DIY
-OK, so this is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee it is free. Contrary to popular opinion, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
+This scenario is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Contrary to popular opinion, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
 
 Here's how:
 

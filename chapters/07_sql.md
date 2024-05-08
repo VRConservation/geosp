@@ -18,9 +18,16 @@ A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his [Geog-
 Adapt the installation from the [geog414 duck db page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation)?
 
 ## Penguins
+Use a dataset from movebank.org? Barnacle geese in downloads
+kaggle dataset
+methane emissions dataset
+FRAP wildfire database
+WCMC PA database. csv in downloads
+PADDD database if able to download
+
 OK, we're going to shift to penguins but use Ducks to analyze them. The repo is at the [palmerpenguins](https://github.com/allisonhorst/palmerpenguins/blob/main/README.md) repo on Github. We'll use this in the R chapter as well.
 
-csv files are at inst/extdata/penguins_raw.csv
+csv files are at inst/extdata/penguins_raw.csv on the github site
 
 Maybe not? Get another dataset from Marin? or Canada forests? Might be better to forests.
 
@@ -34,3 +41,9 @@ Maybe not? Get another dataset from Marin? or Canada forests? Might be better to
 use the cleaned LEWO sets and upload to a github page
 
 youtube course from freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
+
+## Resources
+- **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.
+- **[Spatial SQL](https://spatial-sql.com/)**. Matt Forrest's text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.
+- **[SQL-QGIS Tip](https://twitter.com/spatialthoughts/status/1774833044396081189)**. You can use the 'Execute SQL' processing algorithm to run SQL queries on ANY vector layer within QGIS. Here's an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model. 
+- **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. Mark has a great data and gis blog that features several tutorial running the DuckDB spatial extension.

@@ -3,21 +3,21 @@ root: index
 parts:
   - caption: Introduction
     chapters:
-      - file: chapters/intro
+      - file: chapters/01_intro
       - file: chapters/author
   - caption: Chapters
     numbered: true
     maxdepth: 2
     chapters:
-      - file: chapters/01_foss
-      - file: chapters/02_gee
-      - file: chapters/03_proscons
-      - file: chapters/04_python
-      - file: chapters/05_qgis
-      - file: chapters/06_sql
-      - file: chapters/07_aiml
-      - file: chapters/08_R
-      - file: chapters/09_next
+      - file: chapters/02_foss
+      - file: chapters/03_gee
+      - file: chapters/04_proscons
+      - file: chapters/05_python
+      - file: chapters/06_qgis
+      - file: chapters/07_sql
+      - file: chapters/08_aiml
+      - file: chapters/09_R
+      - file: chapters/10_future
   - caption: Appendices
     chapters:
       - file: chapters/bibliography

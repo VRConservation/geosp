@@ -1,0 +1,7 @@
+# QGIS
+
+## Takeaways
+
+## Tutorial
+
+## Resources
