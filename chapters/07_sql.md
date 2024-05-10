@@ -42,6 +42,8 @@ use the cleaned LEWO sets and upload to a github page
 
 youtube course from freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
 
+[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli
+
 ## Resources
 - **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.
 - **[Spatial SQL](https://spatial-sql.com/)**. Matt Forrest's text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.
