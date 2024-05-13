@@ -12,11 +12,8 @@ jupyter:
     name: python3
 ---
 
-<!-- #region -->
+
 # FOSS GEOSPATIAL RESOURCES
 
-
-I would like to cite earth engine {cite}`gorelick2017`.
-
 ![logo](logo.png)
-<!-- #endregion -->
+
