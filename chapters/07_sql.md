@@ -22,7 +22,7 @@ A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his [Geog-
 
 Adapt the installation from the [geog414 duck db page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation)?
 
-## CA Wood Infrastructure
+## Wood processing
 
 Let's move to an example from University of California's Woody Biomass Utilization Group's Biomass Power Plant [Database](http://gg.gg/1as7ti). First import the dependencies.
 
@@ -55,7 +55,7 @@ con.sql('''
 con.table('sawmill')
 ```
 
-View the sawmill table schema then sum # samills by county
+View the sawmill table schema then sum # sawmills by county
 
 ```python
 # View sawmill table schema
@@ -96,7 +96,6 @@ View the biomass table schema then sum the total megawatts of the plants by coun
 # View biomass table schema
 con.sql('''
     DESCRIBE biomass
-
 ''')
 ```
 
