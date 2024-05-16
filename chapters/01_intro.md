@@ -36,6 +36,8 @@ The book [will] contain[s] the following chapters:
 
 Only written chapters will appear in the table of contents panel to the left and below. Once each chapter is published they will appear.
 
+## Github, Colab & Binder
+
 ## jupyter{book}
 
 This book was made using [Jupyter Books](https://jupyterbook.org/) a free and open source package that lets anyone build beautiful, publication quality books and articles from computational content. Thank you Jupyter Books for this wonderful resource!

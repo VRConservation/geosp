@@ -12,8 +12,4 @@ jupyter:
     name: python3
 ---
 
-
-# FOSS GEOSPATIAL RESOURCES
-
-![logo](logo.png)
-
+![logo](cover.png)
