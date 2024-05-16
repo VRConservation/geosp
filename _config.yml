@@ -35,7 +35,7 @@ launch_buttons:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon: "icon.png"
+  favicon: "favicon.ico"
   baseurl: "vrconservation.github.io/geosp/" # The base URL where your book will be hosted.
   use_repository_button: true
   use_issues_button: true
