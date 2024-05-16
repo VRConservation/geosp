@@ -123,9 +123,6 @@ con.sql('''
 
 ## Large datasets
 
-How to make the outputs show in jupyter?
-Use the NYC dataset?
-
 ## Resources
 
 - **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.
