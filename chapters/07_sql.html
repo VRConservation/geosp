@@ -405,8 +405,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">6.1. New</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wood-processing">6.4. Wood processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-datasets">6.5. Large datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.6. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -439,33 +440,151 @@ document.write(`
 <h2><span class="section-number">6.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <p>Adapt the installation from the <a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation">geog414 duck db page</a>?</p>
 </section>
-<section id="penguins">
-<h2><span class="section-number">6.4. </span>Penguins<a class="headerlink" href="#penguins" title="Link to this heading">#</a></h2>
-<p>Use a dataset from <a class="reference external" href="http://movebank.org">movebank.org</a>? Barnacle geese in downloads
-kaggle dataset
-methane emissions dataset
-FRAP wildfire database
-WCMC PA database. csv in downloads
-PADDD database if able to download</p>
-<p>OK, we’re going to shift to penguins but use Ducks to analyze them. The repo is at the <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins/blob/main/README.md">palmerpenguins</a> repo on Github. We’ll use this in the R chapter as well.</p>
-<p>csv files are at inst/extdata/penguins_raw.csv on the github site</p>
-<p>Maybe not? Get another dataset from Marin? or Canada forests? Might be better to forests.</p>
-<p><a class="reference external" href="https://github.com/developmentseed/lonboard">lonboard</a>
-<a class="reference external" href="https://docs.overturemaps.org/">overture map data</a> is mostly buildings and infrastructure
-<a class="reference external" href="https://docs.overturemaps.org/examples/kepler-gl/">query data and load to kepler.gl</a> using duckdb
-<a class="reference external" href="https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45">examples page</a> has more with duck</p>
-<p><a class="reference external" href="https://github.com/opengeos/geospatial-data-catalogs">open geospatial</a> datasets
-use the cleaned LEWO sets and upload to a github page</p>
-<p>youtube course from freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
+<section id="wood-processing">
+<h2><span class="section-number">6.4. </span>Wood processing<a class="headerlink" href="#wood-processing" title="Link to this heading">#</a></h2>
+<p>Let’s move to an example from University of California’s Woody Biomass Utilization Group’s Biomass Power Plant <a class="reference external" href="http://gg.gg/1as7ti">Database</a>. First import the dependencies.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import dependencies</span>
+<span class="kn">import</span> <span class="nn">duckdb</span>
+<span class="kn">import</span> <span class="nn">leafmap</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then connect to the duckdb database and install httpfs and spatial extensions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connect database install httpfs, spatial</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Read the sawmill .shp file and create sawmill table.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create sawmill table from shp file and show</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE IF NOT EXISTS sawmill as</span>
+<span class="s1">    SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp&#39;)</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Duckdb sql can be run in the command line and through Python as we are doing here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.</p>
+</div>
+<p>View the sawmill table schema then sum # sawmills by county</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View sawmill table schema</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    DESCRIBE sawmill</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum sawmills by county</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    SELECT County, COUNT(*) as Count</span>
+<span class="s1">    FROM sawmill</span>
+<span class="s1">    GROUP BY County</span>
+<span class="s1">    ORDER BY count DESC</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import the biomass database then create the biomass table and show</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Biomass dataset</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from shp file and show</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
+<span class="s1">    SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>View the biomass table schema then sum the total megawatts of the plants by county, rounding the total to 1 decimal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View biomass table schema</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    DESCRIBE biomass</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum the total MW_Grid by county round to 1 decimal</span>
+
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    SELECT County, ROUND(SUM(CAST(MW_Grid AS FLOAT)), 1) as Total_MW_Grid</span>
+<span class="s1">    FROM biomass</span>
+<span class="s1">    GROUP BY County</span>
+<span class="s1">    ORDER BY Total_MW_Grid DESC</span>
+<span class="s1">    LIMIT 15</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="large-datasets">
+<h2><span class="section-number">6.5. </span>Large datasets<a class="headerlink" href="#large-datasets" title="Link to this heading">#</a></h2>
+<p>How to make the outputs show in jupyter?
+Use the NYC dataset and adapt Matt Forrest’s tutorial?</p>
 </section>
 <section id="resources">
-<h2><span class="section-number">6.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.</p></li>
 <li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.</p></li>
 <li><p><strong><a class="reference external" href="https://twitter.com/spatialthoughts/status/1774833044396081189">SQL-QGIS Tip</a></strong>. You can use the ‘Execute SQL’ processing algorithm to run SQL queries on ANY vector layer within QGIS. Here’s an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.</p></li>
 <li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and gis blog that features several tutorial running the DuckDB spatial extension.</p></li>
 </ul>
+<p><a class="reference external" href="https://github.com/developmentseed/lonboard">lonboard</a></p>
+<p><a class="reference external" href="https://docs.overturemaps.org/">overture map data</a> is mostly buildings and infrastructure</p>
+<p><a class="reference external" href="https://docs.overturemaps.org/examples/kepler-gl/">query data and load to kepler.gl</a> using duckdb</p>
+<p><a class="reference external" href="https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45">examples page</a> has more with duck</p>
+<p><a class="reference external" href="https://github.com/opengeos/geospatial-data-catalogs">open geospatial</a> datasets
+use the cleaned LEWO sets and upload to a github page</p>
+<p>youtube course from freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=ljzpm3Mrw-I">analyze millions of points</a> has nice duckdb analysis using h3 and connecting code to cli</p>
+<p>Use a dataset from <a class="reference external" href="http://movebank.org">movebank.org</a>? Barnacle geese in downloads
+kaggle dataset
+methane emissions dataset
+FRAP wildfire database
+WCMC PA database. csv in downloads
+PADDD database if able to download</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -536,8 +655,9 @@ use the cleaned LEWO sets and upload to a github page</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">6.1. New</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wood-processing">6.4. Wood processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-datasets">6.5. Large datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.6. Resources</a></li>
 </ul>
   </nav></div>
 

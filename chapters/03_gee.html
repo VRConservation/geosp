@@ -432,7 +432,7 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </section>
 <section id="scenario">
 <h2><span class="section-number">2.2. </span>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h2>
-<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are, and ask the GIS guy. He peers up above his array of screens, says he’s busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.</p>
+<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are, and ask the GIS guy. He peers up above his array of screens, says he’s busy working on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.</p>
 <p>Yes! You’ve heard of this, and you think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language.</p>
 </section>
 <section id="diy">
@@ -444,18 +444,18 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 <p>That will open a new code editor with the following javascript code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var dataset = ee.ImageCollection(&#39;NASA/ORNL/biomass_carbon_density/v1&#39;);
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var dataset = ee.ImageCollection(&quot;NASA/ORNL/biomass_carbon_density/v1&quot;);
 
 var visualization = {
-  bands: [&#39;agb&#39;],
+  bands: [&quot;agb&quot;],
   min: -50.0,
   max: 80.0,
-  palette: [&#39;d9f0a3&#39;, &#39;addd8e&#39;, &#39;78c679&#39;, &#39;41ab5d&#39;, &#39;238443&#39;, &#39;005a32&#39;]
+  palette: [&quot;d9f0a3&quot;, &quot;addd8e&quot;, &quot;78c679&quot;, &quot;41ab5d&quot;, &quot;238443&quot;, &quot;005a32&quot;],
 };
 
 Map.setCenter(-60.0, 7.0, 4);
 
-Map.addLayer(dataset, visualization, &#39;Aboveground biomass carbon&#39;);
+Map.addLayer(dataset, visualization, &quot;Aboveground biomass carbon&quot;);
 </pre></div>
 </div>
 </div>
@@ -468,12 +468,12 @@ Map.addLayer(dataset, visualization, &#39;Aboveground biomass carbon&#39;);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var vis_b = {
-  bands: [&#39;bgb&#39;],
+  bands: [&quot;bgb&quot;],
   min: -50.0,
   max: 80.0,
-  palette: [&#39;D6BCB1&#39;, &#39;AB8574&#39;, &#39;784E3D&#39;, &#39;3D2216&#39;, &#39;26140C&#39;, &#39;000000&#39;]
+  palette: [&quot;D6BCB1&quot;, &quot;AB8574&quot;, &quot;784E3D&quot;, &quot;3D2216&quot;, &quot;26140C&quot;, &quot;000000&quot;],
 };
-Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;);
+Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 </pre></div>
 </div>
 </div>
@@ -481,7 +481,7 @@ Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;);
 <p>You can zoom the map out and center to approximately world level by changing line 10 of the code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Map.setCenter(-24.83, 19.88, 2)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Map.setCenter(-24.83, 19.88, 2);
 </pre></div>
 </div>
 </div>
@@ -490,27 +490,27 @@ Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Add global carbon density map
-var dataset = ee.ImageCollection(&#39;NASA/ORNL/biomass_carbon_density/v1&#39;);
+var dataset = ee.ImageCollection(&quot;NASA/ORNL/biomass_carbon_density/v1&quot;);
 
 // Add visual parameter variables
 var vis_a = {
-  bands: [&#39;agb&#39;],
+  bands: [&quot;agb&quot;],
   min: -50.0,
   max: 80.0,
-  palette: [&#39;d9f0a3&#39;, &#39;addd8e&#39;, &#39;78c679&#39;, &#39;41ab5d&#39;, &#39;238443&#39;, &#39;005a32&#39;]
+  palette: [&quot;d9f0a3&quot;, &quot;addd8e&quot;, &quot;78c679&quot;, &quot;41ab5d&quot;, &quot;238443&quot;, &quot;005a32&quot;],
 };
 
 var vis_b = {
-  bands: [&#39;bgb&#39;],
+  bands: [&quot;bgb&quot;],
   min: -50.0,
   max: 80.0,
-  palette: [&#39;D6BCB1&#39;, &#39;AB8574&#39;, &#39;784E3D&#39;, &#39;3D2216&#39;, &#39;26140C&#39;, &#39;000000&#39;]
+  palette: [&quot;D6BCB1&quot;, &quot;AB8574&quot;, &quot;784E3D&quot;, &quot;3D2216&quot;, &quot;26140C&quot;, &quot;000000&quot;],
 };
 
 // Center map and add layers
 Map.setCenter(-24.83, 19.88, 2);
-Map.addLayer(dataset, vis_a, &#39;Aboveground biomass carbon&#39;);
-Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;);
+Map.addLayer(dataset, vis_a, &quot;Aboveground biomass carbon&quot;);
+Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 </pre></div>
 </div>
 </div>
@@ -519,7 +519,7 @@ Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;);
 <p>Note the belowground now shows up on top–turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can also control visible layers by altering the Map.addLayer function to add the layer but it won’t be visible when you run the code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, false);
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;, false);
 </pre></div>
 </div>
 </div>
@@ -536,8 +536,11 @@ Map.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Add global carbon density map
-var dataset = ee.ImageCollection(&#39;NASA/ORNL/biomass_carbon_density/v1&#39;)
-                    .map(function(image){return image.clip(bbox)});
+var dataset = ee
+  .ImageCollection(&quot;NASA/ORNL/biomass_carbon_density/v1&quot;)
+  .map(function (image) {
+    return image.clip(bbox);
+  });
 </pre></div>
 </div>
 </div>
@@ -557,10 +560,8 @@ Map.setCenter(-120.2348, 38.8744, 9);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Change basemap to snazzymaps.com subtle gray
-var gray = [
-&#39;paste in the lines of javascript code from Snazzy&#39;
-]
-Map.setOptions(&#39;Gray&#39;, {gray: gray});
+var gray = [&quot;paste in the lines of javascript code from Snazzy&quot;];
+Map.setOptions(&quot;Gray&quot;, { gray: gray });
 </pre></div>
 </div>
 </div>
