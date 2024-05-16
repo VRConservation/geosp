@@ -59,6 +59,8 @@ con.table('sawmill')
 
 ```
 
+![sawmill-all](https://i.imgur.com/ptLCP0F.png)
+
 View the sawmill table schema then sum # sawmills by county
 
 ```python
@@ -67,6 +69,8 @@ con.sql('''
     DESCRIBE sawmill
 ''')
 ```
+
+![sawmill-schema](https://i.imgur.com/gM9AJtB.png)
 
 ```python
 # Sum sawmills by county
@@ -77,6 +81,8 @@ con.sql('''
     ORDER BY count DESC
 ''')
 ```
+
+![sawmill-county](https://i.imgur.com/GeX2mE6.png)
 
 Import the biomass database then create the biomass table and show
 
