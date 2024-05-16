@@ -55,6 +55,10 @@ con.sql('''
 con.table('sawmill')
 ```
 
+```{tip} Duckdb sql can be run in the command line and through Python as we are doing here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.
+
+```
+
 View the sawmill table schema then sum # sawmills by county
 
 ```python
@@ -113,6 +117,7 @@ con.sql('''
 
 ## Large datasets
 
+How to make the outputs show in jupyter?
 Use the NYC dataset and adapt Matt Forrest's tutorial?
 
 ## Resources
