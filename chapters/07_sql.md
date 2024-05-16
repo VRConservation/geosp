@@ -118,7 +118,7 @@ con.sql('''
 ## Large datasets
 
 How to make the outputs show in jupyter?
-Use the NYC dataset and adapt Matt Forrest's tutorial?
+Use the NYC dataset?
 
 ## Resources
 
