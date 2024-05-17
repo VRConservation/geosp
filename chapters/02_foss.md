@@ -29,14 +29,20 @@ My point here, is mapping can be as simple and free as you want, especially to c
 ## Modern GIS
 Geographic information systems (GIS) have changed substantially in the past four decades from simple, but clunky map layers to complex software able to process thousands of datapoints in multiple dimensions. Even the term GIS has started to shift toward geospatial data and data analysis and data analysis nearly always has a spatial component.
 
-An explosion in data science during the past decade from big data to [big data is dead](https://motherduck.com/blog/big-data-is-dead/) has not only seen data have its [rock is dead/long live rock](https://www.youtube.com/watch?v=DqVcDV5kGcg) moment it has also seen proliferation in software and cost to geospatial analysis.
+An explosion in data science during the past decade from big data to <a href="https://motherduck.com/blog/big-data-is-dead/" target="_blank">big data is dead</a> has not only seen data have its <a href="https://www.youtube.com/watch?v=DqVcDV5kGcg" target="_blank">long live rock/rock is dead</a> moment it has also seen proliferation in software and cost to geospatial analysis.
 
 ```{admonition} Modern GIS
 "...the process, systems, and technology used to derive insights from geospatial data. Modern GIS
 uses open, interoperable, and standards-based technology. It can be run locally or in the cloud and can scale to work with different types, velocities, and data scales." {cite}`forrest2023`
 ```
 
+Modern GIS is open and run locally or in the cloud {cite}`forrestmod`. This shift from desktop and enterprise systems to cloud-native systems is a quantum leap from past geospatial analysis. Not only does this make use of efficient and serverless processing, it allows analysis at multiple scales and different users {numref}`cloud`.
 
+```{figure} /figures/cloud.png
+:height: 300px
+:name: cloud
+Modern cloud GIS infrastructure {cite}`forrestmod`.
+```
 
 ## Data Democratization
 Imagine a nonprofit NGO focused on wildlife conservation in a remote corner of the world, striving to protect endangered species and fragile ecosystems amidst mounting challenges. In today's digital age, data is inundating our world at an unprecedented rate, offering valuable insights crucial for informed decision-making. 
@@ -45,7 +51,10 @@ However, not all data is readily accessible, and the software required to analyz
 
 Data democratization is essential to bridge this gap, ensuring that vital information is accessible, empowering conservation efforts, and safeguarding our natural world for future generations. Accessible data and imagery depends on free and open source software. The challenge with free and open source software is it usually requires knowledge of coding, a barrier for some without a computer science background.
 
-## Solutions
-The solution is to learn how to code and fortunately there are a vast number of resources available to learn from youtube to online tutorials and blogs. However, there are still challenges with this approach:
+## Challenges/Solutions
+The solution is to learn how to code and fortunately there are a vast number of resources available to learn from youtube to online tutorials and blogs. However, there are still challenges. I offer a few along with suggested solutions:
 
-1. 
+1. **Coding language**. There are four main languages in this book. Which one should you learn first? We recommend starting with Python. <a href="https://geog-414.gishub.org/book/python/01_getting_started.html" target="_blank">Python basics</a> provides an excellent foundation for starting in Python and freeCodeCamp has many tutorials to complement this resource.
+2. **Resources are everywhere**. This is true and you need to sort through what works, what is high quality, and find answers when you encounter errors. This book is meant to centralize some key resources for geospatial analysis. Don't forget that you can always do a search for an error online or ask large language models such as chatgpt, gemini, and copilot to help solve errors. The models don't always work, nor do the online resources such as Stack Exchange, but they will often get you 'unstuck'. One bonus of many open source softwares is their associated communities. QGIS has an incredible community connected to it and Earth Engine has a large google chat group where you can often search and find answers to questions you may have.
+3. **Directions don't make sense**. Sadly this is a frustrating aspect in a world of coders that all seem to understand the lingo and jargon and you do not. We try to translate some of that here, but sometimes you may need to try things many times or just contact the developers and ask what they really mean. I've also found that if you can get to a video that can help translate the instructions or commands to what is really happening.
+4. **Errors**. Sometimes stuff just doesn't work. Sometimes you're just not doing it right. My only suggestion is keep trying. Leave the work for a while then come back to it. Search for solutions then try them out. TRy out different code in a separate file. Jupyter notebooks are really great for isolating code blocks to help you see where errors occur. Github Copilot, although it does require a subscription, is getting much better at helping fix errors. If you're a student, Copilot is free. If not, try other engines, some of them are now open source and local so you can install them on your computer and try for free.
