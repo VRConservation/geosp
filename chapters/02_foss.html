@@ -406,7 +406,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#participatory-rural-appraisal">1.1. Participatory Rural Appraisal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-gis">1.2. Modern GIS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-democratization">1.3. Data Democratization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">1.4. Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-solutions">1.4. Challenges/Solutions</a></li>
 </ul>
             </nav>
         </div>
@@ -431,12 +431,19 @@ document.write(`
 <section id="modern-gis">
 <h2><span class="section-number">1.2. </span>Modern GIS<a class="headerlink" href="#modern-gis" title="Link to this heading">#</a></h2>
 <p>Geographic information systems (GIS) have changed substantially in the past four decades from simple, but clunky map layers to complex software able to process thousands of datapoints in multiple dimensions. Even the term GIS has started to shift toward geospatial data and data analysis and data analysis nearly always has a spatial component.</p>
-<p>An explosion in data science during the past decade from big data to <a class="reference external" href="https://motherduck.com/blog/big-data-is-dead/">big data is dead</a> has not only seen data have its <a class="reference external" href="https://www.youtube.com/watch?v=DqVcDV5kGcg">rock is dead/long live rock</a> moment it has also seen proliferation in software and cost to geospatial analysis.</p>
+<p>An explosion in data science during the past decade from big data to <a href="https://motherduck.com/blog/big-data-is-dead/" target="_blank">big data is dead</a> has not only seen data have its <a href="https://www.youtube.com/watch?v=DqVcDV5kGcg" target="_blank">long live rock/rock is dead</a> moment it has also seen proliferation in software and cost to geospatial analysis.</p>
 <div class="admonition-modern-gis admonition">
 <p class="admonition-title">Modern GIS</p>
-<p>‘…the process, systems, and technology used to derive insights from geospatial data. Modern GIS
-uses open, interoperable, and standards-based technology. It can be run locally or in the cloud and can scale to work with different types, velocities, and data scales.’ <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="M Forrest. Spatial SQL: A Practical Approach to Modern GIS Using SQL. Locate Press, 2023.">Forrest, 2023</a>]</span></p>
+<p>“…the process, systems, and technology used to derive insights from geospatial data. Modern GIS
+uses open, interoperable, and standards-based technology. It can be run locally or in the cloud and can scale to work with different types, velocities, and data scales.” <span id="id1">[<a class="reference internal" href="bibliography.html#id3" title="M Forrest. Spatial SQL: A Practical Approach to Modern GIS Using SQL. Locate Press, 2023.">Forrest, 2023</a>]</span></p>
 </div>
+<p>Modern GIS is open and run locally or in the cloud <span id="id2">[<a class="reference internal" href="bibliography.html#id4" title="M Forrest. What is modern gis? 2022. URL: https://forrest.nyc/what-is-modern-gis/.">Forrest, 2022</a>]</span>. This shift from desktop and enterprise systems to cloud-native systems is a quantum leap from past geospatial analysis. Not only does this make use of efficient and serverless processing, it allows analysis at multiple scales and different users <a class="reference internal" href="#cloud"><span class="std std-numref">Fig. 1.1</span></a>.</p>
+<figure class="align-default" id="cloud">
+<a class="reference internal image-reference" href="../_images/cloud.png"><img alt="../_images/cloud.png" src="../_images/cloud.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Modern cloud GIS infrastructure <span id="id3">[<a class="reference internal" href="bibliography.html#id4" title="M Forrest. What is modern gis? 2022. URL: https://forrest.nyc/what-is-modern-gis/.">Forrest, 2022</a>]</span>.</span><a class="headerlink" href="#cloud" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="data-democratization">
 <h2><span class="section-number">1.3. </span>Data Democratization<a class="headerlink" href="#data-democratization" title="Link to this heading">#</a></h2>
@@ -444,11 +451,14 @@ uses open, interoperable, and standards-based technology. It can be run locally 
 <p>However, not all data is readily accessible, and the software required to analyze it often comes with a hefty price tag. This unfortunate reality creates a significant barrier, preventing organizations and communities in need from harnessing the power of data-driven solutions. Regrettably, the areas most in peril, facing the looming threats of destruction and extinction, are often located in developing regions where resources are scant.</p>
 <p>Data democratization is essential to bridge this gap, ensuring that vital information is accessible, empowering conservation efforts, and safeguarding our natural world for future generations. Accessible data and imagery depends on free and open source software. The challenge with free and open source software is it usually requires knowledge of coding, a barrier for some without a computer science background.</p>
 </section>
-<section id="solutions">
-<h2><span class="section-number">1.4. </span>Solutions<a class="headerlink" href="#solutions" title="Link to this heading">#</a></h2>
-<p>The solution is to learn how to code and fortunately there are a vast number of resources available to learn from youtube to online tutorials and blogs. However, there are still challenges with this approach:</p>
+<section id="challenges-solutions">
+<h2><span class="section-number">1.4. </span>Challenges/Solutions<a class="headerlink" href="#challenges-solutions" title="Link to this heading">#</a></h2>
+<p>The solution is to learn how to code and fortunately there are a vast number of resources available to learn from youtube to online tutorials and blogs. However, there are still challenges. I offer a few along with suggested solutions:</p>
 <ol class="arabic simple">
-<li></li>
+<li><p><strong>Coding language</strong>. There are four main languages in this book. Which one should you learn first? We recommend starting with Python. <a href="https://geog-414.gishub.org/book/python/01_getting_started.html" target="_blank">Python basics</a> provides an excellent foundation for starting in Python and freeCodeCamp has many tutorials to complement this resource.</p></li>
+<li><p><strong>Resources are everywhere</strong>. This is true and you need to sort through what works, what is high quality, and find answers when you encounter errors. This book is meant to centralize some key resources for geospatial analysis. Don’t forget that you can always do a search for an error online or ask large language models such as chatgpt, gemini, and copilot to help solve errors. The models don’t always work, nor do the online resources such as Stack Exchange, but they will often get you ‘unstuck’. One bonus of many open source softwares is their associated communities. QGIS has an incredible community connected to it and Earth Engine has a large google chat group where you can often search and find answers to questions you may have.</p></li>
+<li><p><strong>Directions don’t make sense</strong>. Sadly this is a frustrating aspect in a world of coders that all seem to understand the lingo and jargon and you do not. We try to translate some of that here, but sometimes you may need to try things many times or just contact the developers and ask what they really mean. I’ve also found that if you can get to a video that can help translate the instructions or commands to what is really happening.</p></li>
+<li><p><strong>Errors</strong>. Sometimes stuff just doesn’t work. Sometimes you’re just not doing it right. My only suggestion is keep trying. Leave the work for a while then come back to it. Search for solutions then try them out. TRy out different code in a separate file. Jupyter notebooks are really great for isolating code blocks to help you see where errors occur. Github Copilot, although it does require a subscription, is getting much better at helping fix errors. If you’re a student, Copilot is free. If not, try other engines, some of them are now open source and local so you can install them on your computer and try for free.</p></li>
 </ol>
 </section>
 </section>
@@ -520,7 +530,7 @@ uses open, interoperable, and standards-based technology. It can be run locally 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#participatory-rural-appraisal">1.1. Participatory Rural Appraisal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-gis">1.2. Modern GIS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-democratization">1.3. Data Democratization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">1.4. Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-solutions">1.4. Challenges/Solutions</a></li>
 </ul>
   </nav></div>
 
