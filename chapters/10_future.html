@@ -59,7 +59,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/10_future';</script>
     <link rel="canonical" href="vrconservation.github.io/geosp/chapters/10_future.html" />
-    <link rel="icon" href="../_static/logo.png"/>
+    <link rel="icon" href="../_static/cover.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Bibliography" href="bibliography.html" />
@@ -152,8 +152,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="FOSS Resources - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="FOSS Resources - Home"/>`);</script>
+    <img src="../_static/cover.png" class="logo__image only-light" alt="FOSS Resources - Home"/>
+    <script>document.write(`<img src="../_static/cover.png" class="logo__image only-dark" alt="FOSS Resources - Home"/>`);</script>
   
   
 </a></div>
@@ -380,9 +380,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -398,18 +396,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid">9.1. Hybrid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marxan">9.2. Marxan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online">9.3. Online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gdal-pdal">9.4. GDAL/PDAL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-of-geospatial">9.5. Future of Geospatial</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -421,36 +407,30 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="future">
 <h1><span class="section-number">9. </span>Future<a class="headerlink" href="#future" title="Link to this heading">#</a></h1>
-<p>There’s a lot to learn hear and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It’s a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next, plus several examples of where it is now (and software I don’t know well enough to write a full chapter!).</p>
-<section id="hybrid">
-<h2><span class="section-number">9.1. </span>Hybrid<a class="headerlink" href="#hybrid" title="Link to this heading">#</a></h2>
-<p>Use case of CMP analog conceptual model development with fine scale veg map and planning such as Marin Forest Health Strategy. Adapt/paste the storymap.</p>
-</section>
-<section id="marxan">
-<h2><span class="section-number">9.2. </span>Marxan<a class="headerlink" href="#marxan" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://marxansolutions.org/">https://marxansolutions.org/</a></p>
-</section>
-<section id="online">
-<h2><span class="section-number">9.3. </span>Online<a class="headerlink" href="#online" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://rapideditor.org/edit">rapid editor</a>
-<a class="reference external" href="https://kepler.gl/">kepler.gl</a></p>
-</section>
-<section id="gdal-pdal">
-<h2><span class="section-number">9.4. </span>GDAL/PDAL<a class="headerlink" href="#gdal-pdal" title="Link to this heading">#</a></h2>
-<p>I didn’t cover the Geospatial Data Abstraction Library, or GDAL, in this version because I have only used it a couple of times, one of which completely broke my IDE set up and required deleting and reinstalling env’s and other items (I probably would not make the same mistake again nor used the scorched earth fix). Here are some resources to convince you to use these powerful tools</p>
-<ul class="simple">
-<li><p>Robert Simmon shared an excellent six-part series called <a class="reference external" href="https://medium.com/planet-stories/a-gentle-introduction-to-gdal-part-1-a3253eb96082">A Gentle Introduction to GDAL</a>. In Part 1 the author answers the question of Why GDAL with GIS systems are great for analyzing geospatial data. However most GIS software is expensive, difficult to learn, and won’t run on his OS of choice. He goes on to say the good news is GDAL is an open source alternative that is free, broadly supported, constantly updated, and runs on almost any OS. But, it is difficult to learn, especially if you’re terrified of command lines.</p></li>
-<li><p>Joshua Stevens has a convincing deck on using the command line for cartographic workflows <a class="reference external" href="https://speakerdeck.com/jscarto/commanding-cartography-take-control-of-faster-more-elegant-workflows-from-the-command-line?slide=39">here</a>.</p></li>
-<li><p>Open Source Options has a <a class="reference external" href="https://www.youtube.com/watch?v=bK-eCFUFgkQ">GDAL Python Tutorial</a> on youtube that shows you how to use Python and GDAL to read, create, and display raster data.</p></li>
-<li><p><a class="reference external" href="https://sites.google.com/thewatershedcenter.com/caflclanding/code-tutorials/pdal-tutorials?authuser=0">PDAL Tutorial</a> from the Watershed Research and Training Center. This help you install the Point Data Absraction Library, or PDAL, and run it from a container. It does not run you through a sample dataset.</p></li>
-<li><p><a class="reference external" href="https://pdal.io/en/2.7-maintenance/">pdal.io</a> will help get you started with PADL.</p></li>
-<li><p>Spatialised has a nice tutorial on <a class="reference external" href="https://www.spatialised.net/lidar-and-geobash/">Lidar processing with PDAL, WMTS and geobash</a> and also a video from FOSS4G Bucharest on <a class="reference external" href="https://media.ccc.de/v/bucharest-267-exploiting-pdal-entwine-in-the-wild#t=34">Exploiting PDAL and Entwine in the Wild</a>.</p></li>
-</ul>
-</section>
-<section id="future-of-geospatial">
-<h2><span class="section-number">9.5. </span>Future of Geospatial<a class="headerlink" href="#future-of-geospatial" title="Link to this heading">#</a></h2>
-</section>
-</section>
+<p>Coming soon!</p>
+<!-- There's a lot to learn here and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next, plus several examples of where it is now (and software I don't know well enough to write a full chapter!).
+
+## Hybrid
+Use case of CMP analog conceptual model development with fine scale veg map and planning such as Marin Forest Health Strategy. Adapt/paste the storymap.
+
+## Marxan
+https://marxansolutions.org/
+
+## Online
+[rapid editor](https://rapideditor.org/edit)
+[kepler.gl](https://kepler.gl/)
+
+## GDAL/PDAL
+I didn't cover the Geospatial Data Abstraction Library, or GDAL, in this version because I have only used it a couple of times, one of which completely broke my IDE set up and required deleting and reinstalling env's and other items (I probably would not make the same mistake again nor used the scorched earth fix). Here are some resources to convince you to use these powerful tools
+
+- Robert Simmon shared an excellent six-part series called [A Gentle Introduction to GDAL](https://medium.com/planet-stories/a-gentle-introduction-to-gdal-part-1-a3253eb96082). In Part 1 the author answers the question of Why GDAL with GIS systems are great for analyzing geospatial data. However most GIS software is expensive, difficult to learn, and won't run on his OS of choice. He goes on to say the good news is GDAL is an open source alternative that is free, broadly supported, constantly updated, and runs on almost any OS. But, it is difficult to learn, especially if you're terrified of command lines.
+- Joshua Stevens has a convincing deck on using the command line for cartographic workflows [here](https://speakerdeck.com/jscarto/commanding-cartography-take-control-of-faster-more-elegant-workflows-from-the-command-line?slide=39).
+- Open Source Options has a [GDAL Python Tutorial](https://www.youtube.com/watch?v=bK-eCFUFgkQ) on youtube that shows you how to use Python and GDAL to read, create, and display raster data.
+- [PDAL Tutorial](https://sites.google.com/thewatershedcenter.com/caflclanding/code-tutorials/pdal-tutorials?authuser=0) from the Watershed Research and Training Center. This help you install the Point Data Absraction Library, or PDAL, and run it from a container. It does not run you through a sample dataset.
+- [pdal.io](https://pdal.io/en/2.7-maintenance/) will help get you started with PADL.
+- Spatialised has a nice tutorial on [Lidar processing with PDAL, WMTS and geobash](https://www.spatialised.net/lidar-and-geobash/) and also a video from FOSS4G Bucharest on [Exploiting PDAL and Entwine in the Wild](https://media.ccc.de/v/bucharest-267-exploiting-pdal-entwine-in-the-wild#t=34).
+
+## Future of Geospatial --></section>
 
     <script type="text/x-thebe-config">
     {
@@ -507,24 +487,7 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid">9.1. Hybrid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marxan">9.2. Marxan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online">9.3. Online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gdal-pdal">9.4. GDAL/PDAL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-of-geospatial">9.5. Future of Geospatial</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
