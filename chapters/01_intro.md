@@ -1,8 +1,16 @@
 # Introduction
 
-Welcome to Free and Open Source Geospatial Solutions. This book provides resources and examples of open source geospatial software and solutions. Please cite as
+Welcome to Free and Open Source Geospatial Tools. This book provides resources and examples of open source geospatial software and solutions. Please cite as
 
-Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org.
+Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org or Bibtex:
+
+@book{vrussell2024,
+	title		  = {Free and open source geospatial tools},
+	author		  = {Russell, Vance},
+	year		  = {2024},
+	publisher	  = {jupyterbook.org},
+	url 		  = {https://3point.xyz/geosp-bib}
+}
 
 ## Support
 
