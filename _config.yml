@@ -8,7 +8,7 @@
 title: FOSS Resources # The title of the book. Will be placed in the left navbar.
 author: Vance Russell # The author of the book
 copyright: "2024" # Copyright year to be placed in the footer
-logo: logo.png # A path to the book logo
+logo: cover.png # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -35,7 +35,7 @@ launch_buttons:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon: "logo.png"
+  favicon: "cover.png"
   baseurl: "vrconservation.github.io/geosp/" # The base URL where your book will be hosted.
   use_repository_button: true
   use_issues_button: true

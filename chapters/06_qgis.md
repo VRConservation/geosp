@@ -1,5 +1,5 @@
 # QGIS
-
+Coming soon!
 ## Takeaways
 
 ## Tutorial

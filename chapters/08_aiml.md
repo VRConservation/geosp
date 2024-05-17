@@ -1,6 +1,6 @@
 # AI & ML
-
-## Machine Learning
+Coming soon!
+<!-- ## Machine Learning
 
 ML example could be from Spatial Thoughts or Whitebark pine
 
@@ -10,4 +10,4 @@ Using generative AI to generate geemap code within jupyter lab: https://www.yout
 
 ## Resources
 
-- [Clay Foundation Model](https://clay-foundation.github.io/model/index.html). Only works on linux devices with CUDA GPUs?
+- [Clay Foundation Model](https://clay-foundation.github.io/model/index.html). Only works on linux devices with CUDA GPUs? -->

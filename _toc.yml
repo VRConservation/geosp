@@ -15,9 +15,9 @@ parts:
       - file: chapters/05_python
       - file: chapters/06_qgis
       - file: chapters/07_sql
-      # - file: chapters/08_aiml
-      # - file: chapters/09_R
-      # - file: chapters/10_future
+      - file: chapters/08_aiml
+      - file: chapters/09_R
+      - file: chapters/10_future
   - caption: Appendices
     chapters:
       - file: chapters/bibliography

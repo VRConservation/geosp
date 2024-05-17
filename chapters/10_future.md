@@ -1,6 +1,6 @@
 # Future
-
-There's a lot to learn hear and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next, plus several examples of where it is now (and software I don't know well enough to write a full chapter!).
+Coming soon!
+<!-- There's a lot to learn here and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next, plus several examples of where it is now (and software I don't know well enough to write a full chapter!).
 
 ## Hybrid
 Use case of CMP analog conceptual model development with fine scale veg map and planning such as Marin Forest Health Strategy. Adapt/paste the storymap.
@@ -22,4 +22,4 @@ I didn't cover the Geospatial Data Abstraction Library, or GDAL, in this version
 - [pdal.io](https://pdal.io/en/2.7-maintenance/) will help get you started with PADL.
 - Spatialised has a nice tutorial on [Lidar processing with PDAL, WMTS and geobash](https://www.spatialised.net/lidar-and-geobash/) and also a video from FOSS4G Bucharest on [Exploiting PDAL and Entwine in the Wild](https://media.ccc.de/v/bucharest-267-exploiting-pdal-entwine-in-the-wild#t=34).
 
-## Future of Geospatial
+## Future of Geospatial -->

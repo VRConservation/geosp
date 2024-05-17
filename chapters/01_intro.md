@@ -1,12 +1,12 @@
 # Introduction
 
-Welcome! Free and Open Source Geospatial Solutions provides resources and examples of open source geospatial software and solutions. Please cite as
+Welcome to Free and Open Source Geospatial Solutions. This book provides resources and examples of open source geospatial software and solutions. Please cite as
 
 Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org.
 
 ## Support
 
-This book is a free to use resource to anyone. If you would like to support me, provide a donation, or buy me a coffee, please go to my [buymeacoffe](https://www.buymeacoffee.com/3point) site. I will be adding chapters and resources in the future. Thank you for your support!
+This book is free to use for anyone. If you would like to support me, provide a donation, or buy me a coffee, please go to my [buymeacoffee](https://www.buymeacoffee.com/3point) site. I will be adding chapters and resources in the future. Please make to cite it or share with others that might benefit. Thank you for your support!
 
 ## Why this book
 
@@ -14,7 +14,7 @@ Accessing, processing, and analyzing geospatial data can be daunting tasks, ofte
 
 At the software level, many tutorials, github repositories, and software sites assume you have familiarity with installing software or running code. They'll use acronyms such as CLI and IDE, and if you're a beginner, you will have no idea what they're talking about. Once you decipher the terms, running into errors and tying to fix them can be trying, or just a downright deterrence to using free and open space geospatial software. Don't be put off by entering this new world and keep at it when errors occur.
 
-The "Navigating Geospatial Data Challenges in Conservation Science" book aims to address these challenges head-on by providing practical solutions and resources. Because you want to analyze and visualize data, not spend time looking through stack exchange or asking ChatGPT how to fix an obscure error when your code doesn't run or your laptop won't install a package correctly.
+The FOSS book aims to address these challenges head-on by providing practical solutions and resources. Because you want to analyze and visualize data, not spend time looking through stack exchange or asking ChatGPT how to fix an obscure error when your code doesn't run or your laptop won't install a package correctly.
 
 ## Audience & Learning
 
@@ -22,7 +22,7 @@ The intended audience for this book is beginners to geospatial analysis with som
 
 ## Chapters
 
-The book [will] contain[s] the following chapters:
+The book will contain (some chapters are still in draft) the following chapters:
 
 1. **FOSS**. Free and open source software introduction and a little about my journey in this field and using these tools.
 2. **GEE**. Google Earth Engine is an incredible resource for cloud geospatial computer. This chapter provides some quick tips and steps to get started.
@@ -32,11 +32,11 @@ The book [will] contain[s] the following chapters:
 6. **SQL**. How to get started using the universal database Structured Query Language or SQL using DuckDB and Post-GIS spatial packages.
 7. **AIML**. Artificial intelligence (AI) and machine learning (ML) are sorta popular right now, no? Here's how to use these tools to complement, not replace, your work.
 8. **R**. A programming language universally adopted by academics, R is easy to use, get started, and has many statistical computing, data visualization, and geospatial packages. We'll use it within the free desktop integrated development environment (IDE).
-9. **Next**. We'll look into a crystal ball, that's actually a globe, for some thoughts and insights to the future of free and open source geospatial software.
-
-Only written chapters will appear in the table of contents panel to the left and below. Once each chapter is published they will appear.
+9. **Future**. We'll look into a crystal ball, that's actually a globe, for some thoughts and insights to the future of free and open source geospatial software.
 
 ## Github, Colab & Binder
+
+The entire book is stored on a Github repository accessible by clicking the Github logo at the top right. Each chapter is also available in Binder and Colab to make running the code easier and if you do not have your own integrated development environment (IDE) such as Visual STudio Code set up. I do recommend that you set up VS Code to run software and guidance for how to do so will be provided in the Appendix.
 
 ## jupyter{book}
 

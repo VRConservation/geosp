@@ -20,7 +20,7 @@ A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his [Geog-
 
 ## Installation
 
-Adapt the installation from the [geog414 duck db page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation)?
+Installation is straightforward: follow the instruction for command line or Python at the DuckDB installation [page](http://gg.gg/1at9tp).
 
 ## Wood processing
 
@@ -122,6 +122,10 @@ con.sql('''
 ```
 
 ## Large datasets
+An advantage of DuckDB is its speed processing large datasets
+
+## Geospatial datasets
+
 
 ## Resources
 
