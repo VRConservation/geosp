@@ -20,5 +20,6 @@ parts:
       - file: chapters/10_future
   - caption: Appendices
     chapters:
+      - file: z_appendices/appendix1
       - file: chapters/bibliography
       - file: chapters/issues

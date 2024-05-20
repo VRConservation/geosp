@@ -7,7 +7,7 @@ Navigating the world of open-source and subscription-based geospatial tools is c
 In truth, it's a false dichotomy to pit FOSS vs. paid geospatial tools. Your workflow may involve data analysis in GEE, then importing datasets into ArcGIS Pro for further analysis and creating layouts, web apps, or online maps. You may find that working with many government agencies requires the use of Arc products because it's what their employees know and their agencies have a license to use (*Cf. the [Modern Geospatial](https://mapscaping.com/podcast/modern-geospatial/) Mapscaping Podcast on using FOSS with different clients*).  See Chapter 1: FOSS for more discussion on using multiple tools.
 
 ## Table
-Table 1 is a non-exhaustive and brief summary of the more commonly used geospatial sofware products.
+Table 1 is a non-exhaustive and brief summary of the more commonly used geospatial software products.
 
 Table 1. Pros and cons of select geospatial software providers.
 
@@ -27,10 +27,10 @@ Table 1. Pros and cons of select geospatial software providers.
 | R, RStudio | Use, Plugins, Academic standard | Slow at times, Vis | Free |
 
 ## Discussion & Caveats
-Use means ease of use. For software I marked as slow, Earth Blox was sometimes slow when I tested it nearly one year ago; it may be much better now. RStudio can sometimes be slow, but typically for much larger datasets. Vis = visualization is very good and feature-rich. Support and documentation indicate good or bad support. Typically, the software documentation and tutorials are very good, or the company or software provider is quick to respond to bugs or questions. 
+Use means ease of use. Earth Blox was sometimes slow for software I marked as slow when I tested it nearly one year ago; it may be much better now. RStudio can sometimes be slow, but typically for much larger datasets. Vis = visualization is very good and feature-rich. Support and documentation indicate good or bad support. Typically, the software documentation and tutorials are very good, or the company or software provider quickly responds to bugs or questions. 
 
-I did not add software that I have not used (or, in the case of GDAL, that I'm afraid of). I have limited knowledge and use of CARTO, Felt, and Earth Blox since I've only used them in free-to-test form. As a result, my pros and cons are limited for them.
+I did not add software I have not used (or, in the case of GDAL, that I'm afraid of). I have limited knowledge and use of CARTO, Felt, and Earth Blox since I've only used them in free-to-test form. As a result, my pros and cons are limited for them.
 
 Pricing is difficult since several companies are opaque about their pricing, ask you to submit information for a quote, or want you to participate in a call to give you bespoke pricing quotes. I've tried to add information on pricing when I have an approximate or specific idea.
 
-One common thread with pros and cons and software use is that free is good. So is the long-term viability of a provider. You don't want to put all your assets, analysis, and projects into a proprietary system to have the company later go belly up. Then, your data and analysis are difficult to transfer. A common thread with several providers such as QGIS, Google Earth Engine (GEE) have very active communities so it is often easy to get help through forums for common bugs and errors.
+One common thread with pros and cons and software use is that free is good. So is the long-term viability of a provider. You don't want to put all your assets, analysis, and projects into a proprietary system to have the company later go belly up. Then, your data and analysis are difficult to transfer. A common thread with several providers such as QGIS and Google Earth Engine (GEE) have very active communities, so it is often easy to get help through forums for common bugs and errors.

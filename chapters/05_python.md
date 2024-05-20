@@ -6,13 +6,15 @@ Then I found Geemap and Leafmap—incredible, user-friendly Python packages deve
 
 ## Getting Started
 
-See the 5.4 Resources for more information.
+To be honest, getting started using a Windows computer was a total pain in the ass. Additionally, it is much easier to set everything up using the Apple or Linux operating systems. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
+
+To get you up and running quickly, I've provided a cheat sheet in Appendix 1 that shortcuts the 414 videos and should have you running in an hour or less. Nevertheless, the videos will provide many tips and tricks I don't include in {doc}`/z_appendices/appendix1` you will find useful when learning and developing in your open source journey. In other words, it's worth taking the time to run through this slowly to get set up correctly.
 
 ## Sentinel-2 Data
 
-Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Open [colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
+Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Google Colab is an online notebook that lets you write and execute code. Its advantage is it is connected to your Google account, shareable, and performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
 
-```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line then clicking control or command plus backslash (/).
+```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).
 ```
 
 Install the dependencies:
@@ -65,7 +67,7 @@ The access and sharing of this code are another example of why free and open-sou
 Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a Python package environment developed by [Quisheng Wu](https://github.com/giswqs).
 
 ```{admonition} Getting Started
-Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
+Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, Miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
 ```
 
 Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a Jupyter notebook and add the following code block:
@@ -177,7 +179,7 @@ The tutorials and workshops are supported by notebooks and videos to thoroughly 
 5. Below history in the upper right of your browser, click on the download raw file button, save it, then click to open it in VS Code. 
 6. Alternatively, go straight to the workshop notebooks, such as the [FOSS4G Workshop](https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb).
 
-Before running the code cells, ensure you have Leafmap installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.
+Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.
 
 ## Resources
 
@@ -186,6 +188,6 @@ Before running the code cells, ensure you have Leafmap installed in your environ
 - [Open Geospatial Solutions](https://github.com/opengeos) hosts many open-source geospatial software projects and datasets.
 [Spatial Thoughts](https://spatialthoughts.com), run by Ujaval Gandhi, offers a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site also offers many other free and paid courses and tutorials for geospatial analysis.
 - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
-- [RiverREM](https://github.com/OpenTopography/RiverREM). Super cool python package for automatically generating river relative elevation model (REM).
-[lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python lilbrary for fast geospatial vector data visualization.
-[Python for Ecologist](https://datacarpentry.org/python-ecology-lesson/#required-packages-miniconda). Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.
+- [RiverREM](https://github.com/OpenTopography/RiverREM). A super cool Python package for automatically generating river relative elevation model (REM).
+[lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
+[Python for Ecologist](https://datacarpentry.org/python-ecology-lesson/#required-packages-miniconda). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.
