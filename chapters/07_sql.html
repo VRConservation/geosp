@@ -58,7 +58,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07_sql';</script>
-    <link rel="canonical" href="vrconservation.github.io/geosp/chapters/07_sql.html" />
+    <link rel="canonical" href="https://3point.xyz/geosp-bib/chapters/07_sql.html" />
     <link rel="icon" href="../_static/cover.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -189,6 +189,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../z_appendices/appendix1.html">Appendix 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -244,7 +245,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/chapters/07_sql.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp-bib/master?urlpath=tree/chapters/07_sql.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +263,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/chapters/07_sql.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp-bib/blob/master/chapters/07_sql.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +311,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/edit/main/chapters/07_sql.ipynb" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/edit/main/chapters/07_sql.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +328,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/issues/new?title=Issue%20on%20page%20%2Fchapters/07_sql.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/issues/new?title=Issue%20on%20page%20%2Fchapters/07_sql.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,25 +427,25 @@ document.write(`
 <p>The language you must learn for geospatial analysis!</p>
 <section id="new">
 <h2><span class="section-number">6.1. </span>New<a class="headerlink" href="#new" title="Link to this heading">#</a></h2>
-<p>I have to admit I’m very new to using SQL for geospatial analysis, but am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL really is the universal database management language, so, geospatial aside, if you work with data, you need to learn how to use it.</p>
+<p>I have to admit I’m very new to using SQL for geospatial analysis but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL really is the universal database management language, so geospatial aside, if you work with data, you need to learn how to use it.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Any time you perform a definition query in ArcGIS Pro or a data query in QGIS, SQL is running in the background. In fact, if you use ArcGIS Pro, open it up, double click on a layer, open the def query function and note that there’s a little switch to conver the GUI to SQL. Create a query then switch it to SQL to see the translation.</p>
+<p>When you perform a definition query in ArcGIS Pro or a data query in QGIS, SQL runs in the background. In fact, if you use ArcGIS Pro, open it up, double-click on a layer, open the def query function, and note that there’s a little switch to convert the GUI to SQL. Create a query, then switch it to SQL to see the translation.</p>
 </div>
 <p>Add photo of a def query before and after in Arc (with and w/o SQL)</p>
 </section>
 <section id="duckdb">
 <h2><span class="section-number">6.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
-<p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.</p>
-<p>A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a> that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.</p>
+<p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.</p>
+<p>A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a>, which has superb tutorials on Python, Earth Engine, DuckDB, and PostGIS.</p>
 </section>
 <section id="installation">
 <h2><span class="section-number">6.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p>Installation is straightforward: follow the instruction for command line or Python at the DuckDB installation <a class="reference external" href="http://gg.gg/1at9tp">page</a>.</p>
+<p>Installation is straightforward: follow the instructions for the command line or Python at the DuckDB installation <a class="reference external" href="http://gg.gg/1at9tp">page</a>.</p>
 </section>
 <section id="wood-processing">
 <h2><span class="section-number">6.4. </span>Wood processing<a class="headerlink" href="#wood-processing" title="Link to this heading">#</a></h2>
-<p>Let’s move to an example from University of California’s Woody Biomass Utilization Group’s Biomass Power Plant <a class="reference external" href="http://gg.gg/1as7ti">Database</a>. First import the dependencies.</p>
+<p>Let’s move to an example from the University of California’s Woody Biomass Utilization Group’s Biomass Power Plant <a class="reference external" href="http://gg.gg/1as7ti">Database</a>. First, import the dependencies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import dependencies</span>
@@ -455,7 +456,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Then connect to the duckdb database and install httpfs and spatial extensions.</p>
+<p>Then, connect to the duckdb database and install httpfs and spatial extensions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connect database install httpfs, spatial</span>
@@ -468,7 +469,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Read the sawmill .shp file and create sawmill table.</p>
+<p>Read the sawmill .shp file and create the sawmill table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create sawmill table from shp file and show</span>
@@ -486,7 +487,7 @@ document.write(`
 <p>Duckdb sql can be run in the command line and through Python as we are doing here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.</p>
 </div>
 <p><img alt="sawmill-all" src="https://i.imgur.com/ptLCP0F.png" /></p>
-<p>View the sawmill table schema then sum # sawmills by county</p>
+<p>View the sawmill table schema, then sum # sawmills by county</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View sawmill table schema</span>
@@ -512,7 +513,7 @@ document.write(`
 </div>
 </div>
 <p><img alt="sawmill-county" src="https://i.imgur.com/GeX2mE6.png" /></p>
-<p>Import the biomass database then create the biomass table and show</p>
+<p>Import the biomass database, then create the biomass table and show</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Biomass dataset</span>
@@ -523,7 +524,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from shp file and show</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from the shp file and show</span>
 <span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
 <span class="s1">    SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)</span>
@@ -533,7 +534,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>View the biomass table schema then sum the total megawatts of the plants by county, rounding the total to 1 decimal.</p>
+<p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to 1 decimal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View biomass table schema</span>
@@ -570,28 +571,19 @@ document.write(`
 <section id="resources">
 <h2><span class="section-number">6.7. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.</p></li>
-<li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.</p></li>
+<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a definitive and recommended way to start with DuckDB.</p></li>
+<li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text), everything is in the book that you will need to become a spatial SQL expert.</p></li>
 <li><p><strong><a class="reference external" href="https://twitter.com/spatialthoughts/status/1774833044396081189">SQL-QGIS Tip</a></strong>. You can use the ‘Execute SQL’ processing algorithm to run SQL queries on ANY vector layer within QGIS. Here’s an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.</p></li>
-<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and gis blog that features several tutorial running the DuckDB spatial extension.</p></li>
+<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.</p></li>
 </ul>
 <p><a class="reference external" href="https://github.com/developmentseed/lonboard">lonboard</a></p>
 <p><a class="reference external" href="https://docs.overturemaps.org/">overture map data</a> is mostly buildings and infrastructure</p>
 <p><a class="reference external" href="https://docs.overturemaps.org/examples/kepler-gl/">query data and load to kepler.gl</a> using duckdb</p>
 <p><a class="reference external" href="https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45">examples page</a> has more with duck</p>
 <p><a class="reference external" href="https://github.com/opengeos/geospatial-data-catalogs">open geospatial</a> datasets
-use the cleaned LEWO sets and upload to a github page</p>
-<p>youtube course from freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
+use the cleaned LEWO sets and upload them to a GitHub page</p>
+<p>youtube course from Freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=ljzpm3Mrw-I">analyze millions of points</a> has nice duckdb analysis using h3 and connecting code to cli</p>
-<p>Use a dataset from <a class="reference external" href="http://movebank.org">movebank.org</a>? Barnacle geese in downloads
-kaggle dataset
-methane emissions dataset
-FRAP wildfire database
-WCMC PA database. csv in downloads
-PADDD database if able to download</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </section>
 </section>
 

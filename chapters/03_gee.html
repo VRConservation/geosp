@@ -58,7 +58,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/03_gee';</script>
-    <link rel="canonical" href="vrconservation.github.io/geosp/chapters/03_gee.html" />
+    <link rel="canonical" href="https://3point.xyz/geosp-bib/chapters/03_gee.html" />
     <link rel="icon" href="../_static/cover.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -189,6 +189,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../z_appendices/appendix1.html">Appendix 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -244,7 +245,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/chapters/03_gee.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp-bib/master?urlpath=tree/chapters/03_gee.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +263,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/chapters/03_gee.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp-bib/blob/master/chapters/03_gee.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +311,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/edit/main/chapters/03_gee.ipynb" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/edit/main/chapters/03_gee.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +328,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/issues/new?title=Issue%20on%20page%20%2Fchapters/03_gee.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/issues/new?title=Issue%20on%20page%20%2Fchapters/03_gee.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -433,8 +434,8 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </section>
 <section id="scenario">
 <h2><span class="section-number">2.2. </span>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h2>
-<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are, and ask the GIS guy. He peers up above his array of screens, says he’s busy working on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.</p>
-<p>Yes! You’ve heard of this, and you think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language.</p>
+<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are and ask the GIS guy. He peers up above his array of screens and says he’s busy working on a dozen other projects; he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.</p>
+<p>Yes! You’ve heard of this and think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language.</p>
 </section>
 <section id="diy">
 <h2><span class="section-number">2.3. </span>DIY<a class="headerlink" href="#diy" title="Link to this heading">#</a></h2>
@@ -461,11 +462,11 @@ Map.addLayer(dataset, visualization, &quot;Aboveground biomass carbon&quot;);
 </div>
 </div>
 </div>
-<p>Clicking run will gives you a basic map of aboveground biomass:</p>
+<p>Clicking run will give you a basic map of aboveground biomass:</p>
 <p><img alt="" src="https://i.imgur.com/m7dOCRr.png" /></p>
 <p>You can zoom in or out and click the layer on or off. Selecting the inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:</p>
 <p><img alt="" src="https://i.imgur.com/LZcLWWh.png" /></p>
-<p>In this case the Mosaic image has 4 bands related to above and belowground carbon, the latitude, longitude of a point clicked is (-68.16, 1.83) and the pixel size is 10km. Add in the belowground (bgb) carbon with</p>
+<p>In this case, the Mosaic image has 4 bands related to above and belowground carbon, the latitude and longitude of a point clicked is (-68.16, 1.83), and the pixel size is 10km. Add in the belowground (bgb) carbon with</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var vis_b = {
@@ -487,7 +488,7 @@ Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 </div>
 </div>
 </div>
-<p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does and standard coding practice (the double back slash allows you to add a comment that does not run when the code executes and is equivalent to the hash tag for python). You can comment out any line of code by clicking on the line and typing control/command enter on your keyboard. Reorganization will give you the following code and image:</p>
+<p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does and standard coding practice (the double back slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python). You can comment out any line of code by clicking on the line and typing control/command enter on your keyboard. A reorganization will give you the following code and image:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Add global carbon density map
@@ -528,12 +529,12 @@ Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 </section>
 <section id="aoi-clip">
 <h2><span class="section-number">2.4. </span>AOI Clip<a class="headerlink" href="#aoi-clip" title="Link to this heading">#</a></h2>
-<p>Getting back to the original request: clip the dataset to an area of interest, in this case around Lake Tahoe. You can clip the map to existing datasets such as Tiger Lines for states or by country. Clipping by specific shape files requires you to upload the vector as a shape file into Earth Engine. This is fiddly and not as easy as dragging/dropping into Arc or QGIS or online resources such as Felt or Earth Blox. We’ll keep this to a simple box.</p>
+<p>Getting back to the original request: clip the dataset to an area of interest, in this case around Lake Tahoe. You can clip the map to existing datasets such as Tiger Lines for states or by country. Clipping by specific shape files requires you to upload the vector as a shape file into Earth Engine. This is fiddly and not as easy as dragging/dropping into Arc, QGIS, or online software such as Felt or Earth Blox. We’ll keep this to a simple box.</p>
 <p>Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe:</p>
 <p><img alt="" src="https://i.imgur.com/wqAZ3bC.png" /></p>
-<p>Enter a search in the box at the top of Earth Engine such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and draft a square in the area</p>
+<p>Enter a search in the box at the top of Earth Engine, such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and draft a square in the area</p>
 <p><img alt="" src="https://i.imgur.com/Il9YmB4.png" /></p>
-<p>This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it ‘bbox’ (double-click geometry, type in bbox and hit enter), but you can use the name geometry, remember to change the name from the code offered below from bbox to geometry. Under the dataset variable change the code to the ImageCollection as follows:</p>
+<p>This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it ‘bbox’ (double-click geometry, type in bbox, and hit enter), but you can use the name geometry, remember to change the name from the code offered below from bbox to geometry. Under the dataset variable, change the code to the ImageCollection as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Add global carbon density map
@@ -555,38 +556,40 @@ Map.setCenter(-120.2348, 38.8744, 9);
 </div>
 </div>
 </div>
-<p>Alternatively, change the line to Map.centerObject(bbox, 9) for more memorable way to center. In the map pane, hover over Geometry Imports, and unclick bbox. Run the code again to get</p>
+<p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again to get</p>
 <p><img alt="" src="https://i.imgur.com/u320Y7K.png" /></p>
-<p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com/">Snazzy Maps</a>, selecting a basemap you like and copying the javascript can make your work easier. In Snazzy we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but don’t be scared, just paste it below everything and add a couple of code lines as follows</p>
+<p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com/">Snazzy Maps</a>, selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there’s an easier way using the <a class="reference external" href="https://github.com/aazuspan/snazzy">snazzy</a> Github respository that reduces the lines of code to 2 using the url for the snazzy basemap subtle grayscale (or choose whichever one you like):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Change basemap to snazzymaps.com subtle gray
-var gray = [&quot;paste in the lines of javascript code from Snazzy&quot;];
-Map.setOptions(&quot;Gray&quot;, { gray: gray });
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Change basemap to snazzy subtle grayscale
+var snazzy = require(&quot;users/aazuspan/snazzy:styles&quot;);
+snazzy.addStyle(&quot;https://snazzymaps.com/style/15/subtle-grayscale&quot;, &quot;Gray&quot;);
 </pre></div>
 </div>
 </div>
 </div>
-<p>Once you hit, enter you will have ‘gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other defaults you can add without a lot of code and can be found <a class="reference external" href="https://developers.google.com/earth-engine/tutorials/community/customizing-base-map-styles">here</a>. Here is what the basemap bar in the upper right of the map pane looks like after adding the gray basemap:</p>
+<p>Once you hit enter, you will have ‘Gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other defaults you can add without much code and can be found <a class="reference external" href="http://gg.gg/1ats42">here</a>. Here is what the basemap bar in the upper right of the map pane looks like after adding the gray basemap:</p>
 <p><img alt="" src="https://i.imgur.com/X16YsFz.png" /></p>
-<p>All together the map now looks like the following (with the belowground layer turned off):</p>
+<p>Altogether, the map now looks like the following (with the belowground layer turned off):</p>
 <p><img alt="" src="https://i.imgur.com/uoXwumv.png" /></p>
 <p>The full code is <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>. Congratulations, you’ve made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.</p>
 </section>
 <section id="geospatial-eda">
 <h2><span class="section-number">2.5. </span>Geospatial EDA<a class="headerlink" href="#geospatial-eda" title="Link to this heading">#</a></h2>
-<p>This type of exploratory data analysis (EDA) is extraordinarily useful to quickly look at large datasets of multiple types of biotic and abiotic data that the Earth Engine Catalog offers. You can search for any set in the catalog, click on sample and get an instantaneous view of the data. In reality, this is almost akin to no-code. It also computes and adds any layer in the cloud, so it doesn’t matter how old or slow your computer is, you can run the geospatial computations in the cloud. This is a tremendous advantage, especially for more complex analyses.</p>
-<p>For the map we just made, you would likely want to add some additional functionality such as a legend showing carbon levels for each raster dataset and a graph with the range of carbon levels for the bounding box area.</p>
+<p>This type of exploratory data analysis (EDA) is extraordinarily useful to quickly look at large datasets of multiple types of biotic and abiotic data that the Earth Engine Catalog offers. You can search for any set in the catalog, click on sample, and get an instantaneous data view. In reality, this is almost akin to no code. It also computes and adds any layer in the cloud, so it doesn’t matter how old or slow your computer is; you can run the geospatial computations in the cloud. This is a tremendous advantage, especially for more complex analyses.</p>
+<p>For the map we just made, you would likely want to add functionality such as a legend showing carbon levels for each raster dataset and a graph with the range of carbon levels for the bounding box area.</p>
 </section>
 <section id="resources">
 <h2><span class="section-number">2.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
-<p>There are many resources for getting started to advanced use of Google Earth Engine:</p>
+<p>There are many resources from getting started to the advanced use of Google Earth Engine:</p>
 <ul class="simple">
-<li><p><strong>Spatial Thoughts, Ujaval Gandhi</strong>. <a class="reference external" href="https://courses.spatialthoughts.com/end-to-end-gee.html">End-to-End Google Earth Engine</a> provides full course materials starts with setting up the Earth Engine environment and moves into more advanced topics such machine learning and change detection.</p></li>
+<li><p><strong>Spatial Thoughts, Ujaval Gandhi</strong>. <a class="reference external" href="https://courses.spatialthoughts.com/end-to-end-gee.html">End-to-End Google Earth Engine</a> provides full course materials that start with setting up the Earth Engine environment and move into more advanced topics such as machine learning and change detection.</p></li>
 <li><p><strong>Remote Sensing with GEE</strong>. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine <a class="reference external" href="https://www.eefabook.org/">book</a> by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex using Earth Engine.</p></li>
-<li><p><strong>Awesome-GEE</strong>. An incredible curated list of GEE resources can be found in at the opengeos <a class="reference external" href="https://github.com/opengeos/Awesome-GEE">Awesome-GEE</a> github repo. This incredible resource has everything from getting started to courses, papers, datasets, and much more. You could lose yourself for days in here!</p></li>
-<li><p><strong>GEE Google Group</strong>. For answers to many other questions the Google Earth Engine Developers <a class="reference external" href="https://groups.google.com/g/google-earth-engine-developers">listserv</a> is quite useful.</p></li>
+<li><p><strong>Awesome-GEE</strong>. The Opengeos <a class="reference external" href="https://github.com/opengeos/Awesome-GEE">Awesome-GEE</a> Github repo is an incredible curated list of GEE resources. This incredible resource has everything from getting started to courses, papers, datasets, and more. You could lose yourself for days in here!
+— <strong>GEE Google Group</strong>. The Google Earth Engine Developers <a class="reference external" href="https://groups.google.com/g/google-earth-engine-developers">listserv</a> is quite useful for answering many other questions.</p></li>
 <li><p><strong>Awesome-GEE-Community-Catalog</strong>. Not to be confused with Awesome-GEE is the equally awesome ‘treasure-trove’ of datasets at <a class="reference external" href="https://gee-community-catalog.org/">awesome-gee-community-catalog</a>.</p></li>
+<li><p><strong>Visualization and Analysis of Brazil Floods 2024</strong>. There is an excellent workflow design along with superb explanations of remote sensing theory and concepts in this <a class="reference external" href="https://share.gishub.org/brazil_floods/#create-sentinel-1-sar-composites">tutorial</a>. In addition, the tutorial contains very useful text and code to analyzing synthetic aperature radar (SAR) imagery.
+– <strong>RiverREM Python Package</strong>. Available <a class="reference external" href="https://github.com/OpenTopography/RiverREM">here</a>. Autpomates riverrelative elevation model (REM) visualizations from DEM model input.</p></li>
 </ul>
 </section>
 </section>

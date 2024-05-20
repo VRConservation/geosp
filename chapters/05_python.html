@@ -58,7 +58,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05_python';</script>
-    <link rel="canonical" href="vrconservation.github.io/geosp/chapters/05_python.html" />
+    <link rel="canonical" href="https://3point.xyz/geosp-bib/chapters/05_python.html" />
     <link rel="icon" href="../_static/cover.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -189,6 +189,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../z_appendices/appendix1.html">Appendix 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -244,7 +245,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=tree/chapters/05_python.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp-bib/master?urlpath=tree/chapters/05_python.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +263,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/chapters/05_python.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp-bib/blob/master/chapters/05_python.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +311,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/edit/main/chapters/05_python.ipynb" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/edit/main/chapters/05_python.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +328,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/issues/new?title=Issue%20on%20page%20%2Fchapters/05_python.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/issues/new?title=Issue%20on%20page%20%2Fchapters/05_python.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,14 +426,15 @@ document.write(`
 <p>Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at <a class="reference external" href="http://leafmap.org">leafmap.org</a> and <a class="reference external" href="http://geemap.org">geemap.org</a> and videos at <a class="reference external" href="https://www.youtube.com/&#64;giswqs">Open Geospatial Solutions</a>. Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.</p>
 <section id="getting-started">
 <h2><span class="section-number">4.1. </span>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
-<p>See the 5.4 Resources for more information.</p>
+<p>To be honest, getting started using a Windows computer was a total pain in the ass. Additionally, it is much easier to set everything up using the Apple or Linux operating systems. It will take a few hours from scratch, but a great resource is at the <a class="reference external" href="http://gg.gg/1ats9t">Geog-414</a> course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn’t work well on my machine with Windows 11, but everything worked with Anaconda.</p>
+<p>To get you up and running quickly, I’ve provided a cheat sheet in Appendix 1 that shortcuts the 414 videos and should have you running in an hour or less. Nevertheless, the videos will provide many tips and tricks I don’t include in <a class="reference internal" href="../z_appendices/appendix1.html"><span class="doc">Appendix 1</span></a> you will find useful when learning and developing in your open source journey. In other words, it’s worth taking the time to run through this slowly to get set up correctly.</p>
 </section>
 <section id="sentinel-2-data">
 <h2><span class="section-number">4.2. </span>Sentinel-2 Data<a class="headerlink" href="#sentinel-2-data" title="Link to this heading">#</a></h2>
-<p>Let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith. Open <a class="reference external" href="https://colab.research.google.com/">colab</a> and click the blue ‘New notebook’ button.</p>
+<p>Let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith. Google Colab is an online notebook that lets you write and execute code. Its advantage is it is connected to your Google account, shareable, and performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you’ve installed or executed is gone, although the code is saved. It’s great for quickly testing out code blocks. Open <a class="reference external" href="https://colab.research.google.com/">Colab</a> and click the blue ‘New notebook’ button.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line then clicking control or command plus backslash (/).</p>
+<p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).</p>
 </div>
 <p>Install the dependencies:</p>
 <div class="cell docutils container">
@@ -495,7 +497,7 @@ data[[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]].isel(time=2).to_arr
 <p>Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a Python package environment developed by <a class="reference external" href="https://github.com/giswqs">Quisheng Wu</a>.</p>
 <div class="admonition-getting-started admonition">
 <p class="admonition-title">Getting Started</p>
-<p>Watch this <a class="reference external" href="https://www.youtube.com/watch?v=gyQ6wBqYGks&amp;amp;list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&amp;amp;index=3">installation video</a> followed by this <a class="reference external" href="https://www.youtube.com/watch?v=gyQ6wBqYGks&amp;amp;list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&amp;amp;index=3">vs code and github</a> video. If you already have an IDE, miniconda, and virtual env’s installed, go to the Geemap <a class="reference external" href="https://geemap.org/installation/">installation</a> page.</p>
+<p>Watch this <a class="reference external" href="https://www.youtube.com/watch?v=gyQ6wBqYGks&amp;amp;list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&amp;amp;index=3">installation video</a> followed by this <a class="reference external" href="https://www.youtube.com/watch?v=gyQ6wBqYGks&amp;amp;list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&amp;amp;index=3">vs code and github</a> video. If you already have an IDE, Miniconda, and virtual env’s installed, go to the Geemap <a class="reference external" href="https://geemap.org/installation/">installation</a> page.</p>
 </div>
 <p>Let’s look at how to visualize the same map from Chapter 2 using Geemap. Open a Jupyter notebook and add the following code block:</p>
 <div class="cell docutils container">
@@ -616,7 +618,7 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 <li><p>Below history in the upper right of your browser, click on the download raw file button, save it, then click to open it in VS Code.</p></li>
 <li><p>Alternatively, go straight to the workshop notebooks, such as the <a class="reference external" href="https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb">FOSS4G Workshop</a>.</p></li>
 </ol>
-<p>Before running the code cells, ensure you have Leafmap installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.</p>
+<p>Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.</p>
 </section>
 <section id="resources">
 <h2><span class="section-number">4.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
@@ -626,9 +628,9 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 <li><p><a class="reference external" href="https://github.com/opengeos">Open Geospatial Solutions</a> hosts many open-source geospatial software projects and datasets.
 <a class="reference external" href="https://spatialthoughts.com">Spatial Thoughts</a>, run by Ujaval Gandhi, offers a free course called <a class="reference external" href="https://courses.spatialthoughts.com/python-foundation.html">Python Foundation for Spatial Analysis</a>. The site also offers many other free and paid courses and tutorials for geospatial analysis.</p></li>
 <li><p><a class="reference external" href="https://py.geocompx.org/">Geocomputation with Python</a> is an open source book inspired by the FOSS4G movement.</p></li>
-<li><p><a class="reference external" href="https://github.com/OpenTopography/RiverREM">RiverREM</a>. Super cool python package for automatically generating river relative elevation model (REM).
-<a class="reference external" href="https://developmentseed.org/blog/2023-10-23-lonboard">lonboard</a>. Python lilbrary for fast geospatial vector data visualization.
-<a class="reference external" href="https://datacarpentry.org/python-ecology-lesson/#required-packages-miniconda">Python for Ecologist</a>. <a class="reference external" href="http://Datacarpentry.org">Datacarpentry.org</a> tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.</p></li>
+<li><p><a class="reference external" href="https://github.com/OpenTopography/RiverREM">RiverREM</a>. A super cool Python package for automatically generating river relative elevation model (REM).
+<a class="reference external" href="https://developmentseed.org/blog/2023-10-23-lonboard">lonboard</a>. Python library for fast geospatial vector data visualization.
+<a class="reference external" href="https://datacarpentry.org/python-ecology-lesson/#required-packages-miniconda">Python for Ecologist</a>. The <a class="reference external" href="http://Datacarpentry.org">Datacarpentry.org</a> tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.</p></li>
 </ul>
 </section>
 </section>
