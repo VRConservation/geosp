@@ -10,4 +10,6 @@ Using generative AI to generate geemap code within jupyter lab: https://www.yout
 
 ## Resources
 - [Autonomoulks GIS](https://github.com/gladcolor/LLM-Geo) repo
-- [Clay Foundation Model](https://clay-foundation.github.io/model/index.html). Only works on linux devices with CUDA GPUs? -->
+- [Clay Foundation Model](https://clay-foundation.github.io/model/index.html). Only works on linux devices with CUDA GPUs? 
+- [human brain edge over ai article](https://www.linkedin.com/pulse/where-human-brain-still-has-edge-over-ai-fast-company-j2jpe/)
+-->
