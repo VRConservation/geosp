@@ -21,5 +21,7 @@ parts:
   - caption: Appendices
     chapters:
       - file: z_appendices/appendix1
+      - file: z_appendices/appendix2
+      - file: z_appendices/appendix3
       - file: chapters/bibliography
       - file: chapters/issues
