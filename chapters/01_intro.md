@@ -44,7 +44,7 @@ The book will contain (some chapters are still in draft) the following chapters:
 
 ## Github, Colab & Binder
 
-The entire book is stored on a Github repository accessible by clicking the Github logo at the top right. Each chapter is also available in Binder and Colab to make running the code easier if you do not have your own integrated development environment (IDE), such as Visual Studio Code set up. I recommend that you set up VS Code to run software; guidance for how to do so will be provided in the Appendix.
+The entire book is stored on a Github repository accessible by clicking the Github logo at the top right. Each chapter is also available in Binder and Colab to make running the code easier if you do not have your own integrated development environment (IDE), such as Visual Studio Code set up. I recommend that you set up VS Code to run software; guidance for how to do can be found in the Appendices.
 
 ## jupyter{book}
 
