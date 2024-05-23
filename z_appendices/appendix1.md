@@ -71,4 +71,4 @@ mamba install -c conda-forge geospatial
 conda remove -n geo --all
 ```
 
-And it's gone. Use `conda env list` to make sure it's no longer an environment. 
+And it's gone! Use `conda env list` to make sure it's no longer an environment. 

@@ -124,8 +124,10 @@ con.sql('''
 ## Large datasets
 An advantage of DuckDB is its speed processing large datasets
 
-## Geospatial datasets
+Examples soon!
 
+## Geospatial datasets
+Examples soon!
 
 ## Resources
 

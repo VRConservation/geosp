@@ -6,7 +6,7 @@
 
 ## Github
 1. Clone a repository. Copy the url in the green <> Code button from repo. 
-2. Right click where you want folder, open in terminal and type the following
+2. Right click where you want folder, open in terminal and type the following `git push` 
 
 ```
 git clone htpps://repo-url
