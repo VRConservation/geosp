@@ -134,6 +134,8 @@ An advantage of DuckDB is its speed processing large datasets
 - **[SQL-QGIS Tip](https://twitter.com/spatialthoughts/status/1774833044396081189)**. You can use the 'Execute SQL' processing algorithm to run SQL queries on ANY vector layer within QGIS. Here's an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.
 - **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
 
+<!-- 
+## Notes
 [lonboard](https://github.com/developmentseed/lonboard)
 
 [overture map data](https://docs.overturemaps.org/) is mostly buildings and infrastructure
@@ -147,4 +149,4 @@ use the cleaned LEWO sets and upload them to a GitHub page
 
 youtube course from Freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
 
-[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli
+[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli -->
