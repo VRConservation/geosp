@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Appendix 1 &#8212; FOSS Resources</title>
+    <title>Appendix 1: Virtual Environment &#8212; FOSS Resources</title>
   
   
   
@@ -62,7 +62,7 @@
     <link rel="icon" href="../_static/cover.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Bibliography" href="../chapters/bibliography.html" />
+    <link rel="next" title="Appendix 2: Visual Studio Code" href="appendix2.html" />
     <link rel="prev" title="9. Future" href="../chapters/10_future.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,7 +189,9 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Appendix 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Appendix 1: Virtual Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix2.html">Appendix 2: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix3.html">Appendix 3: Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -442,7 +444,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Appendix 1</h1>
+    <h1>Appendix 1: Virtual Environment</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -453,8 +455,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Github</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">Anaconda</a></li>
 </ul>
             </nav>
         </div>
@@ -466,17 +466,69 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="appendix-1">
-<h1>Appendix 1<a class="headerlink" href="#appendix-1" title="Link to this heading">#</a></h1>
-<p>Getting started with Visual Studio Code, Github, Anaconda: Your systems started right!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="appendix-1-virtual-environment">
+<h1>Appendix 1: Virtual Environment<a class="headerlink" href="#appendix-1-virtual-environment" title="Link to this heading">#</a></h1>
+<p>Set up a virtual environment using conda.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-</section>
-<section id="github">
-<h2>Github<a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
-</section>
-<section id="anaconda">
-<h2>Anaconda<a class="headerlink" href="#anaconda" title="Link to this heading">#</a></h2>
+<p>Installation instructions are for a PC, but Mac and Linux are similar but probably much easier than windows.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="http://gg.gg/1av3h1">Install</a> conda by downloading miniconda or anaconda for your os. The documentation provides an overview of which package will work for you. I installed anaconda after miniconda would not work on my machine. I suggest trying miniconda first but install the full anaconda if miniconda doesn’t work. If you hate the command line, anaconda is a better option since the anaconda navigator allows you to install environments using the interface without command lines. But then you miss out on reliving computer use in the 70s or 80s when don’t go to the command prompt.</p></li>
+<li><p>Open the conda command prompt by clicking the windows button and typing anaconda or miniconda then selecting the prompt. You should see the following</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourusername</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If you don’t see this in the command prompt (also known as command line interface or CLI), try going to your Users\username file right clicking in the file and selecting ‘open in terminal’ and follow the instructions below. If the windows powershell gives you an error or conda won’t work see the <a class="reference external" href="http://gg.gg/1av2oy">Setting UP Powershell for VS Code</a> video to fix the issue.</p>
+<p>Note that you hit enter after typing or pasting every command into the terminal.</p>
+<ol class="arabic simple" start="3">
+<li><p>Create a conda environment. It’s preferable to create a new environment for each project or set of tasks you complete to avoid conflicts between packages. We’ll call this one ‘geo’ but name it whatever you like, making sure to use a short 3-4 letter abbreviation or name.</p></li>
+</ol>
+<p>When the terminal says <code class="docutils literal notranslate"><span class="pre">Proceed</span> <span class="pre">([y]/n)?</span></code> hit enter or type y and enter to create the environment. When finished you’ll get a message about activate or deactivate the env using the command line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>Note this will install the latest version of Python on your computer. Sometimes that can create incompatibilities with the software packages you install since they may not be synced with this version of Python. It’s safer to specific the previous version of Python. In other words if the latest release is 3.13, install 3.12. to do this alter your environment creation commands to the latest version minus 0.01, in this case 3.12 if the latest is 3.13.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.12</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Do not install packages into your base environmen!</strong>. Although it’s tempting to not install packages into your base don’t do it. Python packages are prone to incompatibilities. Creating virtual environments mitigates dependency management issues and keeps your projects separate and allows you to diagnose problems separately when they arise.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Activate the new environment.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">geo</span>
+</pre></div>
+</div>
+<p>The command line will change to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">geo</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourusername</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You can also check the environment is active by entering <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code>. You should see an asterisk next to the environment you installed and a pathway on the drive to that environment. If you activate base the asterisk will go to the base environment.</p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> will show the packages installed in the active environment. You should see python and the version installed. Use the command <code class="docutils literal notranslate"><span class="pre">cls</span></code> to clear the screen.</p>
+<ol class="arabic simple" start="6">
+<li><p>Install geemap. You can do this directly in conda, but it can be slow. Installing mamba speeds up this process. Mamba is a drop-in replacement for conda that is faster and better at resolving package dependencies:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">mamba</span>
+</pre></div>
+</div>
+<p>This will take a while but hit enter once it asks you to proceed. Once installed you can install geemap:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geemap</span>
+</pre></div>
+</div>
+<p>Alternatively you can install a suite of commonly used packages for geospatial analysis using <a class="reference external" href="https://geospatial.gishub.org/">geospatial</a>. This requires a substantial amount of memory but it will also mean you need to do one installation for nearly every package you need including leafmap, geemap, h3,whitebox, xarray and many others:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geospatial</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Remove an environment. Removing environments is as simple as one line. Say you no longer need geo:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+<p>And it’s gone! Use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code> to make sure it’s no longer an environment.</p>
 </section>
 </section>
 
@@ -520,11 +572,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../chapters/bibliography.html"
+       href="appendix2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Appendix 2: Visual Studio Code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -545,8 +597,6 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Github</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">Anaconda</a></li>
 </ul>
   </nav></div>
 
