@@ -2,8 +2,10 @@
 A powerful desktop GIS software infinitely customizable with plugins
 
 ## Takeaways
+Coming soon!
 
 ## Tutorial
+Coming soon!
 
 ## Resources
 - **[QGIS Training Manual](https://docs.qgis.org/3.34/en/docs/training_manual/index.html)**. A comprehensive resource for all use cases of QGIS plus contributed chapters and tutorials. Always a great place to search to find specific answers to problems you face or find a how to.
