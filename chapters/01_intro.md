@@ -1,16 +1,6 @@
 # Introduction
 
-Welcome to Free and Open Source Geospatial Tools. This book provides resources and examples of open source geospatial software and solutions. Please cite as
-
-Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org or Bibtex:
-
-@book{vrussell2024,
-	title		  = {Free and open source geospatial tools},
-	author		  = {Russell, Vance},
-	year		  = {2024},
-	publisher	  = {jupyterbook.org},
-	url 		  = {https://3point.xyz/geosp-bib}
-}
+Welcome to Free and Open Source Geospatial Tools. This book provides resources and examples of open source geospatial software and solutions. 
 
 ## Support
 
@@ -49,6 +39,23 @@ The entire book is stored on a Github repository accessible by clicking the Gith
 ## jupyter{book}
 
 This book was made using [Jupyter Books](https://jupyterbook.org/), a free and open source package that lets anyone build beautiful, publication-quality books and articles from computational content. Thank you, Jupyter Books, for this wonderful resource!
+
+## Citation
+Please cite as
+
+Russell, Vance. 2024. [Free and Open Source Geospatial Solutions](https://3point.xyz/geosp-bib). 3point Geospatial.
+
+or in Bibtex format:
+
+```
+@book{vrussell2024,
+  title		  = {Free and open source geospatial tools},
+  author	  = {Russell, Vance},
+  year		  = {2024},
+  publisher	  = {3point Geospatial},
+  url 		  = {https://3point.xyz/geosp-bib}
+}
+```
 
 ## Acknowledgements
 
