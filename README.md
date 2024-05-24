@@ -8,10 +8,12 @@ Welcome to Free and Open Source Geospatial Solutions. This book provides resourc
 
 Please cite as Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org. or with bibtex:
 
+```
 @book{vrussell2024,
 	title		  = {Free and open source geospatial tools},
-	author		= {Russell, Vance},
+	author		  = {Russell, Vance},
 	year		  = {2024},
-	publisher	= {jupyterbook.org},
+	publisher	  = {jupyterbook.org},
 	url 		  = {https://3point.xyz/geosp-bib}
 }
+```
