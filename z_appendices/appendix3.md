@@ -1,20 +1,82 @@
 # Appendix 3: Github
-Coming soon!
+Steps to installing Git, Github and connecting local to remote repos
 
-<!-- ## Install Git
-1. Set up a github account at [github](https://github.com/)
+## Create a new repository on GitHub
 
-## Github
+1. Go to GitHub and log in to your account.
+2. Click on the '+' icon in the upper right corner and select 'New repository'.
+3. Name your repository, add a description (optional), and choose to make the repository either public or private.
+4. You can initialize the repository with a README, .gitignore, or license if you want, but this is not necessary.
+5. Click 'Create repository'.
 
-1. Clone a repository. Copy the url in the green <> Code button from repo. 
-2. Right click where you want folder, open in terminal and type the following `git push` 
+## Connect the repository to a local directory
+
+1. Open the terminal on your computer.
+2. Navigate to the directory where you want to clone the repository using the cd command. For example, if you want to clone the repository to a directory named 'my_directory' on your C drive, you would use the command cd C:/my_directory. You can also navigate to the file location, right click in a blank space and select 'open in terminal'. Make sure to activate the correct env for the project.
+3. Clone the repository by running the command git clone https://github.com/username/repository.git, replacing 'username' with your GitHub username and 'repository' with the name of your repository. This will create a new directory in 'my_directory' with the same name as your repository, and this new directory will be linked to the repository on GitHub.
+4. Navigate into the new directory with the command cd repository, replacing 'repository' with the name of your repository.
+
+## Push changes to GitHub
+
+1. Make any changes you want in the new directory.
+2. Once you're done, you can add these changes to the staging area with the command git add ..
+3. Commit the changes with the command git commit -m "Your commit message", replacing 'Your commit message' with a brief description of the changes you made.
+4. Push the changes to GitHub with the command git push origin master.
+Please note that you need to have Git installed on your computer to use the git command. If you don't have Git installed, you can download it from the Git website.
+
+## Clone an existing repo
+1. Find the repository on GitHub
+    1. Go to GitHub and log in to your account.
+    2. Navigate to the repository you want to clone.
+    3. Copy the repository's URL
+
+2. Click on the 'Code' button near the top of the repository's page.
+    1. In the dropdown that appears, click the 'Copy' button to copy the repository's URL to your clipboard.
+    2. Clone the repository to your local machine
+
+3. Open the terminal on your computer.
+    1. Navigate to the directory where you want to clone the repository using the `cd` command. For example, if you want to clone the repository to a directory named 'my_directory' on your C drive, you would use the command `cd C:/my_directory`.
+    2. Clone the repository by running the command `git clone https://github.com/username/repository.git`, replacing 'https://github.com/username/repository.git' with the URL you copied in step 2. This will create a new directory in 'my_directory' with the same name as your repository, and this new directory will be linked to the repository on GitHub.
+
+## Clone a repo in VS Code
+1. Open VS Code
+2. Open the command palette by typing `Ctrl+Shift+P`
+3. Type `Git: Clone` and select it from the dropdown list
+4. Paste the repo URL want to clone and hit enter
+5. Choose the directory where you want to store the repo on your computer
+6. Click `Open` to open the repo in a new window or `Add to Workspace` to add it to the workspace you are working in.
+
+## Git init
+You nneed to initialize Git in each new project you want to version control. You do this by navigating to your project's directory in the terminal and running the command git init. This creates a new Git repository in the current directory.
+
+For example, if you have a project in a directory named 'my_project' on your C drive, you would initialize Git in this project with the following commands:
 
 ```
-git clone htpps://repo-url
+cd C:/my_project
+git init
 ```
-You can type control + v to paste the url after the command. You have to have Git installed on your computer to do this.
+After running these commands, you'll see a message saying "Initialized empty Git repository in C:/my_project/.git/". This means that Git has been initialized in the 'my_project' directory, and you can now use Git commands to track changes to your project.
 
-## VS Code
-1. In the lower left corner of VS Code above the settings icon, click on the accounts icon and sign into your Github account. This will open a browser and allow you to sign into Github online. Select open in VS Code and open.
-2. Or directly in VS code control + shift + p type clone and select clone github repo.
-3. Right click in the folder you just cloned and select open in Visual Studio Code -->
+## Push changes in VS Code
+To save your local changes in VS Code and 'push' them to your remote repo follow these steps:
+1. Edit your files and save the changes.
+2. Click on the Source Control icon in the Activity Bar on the side, or press `Ctrl + Shift + G` to open the Source Control panel.
+3. Click the '+' icon next to each file you want to stage, or click the '+' icon at the top to stage all changes.
+4. Enter a commit message in the text box at the top of the Source Control panel and press `Ctrl + Enter` to commit the changes.
+5. Click on the '...' icon at the top of the Source Control panel and select 'Push' from the dropdown menu.
+6. Select sync from the blue button.
+
+## Push changes using Git
+1. Make sure you're in the correct repo and env in your terminal. Use the `cd` command to change directories, e.g., `cd C:\my_project`
+2. Stage changes using the command `git add .` to stage all of the changes to the repo.
+3. Commit changes using the command `git commit -m 'your commmit message'. Make sure to change the commit message in quotes to briefly reflect what changes you made.
+4. Push the changes using `git push origin master` sending the changes to the master branch of the remote repo.
+
+This will look like the following where you enter each line and hit enter separately:
+
+```
+cd C:/my_project
+git add .
+git commit -m "Your commit message"
+git push origin master
+```
