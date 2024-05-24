@@ -490,18 +490,18 @@ document.write(`
 <h2>Connect the repository to a local directory<a class="headerlink" href="#connect-the-repository-to-a-local-directory" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Open the terminal on your computer.</p></li>
-<li><p>Navigate to the directory where you want to clone the repository using the cd command. For example, if you want to clone the repository to a directory named ‘my_directory’ on your C drive, you would use the command cd C:/my_directory. You can also navigate to the file location, right click in a blank space and select ‘open in terminal’. Make sure to activate the correct env for the project.</p></li>
-<li><p>Clone the repository by running the command git clone <a class="github reference external" href="https://github.com/username/repository.git">username/repository.git</a>, replacing ‘username’ with your GitHub username and ‘repository’ with the name of your repository. This will create a new directory in ‘my_directory’ with the same name as your repository, and this new directory will be linked to the repository on GitHub.</p></li>
-<li><p>Navigate into the new directory with the command cd repository, replacing ‘repository’ with the name of your repository.</p></li>
+<li><p>Navigate to the directory where you want to clone the repository using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command. For example, if you want to clone the repository to a directory named ‘my_directory’ on your C drive, you would use the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:/my_directory</span></code>. You can also navigate to the file location, right click in a blank space and select ‘open in terminal’. Make sure to activate the correct env for the project.</p></li>
+<li><p>Clone the repository by running the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/username/repository.git</span></code>, replacing ‘username’ with your GitHub username and ‘repository’ with the name of your repository. This will create a new directory in ‘my_directory’ with the same name as your repository, and this new directory will be linked to the repository on GitHub.</p></li>
+<li><p>Navigate into the new directory with the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">repository</span></code>, replacing ‘repository’ with the name of your repository.</p></li>
 </ol>
 </section>
 <section id="push-changes-to-github">
 <h2>Push changes to GitHub<a class="headerlink" href="#push-changes-to-github" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Make any changes you want in the new directory.</p></li>
-<li><p>Once you’re done, you can add these changes to the staging area with the command git add ..</p></li>
-<li><p>Commit the changes with the command git commit -m “Your commit message”, replacing ‘Your commit message’ with a brief description of the changes you made.</p></li>
-<li><p>Push the changes to GitHub with the command git push origin master.
+<li><p>Once you’re done, you can add these changes to the staging area with the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code>.</p></li>
+<li><p>Commit the changes with the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Your</span> <span class="pre">commit</span> <span class="pre">message&quot;</span></code>, replacing ‘Your commit message’ with a brief description of the changes you made.</p></li>
+<li><p>Push the changes to GitHub with the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code>.
 Please note that you need to have Git installed on your computer to use the git command. If you don’t have Git installed, you can download it from the Git website.</p></li>
 </ol>
 </section>
@@ -512,19 +512,19 @@ Please note that you need to have Git installed on your computer to use the git 
 <ol class="arabic simple">
 <li><p>Go to GitHub and log in to your account.</p></li>
 <li><p>Navigate to the repository you want to clone.</p></li>
-<li><p>Copy the repository’s URL</p></li>
 </ol>
 </li>
-<li><p>Click on the ‘Code’ button near the top of the repository’s page.</p>
+<li><p>Copy github URL</p>
 <ol class="arabic simple">
-<li><p>In the dropdown that appears, click the ‘Copy’ button to copy the repository’s URL to your clipboard.</p></li>
-<li><p>Clone the repository to your local machine</p></li>
+<li><p>In the repo click on the ‘green <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span> <span class="pre">Code</span></code> button near the top of the repository’s page.</p></li>
+<li><p>In the dropdown that appears, click copy the repository’s URL to your clipboard.</p></li>
 </ol>
 </li>
 <li><p>Open the terminal on your computer.</p>
 <ol class="arabic simple">
-<li><p>Navigate to the directory where you want to clone the repository using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command. For example, if you want to clone the repository to a directory named ‘my_directory’ on your C drive, you would use the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:/my_directory</span></code>.</p></li>
-<li><p>Clone the repository by running the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/username/repository.git</span></code>, replacing ‘<a class="github reference external" href="https://github.com/username/repository.git">username/repository.git</a>’ with the URL you copied in step 2. This will create a new directory in ‘my_directory’ with the same name as your repository, and this new directory will be linked to the repository on GitHub.</p></li>
+<li><p>In a terminal navigate to the directory where you want to clone the repository using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command. For example, if you want to clone the repository to a directory named ‘my_directory’ on your C drive, you would use the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:/my_directory</span></code>.</p></li>
+<li><p>An easier way to the correct directory is to open the directory in your file explorer, right clock on a space in the directory and select open in terminal.</p></li>
+<li><p>Clone the repository by running the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/username/repository.git</span></code>, replacing ‘<a class="github reference external" href="https://github.com/username/repository.git">username/repository.git</a>’ with the URL you copied in step 1. This will create a new directory in ‘my_directory’ with the same name as your repository, and this new directory will be linked to the repository on GitHub.</p></li>
 </ol>
 </li>
 </ol>
@@ -564,6 +564,7 @@ Please note that you need to have Git installed on your computer to use the git 
 </section>
 <section id="push-changes-using-git">
 <h2>Push changes using Git<a class="headerlink" href="#push-changes-using-git" title="Link to this heading">#</a></h2>
+<p>Or you can push changes in the terminal using Git:</p>
 <ol class="arabic simple">
 <li><p>Make sure you’re in the correct repo and env in your terminal. Use the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command to change directories, e.g., <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\my_project</span></code></p></li>
 <li><p>Stage changes using the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> to stage all of the changes to the repo.</p></li>
