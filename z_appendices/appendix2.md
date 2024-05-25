@@ -1,19 +1,19 @@
-# Appendix 2: Visual Studio Code
+# Visual Studio Code
 Get your integrated development environment set up to code like a pro
 
-## Visual Studio Code
+## Installation
 [Visual Studio Code](https://code.visualstudio.com/) is a powerful open source code editor. There are other integrated development environments (IDEs) out there such as Pycharm or Spyder (comes with Anaconda), so choose the one that's best for you. Note that if you only use R, RStudio comes with an integrated terminal and IDE so you can solely work within RStudio. If you use multiple languages, however, VS Code is fantastic, used by many (so makes tutorials and learning new packages or languages easier) and it has many plugins to make it easy to use.
 
 Visual Studio Code has great documentation and setup tutorials available, so we won't go into those here. Download VS Code for your OS and open it. On the left hand pane there is an icon with 4 squares for extensions. Click on that to open it and install and activate the following extensions (use the search box at the top of the extension pane to find each extension):
 
-1. autoDocstring
-2. Bracket Pair Color DLW
+1. Bracket Pair Color DLW
+2. autoDocstring
 3. Code Spell Checker
 4. CodeSnap
 5. GitHub Actions, GitHub Pull Requests, and GitHub Repositories
 6. GitLens
 7. Highligh Matching Tag
-8. indent-rainbos
+8. indent-rainbows
 9. Jupyter
 10. Prettier
 11. Python

@@ -1,4 +1,4 @@
-# Appendix 3: Github
+# Github
 Steps to installing Git, Github and connecting local to remote repos
 
 ## Create a new repository on GitHub

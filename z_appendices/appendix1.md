@@ -1,4 +1,4 @@
-# Appendix 1: Virtual Environment
+# Virtual Environment
 Set up a virtual environment using conda.
 
 ## Installation
