@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. SQL &#8212; FOSS Resources</title>
+    <title>6. QGIS &#8212; FOSS Resources</title>
   
   
   
@@ -57,13 +57,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06_sql';</script>
-    <link rel="canonical" href="https://3point.xyz/geosp-bib/chapters/06_sql.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/07_qgis';</script>
+    <link rel="canonical" href="https://3point.xyz/geosp-bib/chapters/07_qgis.html" />
     <link rel="icon" href="../_static/cover.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. QGIS" href="07_qgis.html" />
-    <link rel="prev" title="4. Python" href="05_python.html" />
+    <link rel="next" title="7. AI &amp; ML" href="08_aiml.html" />
+    <link rel="prev" title="5. SQL" href="06_sql.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,8 +181,8 @@
 <li class="toctree-l1"><a class="reference internal" href="03_gee.html">2. Google Earth Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_proscons.html">3. Pros &amp; Cons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_python.html">4. Python</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. SQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_qgis.html">6. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_sql.html">5. SQL</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_aiml.html">7. AI &amp; ML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_R.html">8. R</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_future.html">9. Future</a></li>
@@ -248,7 +248,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp-bib/master?urlpath=tree/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp-bib/master?urlpath=tree/chapters/07_qgis.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -266,7 +266,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/VRConservation/geosp-bib/blob/master/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp-bib/blob/master/chapters/07_qgis.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +314,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp-bib/edit/main/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/edit/main/chapters/07_qgis.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +331,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp-bib/issues/new?title=Issue%20on%20page%20%2Fchapters/06_sql.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp-bib/issues/new?title=Issue%20on%20page%20%2Fchapters/07_qgis.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -361,7 +361,7 @@
       
       
       
-      <li><a href="../_sources/chapters/06_sql.ipynb" target="_blank"
+      <li><a href="../_sources/chapters/07_qgis.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -445,7 +445,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SQL</h1>
+    <h1>QGIS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -455,13 +455,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">5.1. New</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">5.2. DuckDB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">5.3. Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wood-processing">5.4. Wood processing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-datasets">5.5. Large datasets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geospatial-datasets">5.6. Geospatial datasets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">5.7. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">6.1. Takeaways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">6.2. Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.3. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -473,177 +469,26 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sql">
-<h1><span class="section-number">5. </span>SQL<a class="headerlink" href="#sql" title="Link to this heading">#</a></h1>
-<p>The language you must learn for geospatial analysis!</p>
-<section id="new">
-<h2><span class="section-number">5.1. </span>New<a class="headerlink" href="#new" title="Link to this heading">#</a></h2>
-<p>I have to admit I’m very new to using SQL for geospatial analysis but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL really is the universal database management language, so geospatial aside, if you work with data, you need to learn how to use it.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>When you perform a definition query in ArcGIS Pro or a data query in QGIS, SQL runs in the background. In fact, if you use ArcGIS Pro, open it up, double-click on a layer, open the def query function, and note that there’s a little switch to convert the GUI to SQL. Create a query, then switch it to SQL to see the translation.</p>
-</div>
-<p>Add photo of a def query before and after in Arc (with and w/o SQL)</p>
-</section>
-<section id="duckdb">
-<h2><span class="section-number">5.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
-<p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed processing large datasets</p>
-<p>A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a>, which has superb tutorials on Python, Earth Engine, DuckDB, and PostGIS.</p>
-</section>
-<section id="installation">
-<h2><span class="section-number">5.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p>Installation is straightforward: follow the instructions for the command line or Python at the DuckDB installation <a class="reference external" href="http://gg.gg/1at9tp">page</a>.</p>
-</section>
-<section id="wood-processing">
-<h2><span class="section-number">5.4. </span>Wood processing<a class="headerlink" href="#wood-processing" title="Link to this heading">#</a></h2>
-<p>Let’s move to an example from the University of California’s Woody Biomass Utilization Group’s Biomass Power Plant <a class="reference external" href="http://gg.gg/1as7ti">Database</a>. First, import the dependencies.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import dependencies</span>
-<span class="kn">import</span> <span class="nn">duckdb</span>
-<span class="kn">import</span> <span class="nn">leafmap</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Then, connect to the duckdb database and install httpfs and spatial extensions.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connect database install httpfs, spatial</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
-<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
-<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
-<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Read the sawmill .shp file and create the sawmill table.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create sawmill table from shp file and show</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    CREATE TABLE IF NOT EXISTS sawmill as</span>
-<span class="s1">    SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp&#39;)</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Duckdb sql can be run in the command line and through Python as we are doing here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.</p>
-</div>
-<p><img alt="sawmill-all" src="https://i.imgur.com/ptLCP0F.png" /></p>
-<p>View the sawmill table schema, then sum # sawmills by county</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View sawmill table schema</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    DESCRIBE sawmill</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="sawmill-schema" src="https://i.imgur.com/gM9AJtB.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum sawmills by county</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    SELECT County, COUNT(*) as Count</span>
-<span class="s1">    FROM sawmill</span>
-<span class="s1">    GROUP BY County</span>
-<span class="s1">    ORDER BY count DESC</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="sawmill-county" src="https://i.imgur.com/GeX2mE6.png" /></p>
-<p>Import the biomass database, then create the biomass table and show</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Biomass dataset</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from the shp file and show</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
-<span class="s1">    SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to 1 decimal.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View biomass table schema</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    DESCRIBE biomass</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum the total MW_Grid by county round to 1 decimal</span>
-
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">    SELECT County, ROUND(SUM(CAST(MW_Grid AS FLOAT)), 1) as Total_MW_Grid</span>
-<span class="s1">    FROM biomass</span>
-<span class="s1">    GROUP BY County</span>
-<span class="s1">    ORDER BY Total_MW_Grid DESC</span>
-<span class="s1">    LIMIT 15</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="large-datasets">
-<h2><span class="section-number">5.5. </span>Large datasets<a class="headerlink" href="#large-datasets" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="qgis">
+<h1><span class="section-number">6. </span>QGIS<a class="headerlink" href="#qgis" title="Link to this heading">#</a></h1>
+<p>A powerful desktop GIS software infinitely customizable with plugins</p>
+<section id="takeaways">
+<h2><span class="section-number">6.1. </span>Takeaways<a class="headerlink" href="#takeaways" title="Link to this heading">#</a></h2>
 <p>Coming soon!</p>
 </section>
-<section id="geospatial-datasets">
-<h2><span class="section-number">5.6. </span>Geospatial datasets<a class="headerlink" href="#geospatial-datasets" title="Link to this heading">#</a></h2>
+<section id="tutorial">
+<h2><span class="section-number">6.2. </span>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h2>
 <p>Coming soon!</p>
 </section>
 <section id="resources">
-<h2><span class="section-number">5.7. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a definitive and recommended way to start with DuckDB.</p></li>
-<li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use a copyedit (many spelling errors) and better organization (figures disconnected from text, tutorials with more bullets/less text), everything is in the book that you will need to become a spatial SQL expert. The tutorials are relevant and guide you through critical beginner -&gt; advanced workflows using spatial SQL.</p></li>
-<li><p><strong><a class="reference external" href="https://twitter.com/spatialthoughts/status/1774833044396081189">SQL-QGIS Tip</a></strong>. You can use the ‘Execute SQL’ processing algorithm to run SQL queries on ANY vector layer within QGIS. Here’s an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.</p></li>
-<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.</p></li>
+<li><p><strong><a class="reference external" href="https://docs.qgis.org/3.34/en/docs/training_manual/index.html">QGIS Training Manual</a></strong>. A comprehensive resource for all use cases of QGIS plus contributed chapters and tutorials. Always a great place to search to find specific answers to problems you face or find a how to.</p></li>
+<li><p><strong>Spatial Thoughts</strong>. Free or paid options available with comprehensive <a class="reference external" href="https://courses.spatialthoughts.com/introduction-to-qgis.html">Introduction to QGIS</a>, <a class="reference external" href="https://courses.spatialthoughts.com/advanced-qgis.html">Advanced QGIS</a>, or <a class="reference external" href="https://courses.spatialthoughts.com/spatial-data-viz.html">Spatial Data Visualization with QGIS</a>. The course materials and tutorials are free and have clear instructions and figures to follow each tutorial.</p></li>
+<li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;automaticknowledge">Map Academy</a></strong>. Everything you need to know about QGIS, usually in short, digestible snippets. Also includes excellent videos on using Aerialod, a path tracing map visualizer using DEM and other data.</p></li>
+<li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;HansvanderKwast">Hans Van der Kwast</a></strong>. Particularly good for QGIS hydrological applications, but also has Lidar, image analysis, and raster analysis.</p></li>
 </ul>
-<!-- 
-## Notes
-[lonboard](https://github.com/developmentseed/lonboard)
-
-[overture map data](https://docs.overturemaps.org/) is mostly buildings and infrastructure
-
-[query data and load to kepler.gl](https://docs.overturemaps.org/examples/kepler-gl/) using duckdb
-
-[examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
-
-[open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
-use the cleaned LEWO sets and upload them to a GitHub page
-
-youtube course from Freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
-
-[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli --></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -677,20 +522,20 @@ youtube course from Freecode camp, note the outline: https://www.youtube.com/wat
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05_python.html"
+       href="06_sql.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Python</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>SQL</p>
       </div>
     </a>
     <a class="right-next"
-       href="07_qgis.html"
+       href="08_aiml.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>QGIS</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>AI &amp; ML</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -710,13 +555,9 @@ youtube course from Freecode camp, note the outline: https://www.youtube.com/wat
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">5.1. New</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">5.2. DuckDB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">5.3. Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wood-processing">5.4. Wood processing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-datasets">5.5. Large datasets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geospatial-datasets">5.6. Geospatial datasets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">5.7. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">6.1. Takeaways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">6.2. Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.3. Resources</a></li>
 </ul>
   </nav></div>
 
