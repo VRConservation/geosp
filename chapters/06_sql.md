@@ -121,11 +121,12 @@ con.sql('''
 ''')
 ```
 
-## Large datasets
-Coming soon!
+## Lewis's Woodpecker
+Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis's Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects ([Wikipedia](https://en.wikipedia.org/wiki/Lewis%27s_woodpecker)). We'll examine a dataset of Lewis's species occurrence from eBird.
 
-## Geospatial datasets
-Coming soon!
+![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
+
+
 
 ## Resources
 
@@ -137,10 +138,6 @@ Coming soon!
 <!-- 
 ## Notes
 [lonboard](https://github.com/developmentseed/lonboard)
-
-[overture map data](https://docs.overturemaps.org/) is mostly buildings and infrastructure
-
-[query data and load to kepler.gl](https://docs.overturemaps.org/examples/kepler-gl/) using duckdb
 
 [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
 

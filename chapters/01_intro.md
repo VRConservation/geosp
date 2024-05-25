@@ -26,8 +26,8 @@ The book will contain (some chapters are still in draft) the following chapters:
 2. **GEE**. Google Earth Engine is an incredible resource for its large data catalog and cloud-based geospatial analysis. This chapter provides some quick tips and steps to get started.
 3. **Proscons**. Outlines the pros and cons of free and open source vs. paid geospatial software.
 4. **Python**. Using Python for geospatial data analysis and visualization with a variety of libraries.
-5. **QGIS**. There are many QGIS tutorials and a supportive community. This chapter will help you learn the basics of using this powerful geospatial software.
-6. **SQL**. Starting to use the universal database Structured Query Language or SQL using DuckDB and Post-GIS spatial packages.
+5. **SQL**. Starting to use the universal database Structured Query Language or SQL using DuckDB and Post-GIS spatial packages.
+6. **QGIS**. There are many QGIS tutorials and a supportive community. This chapter will help you learn the basics of using this powerful geospatial software.
 7. **AIML**. Artificial intelligence (AI) and machine learning (ML) are sorta popular right now, no? Here's how to use these tools to complement, not replace, your work.
 8. **R**. A programming language universally adopted by academics, R is easy to use and get started with and has many statistical computing, data visualization, and geospatial packages. We'll use it within the free desktop integrated development environment (IDE).
 9. **Future**. We'll look into a crystal ball—actually a globe—for some thoughts and insights into the future of free and open-source geospatial software.

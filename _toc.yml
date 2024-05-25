@@ -13,8 +13,8 @@ parts:
       - file: chapters/03_gee
       - file: chapters/04_proscons
       - file: chapters/05_python
-      - file: chapters/06_qgis
-      - file: chapters/07_sql
+      - file: chapters/06_sql
+      - file: chapters/07_qgis
       - file: chapters/08_aiml
       - file: chapters/09_R
       - file: chapters/10_future
