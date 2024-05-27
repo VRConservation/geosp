@@ -126,7 +126,7 @@ Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of 
 
 ![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
 
-
+The csv file is quite large so can take a while to run.
 
 ## Resources
 
