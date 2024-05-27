@@ -579,7 +579,7 @@ document.write(`
 <span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
 <span class="s1">    SELECT * FROM ST_Read(&#39;C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;biomass&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -613,8 +613,9 @@ document.write(`
 </section>
 <section id="lewis-s-woodpecker">
 <h2><span class="section-number">5.5. </span>Lewis’s Woodpecker<a class="headerlink" href="#lewis-s-woodpecker" title="Link to this heading">#</a></h2>
-<p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects <a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>. We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
-<p><img alt="Lewis pic" src="http://gg.gg/1aw9av" /></p>
+<p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
+<p><img alt="Lewis pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg" /></p>
+<p>The csv file is quite large so can take a while to run.</p>
 </section>
 <section id="resources">
 <h2><span class="section-number">5.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
@@ -627,10 +628,6 @@ document.write(`
 <!-- 
 ## Notes
 [lonboard](https://github.com/developmentseed/lonboard)
-
-[overture map data](https://docs.overturemaps.org/) is mostly buildings and infrastructure
-
-[query data and load to kepler.gl](https://docs.overturemaps.org/examples/kepler-gl/) using duckdb
 
 [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
 
