@@ -499,31 +499,34 @@ document.write(`
 <li><p>Install R from <a class="reference external" href="https://cran.rstudio.com/">CRAN</a>.</p></li>
 <li><p>Install the language server in R: ‘install.packages(“languageserver”)’</p></li>
 <li><p>Go to extensions and install the R Extension Pack by Yuki Ueda. This will install R (the coding language) and R-LSP (provides language support and autocomplete for commands).</p></li>
-<li><p>Install extra packages such as <a class="reference external" href="https://github.com/randy3k/radian">radian</a> to make R easier to use. See the notes in the R extension in VS Code for additional recommendations, links, and installation instructions. <a class="reference external" href="https://medium.com/analytics-vidhya/a-fresh-start-for-r-in-vscode-ec61ed108cf6">This</a> article in Medium is a concise guide for setup.</p></li>
+<li><p>Install extra packages such as <a class="reference external" href="https://github.com/randy3k/radian">radian</a> to make R easier to use. See the notes in the R extension in VS Code for additional recommendations, links, and installation instructions. <a class="reference external" href="https://medium.com/analytics-vidhya/a-fresh-start-for-r-in-vscode-ec61ed108cf6">This</a> article is a concise guide for setup.</p></li>
 </ol>
 </section>
 <section id="eda">
 <h2><span class="section-number">8.3. </span>EDA<a class="headerlink" href="#eda" title="Link to this heading">#</a></h2>
-<p>The R library DataExplorer allows you to quickly perform exploratory data analysis (EDA) on datasets.</p>
+<p>The R library DataExplorer allows you to quickly perform exploratory data analysis (EDA) on datasets. I’ve adapted this section from a post in <a class="reference external" href="http://datascienceplus.com">datascienceplus.com</a> from <a class="reference external" href="https://datascienceplus.com/blazing-fast-eda-in-r-with-dataexplorer/">Raja 2018</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Package Installation</strong>. If you’re using RSTudio you can also install packages by going to the packages tab in the Files, Plots, Packages pane (default location lower right), select Packages, Install then enter the package name in the open window.</p>
 <p><strong>Running R Script</strong>. You can run each line of code entered by placing the cursor at the comment or line of code you want to run then clicking the Run button in the upper right of the code pane (default location upper left) or using control/command enter on your keyboard. You can also highlight an entire block or section of code and run it with the same command.</p>
 </div>
-<p>First install the package and load it</p>
+<p>Install the Data Explorer package and load it</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s1">&#39;DataExplorer&#39;</span><span class="p">)</span>
 <span class="n">library</span><span class="p">(</span><span class="n">DataExplorer</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Read your dataset, inspect the head and total number of rows</p>
+<p>Read the dataset, inspect the head and total number of rows.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#read csv</span>
-<span class="n">lewo</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s1">&#39;C:/Path/to/your/dataset.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+<span class="n">lewo</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s1">&#39;./test/cacao.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
 
-<span class="c1">#examine head, count total rows</span>
+<span class="c1">#examine head and count total dataset rows</span>
 <span class="n">head</span><span class="p">(</span><span class="n">lewo</span><span class="p">)</span>
 <span class="n">nrow</span><span class="p">(</span><span class="n">lewo</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Instead of head() and nrow() you can call summary statistics on the dataset with the command <code class="docutils literal notranslate"><span class="pre">summary()</span></code>.</p>
+<p>Plotting a histogram is great way to start analyzing continuous variables</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">create_report()</span></code> function will run all of the EDA commands above, convert the outputs to an html file then open the report in your default browser. This is useful if you want to enter one line and get a rapid summary of everything for the dataset.</p>
 </section>
 <section id="lidr">
 <h2><span class="section-number">8.4. </span>LidR<a class="headerlink" href="#lidr" title="Link to this heading">#</a></h2>
