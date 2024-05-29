@@ -23,10 +23,10 @@ subprocess.run(["jb", "build", "--all", "."], check=True)
 # run the ghp-import -n -p -f _build/html
 subprocess.run(["ghp-import", "-n", "-p", "-f", "_build/html"], check=True)
 
-# # Push and sync the repository to GitHub
-# subprocess.run(["git", "add", "."])
-# subprocess.run(["git", "commit", "-m", "Chapter and Appendix edits"])
-# subprocess.run(["git", "push"])
+# Push and sync the repository to GitHub
+subprocess.run(["git", "add", "."])
+subprocess.run(["git", "commit", "-m", "R Chp edits"])
+subprocess.run(["git", "push"])
 
 
-# run the script in the terminal by with the command python update.py
+# run the script in the terminal with the command python update.py

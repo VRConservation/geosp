@@ -97,7 +97,7 @@ con.sql('''
     CREATE TABLE IF NOT EXISTS biomass as
     SELECT * FROM ST_Read('C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')
 ''')
-con.table('sawmill')
+con.table('biomass')
 ```
 
 View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to 1 decimal.
