@@ -527,26 +527,30 @@ document.write(`
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#read csv
 cacao &lt;- read.csv(&#39;./test/cacao.csv&#39;, header = T, stringsAsFactors = F)
 
-#examine head and count total dataset rows
+#examine head and create summary statistics
 head(cacao)
-nrow(cacao)
+summary(cacao)
 </pre></div>
 </div>
 </div>
 </div>
-<p>Instead of head() and nrow() you can call summary statistics on the dataset with the command <code class="docutils literal notranslate"><span class="pre">summary()</span></code> putting the name of your dataset variable in the parenthesis, e.g., <code class="docutils literal notranslate"><span class="pre">summary(cacao)</span></code>. Note the variable Cocoa.Percent is a character rather than a number due to the % sign attached to each value and the review date needs to be changed to character. To fix the dataset run the following:</p>
+<p>Running the head(cacao) line produces the following in the console</p>
+<p><img alt="head" src="https://i.imgur.com/TD3suZC.png" /></p>
+<p>It’s messy but at least confirms the dataset loaded. The summary command gives more information</p>
+<p><img alt="summary" src="https://i.imgur.com/o0BJKFI.png" /></p>
+<p>A better visual summary can be produced using <code class="docutils literal notranslate"><span class="pre">plot_intro(cacao)</span></code> producing</p>
+<p><img alt="plot_intro" src="https://i.imgur.com/MqSenEN.png" /></p>
+<p>Note the summary stats show that the variable Cocoa.Percent is a character rather than a number due to the % sign attached to each value and the review date needs to be changed to character. To fix this error run the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Fix Cocoa.Percent character error
 cacao$Cocoa.Percent = as.numeric(gsub(&#39;%&#39;,&#39;&#39;,cacao$Cocoa.Percent))  
 cacao$Review.Date = as.character(cacao$Review.Date)
-
-# Check changes made 
-head(cacao)
 </pre></div>
 </div>
 </div>
 </div>
+<p>When you run head or summary again the Cocoa.Percent is now converted to numbers.</p>
 <p>There are several functions to analyze and plot the dataset looking at categorical and continuous variables and other analyses. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -566,7 +570,11 @@ plot_correlation(cacao, type = &#39;continuous&#39;,&#39;Review.Date&#39;)
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">create_report()</span></code> function will run all of the EDA commands above, convert the outputs to an html file then open the report in your default browser. This is useful if you want to enter one line and get a rapid summary of everything for the dataset. All of the above code runs very fast even with large datasets.</p>
+<p>For instance the histogram plot shows distribution values for all the continuous variables. In this case most cocoa percents are in the 70s and ratings cluster around three.</p>
+<p><img alt="histogram" src="https://i.imgur.com/S0UdRRz.png" /></p>
+<p>The simplified correlation analysis grouping Review.Dat shows weak relationship between Rating and Cocoa.Percent.</p>
+<p><img alt="correlation" src="https://i.imgur.com/ojVX5Hx.png" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">create_report()</span></code> function will run all of the EDA commands above, convert the outputs to an html file then open the report in your default browser. This is useful if you want to enter one line and get a rapid summary of everything for the dataset. All of the above code runs very fast even with large datasets. More details on the package can be found at the <a class="reference external" href="https://cran.r-project.org/web/packages/DataExplorer/vignettes/dataexplorer-intro.html">Introduction to DataExplorer site</a>.</p>
 </section>
 <section id="lidr">
 <h2><span class="section-number">8.4. </span>lidR<a class="headerlink" href="#lidr" title="Link to this heading">#</a></h2>
@@ -583,7 +591,40 @@ plot(las, bg = &quot;white&quot;, size = 4)
 </div>
 </div>
 </div>
-<p>This will give you a popup showing the 3d point cloud of the forest stand in this dataset. The window may not popup, so check your open windows to see if it rendered. If you left click on the point cloud model you can rotate the dateset in 3 dimensions. Far out man!</p>
+<p>This will give you a popup window showing the 3d point cloud of the lidar return in this dataset with highest values red and lowest blue. Since the point cloud appears to be of a forest stand, you can discern tree outlines. If you left click on the point cloud model you can rotate the dateset in 3 dimensions. Far out man!</p>
+<p><video controls src="/figures/3dmodel.mp4" title="3d Las"></video></p>
+<p>Rasterize a canopy height model and plot it. Not the highest tree show up in the lower right corner, same as the 3d mmodel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Rasterize canopy height model
+chm &lt;- rasterize_canopy(las, 0.5, pitfree(subcircle = 0.2))
+plot(chm, col = height.colors(50))
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="rasterized_las" src="https://i.imgur.com/20jBlqP.png" /></p>
+<p>Locate the tree top centers</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Locate the tree tops and plot
+ttops &lt;- locate_trees(las, lmf(ws = 5))
+plot(sf::st_geometry(ttops), add = TRUE, pch = 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="centers" src="https://i.imgur.com/u4Edfbm.png" /></p>
+<p>You can also add the tree top centers to a 3d model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add 3d tree tops
+add_treetops3d(x, ttops)
+</pre></div>
+</div>
+</div>
+</div>
+<p><video controls src="/figures/20240530-0851-22.9598825.mp4" title="3d Treetops"></video></p>
 </section>
 <section id="duckdb">
 <h2><span class="section-number">8.5. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
@@ -620,6 +661,12 @@ print(res)
 </div>
 </div>
 </div>
+<p>Gives the output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">item</span> <span class="n">value</span> <span class="n">count</span>
+<span class="mi">1</span>  <span class="n">jeans</span>  <span class="mf">20.0</span>     <span class="mi">1</span>
+<span class="mi">2</span> <span class="n">hammer</span>  <span class="mf">42.2</span>     <span class="mi">2</span>
+</pre></div>
+</div>
 </section>
 <section id="resources">
 <h2><span class="section-number">8.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
@@ -632,8 +679,6 @@ print(res)
 <li><p><strong><a class="reference external" href="https://github.com/r-spatial/rgee">r-spatial/rgee</a></strong>. An R library for Google Earth Engine. Chapter 6.4 of the Earth Engine Fundamentals and Applications is focused on the rgee package <span id="id3">[<a class="reference internal" href="bibliography.html#id3" title="Jeffrey A Cardille, Morgan A Crowley, David Saah, and Nicholas E Clinton. Cloud-based remote sensing with google earth engine: fundamentals and applications. Springer Nature, 2023.">Cardille <em>et al.</em>, 2023</a>]</span>.</p></li>
 <li><p><strong><a class="reference external" href="https://r-lidar.github.io/lidRbook/">lidR</a></strong>. Online book for the lidR package.</p></li>
 </ul>
-<!-- ## Notes
-- R tutorial with Lidr and a lidar spatial dataset from NRCP? <p>–&gt;</p>
 </section>
 </section>
 
