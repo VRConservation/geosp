@@ -458,8 +458,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">4.1. Getting Started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">4.2. Sentinel-2 Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">4.3. Geemap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leafmap">4.4. Leafmap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.5. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#easier-bboxing">4.4. Easier bboxing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leafmap">4.5. Leafmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.6. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -657,8 +658,64 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 <p>Let’s take another look at the lambda function to clip the raster. Lambda functions are similar to other Python functions but are not bound to a name when run. Known as anonymous functions, they are used when you need a one-off function that isn’t separately defined. In our case, the Lamda function takes an image, clips it to the bounding box, and returns the clipped image. The map() function, not to be confused with the Map function in Javascript, applies the function to every image in the ImageCollection.</p>
 </div>
 </section>
+<section id="easier-bboxing">
+<h2><span class="section-number">4.4. </span>Easier bboxing<a class="headerlink" href="#easier-bboxing" title="Link to this heading">#</a></h2>
+<p>As you can see in both examples adding a bounding box can be semi-painful. There’s an excellent <a class="reference external" href="https://www.keene.edu/campus/maps/tool">Polyline Tool</a> that allows creates json text when you right click on each point in a polygon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import geemap and initialize earth engine
+import ee
+import geemap
+geemap.ee_initialize()
+m = geemap.Map()
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the Polyline Tool I’ve right clicked 3 points around Cape Cod, Massachusetts in the United States, then clicked close shape to get a square. Then I copied the curly brackets and the geojson coordinates in between and assigned them to a variable. Then convert the geojson coordinates to an earth engine geometry type and map.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add the coordinates from the Polyline tool and assign to a variable
+capecod = {
+    &quot;coordinates&quot;: [
+        [
+            [
+                -70.4525757,
+                42.0916883
+            ],
+            [
+                -70.423462,
+                41.4974371
+            ],
+            [
+                -69.7763673,
+                41.5036664
+            ],
+            [
+                -69.7939453,
+                42.1075947
+            ],
+            [
+                -70.4525757,
+                42.0916883
+            ]
+        ]
+    ],
+    &quot;type&quot;: &quot;Polygon&quot;
+}
+
+# Convert the geojson coordinates to ee.Geomtry and map
+bbox = ee.Geometry(capecod)
+m.addLayer(bbox, {}, &#39;Cape Cod&#39;)
+m
+</pre></div>
+</div>
+</div>
+</div>
+<p>It’s lengthy but gets you any polygon on the globe with any number of points.</p>
+</section>
 <section id="leafmap">
-<h2><span class="section-number">4.4. </span>Leafmap<a class="headerlink" href="#leafmap" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.5. </span>Leafmap<a class="headerlink" href="#leafmap" title="Link to this heading">#</a></h2>
 <p>A related Python package worth exploring is <a class="reference external" href="https://leafmap.org/">Leafmap</a>, also developed by Quisheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.</p>
 <p>The tutorials and workshops are supported by notebooks and videos to thoroughly walk you through this fantastic software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:</p>
 <ol class="arabic simple">
@@ -672,16 +729,17 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 <p>Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.</p>
 </section>
 <section id="resources">
-<h2><span class="section-number">4.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://geemap.org/">Geemap</a> has a webpage, book, tutorials, API, and much more to support this excellent Python package.</p></li>
 <li><p><a class="reference external" href="https://leafmap.org/">Leafmap</a> is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.</p></li>
 <li><p><a class="reference external" href="https://github.com/opengeos">Open Geospatial Solutions</a> hosts many open-source geospatial software projects and datasets.
 <a class="reference external" href="https://spatialthoughts.com">Spatial Thoughts</a>, run by Ujaval Gandhi, offers a free course called <a class="reference external" href="https://courses.spatialthoughts.com/python-foundation.html">Python Foundation for Spatial Analysis</a>. The site also offers many other free and paid courses and tutorials for geospatial analysis.</p></li>
 <li><p><a class="reference external" href="https://py.geocompx.org/">Geocomputation with Python</a> is an open source book inspired by the FOSS4G movement.</p></li>
-<li><p><a class="reference external" href="https://github.com/OpenTopography/RiverREM">RiverREM</a>. A super cool Python package for automatically generating river relative elevation model (REM).
-<a class="reference external" href="https://developmentseed.org/blog/2023-10-23-lonboard">lonboard</a>. Python library for fast geospatial vector data visualization.
-<a class="reference external" href="https://datacarpentry.org/python-ecology-lesson/#required-packages-miniconda">Python for Ecologist</a>. The <a class="reference external" href="http://Datacarpentry.org">Datacarpentry.org</a> tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.</p></li>
+<li><p><a class="reference external" href="https://github.com/OpenTopography/RiverREM">RiverREM</a>. A super cool Python package for automatically generating river relative elevation model (REM).</p></li>
+<li><p><a class="reference external" href="https://developmentseed.org/blog/2023-10-23-lonboard">lonboard</a>. Python library for fast geospatial vector data visualization.</p></li>
+<li><p><a class="reference external" href="https://datacarpentry.org/python-ecology-lesson">Python for Ecologists</a>. The <a class="reference external" href="http://Datacarpentry.org">Datacarpentry.org</a> tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.</p></li>
+<li><p><a class="reference external" href="http://gg.gg/1az3jj">Unlocking the Depths</a>. A useful tutorial for mapping bathymetry and calculating lake volume. May be behind a Medium pay wall.</p></li>
 </ul>
 </section>
 </section>
@@ -753,8 +811,9 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">4.1. Getting Started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">4.2. Sentinel-2 Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">4.3. Geemap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leafmap">4.4. Leafmap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.5. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#easier-bboxing">4.4. Easier bboxing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leafmap">4.5. Leafmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.6. Resources</a></li>
 </ul>
   </nav></div>
 
