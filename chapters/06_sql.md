@@ -126,10 +126,13 @@ Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of 
 
 ![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
 
-The csv file is quite large so can take a while to run.
+If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a kepler.gl viewer. For example right clicking on the Lewis's Woodpecker CSV file in the test folder (if you've cloned this repo) and selecting View Map will give you
+
+![lewo](https://i.imgur.com/cb48hqP.png)
+
+The Lewis's csv file is quite large so can take a while to run.
 
 ## Resources
-
 - **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a definitive and recommended way to start with DuckDB.
 - **[Spatial SQL](https://spatial-sql.com/)**. Matt Forrest's text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use a copyedit (many spelling errors) and better organization (figures disconnected from text, tutorials with more bullets/less text), everything is in the book that you will need to become a spatial SQL expert. The tutorials are relevant and guide you through critical beginner -> advanced workflows using spatial SQL.
 - **[SQL-QGIS Tip](https://twitter.com/spatialthoughts/status/1774833044396081189)**. You can use the 'Execute SQL' processing algorithm to run SQL queries on ANY vector layer within QGIS. Here's an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.
@@ -137,13 +140,9 @@ The csv file is quite large so can take a while to run.
 
 <!-- 
 ## Notes
-[lonboard](https://github.com/developmentseed/lonboard)
-
-[examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
-
-[open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
-use the cleaned LEWO sets and upload them to a GitHub page
-
-youtube course from Freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
-
-[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli -->
+- [lonboard](https://github.com/developmentseed/lonboard)
+- [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
+- [open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
+- use the cleaned LEWO sets and upload them to a GitHub page
+-youtube course from Freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
+-[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli but doesn't explain how to do these very well -->
