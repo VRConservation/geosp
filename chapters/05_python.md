@@ -143,6 +143,7 @@ Then clip the carbon raster to the AOI:
 aoi = dataset.map(lambda image: image.clip(bbox))
 ```
 Now add the clipped rasters:
+
 ```python
 # Add the clipped dataset to the map
 m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
@@ -167,6 +168,56 @@ Adding 'False' after the layer name still adds the layers to the map but turns t
 Let's take another look at the lambda function to clip the raster. Lambda functions are similar to other Python functions but are not bound to a name when run. Known as anonymous functions, they are used when you need a one-off function that isn't separately defined. In our case, the Lamda function takes an image, clips it to the bounding box, and returns the clipped image. The map() function, not to be confused with the Map function in Javascript, applies the function to every image in the ImageCollection.
 ```
 
+## Easier bboxing
+As you can see in both examples adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows creates json text when you right click on each point in a polygon. 
+
+```python
+# Import geemap and initialize earth engine
+import ee
+import geemap
+geemap.ee_initialize()
+m = geemap.Map()
+```
+
+In the Polyline Tool I've right clicked 3 points around Cape Cod, Massachusetts in the United States, then clicked close shape to get a square. Then I copied the curly brackets and the geojson coordinates in between and assigned them to a variable. Then convert the geojson coordinates to an earth engine geometry type and map.
+
+```python
+# Add the coordinates from the Polyline tool and assign to a variable
+capecod = {
+    "coordinates": [
+        [
+            [
+                -70.4525757,
+                42.0916883
+            ],
+            [
+                -70.423462,
+                41.4974371
+            ],
+            [
+                -69.7763673,
+                41.5036664
+            ],
+            [
+                -69.7939453,
+                42.1075947
+            ],
+            [
+                -70.4525757,
+                42.0916883
+            ]
+        ]
+    ],
+    "type": "Polygon"
+}
+
+# Convert the geojson coordinates to ee.Geomtry and map
+bbox = ee.Geometry(capecod)
+m.addLayer(bbox, {}, 'Cape Cod')
+m
+```
+It's lengthy but gets you any polygon on the globe with any number of points.
+
 ## Leafmap
 A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
 
@@ -182,12 +233,12 @@ The tutorials and workshops are supported by notebooks and videos to thoroughly 
 Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.
 
 ## Resources
-
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
 - [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.
 - [Open Geospatial Solutions](https://github.com/opengeos) hosts many open-source geospatial software projects and datasets.
 [Spatial Thoughts](https://spatialthoughts.com), run by Ujaval Gandhi, offers a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site also offers many other free and paid courses and tutorials for geospatial analysis.
 - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
 - [RiverREM](https://github.com/OpenTopography/RiverREM). A super cool Python package for automatically generating river relative elevation model (REM).
-[lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
-[Python for Ecologist](https://datacarpentry.org/python-ecology-lesson/#required-packages-miniconda). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.
+- [lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
+- [Python for Ecologists](https://datacarpentry.org/python-ecology-lesson). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.
+- [Unlocking the Depths](http://gg.gg/1az3jj). A useful tutorial for mapping bathymetry and calculating lake volume. May be behind a Medium pay wall.
