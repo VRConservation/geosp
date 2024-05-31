@@ -130,17 +130,86 @@ If you install the Geo Data Viewer plugin for VS Code it will let you quickly vi
 
 ![lewo](https://i.imgur.com/cb48hqP.png)
 
-The Lewis's csv file is quite large so can take a while to run.
+The Lewis's csv file is quite large but DuckDB runs through it 140k rows quickly. First import the packages and connect to DuckDB
+
+```python
+# Import and connect
+import duckdb
+import leafmap
+import pandas as pd
+con = duckdb.connect()
+con.install_extension("httpfs")
+con.load_extension("httpfs")
+con.install_extension("spatial")
+con.load_extension("spatial")
+```
+
+Create a table called lewo, short for Lewis's Woodpecker. The csv file is in the test folder of the repo. Note the use of ST_Point assigning the lat lon columns to geometry.
+
+```python
+# Create lewo table and assign points lat lon points to geometry
+sql = ("""
+    CREATE TABLE lewo AS
+    SELECT *,
+        ST_Point(LONGITUDE, LATITUDE) as geometry
+    FROM "./test/lewo_clip.csv" 
+""")
+con.execute(sql)
+
+# show the table
+con.table("lewo")
+```
+
+Count the total observations by state
+
+```python
+# Count observations by state
+con.sql('''
+    SELECT STATE, COUNT(OBJECTID) as Count
+    FROM lewo
+    GROUP BY STATE
+    ORDER BY Count DESC
+    LIMIT 10
+''')
+```
+![lewo_state](https://i.imgur.com/J8h5fbP.png)
+
+Select Washington observation and name the new table wash
+
+```python
+# Select only the Washington state points from the table and call the new table wash
+con.sql('''
+    CREATE TABLE wash AS
+    SELECT *
+    FROM lewo
+    WHERE STATE = 'Washington'
+''')
+```
+
+Export the new table to a csv in the test folder
+
+```python
+# Fetch the data from the wash table into a DataFrame
+wash_df = con.execute("SELECT * FROM wash").fetchdf()
+
+# Export the DataFrame to a CSV file in the test folder
+wash_df.to_csv('test/wash.csv', index=False)
+```
+
+Right clicking the csv file and selecting View Map produces a heat map. I seeems to show that Lewis's Woodpecker seem to like the Hood River and a certain elevation along the Pacific Crest:
+
+![Wash](https://i.imgur.com/nGiuDxq.png)
 
 ## Resources
 - **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a definitive and recommended way to start with DuckDB.
 - **[Spatial SQL](https://spatial-sql.com/)**. Matt Forrest's text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use a copyedit (many spelling errors) and better organization (figures disconnected from text, tutorials with more bullets/less text), everything is in the book that you will need to become a spatial SQL expert. The tutorials are relevant and guide you through critical beginner -> advanced workflows using spatial SQL.
 - **[SQL-QGIS Tip](https://twitter.com/spatialthoughts/status/1774833044396081189)**. You can use the 'Execute SQL' processing algorithm to run SQL queries on ANY vector layer within QGIS. Here's an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.
 - **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
+- **[Lonboard](https://developmentseed.org/lonboard/latest/)**. Lonboard is a Python library for fast vector processing. The [DuckDB Spatial](https://developmentseed.org/lonboard/latest/examples/duckdb/) tutorial links Lonboard to DuckDB and python to create a heatmap. 
 
 <!-- 
 ## Notes
-- [lonboard](https://github.com/developmentseed/lonboard)
+
 - [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
 - [open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
 - use the cleaned LEWO sets and upload them to a GitHub page
