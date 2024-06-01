@@ -100,7 +100,7 @@ con.sql('''
 con.table('biomass')
 ```
 
-View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to 1 decimal.
+View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal.
 
 ```python
 # View biomass table schema
@@ -126,11 +126,11 @@ Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of 
 
 ![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
 
-If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a kepler.gl viewer. For example right clicking on the Lewis's Woodpecker CSV file in the test folder (if you've cloned this repo) and selecting View Map will give you
+If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a kepler.gl viewer. For example right clicking on the Lewis's Woodpecker csv file in the test folder (if you've cloned this repo) and selecting View Map will give you
 
 ![lewo](https://i.imgur.com/cb48hqP.png)
 
-The Lewis's csv file is quite large but DuckDB runs through it 140k rows quickly. First import the packages and connect to DuckDB
+The Lewis's csv file is quite large but DuckDB runs through its ~140k rows quickly. First import the packages and connect to DuckDB
 
 ```python
 # Import and connect
@@ -174,7 +174,7 @@ con.sql('''
 ```
 ![lewo_state](https://i.imgur.com/J8h5fbP.png)
 
-Select Washington observation and name the new table wash
+Select the Washington observations and name the new table wash
 
 ```python
 # Select only the Washington state points from the table and call the new table wash
@@ -186,22 +186,22 @@ con.sql('''
 ''')
 ```
 
-Export the new table to a csv in the test folder
+Export the new table as a csv by converting it to a data frame and save in the test folder
 
 ```python
-# Fetch the data from the wash table into a DataFrame
+# Fetch the data from the wash table into a data frame
 wash_df = con.execute("SELECT * FROM wash").fetchdf()
 
-# Export the DataFrame to a CSV file in the test folder
+# Export the dataframe to a csv file in the test folder
 wash_df.to_csv('test/wash.csv', index=False)
 ```
 
-Right clicking the csv file and selecting View Map produces a heat map. I seeems to show that Lewis's Woodpecker seem to like the Hood River and a certain elevation along the Pacific Crest:
+Right clicking the csv file and selecting View Map produces a heat map. It seeems to show that Lewis's Woodpecker prefer the Hood River and a certain elevation along the Pacific Crest:
 
 ![Wash](https://i.imgur.com/nGiuDxq.png)
 
 ## Resources
-- **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a definitive and recommended way to start with DuckDB.
+- **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a recommended way to start with DuckDB.
 - **[Spatial SQL](https://spatial-sql.com/)**. Matt Forrest's text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use a copyedit (many spelling errors) and better organization (figures disconnected from text, tutorials with more bullets/less text), everything is in the book that you will need to become a spatial SQL expert. The tutorials are relevant and guide you through critical beginner -> advanced workflows using spatial SQL.
 - **[SQL-QGIS Tip](https://twitter.com/spatialthoughts/status/1774833044396081189)**. You can use the 'Execute SQL' processing algorithm to run SQL queries on ANY vector layer within QGIS. Here's an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.
 - **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
