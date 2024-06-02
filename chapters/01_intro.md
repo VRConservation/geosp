@@ -20,7 +20,7 @@ The intended audience for this book is beginners to geospatial analysis with som
 
 ## Chapters
 
-The book will contain (some chapters are still in draft) the following chapters:
+The book will contain (some chapters are still being developed) the following chapters:
 
 1. **FOSS**. This is an introduction to Free and open-source software and a little about my journey in this field and my use of these tools.
 2. **GEE**. Google Earth Engine is an incredible resource for its large data catalog and cloud-based geospatial analysis. This chapter provides some quick tips and steps to get started.

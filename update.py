@@ -25,7 +25,7 @@ subprocess.run(["ghp-import", "-n", "-p", "-f", "_build/html"], check=True)
 
 # Push and sync the repository to GitHub
 subprocess.run(["git", "add", "."], check=True)
-subprocess.run(["git", "commit", "-m", "general edits incl contrib, future, sql"], check=True)
+subprocess.run(["git", "commit", "-m", "index and intro edits"], check=True)
 subprocess.run(["git", "push"], check=True)
 
 
