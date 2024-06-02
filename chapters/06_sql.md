@@ -4,17 +4,21 @@ The language you must learn for geospatial analysis!
 
 ## New
 
-I have to admit I'm very new to using SQL for geospatial analysis but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL really is the universal database management language, so geospatial aside, if you work with data, you need to learn how to use it.
+I have to admit I'm very new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Depending on what you need to know, you can use some or all of the basics. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.
 
 ```{tip}
-When you perform a definition query in ArcGIS Pro or a data query in QGIS, SQL runs in the background. In fact, if you use ArcGIS Pro, open it up, double-click on a layer, open the def query function, and note that there's a little switch to convert the GUI to SQL. Create a query, then switch it to SQL to see the translation.
+**SQL QUERY STRUCTURE**<BR>
+CREATE TABLE IF NOT EXISTS tablename AS
+SELECT * FROM ('path_to_file')
+WHERE
+GROUP BY
+ORDER BY desc
+LIMIT
 ```
-
-Add photo of a def query before and after in Arc (with and w/o SQL)
 
 ## DuckDB
 
-We'll use [DuckDB](https://duckdb.org/) for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed processing large datasets
+We'll use [DuckDB](https://duckdb.org/) for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets
 
 A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/), which has excellent tutorials on Python, Earth Engine, DuckDB, and PostGIS.
 
@@ -121,18 +125,16 @@ con.sql('''
 ''')
 ```
 
-<!-- Need to eliminate the sawmill example or make it diff. Both examples import csv files. Maybe make one a parquet file? -->
-
 ## Lewis's Woodpecker
 Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis's Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects ([Wikipedia](https://en.wikipedia.org/wiki/Lewis%27s_woodpecker)). We'll examine a dataset of Lewis's species occurrence from eBird.
 
 ![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
 
-If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a kepler.gl viewer. For example right clicking on the Lewis's Woodpecker csv file in the test folder (if you've cloned this repo) and selecting View Map will give you
+Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, right-clicking on the Lewis's Woodpecker csv file in the test folder (if you've cloned this repo) and selecting View Map will give you
 
 ![lewo](https://i.imgur.com/cb48hqP.png)
 
-The Lewis's csv file is quite large but DuckDB runs through its ~140k rows quickly. First import the packages and connect to DuckDB
+The Lewis's csv file is quite large, but DuckDB quickly runs through its ~140k rows. First, import the packages and connect to DuckDB
 
 ```python
 # Import and connect
@@ -146,7 +148,7 @@ con.install_extension("spatial")
 con.load_extension("spatial")
 ```
 
-Create a table called lewo, short for Lewis's Woodpecker. The csv file is in the test folder of the repo. Note the use of ST_Point assigning the lat lon columns to geometry.
+Create a table called lewo, short for Lewis's Woodpecker. The csv file is in the repo's test folder. Note the use of ST_Point to assign the lat-lon columns to geometry.
 
 ```python
 # Create lewo table and assign points lat lon points to geometry
@@ -198,7 +200,7 @@ wash_df = con.execute("SELECT * FROM wash").fetchdf()
 wash_df.to_csv('test/wash.csv', index=False)
 ```
 
-Right clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis's Woodpecker prefer the Hood River and a certain elevation along the Pacific Crest:
+Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis's Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest:
 
 ![Wash](https://i.imgur.com/nGiuDxq.png)
 
@@ -212,4 +214,8 @@ Right clicking the csv file and selecting View Map produces a heat map. It seems
 <!-- 
 ## Notes
 Add parquet files and analyze? See parquet.ipynb
+
+exploring large scale data: https://medium.com/towards-data-science/exploring-large-scale-raster-population-data-72803cf7f2ad
+
+big data viz: https://towardsdatascience.com/big-data-visualization-using-datashader-in-python-c3fd00b9b6fc
 -->
