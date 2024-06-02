@@ -198,7 +198,7 @@ wash_df = con.execute("SELECT * FROM wash").fetchdf()
 wash_df.to_csv('test/wash.csv', index=False)
 ```
 
-Right clicking the csv file and selecting View Map produces a heat map. It seeems to show that Lewis's Woodpecker prefer the Hood River and a certain elevation along the Pacific Crest:
+Right clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis's Woodpecker prefer the Hood River and a certain elevation along the Pacific Crest:
 
 ![Wash](https://i.imgur.com/nGiuDxq.png)
 
@@ -206,14 +206,10 @@ Right clicking the csv file and selecting View Map produces a heat map. It seeem
 - **[GEOG-414](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html)**. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a recommended way to start with DuckDB.
 - **[Spatial SQL](https://spatial-sql.com/)**. Matt Forrest's text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use a copyedit (many spelling errors) and better organization (figures disconnected from text, tutorials with more bullets/less text), everything is in the book that you will need to become a spatial SQL expert. The tutorials are relevant and guide you through critical beginner -> advanced workflows using spatial SQL.
 - **[SQL-QGIS Tip](https://twitter.com/spatialthoughts/status/1774833044396081189)**. You can use the 'Execute SQL' processing algorithm to run SQL queries on ANY vector layer within QGIS. Here's an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.
-- **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
+- **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. This is a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
 - **[Lonboard](https://developmentseed.org/lonboard/latest/)**. Lonboard is a Python library for fast vector processing. The [DuckDB Spatial](https://developmentseed.org/lonboard/latest/examples/duckdb/) tutorial links Lonboard to DuckDB and python to create a heatmap. 
 
 <!-- 
 ## Notes
-
-- [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
-- [open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
-- use the cleaned LEWO sets and upload them to a GitHub page
--youtube course from Freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
--[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli but doesn't explain how to do these very well -->
+Add parquet files and analyze? See parquet.ipynb
+-->
