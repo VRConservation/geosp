@@ -121,6 +121,8 @@ con.sql('''
 ''')
 ```
 
+<!-- Need to eliminate the sawmill example or make it diff. Both examples import csv files. Maybe make one a parquet file? -->
+
 ## Lewis's Woodpecker
 Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis's Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects ([Wikipedia](https://en.wikipedia.org/wiki/Lewis%27s_woodpecker)). We'll examine a dataset of Lewis's species occurrence from eBird.
 
