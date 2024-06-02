@@ -8,11 +8,11 @@ I have to admit I'm very new to using SQL for geospatial analysis, but I am amaz
 
 ```{tip}
 **SQL QUERY STRUCTURE**<BR>
-CREATE TABLE IF NOT EXISTS tablename AS
-SELECT * FROM ('path_to_file')
-WHERE
-GROUP BY
-ORDER BY desc
+CREATE TABLE IF NOT EXISTS tablename AS <br>
+SELECT * FROM ('path_to_file') <br>
+WHERE <br>
+GROUP BY <br>
+ORDER BY desc <br>
 LIMIT
 ```
 
