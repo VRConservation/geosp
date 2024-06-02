@@ -487,7 +487,7 @@ document.write(`
 <section id="duckdb">
 <h2><span class="section-number">5.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
 <p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed processing large datasets</p>
-<p>A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a>, which has superb tutorials on Python, Earth Engine, DuckDB, and PostGIS.</p>
+<p>A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a>, which has excellent tutorials on Python, Earth Engine, DuckDB, and PostGIS.</p>
 </section>
 <section id="installation">
 <h2><span class="section-number">5.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
@@ -584,7 +584,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to 1 decimal.</p>
+<p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View biomass table schema</span>
@@ -610,14 +610,15 @@ document.write(`
 </div>
 </div>
 </div>
+<!-- Need to eliminate the sawmill example or make it diff. Both examples import csv files. Maybe make one a parquet file? -->
 </section>
 <section id="lewis-s-woodpecker">
 <h2><span class="section-number">5.5. </span>Lewis’s Woodpecker<a class="headerlink" href="#lewis-s-woodpecker" title="Link to this heading">#</a></h2>
 <p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
 <p><img alt="Lewis pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg" /></p>
-<p>If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example right clicking on the Lewis’s Woodpecker CSV file in the test folder (if you’ve cloned this repo) and selecting View Map will give you</p>
+<p>If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example right clicking on the Lewis’s Woodpecker csv file in the test folder (if you’ve cloned this repo) and selecting View Map will give you</p>
 <p><img alt="lewo" src="https://i.imgur.com/cb48hqP.png" /></p>
-<p>The Lewis’s csv file is quite large but DuckDB runs through it 140k rows quickly. First import the packages and connect to DuckDB</p>
+<p>The Lewis’s csv file is quite large but DuckDB runs through its ~140k rows quickly. First import the packages and connect to DuckDB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import and connect</span>
@@ -667,7 +668,7 @@ document.write(`
 </div>
 </div>
 <p><img alt="lewo_state" src="https://i.imgur.com/J8h5fbP.png" /></p>
-<p>Select Washington observation and name the new table wash</p>
+<p>Select the Washington observations and name the new table wash</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select only the Washington state points from the table and call the new table wash</span>
@@ -681,38 +682,34 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Export the new table to a csv in the test folder</p>
+<p>Export the new table as a csv by converting it to a data frame and save in the test folder</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch the data from the wash table into a DataFrame</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch the data from the wash table into a data frame</span>
 <span class="n">wash_df</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM wash&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchdf</span><span class="p">()</span>
 
-<span class="c1"># Export the DataFrame to a CSV file in the test folder</span>
+<span class="c1"># Export the dataframe to a csv file in the test folder</span>
 <span class="n">wash_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;test/wash.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Right clicking the csv file and selecting View Map produces a heat map. I seeems to show that Lewis’s Woodpecker seem to like the Hood River and a certain elevation along the Pacific Crest:</p>
+<p>Right clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis’s Woodpecker prefer the Hood River and a certain elevation along the Pacific Crest:</p>
 <p><img alt="Wash" src="https://i.imgur.com/nGiuDxq.png" /></p>
 </section>
 <section id="resources">
 <h2><span class="section-number">5.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a definitive and recommended way to start with DuckDB.</p></li>
+<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville, is a recommended way to start with DuckDB.</p></li>
 <li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use a copyedit (many spelling errors) and better organization (figures disconnected from text, tutorials with more bullets/less text), everything is in the book that you will need to become a spatial SQL expert. The tutorials are relevant and guide you through critical beginner -&gt; advanced workflows using spatial SQL.</p></li>
 <li><p><strong><a class="reference external" href="https://twitter.com/spatialthoughts/status/1774833044396081189">SQL-QGIS Tip</a></strong>. You can use the ‘Execute SQL’ processing algorithm to run SQL queries on ANY vector layer within QGIS. Here’s an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.</p></li>
-<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.</p></li>
+<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. This is a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.</p></li>
 <li><p><strong><a class="reference external" href="https://developmentseed.org/lonboard/latest/">Lonboard</a></strong>. Lonboard is a Python library for fast vector processing. The <a class="reference external" href="https://developmentseed.org/lonboard/latest/examples/duckdb/">DuckDB Spatial</a> tutorial links Lonboard to DuckDB and python to create a heatmap.</p></li>
 </ul>
 <!-- 
 ## Notes
-
-- [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
-- [open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
-- use the cleaned LEWO sets and upload them to a GitHub page
--youtube course from Freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
--[analyze millions of points](https://www.youtube.com/watch?v=ljzpm3Mrw-I) has nice duckdb analysis using h3 and connecting code to cli but doesn't explain how to do these very well --></section>
+Add parquet files and analyze? See parquet.ipynb
+--></section>
 </section>
 
     <script type="text/x-thebe-config">
