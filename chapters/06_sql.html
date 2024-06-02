@@ -477,16 +477,21 @@ document.write(`
 <p>The language you must learn for geospatial analysis!</p>
 <section id="new">
 <h2><span class="section-number">5.1. </span>New<a class="headerlink" href="#new" title="Link to this heading">#</a></h2>
-<p>I have to admit I’m very new to using SQL for geospatial analysis but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL really is the universal database management language, so geospatial aside, if you work with data, you need to learn how to use it.</p>
+<p>I have to admit I’m very new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Depending on what you need to know, you can use some or all of the basics. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>When you perform a definition query in ArcGIS Pro or a data query in QGIS, SQL runs in the background. In fact, if you use ArcGIS Pro, open it up, double-click on a layer, open the def query function, and note that there’s a little switch to convert the GUI to SQL. Create a query, then switch it to SQL to see the translation.</p>
+<p><strong>SQL QUERY STRUCTURE</strong><BR>
+CREATE TABLE IF NOT EXISTS tablename AS
+SELECT * FROM (‘path_to_file’)
+WHERE
+GROUP BY
+ORDER BY desc
+LIMIT</p>
 </div>
-<p>Add photo of a def query before and after in Arc (with and w/o SQL)</p>
 </section>
 <section id="duckdb">
 <h2><span class="section-number">5.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
-<p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed processing large datasets</p>
+<p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets</p>
 <p>A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a>, which has excellent tutorials on Python, Earth Engine, DuckDB, and PostGIS.</p>
 </section>
 <section id="installation">
@@ -610,15 +615,14 @@ document.write(`
 </div>
 </div>
 </div>
-<!-- Need to eliminate the sawmill example or make it diff. Both examples import csv files. Maybe make one a parquet file? -->
 </section>
 <section id="lewis-s-woodpecker">
 <h2><span class="section-number">5.5. </span>Lewis’s Woodpecker<a class="headerlink" href="#lewis-s-woodpecker" title="Link to this heading">#</a></h2>
 <p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
 <p><img alt="Lewis pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg" /></p>
-<p>If you install the Geo Data Viewer plugin for VS Code it will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example right clicking on the Lewis’s Woodpecker csv file in the test folder (if you’ve cloned this repo) and selecting View Map will give you</p>
+<p>Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example, right-clicking on the Lewis’s Woodpecker csv file in the test folder (if you’ve cloned this repo) and selecting View Map will give you</p>
 <p><img alt="lewo" src="https://i.imgur.com/cb48hqP.png" /></p>
-<p>The Lewis’s csv file is quite large but DuckDB runs through its ~140k rows quickly. First import the packages and connect to DuckDB</p>
+<p>The Lewis’s csv file is quite large, but DuckDB quickly runs through its ~140k rows. First, import the packages and connect to DuckDB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import and connect</span>
@@ -634,7 +638,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Create a table called lewo, short for Lewis’s Woodpecker. The csv file is in the test folder of the repo. Note the use of ST_Point assigning the lat lon columns to geometry.</p>
+<p>Create a table called lewo, short for Lewis’s Woodpecker. The csv file is in the repo’s test folder. Note the use of ST_Point to assign the lat-lon columns to geometry.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create lewo table and assign points lat lon points to geometry</span>
@@ -694,7 +698,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Right clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis’s Woodpecker prefer the Hood River and a certain elevation along the Pacific Crest:</p>
+<p>Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis’s Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest:</p>
 <p><img alt="Wash" src="https://i.imgur.com/nGiuDxq.png" /></p>
 </section>
 <section id="resources">
@@ -709,6 +713,10 @@ document.write(`
 <!-- 
 ## Notes
 Add parquet files and analyze? See parquet.ipynb
+
+exploring large scale data: https://medium.com/towards-data-science/exploring-large-scale-raster-population-data-72803cf7f2ad
+
+big data viz: https://towardsdatascience.com/big-data-visualization-using-datashader-in-python-c3fd00b9b6fc
 --></section>
 </section>
 
