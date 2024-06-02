@@ -12,6 +12,6 @@ jupyter:
     name: python3
 ---
 
-# Welcome to FOSS Geospatial Tools
+# Welcome to Free & Open Source Geospatial Tools
 
 ![logo](cover.png)

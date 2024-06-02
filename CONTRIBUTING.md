@@ -18,31 +18,19 @@ If you are reporting a bug, please include:
 Look through the GitHub issues for bugs. Anything tagged with "bug" and "help
 wanted" is open to whoever wants to implement it.
 
-## Implement Features
+## Copyedits
 
-Look through the GitHub issues for features. Anything tagged with "enhancement"
-and "help wanted" is open to whoever wants to implement it.
-
-## Write Documentation
-
-geebook could always use more documentation, whether as part of the
-official geebook docs, in docstrings, or even on the web in blog posts,
-articles, and such.
+If you see any grammatical errors or sections that do not make sense, please send comments through issues or contact me directly.
 
 ## Submit Feedback
 
 The best way to send feedback is to file an issue on GitHub.
 
-If you are proposing a feature:
-
-- Explain in detail how it would work.
-- Keep the scope as narrow as possible, to make it easier to implement.
-- Remember that this is a volunteer-driven project, and that contributions
-  are welcome :)
+If you are proposing a change, addition, or suggestion remember that this is a volunteer-driven project, and that contributions are welcome.
 
 ## Get Started
 
-Ready to contribute? Here's how to set up `fossbook` for local development.
+Ready to contribute? Here's how to set the foss book for local contributions:
 
 1. Fork the repo on GitHub.
 2. Clone your fork locally.

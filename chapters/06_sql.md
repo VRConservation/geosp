@@ -7,7 +7,8 @@ The language you must learn for geospatial analysis!
 I have to admit I'm very new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Depending on what you need to know, you can use some or all of the basics. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.
 
 ```{tip}
-**SQL QUERY STRUCTURE**<BR>
+**BASIC SQL QUERY STRUCTURE**<br>
+<br>
 CREATE TABLE IF NOT EXISTS tablename AS <br>
 SELECT * FROM ('path_to_file') <br>
 WHERE <br>

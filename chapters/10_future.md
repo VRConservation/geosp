@@ -22,4 +22,7 @@ I didn't cover the Geospatial Data Abstraction Library, or GDAL, in this version
 - [pdal.io](https://pdal.io/en/2.7-maintenance/) will help get you started with PADL.
 - Spatialised has a nice tutorial on [Lidar processing with PDAL, WMTS and geobash](https://www.spatialised.net/lidar-and-geobash/) and also a video from FOSS4G Bucharest on [Exploiting PDAL and Entwine in the Wild](https://media.ccc.de/v/bucharest-267-exploiting-pdal-entwine-in-the-wild#t=34).
 
-## Future of Geospatial -->
+## Future of Geospatial 
+- modern gis mapscaping podcast about how most maps being used by people w/o cartographic, geospatial, and data science backgrounds, but they still use mapping tools to get around, plan vacations, or look at cool places on the planet.
+
+-->
