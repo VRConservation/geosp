@@ -176,7 +176,7 @@ con.sql('''
     LIMIT 10
 ''')
 ```
-![lewo_state](https://i.imgur.com/J8h5fbP.png)
+![lewo_state](https://i.imgur.com/1sGQLD1.png)
 
 Select the Washington observations and name the new table wash
 
