@@ -36,7 +36,7 @@ launch_buttons:
 # HTML-specific settings
 html:
   favicon: "cover.png"
-  baseurl: "https://3point.xyz/geosp-bib/" # The base URL where your book will be hosted.
+  baseurl: "https://3point.xyz/geosp" # The base URL where your book will be hosted.
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
@@ -45,7 +45,7 @@ html:
 #######################################################################################
 # Launch button settings
 repository:
-  url: https://github.com/VRConservation/geosp-bib
+  url: https://github.com/VRConservation/geosp
   # path_to_book: "./" # A path to your book's folder, relative to the repository root.
   branch: master # Which branch of the repository should be used when creating links
 
@@ -54,7 +54,7 @@ sphinx:
     html_extra_path: ["CNAME"]
     html_theme_options:
       use_download_button: true
-      repository_url: https://github.com/VRConservation/geosp-bib
+      repository_url: https://github.com/VRConservation/geosp
       use_issues_button: true
       use_repository_button: true
       use_edit_page_button: true
