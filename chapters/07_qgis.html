@@ -455,7 +455,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">6.1. Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-nevada-species-richness">6.1. Sierra Nevada Species Richness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.1. Add data</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.2. Resources</a></li>
 </ul>
             </nav>
@@ -471,9 +474,20 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="qgis">
 <h1><span class="section-number">6. </span>QGIS<a class="headerlink" href="#qgis" title="Link to this heading">#</a></h1>
 <p>A powerful desktop GIS software infinitely customizable with plugins</p>
-<section id="tutorial">
-<h2><span class="section-number">6.1. </span>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h2>
-<p>Coming soon!</p>
+<section id="sierra-nevada-species-richness">
+<h2><span class="section-number">6.1. </span>Sierra Nevada Species Richness<a class="headerlink" href="#sierra-nevada-species-richness" title="Link to this heading">#</a></h2>
+<p>QGIS is a challenging tutorial to put together because there are so many resources available. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter.</p>
+<section id="add-data">
+<h3><span class="section-number">6.1.1. </span>Add data<a class="headerlink" href="#add-data" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>If you haven’t already installed the QuickMapServices plugin, go to Plugins/Not installed, look for QuickMapServices and select Install Plugin. In QMS search for Dark Matter and click Add to add it as a basemap.</p></li>
+<li><p>Go to the <a class="reference external" href="https://rrk.sdsc.edu/sierra.html#bio_conserv">Biodiviersity Conservation</a> dataset for the California Wildfire Task Force Regional Resource Kits. Under Species Diversity/Wildlife Species Richness click the pull down menu for Raw Data, download then unzip the tif file.</p></li>
+<li><p>Add your downloads folder to favorites in the browser panel by navigating to your downloads, right clicking, and selecting add to favorites. In the favorites at the top of the panel, open downloads, the species richness file, then draft the tif onto the map canvas. It should appear on the map and in your layers:</p></li>
+</ol>
+<p><img alt="wsr_gray" src="https://i.imgur.com/tJMG7w1.png" /></p>
+<p>Let’s change the gray color of the raster to something easier to view. In the layers panel click on the Open Layer Styling panel in the upper left corner</p>
+<p><img alt="layers" src="https://i.imgur.com/E17z13S.png" /></p>
+</section>
 </section>
 <section id="resources">
 <h2><span class="section-number">6.2. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
@@ -482,24 +496,10 @@ document.write(`
 <li><p><strong>Spatial Thoughts</strong>. Free or paid options available with comprehensive <a class="reference external" href="https://courses.spatialthoughts.com/introduction-to-qgis.html">Introduction to QGIS</a>, <a class="reference external" href="https://courses.spatialthoughts.com/advanced-qgis.html">Advanced QGIS</a>, or <a class="reference external" href="https://courses.spatialthoughts.com/spatial-data-viz.html">Spatial Data Visualization with QGIS</a>. The course materials and tutorials are free and have clear instructions and figures to follow each tutorial.</p></li>
 <li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;automaticknowledge">Map Academy</a></strong>. Everything you need to know about QGIS, usually in short, digestible snippets. Also includes excellent videos on using Aerialod, a path tracing map visualizer using DEM and other data.</p></li>
 <li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;HansvanderKwast">Hans Van der Kwast</a></strong>. Particularly good for QGIS hydrological applications, but also has Lidar, image analysis, and raster analysis.</p></li>
+<li><p>**<a class="reference external" href="https://www.youtube.com/&#64;burdGIS">Burd GIS</a>. Many practical videos on QGIS.</p></li>
+<li><p>**<a class="reference external" href="https://www.youtube.com/&#64;geospatialschool">Geospatial School</a>. Great combination of Python and QGIS. Also full courses at <a class="reference external" href="https://geospatialschool.com/">geospatialschool.com</a>.</p></li>
 </ul>
-<!-- 
-
-See the QGIS folder for project ideas. Also the PYQGIS scripts file 
-
-QGIS tutorial could be about processing SAR data, also the SAR tutorial from Quisheng
-
-Tutorial on SAR and QGIS for veg change: https://asf.alaska.edu/how-to/data-recipes/change-detection-using-sar-data-in-qgis/. Not that great but could have some processing ideas
-
-Burdgis has a video that goes from gee to geemap to qgis: https://www.youtube.com/watch?v=aVunoYXSJtg
-
-Look for SAR or Synthetic aperture radar tutorials in medium: 
-
-SAR flood mapping: https://medium.com/@thukupeter487/flood-mapping-on-google-earth-engine-using-sentinel-1-sar-grd-bde8085eedd0
-but it's in GEE
-
-see the EEFA book
---></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -566,7 +566,10 @@ see the EEFA book
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">6.1. Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-nevada-species-richness">6.1. Sierra Nevada Species Richness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.1. Add data</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.2. Resources</a></li>
 </ul>
   </nav></div>
