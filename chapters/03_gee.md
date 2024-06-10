@@ -16,7 +16,7 @@ Yes! You've heard of this and think Google Earth will be easy. But when you chec
 
 ## DIY
 
-This scenario is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Contrary to popular opinion, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
+This scenario applies even if you have a GIS guy down the hall with the defunct plotter! Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Contrary to popular opinion, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
 
 Here's how:
 
