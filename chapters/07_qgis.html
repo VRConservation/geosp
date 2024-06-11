@@ -455,17 +455,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-species-richness">6.1. Sierra species richness</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">6.1.1. Workflow</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.2. Add data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-styling">6.1.3. Layer styling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-toolboxes">6.1.4. Processing toolboxes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-table-edit">6.1.5. Attribute table edit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">6.1.6. Summary statistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-webmap">6.1.7. Layout/webmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">6.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-species-richness">6.2. Sierra species richness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">6.2.1. Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.2.2. Add data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#style-layers">6.2.3. Style layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-toolboxes">6.2.4. Processing toolboxes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-table-edit">6.2.5. Attribute table edit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">6.2.6. Summary statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-webmap">6.2.7. Layout/webmap</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.2. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.3. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -480,21 +481,26 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="qgis">
 <h1><span class="section-number">6. </span>QGIS<a class="headerlink" href="#qgis" title="Link to this heading">#</a></h1>
 <p>A powerful desktop GIS software infinitely customizable with plugins</p>
+<section id="background">
+<h2><span class="section-number">6.1. </span>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<p>QGIS is a fantastic alternative to ArcGIS Pro, especially since it’s free, updated regularly, and has a supportive community srruonding it. It is a desktop package and has additional packages that come with it for the download such as GRASS GIS that are worth checking out. In fact, QGIS is a challenging tutorial to put together because there are so many resources available to learn its use. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter.</p>
+</section>
 <section id="sierra-species-richness">
-<h2><span class="section-number">6.1. </span>Sierra species richness<a class="headerlink" href="#sierra-species-richness" title="Link to this heading">#</a></h2>
-<p>QGIS is a challenging tutorial to put together because there are so many resources available. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter. For this tutorial, we’ll examine species richness by hexagon buckets. Make sure you are regularly saving the project by typing control/command S or Project/Save.</p>
+<h2><span class="section-number">6.2. </span>Sierra species richness<a class="headerlink" href="#sierra-species-richness" title="Link to this heading">#</a></h2>
+<p>For this tutorial, we’ll examine species richness by hexagon, known as tessellation, in the Sierra Nevada, California. Make sure you are regularly saving the project by typing control/command S or Project/Save.</p>
 <section id="workflow">
-<h3><span class="section-number">6.1.1. </span>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.1. </span>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h3>
+<p>We will follow the following workflow to examine species richness:</p>
 <ol class="arabic simple">
 <li><p>Add data</p></li>
 <li><p>Style layers</p></li>
-<li><p>Create and clip grid</p></li>
+<li><p>Create and clip grid: Processing toolbox</p></li>
 <li><p>Run summary statistics and style</p></li>
 <li><p>Create layout or export to web</p></li>
 </ol>
 </section>
 <section id="add-data">
-<h3><span class="section-number">6.1.2. </span>Add data<a class="headerlink" href="#add-data" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.2. </span>Add data<a class="headerlink" href="#add-data" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>If you haven’t already installed the QuickMapServices plugin, go to Plugins/Not installed, look for QuickMapServices and select Install Plugin. In QMS search for Dark Matter and click Add to add it as a basemap.</p></li>
 <li><p>Go to the <a class="reference external" href="https://rrk.sdsc.edu/sierra.html#bio_conserv">Biodiviersity Conservation</a> dataset for the California Wildfire Task Force Regional Resource Kits. Under Species Diversity/Wildlife Species Richness click the pull down menu for Raw Data, download then unzip the tif file.</p></li>
@@ -511,15 +517,15 @@ document.write(`
 <p><img alt="agol" src="https://i.imgur.com/duABhsL.jpeg" /></p>
 <p>For some reason, some links to REST servers do not work at all or do not work the first time you create the connection. It’s worth trying to delete and add the server again.</p>
 </section>
-<section id="layer-styling">
-<h3><span class="section-number">6.1.3. </span>Layer styling<a class="headerlink" href="#layer-styling" title="Link to this heading">#</a></h3>
+<section id="style-layers">
+<h3><span class="section-number">6.2.3. </span>Style layers<a class="headerlink" href="#style-layers" title="Link to this heading">#</a></h3>
 <p>Now that the Task Force REgions have been added, click the arrow to the left of the new connection and drag the vector layer onto the map window or down to the layers panel. Turn off the species richness raster layer by clicking the eye to the left of the layer name in the layers panel. The task force regions should show up with a random color and outlined in black. The layer should be selected when added, so click on the Open the Layer Styling Panel icon in the upper left of the layer panel (or F7) to re-open the symbology or styling panel.</p>
 <p><img alt="tf regions styling" src="https://i.imgur.com/KKp5U2a.png" /></p>
 <p>Under Single Symbol click Simple Fill under Fill. Click the arrow next to fill color and select the box for Transparent Fill. You can also play around with the colors to see how they change. In the lower right of the Layer Styling box the box for Live update should be checked and the changes are instantaneous. When you click the Transparent Fill the layer will seem to disappear since the basemap is black. Never fear, it’s still there. Click the arrow next to Stroke Color and under Standard colors select white and the regions will appear in white.</p>
 <p><img alt="task force white" src="https://i.imgur.com/V6mgBV5.png" /></p>
 </section>
 <section id="processing-toolboxes">
-<h3><span class="section-number">6.1.4. </span>Processing toolboxes<a class="headerlink" href="#processing-toolboxes" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.4. </span>Processing toolboxes<a class="headerlink" href="#processing-toolboxes" title="Link to this heading">#</a></h3>
 <p>Head back to the Layers panel and right click the Task Force Regions layer and select Filter. We’re going to filter the vector layer to only show the Sierra Nevada and Cascade Region. This will bring up the Query Builder window:</p>
 <ol class="arabic simple">
 <li><p>Double click Region in the Fields box in the upper left. “Region” will appear in the Expression box below.</p></li>
@@ -556,7 +562,7 @@ document.write(`
 <p>In the save dialog box enter Format: Geopackage, File Name Sierra Clip (click the 3 dots to right and navigate to the folder where you’ve saved the project), Layer name: Sierra Clip and click ok. You should get a Layer Export success message at the top of the map window.</p>
 </section>
 <section id="attribute-table-edit">
-<h3><span class="section-number">6.1.5. </span>Attribute table edit<a class="headerlink" href="#attribute-table-edit" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.5. </span>Attribute table edit<a class="headerlink" href="#attribute-table-edit" title="Link to this heading">#</a></h3>
 <p>You may notice that there’s a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake’s Estero. This seems to be an error in the vector layer from the Task Force. Let’s delete it so it doesn’t show up in the subsequent analysis.</p>
 <p>Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the name of the icon). In the same toolbar click on the info circle with the arrow. This is the Identify Features icon and is useful for clicking on any area of the map to show the layers and information about the pixel you’ve clicked. Once you’ve selected Identify Features, click inside the polygon on the map.</p>
 <p>The polygon will change color to show it’s selected and an Identify Results box will open.</p>
@@ -569,7 +575,7 @@ document.write(`
 <p>Click the delete button on your keyboard, de-select the pencil editor, accept save changes, and close the attribute table. You’ll notice the Marin hexagon is gone.</p>
 </section>
 <section id="summary-statistics">
-<h3><span class="section-number">6.1.6. </span>Summary statistics<a class="headerlink" href="#summary-statistics" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.6. </span>Summary statistics<a class="headerlink" href="#summary-statistics" title="Link to this heading">#</a></h3>
 <p>Zoom back to Sierra Clip by right clicking the layer and selecting Zoom to layer(s). This will center the map to the the Sierra Clip layer. Select the Sierra Clip layer by left clicking it. Open the Toolbox and start typing Zonal then select Zonal Statistics and make the following changes:</p>
 <ol class="arabic simple">
 <li><p>Input layer: leave as Sierra Clip.</p></li>
@@ -601,7 +607,7 @@ document.write(`
 <p>Go back to QMS and type hillshade in the search function and add the ESRI world hillshade. With Richness Stats selected, open the Styling pane and try different selections for the Layer blending mode. Multiply and Hard Light seem to back the layer into hillshade best so you can see both layers. This can be an effective visualization tool. If the layer disappears you may need to click on Classify again to re-classify the layer.</p>
 </section>
 <section id="layout-webmap">
-<h3><span class="section-number">6.1.7. </span>Layout/webmap<a class="headerlink" href="#layout-webmap" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.7. </span>Layout/webmap<a class="headerlink" href="#layout-webmap" title="Link to this heading">#</a></h3>
 <p>We won’t go into depth to create a layout for exporting your map but generally the steps are as follows:</p>
 <ol class="arabic simple">
 <li><p>Go to the Project menu and select New Print Layout.</p></li>
@@ -625,7 +631,7 @@ document.write(`
 </section>
 </section>
 <section id="resources">
-<h2><span class="section-number">6.2. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <p>The Sierra species richness tutorial should give you a flavor of QGIS’ capabilities and processing algorithms. To go deeper in your learning and geospatial practice, here are some additional QGIS resources:</p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="https://docs.qgis.org/3.34/en/docs/training_manual/index.html">QGIS Training Manual</a></strong>. A comprehensive resource for all use cases of QGIS plus contributed chapters and tutorials. Always a great place to search to find specific answers to problems you face or find a how to.</p></li>
@@ -633,7 +639,7 @@ document.write(`
 <li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;automaticknowledge">Map Academy</a></strong>. Everything you need to know about QGIS, usually in short, digestible snippets. Also includes excellent videos on using Aerialod, a path tracing map visualizer using DEM and other data.</p></li>
 <li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;HansvanderKwast">Hans Van der Kwast</a></strong>. Particularly good for QGIS hydrological applications, but also has Lidar, image analysis, and raster analysis.</p></li>
 <li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;burdGIS">Burd GIS</a></strong>. Many practical videos on QGIS.</p></li>
-<li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;geospatialschool">Geospatial School</a></strong>. Great combination of Python and QGIS. Also full courses at <a class="reference external" href="https://geospatialschool.com/">geospatialschool.com</a>.</p></li>
+<li><p><strong><a class="reference external" href="https://www.youtube.com/&#64;geospatialschool">Geospatial School</a></strong>. Great combination of Python and QGIS. They offer full courses at <a class="reference external" href="https://geospatialschool.com/">geospatialschool.com</a>.</p></li>
 </ul>
 </section>
 </section>
@@ -702,17 +708,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-species-richness">6.1. Sierra species richness</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">6.1.1. Workflow</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.2. Add data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-styling">6.1.3. Layer styling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-toolboxes">6.1.4. Processing toolboxes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-table-edit">6.1.5. Attribute table edit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">6.1.6. Summary statistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-webmap">6.1.7. Layout/webmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">6.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-species-richness">6.2. Sierra species richness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">6.2.1. Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.2.2. Add data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#style-layers">6.2.3. Style layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-toolboxes">6.2.4. Processing toolboxes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-table-edit">6.2.5. Attribute table edit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">6.2.6. Summary statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-webmap">6.2.7. Layout/webmap</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.2. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.3. Resources</a></li>
 </ul>
   </nav></div>
 
