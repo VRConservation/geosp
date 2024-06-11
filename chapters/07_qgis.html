@@ -456,7 +456,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-nevada-species-richness">6.1. Sierra Nevada Species Richness</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.1. Add data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">6.1.1. Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.2. Add data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-styling">6.1.3. Layer styling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-toolboxes">6.1.4. Processing toolboxes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-table-edit">6.1.5. Attribute table edit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">6.1.6. Summary statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-layout-webmap">6.1.7. Create layout/webmap</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.2. Resources</a></li>
@@ -476,21 +482,151 @@ document.write(`
 <p>A powerful desktop GIS software infinitely customizable with plugins</p>
 <section id="sierra-nevada-species-richness">
 <h2><span class="section-number">6.1. </span>Sierra Nevada Species Richness<a class="headerlink" href="#sierra-nevada-species-richness" title="Link to this heading">#</a></h2>
-<p>QGIS is a challenging tutorial to put together because there are so many resources available. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter.</p>
+<p>QGIS is a challenging tutorial to put together because there are so many resources available. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter. For this tutorial, we’ll examine species richness by hexagon buckets. Make sure you are regularly saving the project by typing control/command S or Project/Save.</p>
+<section id="workflow">
+<h3><span class="section-number">6.1.1. </span>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Add data</p></li>
+<li><p>Style layers</p></li>
+<li><p>Create and clip grid</p></li>
+<li><p>Run summary statistics and style</p></li>
+<li><p>Create layout or export to web</p></li>
+</ol>
+</section>
 <section id="add-data">
-<h3><span class="section-number">6.1.1. </span>Add data<a class="headerlink" href="#add-data" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.1.2. </span>Add data<a class="headerlink" href="#add-data" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>If you haven’t already installed the QuickMapServices plugin, go to Plugins/Not installed, look for QuickMapServices and select Install Plugin. In QMS search for Dark Matter and click Add to add it as a basemap.</p></li>
 <li><p>Go to the <a class="reference external" href="https://rrk.sdsc.edu/sierra.html#bio_conserv">Biodiviersity Conservation</a> dataset for the California Wildfire Task Force Regional Resource Kits. Under Species Diversity/Wildlife Species Richness click the pull down menu for Raw Data, download then unzip the tif file.</p></li>
 <li><p>Add your downloads folder to favorites in the browser panel by navigating to your downloads, right clicking, and selecting add to favorites. In the favorites at the top of the panel, open downloads, the species richness file, then draft the tif onto the map canvas. It should appear on the map and in your layers:</p></li>
 </ol>
 <p><img alt="wsr_gray" src="https://i.imgur.com/tJMG7w1.png" /></p>
-<p>Let’s change the gray color of the raster to something easier to view. In the layers panel click on the Open Layer Styling panel in the upper left corner</p>
+<p>Let’s change the gray color of the raster to something easier to view. In the layers panel click on the Open Layer Styling panel in the upper left corner (or F7) after clicking on the wildlife species richness layer to make it active.</p>
 <p><img alt="layers" src="https://i.imgur.com/E17z13S.png" /></p>
+<p>This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma (when you’re selecting magma say MAGMA to yourself in a loud, authoritarian Dr. Evil kind of voice).</p>
+<p><img alt="pseudocolor" src="https://i.imgur.com/Kek44Zz.png" /></p>
+<p>Close the layer styling panel and go back to the Browser locating the ArcGIS Rest Server. Right click and select New Connection. Under name enter Task Force Regions and for url paste: <a class="reference external" href="https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer">https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer</a>. Click ok to activate.</p>
+<p><img alt="task force regions" src="https://i.imgur.com/VK0e3pM.png" /></p>
+<p>The url comes from the ArcGIS online metadata page for <a class="reference external" href="https://www.arcgis.com/home/item.html?id=781f25e4b1a1419d8939b4b54b25433e&amp;amp;sublayer=0">Forest Management Task Force Regions</a>. On the page you will see a URL and a copy sign. If you get to the Map Viewer instead of the metadata, click on Information and then paper arrow icon to get to the page to copy the REST server url.</p>
+<p><img alt="agol" src="https://i.imgur.com/duABhsL.jpeg" /></p>
+<p>For some reason, some links to REST servers do not work at all or do not work the first time you create the connection. It’s worth trying to delete and add the server again.</p>
+</section>
+<section id="layer-styling">
+<h3><span class="section-number">6.1.3. </span>Layer styling<a class="headerlink" href="#layer-styling" title="Link to this heading">#</a></h3>
+<p>Now that the Task Force REgions have been added, click the arrow to the left of the new connection and drag the vector layer onto the map window or down to the layers panel. Turn off the species richness raster layer by clicking the eye to the left of the layer name in the layers panel. The task force regions should show up with a random color and outlined in black. The layer should be selected when added, so click on the Open the Layer Styling Panel icon in the upper left of the layer panel (or F7) to re-open the symbology or styling panel.</p>
+<p><img alt="tf regions styling" src="https://i.imgur.com/KKp5U2a.png" /></p>
+<p>Under Single Symbol click Simple Fill under Fill. Click the arrow next to fill color and select the box for Transparent Fill. You can also play around with the colors to see how they change. In the lower right of the Layer Styling box the box for Live update should be checked and the changes are instantaneous. When you click the Transparent Fill the layer will seem to disappear since the basemap is black. Never fear, it’s still there. Click the arrow next to Stroke Color and under Standard colors select white and the regions will appear in white.</p>
+<p><img alt="task force white" src="https://i.imgur.com/V6mgBV5.png" /></p>
+</section>
+<section id="processing-toolboxes">
+<h3><span class="section-number">6.1.4. </span>Processing toolboxes<a class="headerlink" href="#processing-toolboxes" title="Link to this heading">#</a></h3>
+<p>Head back to the Layers panel and right click the Task Force Regions layer and select Filter. We’re going to filter the vector layer to only show the Sierra Nevada and Cascade Region. This will bring up the Query Builder window:</p>
+<ol class="arabic simple">
+<li><p>Double click Region in the Fields box in the upper left. “Region” will appear in the Expression box below.</p></li>
+<li><p>Click the = sign in the operators box just above the Expression box.</p></li>
+<li><p>In the upper right Values box click on Sample bringing up the possible names</p></li>
+<li><p>Double click Sierra - Cascade - Inyo</p></li>
+<li><p>‘Sierra - Cascade - Inyo’ will appear in the Expression window below.</p></li>
+<li><p>To make sure the expression is valid click test and the Query Result will say the where clause returned 1 row. Congratulations you just completed a data query.</p></li>
+</ol>
+<p><img alt="region query" src="https://i.imgur.com/DrVABtI.png" /></p>
+<p>Click ok to complete the query and close the box and now only the Sierra Nevada region will show. Right click the layer in the Layers panel, select properties and in the window that opens re-name the layer to Sierra Nevada.</p>
+<p>At the top of the QGIS window below the Project, Edit, View windows there is an attribute toolbar:</p>
+<p><img alt="attributes toolbar" src="https://i.imgur.com/qEzv3Gn.png" /></p>
+<p>Click on the cog icon to open the Processing Toolbox. If you left the Layers Styling panel open, close that to maximize the Toolbox pane. In the search panel type grid and double click on create grid to open the grid tool.</p>
+<p><img alt="create grid" src="https://i.imgur.com/QnOBylo.png" /></p>
+<p>Fill out the tool with the following:</p>
+<ol class="arabic simple">
+<li><p>Grid type: Hexagon</p></li>
+<li><p>Grid extent: Click arrow, select Calculate from Layer, select Sierra Nevada</p></li>
+</ol>
+<p><img alt="grid extent" src="https://i.imgur.com/dYOZL20.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>Horizontal and Vertical spacing enter 10000 meters. If you see degrees as the option change the CRS projection to EPSG:3310 NAD83/California Albers. You may need to change the QGIS settings to default to this projection, which can be a fiddle.</p></li>
+<li><p>Click run. It should take a short time to create and a tessellated grid of hexagons will appear over the area of the Sierra Nevada region. Close the tool window and the processing toolbox.</p></li>
+</ol>
+<p>Open the Layer Styling Pane&gt;Simple Fill&gt;Fill color&gt;Transparent&gt;Stroke Color&gt;Light Blue. Make sure to click on the light blue in the circle and within the triangle click on the corner of the triangle for the color (in this case lower left).</p>
+<p><img alt="grid color light blue" src="https://i.imgur.com/QdizHlz.png" /></p>
+<p>We need to clip the hexagons outside the Sierra region. Close the Layer Styling Pane and open the Processing Toolbox. Start typing Select by location and double click the toolbox with the same name. Fill out the toolbox with Select features from Grid, Where the features Intersect, By comparing to features from Sierra Nevada.</p>
+<p><img alt="select by location" src="https://i.imgur.com/8Pqf61k.png" /></p>
+<p>Click run</p>
+<p><img alt="select by location map" src="https://i.imgur.com/tqomvq6.png" /></p>
+<p>Right click the grid layer&gt;Export&gt;Save Selected features as (not in my screenshot that I have a copy of the grid layer that appears below)</p>
+<p><img alt="save selected features as" src="https://i.imgur.com/qsqCaw2.png" /></p>
+<p>In the save dialog box enter Format: Geopackage, File Name Sierra Clip (click the 3 dots to right and navigate to the folder where you’ve saved the project), Layer name: Sierra Clip and click ok. You should get a Layer Export success message at the top of the map window.</p>
+</section>
+<section id="attribute-table-edit">
+<h3><span class="section-number">6.1.5. </span>Attribute table edit<a class="headerlink" href="#attribute-table-edit" title="Link to this heading">#</a></h3>
+<p>You may notice that there’s a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake’s Estero. This seems to be an error in the vector layer from the Task Force. Let’s delete it so it doesn’t show up in the subsequent analysis.</p>
+<p>Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the name of the icon). In the same toolbar click on the info circle with the arrow. This is the Identify Features icon and is useful for clicking on any area of the map to show the layers and information about the pixel you’ve clicked. Once you’ve selected Identify Features, click inside the polygon on the map.</p>
+<p>The polygon will change color to show it’s selected and an Identify Results box will open.</p>
+<p><img alt="identify results" src="https://i.imgur.com/oj9k64N.png" /></p>
+<p>Values from the attribute table will appear showing the fid, id, polygon values, row and column indices. Note the fid and id numbers are 201. Close that pane and then click the Open Attribute Table (F6) to the right of the Toolbox icon on the attribute toolbar that looks like a table. Make sure the Sierra Clip layer is selected in the Layers panel before clicking the Attribute Table icon.</p>
+<p><img alt="attribute table" src="https://i.imgur.com/EUwvAiw.png" /></p>
+<p>In the attribute table you will see the different fields for the layer. This is a simple table since it is a series of polygons. Try selecting other layers in your project to see how each attribute table is different. Note the species richness layer will not have an attribute table sine it is a raster layer. However, the richness layer will show you values if you click the Identify Features and show values stored by pixel in the raster. Opening attribute tables is often the best way to get a quick understanding of the data you are analyzing.</p>
+<p>Click on the pencil icon in the upper left of the layer to activate editing mode then select the 201 fid/id row by clicking on the row number to the left. It should be row 6.</p>
+<p><img alt="attribute table edit mode" src="https://i.imgur.com/v01H9Lr.png" /></p>
+<p>Click the delete button on your keyboard, de-select the pencil editor, accept save changes, and close the attribute table. You’ll notice the Marin hexagon is gone.</p>
+</section>
+<section id="summary-statistics">
+<h3><span class="section-number">6.1.6. </span>Summary statistics<a class="headerlink" href="#summary-statistics" title="Link to this heading">#</a></h3>
+<p>Zoom back to Sierra Clip by right clicking the layer and selecting Zoom to layer(s). This will center the map to the the Sierra Clip layer. Select the Sierra Clip layer by left clicking it. Open the Toolbox and start typing Zonal then select Zonal Statistics and make the following changes:</p>
+<ol class="arabic simple">
+<li><p>Input layer: leave as Sierra Clip.</p></li>
+<li><p>Raster layer: click the arrow and select wildlife species richness.</p></li>
+<li><p>Statistics to calculate: click the 3 dot box to the right and make sure Count, Sum, Mean, and Maximum are checked.</p></li>
+<li><p>Click on the blue arrow in the upper right to go back and then click run.</p></li>
+<li><p>The process may take ~ one minute to run depending on your computer speed. Close the Zonal Stats tool when completed.</p></li>
+</ol>
+<p>A new layer called Zonal Statistics will appear in your layers with a scratch box to the right. Click the box to save the scratch layer:</p>
+<ol class="arabic simple">
+<li><p>File name: navigate to your project folder and save as Richness Stats.</p></li>
+<li><p>Layer name: Richness Stats and click ok.</p></li>
+<li><p>You should get a layer saved success notification at the top of the map and the gray scratch layer box is gone.</p></li>
+<li><p>You may need to right click on the layer and change the name to Richness Stats to change the name in the Layer panel.</p></li>
+</ol>
+<p>Close the processing toolbox and with the layer selected open the Layer Styling pane:</p>
+<ol class="arabic simple">
+<li><p>Change Single Symbol to Graduated.</p></li>
+<li><p>Click the arrow next to Value and scroll down to select _mean.</p></li>
+<li><p>Towards the bottom of the panel click the classify button and turn off the Sierra Clip and Sierra Nevada layers in the layers panel</p></li>
+</ol>
+<p><img alt="classify" src="https://i.imgur.com/z4a2UXp.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Click on the color ramp and change to Viridis (or if you’re feeling the Dr. Evil thing, select Magma!). You’re map should look like the following:</p></li>
+</ol>
+<p><img alt="viridis" src="https://i.imgur.com/ZJK7lOK.png" /></p>
+<p>If you want more or less classes click the arrows next to Classes below the Symbol/Values/Legend box. To change the type of classification, click next to the Mode button. The default is Equal Count (Quantile) but Natural Breaks (Jenks) or Standard Deviation are often used depending on the data. Try these out with different numbers of classes and see how the map changes. Don’t forget to type Save S or Project/Save. Also check out what happens when you select a different field Value from mean.</p>
+<p>In this map you’ll notice that higher species richness is aggregated by hexagon in the foothills regions on either side of the Sierra Nevada and the lowest richness is at higher elevations. In the Styling panel under Rendering you can use the slider to decrease the opacity and look underneath the layer. It might be interesting to import a hillshade layer to get a better idea of where each hexagon lies or a lighter OSM basemap to see more reference cities and geography.</p>
+<p>Go back to QMS and type hillshade in the search function and add the ESRI world hillshade. With Richness Stats selected, open the Styling pane and try different selections for the Layer blending mode. Multiply and Hard Light seem to back the layer into hillshade best so you can see both layers. This can be an effective visualization tool. If the layer disappears you may need to click on Classify again to re-classify the layer.</p>
+</section>
+<section id="create-layout-webmap">
+<h3><span class="section-number">6.1.7. </span>Create layout/webmap<a class="headerlink" href="#create-layout-webmap" title="Link to this heading">#</a></h3>
+<p>We won’t go into depth to create a layout for exporting your map but generally the steps are as follows:</p>
+<ol class="arabic simple">
+<li><p>Go to the Project menu and select New Print Layout.</p></li>
+<li><p>Enter a name for the new layout and click OK.</p></li>
+<li><p>A new window will open with a blank layout.</p></li>
+<li><p>Go to the Layout menu and select Add Map. Click and drag on the layout where you want the map to be.</p></li>
+<li><p>Adjust the scale and position of the map in the layout using the Item Properties panel.</p></li>
+<li><p>To add other elements like a title, legend, scale bar, north arrow etc., use the Add menu on the left side of the layout window.</p></li>
+<li><p>Once you are satisfied with your layout, you can export it as an image, PDF, or SVG using the Layout menu.</p></li>
+</ol>
+<p>Instead of a static layout you may want to export as a web map:</p>
+<ol class="arabic simple">
+<li><p>Go to the Plugins menu and select Manage and Install Plugins.</p></li>
+<li><p>Search for qgis2web and click Install Plugin.</p></li>
+<li><p>Go to the Web menu, select qgis2web and then Create a web map.</p></li>
+<li><p>Select OpenLayers as the format.</p></li>
+<li><p>Adjust any other settings as needed.</p></li>
+<li><p>Click Export to export the project as an OpenLayers map.</p></li>
+<li><p>The project should open as an html file in your default browser.</p></li>
+</ol>
 </section>
 </section>
 <section id="resources">
 <h2><span class="section-number">6.2. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<p>The Sierra species richness tutorial should give you a flavor of QGIS’ capabilities and processing algorithms. To go deeper in your learning and geospatial practice, here are some additional QGIS resources:</p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="https://docs.qgis.org/3.34/en/docs/training_manual/index.html">QGIS Training Manual</a></strong>. A comprehensive resource for all use cases of QGIS plus contributed chapters and tutorials. Always a great place to search to find specific answers to problems you face or find a how to.</p></li>
 <li><p><strong>Spatial Thoughts</strong>. Free or paid options available with comprehensive <a class="reference external" href="https://courses.spatialthoughts.com/introduction-to-qgis.html">Introduction to QGIS</a>, <a class="reference external" href="https://courses.spatialthoughts.com/advanced-qgis.html">Advanced QGIS</a>, or <a class="reference external" href="https://courses.spatialthoughts.com/spatial-data-viz.html">Spatial Data Visualization with QGIS</a>. The course materials and tutorials are free and have clear instructions and figures to follow each tutorial.</p></li>
@@ -567,7 +703,13 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sierra-nevada-species-richness">6.1. Sierra Nevada Species Richness</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.1. Add data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">6.1.1. Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-data">6.1.2. Add data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-styling">6.1.3. Layer styling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-toolboxes">6.1.4. Processing toolboxes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-table-edit">6.1.5. Attribute table edit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">6.1.6. Summary statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-layout-webmap">6.1.7. Create layout/webmap</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.2. Resources</a></li>
