@@ -1,13 +1,18 @@
 # QGIS
 A powerful desktop GIS software infinitely customizable with plugins
 
+## Background
+QGIS is a fantastic alternative to ArcGIS Pro, especially since it's free, updated regularly, and has a supportive community srruonding it. It is a desktop package and has additional packages that come with it for the download such as GRASS GIS that are worth checking out. In fact, QGIS is a challenging tutorial to put together because there are so many resources available to learn its use. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter. 
+
 ## Sierra species richness
-QGIS is a challenging tutorial to put together because there are so many resources available. This chapter assumes you have downloaded QGIS and have basic knowledge of how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter. For this tutorial, we'll examine species richness by hexagon buckets. Make sure you are regularly saving the project by typing control/command S or Project/Save.
+For this tutorial, we'll examine species richness by hexagon, known as tessellation, in the Sierra Nevada, California. Make sure you are regularly saving the project by typing control/command S or Project/Save.
 
 ### Workflow
+We will follow the following workflow to examine species richness:
+
 1. Add data
 2. Style layers
-3. Create and clip grid
+3. Create and clip grid: Processing toolbox
 4. Run summary statistics and style
 5. Create layout or export to web
 
@@ -36,7 +41,7 @@ The url comes from the ArcGIS online metadata page for [Forest Management Task F
 
 For some reason, some links to REST servers do not work at all or do not work the first time you create the connection. It's worth trying to delete and add the server again. 
 
-### Layer styling
+### Style layers
 Now that the Task Force REgions have been added, click the arrow to the left of the new connection and drag the vector layer onto the map window or down to the layers panel. Turn off the species richness raster layer by clicking the eye to the left of the layer name in the layers panel. The task force regions should show up with a random color and outlined in black. The layer should be selected when added, so click on the Open the Layer Styling Panel icon in the upper left of the layer panel (or F7) to re-open the symbology or styling panel.
 
 ![tf regions styling](https://i.imgur.com/KKp5U2a.png)
@@ -179,4 +184,4 @@ The Sierra species richness tutorial should give you a flavor of QGIS' capabilit
 - **[Map Academy](https://www.youtube.com/@automaticknowledge)**. Everything you need to know about QGIS, usually in short, digestible snippets. Also includes excellent videos on using Aerialod, a path tracing map visualizer using DEM and other data.
 - **[Hans Van der Kwast](https://www.youtube.com/@HansvanderKwast)**. Particularly good for QGIS hydrological applications, but also has Lidar, image analysis, and raster analysis.
 - **[Burd GIS](https://www.youtube.com/@burdGIS)**. Many practical videos on QGIS.
-- **[Geospatial School](https://www.youtube.com/@geospatialschool)**. Great combination of Python and QGIS. Also full courses at [geospatialschool.com](https://geospatialschool.com/).
+- **[Geospatial School](https://www.youtube.com/@geospatialschool)**. Great combination of Python and QGIS. They offer full courses at [geospatialschool.com](https://geospatialschool.com/).
