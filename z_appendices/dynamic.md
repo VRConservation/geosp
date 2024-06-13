@@ -71,7 +71,7 @@ m.addLayer(landcover2, {}, "Land Cover2")
 To compare the 2016 to the 2024 composite we'll add a swipe split panel.
 
 ```python
-# Add split panel
+# Add split panel. Note that zooming with the split panel sometimes doesn't work
 left_layer = geemap.ee_tile_layer(landcover, {}, "Land Cover")
 right_layer = geemap.ee_tile_layer(landcover2, {}, "Land Cover2")
 
@@ -95,5 +95,6 @@ landcover = geemap.dynamic_world(region, start_date, end_date, return_type="clas
 geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
 ```
 
-Halright!
+Halright! <br>
+
 ![wayne](https://variety.com/wp-content/uploads/2017/02/mike-myers-1.jpg?w=700)
