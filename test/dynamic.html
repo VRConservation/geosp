@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dynamic World, Party Time, Excellent &#8212; FOSS Resources</title>
+    <title>Dynamic World &#8212; FOSS Resources</title>
   
   
   
@@ -192,7 +192,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../z_appendices/appendix1.html">Virtual Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../z_appendices/appendix2.html">Visual Studio Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../z_appendices/appendix3.html">Github</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dynamic World, Party Time, Excellent</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dynamic World</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapters/bibliography.html">Bibliography</a></li>
 </ul>
@@ -433,7 +433,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -444,11 +446,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Dynamic World, Party Time, Excellent</h1>
+    <h1>Dynamic World</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-world-party-time-excellent">Dynamic World, Party Time, Excellent</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -458,34 +468,40 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="dynamic-world-party-time-excellent">
-<h1>Dynamic World, Party Time, Excellent<a class="headerlink" href="#dynamic-world-party-time-excellent" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="dynamic-world">
+<h1>Dynamic World<a class="headerlink" href="#dynamic-world" title="Link to this heading">#</a></h1>
+<section id="dynamic-world-party-time-excellent">
+<h2>Dynamic World, Party Time, Excellent<a class="headerlink" href="#dynamic-world-party-time-excellent" title="Link to this heading">#</a></h2>
+<p>Dynamic is a worldwide dataset for landcover at 10m resolution. It’s an excellent way to examine land use change using the broad land types from the dataset. The code is adapted from geemap <a class="reference external" href="https://geemap.org/notebooks/114_dynamic_world/">tutorial 114</a>. Bonus!</p>
 <p><img alt="Party on" src="https://cdn.apollo.audio/one/media/620a/4546/edd3/6b2c/268c/2a6b/waynes-world-header.jpg?quality=80&amp;format=jpg&amp;crop=41,0,603,1000&amp;resize=crop" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ee</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import earth engine geemap and create a map</span>
+<span class="kn">import</span> <span class="nn">ee</span>
 <span class="kn">import</span> <span class="nn">geemap</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">geem</span><span class="o">.</span><span class="n">m</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_basem</span><span class="p">(</span><span class="s2">&quot;TERRAIN&quot;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s2">&quot;TERRAIN&quot;</span><span class="p">)</span>
 <span class="n">m</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Here we’ve used the <a class="reference external" href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a> to create a bounding box in the Chaco region of southeastern Bolivia. Remember the bbox coordinates require lower left lat lon and upper right lat lon to make a rectangular box.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">region</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">user_roi</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a region of interest. </span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">user_roi</span>
 <span class="k">if</span> <span class="n">region</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">region</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">BBox</span><span class="p">(</span><span class="o">-</span><span class="mf">64.6523439</span><span class="p">,</span> <span class="o">-</span><span class="mf">25.9007305</span><span class="p">,</span> <span class="o">-</span><span class="mf">63.1115113</span><span class="p">,</span> <span class="o">-</span><span class="mf">24.8390856</span><span class="p">)</span>
-
 <span class="n">m</span><span class="o">.</span><span class="n">centerObject</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Then we’ll set the date ranges for a before and after image then sentinel and dynamic world composites.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the date range</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the 1st date range</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s2">&quot;2016-01-01&quot;</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s2">&quot;2017-01-01&quot;</span>
 
@@ -524,6 +540,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>To compare the 2016 to the 2024 composite we’ll add a swipe split panel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add split panel</span>
@@ -536,6 +553,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>And then a legend</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add legend</span>
@@ -546,6 +564,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Schwing! To export the first map as a geotiff add this code</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save Dynamic World class data in GeoTIFF format</span>
@@ -556,6 +575,9 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Halright!
+<img alt="wayne" src="https://variety.com/wp-content/uploads/2017/02/mike-myers-1.jpg?w=700" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -613,7 +635,20 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-world-party-time-excellent">Dynamic World, Party Time, Excellent</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
