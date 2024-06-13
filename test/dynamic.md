@@ -12,11 +12,12 @@ jupyter:
     name: python3
 ---
 
+# Dynamic World
+
 ## Dynamic World, Party Time, Excellent
+Dynamic is a worldwide dataset for landcover at 10m resolution. It's an excellent way to examine land use change using the broad land types from the dataset. The code is adapted from geemap [tutorial 114](https://geemap.org/notebooks/114_dynamic_world/). Bonus!
 
 ![Party on](https://cdn.apollo.audio/one/media/620a/4546/edd3/6b2c/268c/2a6b/waynes-world-header.jpg?quality=80&format=jpg&crop=41,0,603,1000&resize=crop)
-
-Dynamic is a worldwide dataset for landcover at 10m resolution. It's an excellent way to examine land use change using the broad land types from the dataset. The code is adapted from geemap [tutorial 114](https://geemap.org/notebooks/114_dynamic_world/). Bonus!
 
 ```python
 # Import earth engine geemap and create a map
