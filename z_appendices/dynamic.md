@@ -95,6 +95,6 @@ landcover = geemap.dynamic_world(region, start_date, end_date, return_type="clas
 geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
 ```
 
-Halright! <br>
+**HALRIGHT!** <br>
 
 ![wayne](https://variety.com/wp-content/uploads/2017/02/mike-myers-1.jpg?w=700)
