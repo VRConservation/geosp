@@ -23,9 +23,8 @@ Dynamic is a worldwide dataset for landcover at 10m resolution. It's an excellen
 # Import earth engine geemap and create a map
 import ee
 import geemap
-m = geem.m()
+m = geemap.Map()
 m.add_basemap("TERRAIN")
-m
 ```
 Here we've used the [Polyline tool](https://www.keene.edu/campus/maps/tool/) to create a bounding box in the Chaco region of southeastern Bolivia. Remember the bbox coordinates require lower left lat lon and upper right lat lon to make a rectangular box.
 
