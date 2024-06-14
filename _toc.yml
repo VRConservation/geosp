@@ -23,6 +23,6 @@ parts:
       - file: z_appendices/appendix1
       - file: z_appendices/appendix2
       - file: z_appendices/appendix3
-      - file: test/dynamic
+      - file: z_appendices/dynamic
       - file: contributing
       - file: chapters/bibliography
