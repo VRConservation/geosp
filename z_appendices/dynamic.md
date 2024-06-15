@@ -88,6 +88,9 @@ m.add_text(text, fontsize=14, position='bottomleft')
 m.centerObject(region)
 m
 ```
+
+![schwing](https://i.imgur.com/jMFTsrB.jpeg)
+
 Schwing! To export the first map as a geotiff add this code
 
 ```python

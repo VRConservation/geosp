@@ -14,4 +14,4 @@ jupyter:
 
 # Welcome to FOS Geospatial Tools!
 
-![logo](cover.png)
+![cover](cover.png)
