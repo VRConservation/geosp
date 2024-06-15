@@ -1,6 +1,8 @@
 # Introduction
 Welcome to Free and Open Source Geospatial Tools. This book provides resources and examples of open source geospatial software and solutions. 
 
+MAKING SURE THE BOOK MOVE WORKED
+
 ## Support
 This book is free to use for anyone. If you want to support me, donate, or buy me a coffee, please go to my [buymeacoffee](https://www.buymeacoffee.com/3point) site. I will be adding chapters and resources in the future. Please make to cite it or share it with others that might benefit. Thank you for your support!
 

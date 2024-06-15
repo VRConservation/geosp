@@ -5,9 +5,9 @@ import subprocess
 orig_dir = os.getcwd()
 
 # Define folder paths and create a list of the folders
-bibtest = 'C:/Users/vance/Downloads/geosp-bibtest'
-chapters = 'C:/Users/vance/Downloads/geosp-bibtest/chapters'
-appendices = 'C:/Users/vance/Downloads/geosp-bibtest/z_appendices'
+bibtest = 'D:/OneDrive/1_Consulting/Spatial/geosp-bibtest'
+chapters = 'D:/OneDrive/1_Consulting/Spatial/geosp-bibtest/chapters'
+appendices = 'D:/OneDrive/1_Consulting/Spatial/geosp-bibtest/z_appendices'
 
 folders = [bibtest, chapters, appendices]
 
@@ -25,7 +25,7 @@ subprocess.run(["ghp-import", "-n", "-p", "-f", "_build/html"], check=True)
 
 # Push and sync the repository to GitHub
 subprocess.run(["git", "add", "."], check=True)
-subprocess.run(["git", "commit", "-m", "Wayne's World"], check=True)
+subprocess.run(["git", "commit", "-m", "move check"], check=True)
 subprocess.run(["git", "push"], check=True)
 
 # run the script in the terminal with the command python update.py
