@@ -78,7 +78,7 @@ right_layer = geemap.ee_tile_layer(landcover2, {}, "Land Cover2")
 m = geemap.Map()
 m.split_map(left_layer, right_layer)
 ```
-And then a legend
+And then a legend and text
 
 ```python
 # Add legend and explanatory text
@@ -92,9 +92,9 @@ Schwing! To export the first map as a geotiff add this code
 
 ```python
 # Save Dynamic World data in GeoTIFF format
-# output_path = "landcover.tif"
-# landcover = geemap.dynamic_world(region, start_date, end_date, return_type="class")
-# geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
+output_path = "landcover.tif"
+landcover = geemap.dynamic_world(region, start_date, end_date, return_type="class")
+geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
 ```
 
 **HALRIGHT!** <br>
