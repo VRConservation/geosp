@@ -1,6 +1,6 @@
 # Python
 
-Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. However, even though Arcpy is a Python package, it is not easy or intuitive to use. I tried it, read an entire book on it, and struggled using the notebooks, which are slow to load and not easy to link to VS Code.
+Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. However, even though Arcpy is a Python package, it is not easy or intuitive to use. I tried it, read an entire Arcpy book, and struggled using the esri notebooks, which are slow to load and not feature-rich.
 
 Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.
 
@@ -8,11 +8,11 @@ Then I found Geemap and Leafmap—incredible, user-friendly Python packages deve
 
 To be honest, getting started using a Windows computer was a total pain in the ass. Additionally, it is much easier to set everything up using the Apple or Linux operating systems. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
 
-To get you up and running quickly, I've provided a cheat sheet in Appendix 1 that shortcuts the 414 videos and should have you running in an hour or less. Nevertheless, the videos will provide many tips and tricks I don't include in {doc}`/z_appendices/appendix1` you will find useful when learning and developing in your open source journey. In other words, it's worth taking the time to run through this slowly to get set up correctly.
+To get you up and running quickly, I've provided a cheat sheet in Appendix 1 that shortcuts the 414 videos and should have you running in an hour or less. Nevertheless, the videos will provide many tips and tricks I don't include in {doc}`/z_appendices/appendix1` you will find useful when learning and developing in your open-source journey. In other words, it's worth taking the time to run through this slowly to get set up correctly.
 
 ## Sentinel-2 Data
 
-Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Google Colab is an online notebook that lets you write and execute code. Its advantage is it is connected to your Google account, shareable, and performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
+Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable and connected to your Google account, and it performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
 
 ```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).
 ```
@@ -64,7 +64,7 @@ Sentinel-2 true color image:
 The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
 
 ## Geemap
-Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a Python package environment developed by [Quisheng Wu](https://github.com/giswqs).
+Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data, all within a Python package environment developed by [Quisheng Wu](https://github.com/giswqs).
 
 ```{admonition} Getting Started
 Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, Miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
@@ -154,7 +154,7 @@ If you turn off the aboveground and belowground maps, your map will now look lik
 
 ![](https://i.imgur.com/DDRJeDF.png)
 
-Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to code block to
+Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map, you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to the code block to
 
 ```python
 # Center map and add layers
@@ -169,7 +169,7 @@ Let's take another look at the lambda function to clip the raster. Lambda functi
 ```
 
 ## Easier bboxing
-As you can see in both examples adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows creates json text when you right click on each point in a polygon. 
+As you can see in both examples, adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows you to creates json text when you right-click on each point in a polygon. 
 
 ```python
 # Import geemap and initialize earth engine
@@ -179,7 +179,7 @@ geemap.ee_initialize()
 m = geemap.Map()
 ```
 
-In the Polyline Tool I've right clicked 3 points around Cape Cod, Massachusetts in the United States, then clicked close shape to get a square. Then I copied the curly brackets and the geojson coordinates in between and assigned them to a variable. Then convert the geojson coordinates to an earth engine geometry type and map.
+In the Polyline Tool, I've right-clicked 3 points around Cape Cod, Massachusetts, in the United States, then clicked close shape to get a square. Then, I copied the curly brackets and the geojson coordinates in between and assigned them to a variable. Then, convert the geojson coordinates to an earth engine geometry type and map.
 
 ```python
 # Add the coordinates from the Polyline tool and assign to a variable
@@ -211,23 +211,23 @@ capecod = {
     "type": "Polygon"
 }
 
-# Convert the geojson coordinates to ee.Geomtry and map
+# Convert the geojson coordinates to ee.Geometry and map
 bbox = ee.Geometry(capecod)
 m.addLayer(bbox, {}, 'Cape Cod')
 m
 ```
-It's lengthy but gets you any polygon on the globe with any number of points.
+It's lengthy but gets you any polygon on the globe with many points.
 
 ## Leafmap
 A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
 
-The tutorials and workshops are supported by notebooks and videos to thoroughly walk you through this fantastic software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
+The tutorials and workshops are supported by notebooks and videos to walk you through this excellent software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
 
 1. Click workshops in leafmap.org
 2. Select the workshop
 3. Select GitHub in the upper right, select examples, then notebooks
 4. Click on the notebook you want (*.ipynb)
-5. Below history in the upper right of your browser, click on the download raw file button, save it, then click to open it in VS Code. 
+5. Below history in the upper right of your browser, click on the download raw file button, save the file, and then click to open it in VS Code. 
 6. Alternatively, go straight to the workshop notebooks, such as the [FOSS4G Workshop](https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb).
 
 Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.
@@ -240,5 +240,5 @@ Before running the code cells, ensure Leafmap is installed in your environment. 
 - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
 - [RiverREM](https://github.com/OpenTopography/RiverREM). A super cool Python package for automatically generating river relative elevation model (REM).
 - [lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
-- [Python for Ecologists](https://datacarpentry.org/python-ecology-lesson). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but a super useful set of tutorials.
-- [Unlocking the Depths](http://gg.gg/1az3jj). A useful tutorial for mapping bathymetry and calculating lake volume. May be behind a Medium pay wall.
+- [Python for Ecologists](https://datacarpentry.org/python-ecology-lesson). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but it is a useful set of tutorials.
+- [Unlocking the Depths](http://gg.gg/1az3jj). A useful tutorial for mapping bathymetry and calculating lake volume. It may be behind a paywall.

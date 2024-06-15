@@ -4,7 +4,7 @@ The language you must learn for geospatial analysis!
 
 ## New
 
-I have to admit I'm very new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Depending on what you need to know, you can use some or all of the basics. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.
+I have to admit I'm very new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.
 
 ```{tip}
 **BASIC SQL QUERY STRUCTURE**<br>
@@ -18,9 +18,9 @@ LIMIT
 
 ## DuckDB
 
-We'll use [DuckDB](https://duckdb.org/) for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets
+We'll use [DuckDB](https://duckdb.org/) for examples in this chapter. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript, and works without fuss. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets
 
-A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/), which has excellent tutorials on Python, Earth Engine, DuckDB, and PostGIS.
+A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/). The course is highly recommended and includes tutorials on Python, Earth Engine, DuckDB, and PostGIS.
 
 ## Installation
 
@@ -213,9 +213,5 @@ Right-clicking the csv file and selecting View Map produces a heat map. It seems
 
 <!-- 
 ## Notes
-Add parquet files and analyze? See parquet.ipynb
-
-exploring large scale data: https://medium.com/towards-data-science/exploring-large-scale-raster-population-data-72803cf7f2ad
-
-big data viz: https://towardsdatascience.com/big-data-visualization-using-datashader-in-python-c3fd00b9b6fc
+parquet file analysis? See parquet.ipynb
 -->

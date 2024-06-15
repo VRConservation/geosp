@@ -26,7 +26,7 @@ If you see any grammatical errors or sections that do not make sense, please sen
 
 The best way to send feedback is to file an issue on GitHub.
 
-If you are proposing a change, addition, or suggestion remember that this is a volunteer-driven project, and that contributions are welcome.
+If you propose a change, addition, or suggestion, remember that this is a volunteer-driven project and that contributions are welcome.
 
 ## Get Started
 
@@ -47,8 +47,8 @@ We are committed to making participation in this project a harassment-free exper
 
 Examples of unacceptable behavior by participants include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Project maintainers who do not follow the Code of Conduct may be removed from the project team.
+Project maintainers are responsible for removing, editing, or rejecting comments, commits, code, wiki edits, issues, and other contributions not aligned with this Code of Conduct. Project maintainers who do not follow the Code of Conduct may be removed from the project team.
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more project maintainers.
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 1.0.0, available [here](https://contributor-covenant.org/version/1/0/0/).

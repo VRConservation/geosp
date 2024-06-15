@@ -32,4 +32,4 @@ For more information, contact the author and see projects he is currently workin
 
 ## Support
 
-This book is a free to use resource to anyone. If you would like to support me, provide a donation, or buy me a coffee, please go to my [buymeacoffee](https://www.buymeacoffee.com/3point) site. I will be adding chapters and resources in the future. Thank you!
+This book is a free resource for anyone to use. If you want to support me, donate, or buy me a coffee, please go to my [buymeacoffee](https://www.buymeacoffee.com/3point) site. I will be adding chapters and resources in the future. Thank you!

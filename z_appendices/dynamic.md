@@ -15,7 +15,7 @@ jupyter:
 # Dynamic World
 
 ## Dynamic World, Party Time, Excellent
-Dynamic is a worldwide dataset for landcover at 10m resolution. It's an excellent way to examine land use change using the broad land types from the dataset. The code is adapted from geemap [tutorial 114](https://geemap.org/notebooks/114_dynamic_world/). Bonus!
+Dynamic is a worldwide dataset for landcover at 10m resolution. Using the broad land types from the dataset is an excellent way to examine land use change. The code is adapted from geemap [tutorial 114](https://geemap.org/notebooks/114_dynamic_world/). Bonus!
 
 ![Party on](https://cdn.apollo.audio/one/media/620a/4546/edd3/6b2c/268c/2a6b/waynes-world-header.jpg?quality=80&format=jpg&crop=41,0,603,1000&resize=crop)
 
@@ -26,7 +26,7 @@ import geemap
 m = geemap.Map()
 m.add_basemap("TERRAIN")
 ```
-Here we've used the [Polyline tool](https://www.keene.edu/campus/maps/tool/) to create a bounding box in the Chaco region of southeastern Bolivia. Remember the bbox coordinates require lower left lat lon and upper right lat lon to make a rectangular box.
+Here, we've used the [Polyline tool](https://www.keene.edu/campus/maps/tool/) to create a bounding box in the Chaco region of southeastern Bolivia. Remember, the bbox coordinates require lower left lat lon and upper right lat lon to make a rectangular box.
 
 ```python
 # Create a region of interest. 
@@ -71,7 +71,7 @@ m.addLayer(landcover2, {}, "Land Cover2")
 To compare the 2016 to the 2024 composite we'll add a swipe split panel.
 
 ```python
-# Add split panel. Note that zooming with the split panel sometimes doesn't work
+# Add split panel. Zooming with the split panel sometimes doesn't work
 left_layer = geemap.ee_tile_layer(landcover, {}, "Land Cover")
 right_layer = geemap.ee_tile_layer(landcover2, {}, "Land Cover2")
 
@@ -89,7 +89,7 @@ m
 Schwing! To export the first map as a geotiff add this code
 
 ```python
-# Save Dynamic World class data in GeoTIFF format
+# Save Dynamic World data in GeoTIFF format
 output_path = "landcover.tif"
 landcover = geemap.dynamic_world(region, start_date, end_date, return_type="class")
 geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
