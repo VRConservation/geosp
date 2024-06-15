@@ -472,7 +472,7 @@ document.write(`
 <h1>Dynamic World<a class="headerlink" href="#dynamic-world" title="Link to this heading">#</a></h1>
 <section id="dynamic-world-party-time-excellent">
 <h2>Dynamic World, Party Time, Excellent<a class="headerlink" href="#dynamic-world-party-time-excellent" title="Link to this heading">#</a></h2>
-<p>Dynamic is a worldwide dataset for landcover at 10m resolution. It’s an excellent way to examine land use change using the broad land types from the dataset. The code is adapted from geemap <a class="reference external" href="https://geemap.org/notebooks/114_dynamic_world/">tutorial 114</a>. Bonus!</p>
+<p>Dynamic is a worldwide dataset for landcover at 10m resolution. Using the broad land types from the dataset is an excellent way to examine land use change. The code is adapted from geemap <a class="reference external" href="https://geemap.org/notebooks/114_dynamic_world/">tutorial 114</a>. Bonus!</p>
 <p><img alt="Party on" src="https://cdn.apollo.audio/one/media/620a/4546/edd3/6b2c/268c/2a6b/waynes-world-header.jpg?quality=80&amp;format=jpg&amp;crop=41,0,603,1000&amp;resize=crop" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -509,7 +509,7 @@ document.write(`
             </style>
             </div></div>
 </div>
-<p>Here we’ve used the <a class="reference external" href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a> to create a bounding box in the Chaco region of southeastern Bolivia. Remember the bbox coordinates require lower left lat lon and upper right lat lon to make a rectangular box.</p>
+<p>Here, we’ve used the <a class="reference external" href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a> to create a bounding box in the Chaco region of southeastern Bolivia. Remember, the bbox coordinates require lower left lat lon and upper right lat lon to make a rectangular box.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a region of interest. </span>
@@ -662,7 +662,7 @@ document.write(`
 <p>To compare the 2016 to the 2024 composite we’ll add a swipe split panel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add split panel. Note that zooming with the split panel sometimes doesn&#39;t work</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add split panel. Zooming with the split panel sometimes doesn&#39;t work</span>
 <span class="n">left_layer</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">ee_tile_layer</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">&quot;Land Cover&quot;</span><span class="p">)</span>
 <span class="n">right_layer</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">ee_tile_layer</span><span class="p">(</span><span class="n">landcover2</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">&quot;Land Cover2&quot;</span><span class="p">)</span>
 
@@ -734,7 +734,7 @@ document.write(`
 <p>Schwing! To export the first map as a geotiff add this code</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save Dynamic World class data in GeoTIFF format</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save Dynamic World data in GeoTIFF format</span>
 <span class="n">output_path</span> <span class="o">=</span> <span class="s2">&quot;landcover.tif&quot;</span>
 <span class="n">landcover</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">dynamic_world</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
 <span class="n">geemap</span><span class="o">.</span><span class="n">ee_export_image</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">output_path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">file_per_band</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

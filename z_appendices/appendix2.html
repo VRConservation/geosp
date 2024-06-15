@@ -474,8 +474,8 @@ document.write(`
 <p>Get your integrated development environment set up to code like a pro</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> is a powerful open source code editor. There are other integrated development environments (IDEs) out there such as Pycharm or Spyder (comes with Anaconda), so choose the one that’s best for you. Note that if you only use R, RStudio comes with an integrated terminal and IDE so you can solely work within RStudio. If you use multiple languages, however, VS Code is fantastic, used by many (so makes tutorials and learning new packages or languages easier) and it has many plugins to make it easy to use.</p>
-<p>Visual Studio Code has great documentation and setup tutorials available, so we won’t go into those here. Download VS Code for your OS and open it. On the left hand pane there is an icon with 4 squares for extensions. Click on that to open it and install and activate the following extensions (use the search box at the top of the extension pane to find each extension):</p>
+<p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> is a powerful open-source code editor. There are other integrated development environments (IDEs) such as Pycharm or Spyder (comes with Anaconda), so choose the one that’s best for you. Note that if you only use R, RStudio comes with an integrated terminal and IDE so you can solely work within RStudio. If you use multiple languages, however, VS Code is fantastic, used by many (so it makes tutorials and learning new packages or languages easier), and it has many plugins to make it easy to use.</p>
+<p>Visual Studio Code has great documentation and setup tutorials so that we won’t explore those here. Download VS Code for your OS and open it. On the left-hand pane, there is an icon with 4 squares for extensions. Click on that to open it and install and activate the following extensions (use the search box at the top of the extension pane to find each extension):</p>
 <ol class="arabic simple">
 <li><p>Bracket Pair Color DLW</p></li>
 <li><p>autoDocstring</p></li>
@@ -483,36 +483,36 @@ document.write(`
 <li><p>CodeSnap</p></li>
 <li><p>GitHub Actions, GitHub Pull Requests, and GitHub Repositories</p></li>
 <li><p>GitLens</p></li>
-<li><p>Highligh Matching Tag</p></li>
+<li><p>Highlight Matching Tag</p></li>
 <li><p>indent-rainbows</p></li>
 <li><p>Jupyter</p></li>
 <li><p>Prettier</p></li>
 <li><p>Python</p></li>
 </ol>
-<p>Optional extensions include github copilot (requires a subscription), chatgpt (requires account and subscription for some versions). I highly recommend considering copilot as the chat and autocomplete for it often suggest code that works or can help you resolve errors in your code when searches or your own editing doesn’t work. It will also greatly speed up the process of producing code and does seem to be improving rapidly. Copilot is free to students and possibly free through select nonprofits organizations.</p>
+<p>Optional extensions include github copilot (requires a subscription) and chatgpt (requires a subscription for some versions). I highly recommend considering copilot as the chat and autocomplete, for it often suggests code that works or can help you resolve errors in your code when searches or your own editing don’t work. It will also greatly speed up the process of producing code and seems to be improving rapidly. Copilot is free to students and possibly free through select nonprofit organizations.</p>
 </section>
 <section id="environment-variables-setup">
 <h2>Environment Variables Setup<a class="headerlink" href="#environment-variables-setup" title="Link to this heading">#</a></h2>
-<p>In many cases VS Code isn’t properly set up with the terminal, usually in Windows. Open the terminal by clicking the Terminal Window in the top bar of VS Code and select ‘New Terminal’. In the command line enter <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If you get a red error message follow these steps:</p>
+<p>In many cases VS Code isn’t properly set up with the terminal, usually in Windows. Open the terminal by clicking the Terminal Window in the top bar of VS Code and select ‘New Terminal’. In the command line, enter <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If you get a red error message, follow these steps:</p>
 <ol class="arabic simple">
-<li><p>Hit the windows button on your computer and type ‘env’ then select ‘Edit the System Environment Variables’.</p></li>
+<li><p>Click the windows button on your computer, type ‘env,’ and select ‘Edit the System Environment Variables’.</p></li>
 <li><p>In the system properties window, select ‘Environment Variables’</p></li>
-<li><p>In the Environment Variables window under ‘System variables’ double click ‘Path’</p></li>
-<li><p>In the Edit environment variable window, you should have a variable that looks like ‘C:\Users\yourusername\anaconda3\Scripts\conda.exe’. anaconda3 may be replaced by miniconda if you installed miniconda.</p></li>
-<li><p>If that doesn’t exist open internet explorer and go to the Scripts file:</p>
+<li><p>In the Environment Variables window under ‘System variables’, double click ‘Path’</p></li>
+<li><p>In the Edit environment variable window, you should have a variable called ‘C:\Users\yourusername\anaconda3\Scripts\conda.exe’. anaconda3 may be replaced by miniconda if you installed miniconda.</p></li>
+<li><p>If that doesn’t exist, open internet explorer and go to the Scripts file:</p>
 <ol class="arabic simple">
 <li><p>Select ‘This PC’ in the left pane of explorer</p></li>
 <li><p>Open ‘Users’</p></li>
 <li><p>Open your username file, likely your first name</p></li>
-<li><p>Scroll down and open miniconda or anaconda3 (don’t open the files such as .anaconda keep scrolling until you find the file)</p></li>
+<li><p>Scroll down and open miniconda or anaconda3 (don’t open the files such as .anaconda; keep scrolling until you find the file)</p></li>
 <li><p>Open ‘Scripts’</p></li>
-<li><p>Find the conda.exe file. It could appear solely as ‘conda’. Right click on the file and select ‘Copy as path’.</p></li>
-<li><p>Go back to the Edit environment variable double click at the bottom and then type control V on your keyboard to paste the conda file path into the variables. Ok your way out of each of the open windows.</p></li>
+<li><p>Find the conda.exe file. It could appear solely as ‘conda’. Right-click on the file and select ‘Copy as path’.</p></li>
+<li><p>Go back to the Edit environment variable, double-click at the bottom, and then type control V on your keyboard to paste the conda file path into the variables. Ok, your way out of each of the open windows.</p></li>
 <li><p>Close Visual Studio Code</p></li>
 </ol>
 </li>
-<li><p>Open VS Code and type conda in the terminal. You should no longer get an error.</p></li>
-<li><p>What a pain in the butt! To watch how to do this go to minute 34:20 of the <a class="reference external" href="http://gg.gg/1av3xn">Introducing Visual Studio Code</a> video. Or this might convince you to purchase a machine with a linux OS where none of this is necessary!</p></li>
+<li><p>Open the VS Code and type the conda into the terminal. You should no longer get an error.</p></li>
+<li><p>What a pain in the butt! To watch how to do this, go to minute 34:20 of the <a class="reference external" href="http://gg.gg/1av3xn">Introducing Visual Studio Code</a> video. Or this might convince you to purchase a machine with a linux OS where none of this configuration faffing is necessary!</p></li>
 </ol>
 </section>
 </section>

@@ -473,15 +473,15 @@ document.write(`
 <p>Set up a virtual environment using conda.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p>Installation instructions are for a PC, but Mac and Linux are similar but probably much easier than windows.</p>
+<p>Installation instructions are for a PC, but Mac and Linux are similar and probably much easier than windows.</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="http://gg.gg/1av3h1">Install</a> conda by downloading miniconda or anaconda for your os. The documentation provides an overview of which package will work for you. I installed anaconda after miniconda would not work on my machine. I suggest trying miniconda first but install the full anaconda if miniconda doesn’t work. If you hate the command line, anaconda is a better option since the anaconda navigator allows you to install environments using the interface without command lines. But then you miss out on reliving computer use in the 70s or 80s when don’t go to the command prompt.</p></li>
+<li><p><a class="reference external" href="http://gg.gg/1av3h1">Install</a> conda by downloading miniconda or anaconda for your os. The documentation provides an overview of which package will work for you. I installed anaconda after miniconda would not work on my machine. I suggest trying miniconda first, but install the full anaconda if miniconda doesn’t work. If you hate the command line, anaconda is a better option since the anaconda navigator allows you to install environments using the interface without command lines. But then you miss out on reliving computer use in the 70s or 80s when you don’t go to the command prompt.</p></li>
 <li><p>Open the conda command prompt by clicking the windows button and typing anaconda or miniconda then selecting the prompt. You should see the following</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourusername</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>If you don’t see this in the command prompt (also known as command line interface or CLI), try going to your Users\username file right clicking in the file and selecting ‘open in terminal’ and follow the instructions below. If the windows powershell gives you an error or conda won’t work see the <a class="reference external" href="http://gg.gg/1av2oy">Setting UP Powershell for VS Code</a> video to fix the issue.</p>
+<p>If you don’t see this in the command prompt (also known as command line interface or CLI), try going to your Users\username file right clicking in the file and selecting ‘open in terminal’, and following the instructions below. If the windows powershell gives you an error or conda won’t work, see the <a class="reference external" href="http://gg.gg/1av2oy">Setting UP Powershell for VS Code</a> video to fix the issue.</p>
 <p>Note that you hit enter after typing or pasting every command into the terminal.</p>
 <ol class="arabic simple" start="3">
 <li><p>Create a conda environment. It’s preferable to create a new environment for each project or set of tasks you complete to avoid conflicts between packages. We’ll call this one ‘geo’ but name it whatever you like, making sure to use a short 3-4 letter abbreviation or name.</p></li>
@@ -490,13 +490,13 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="n">python</span>
 </pre></div>
 </div>
-<p>Note this will install the latest version of Python on your computer. Sometimes that can create incompatibilities with the software packages you install since they may not be synced with this version of Python. It’s safer to specific the previous version of Python. In other words if the latest release is 3.13, install 3.12. to do this alter your environment creation commands to the latest version minus 0.01, in this case 3.12 if the latest is 3.13.</p>
+<p>Note this will install the latest version of Python on your computer. Sometimes, that can create incompatibilities with the software packages you install since they may not be synced with this version of Python. It’s safer to specify the previous version of Python. In other words, if the latest release is 3.13, install 3.12. to do this, alter your environment creation commands to the latest version minus 0.01, in this case, 3.12 if the latest is 3.13.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.12</span>
 </pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>Do not install packages into your base environmen!</strong>. Although it’s tempting to not install packages into your base don’t do it. Python packages are prone to incompatibilities. Creating virtual environments mitigates dependency management issues and keeps your projects separate and allows you to diagnose problems separately when they arise.</p>
+<p><strong>Do not install packages into your base environment!</strong>. Although it’s tempting not to install packages into your base, don’t do it. Python packages are prone to incompatibilities. Creating virtual environments mitigates dependency management issues, keeps your projects separate, and allows you to diagnose problems separately when they arise.</p>
 </div>
 <ol class="arabic simple" start="4">
 <li><p>Activate the new environment.</p></li>
@@ -508,7 +508,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">geo</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourusername</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>You can also check the environment is active by entering <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code>. You should see an asterisk next to the environment you installed and a pathway on the drive to that environment. If you activate base the asterisk will go to the base environment.</p>
+<p>You can also check the environment is active by entering <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code>. You should see an asterisk next to the environment you installed and a pathway on the drive to that environment. If you activate base, the asterisk will go to the base environment.</p>
 <p>The command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> will show the packages installed in the active environment. You should see python and the version installed. Use the command <code class="docutils literal notranslate"><span class="pre">cls</span></code> to clear the screen.</p>
 <ol class="arabic simple" start="6">
 <li><p>Install geemap. You can do this directly in conda, but it can be slow. Installing mamba speeds up this process. Mamba is a drop-in replacement for conda that is faster and better at resolving package dependencies:</p></li>
@@ -516,11 +516,11 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">mamba</span>
 </pre></div>
 </div>
-<p>This will take a while but hit enter once it asks you to proceed. Once installed you can install geemap:</p>
+<p>This will take a while, but hit enter once it asks you to proceed. Once installed, you can install geemap:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geemap</span>
 </pre></div>
 </div>
-<p>Alternatively you can install a suite of commonly used packages for geospatial analysis using <a class="reference external" href="https://geospatial.gishub.org/">geospatial</a>. This requires a substantial amount of memory but it will also mean you need to do one installation for nearly every package you need including leafmap, geemap, h3,whitebox, xarray and many others:</p>
+<p>Alternatively, you can install a suite of commonly used packages for geospatial analysis using <a class="reference external" href="https://geospatial.gishub.org/">geospatial</a>. This requires a substantial amount of memory, but it will also mean you need to do one installation for nearly every package you need, including leafmap, geemap, h3,whitebox, xarray, and many others:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geospatial</span>
 </pre></div>
 </div>
@@ -530,7 +530,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">geo</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
-<p>And it’s gone! Use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code> to make sure it’s no longer an environment.</p>
+<p>And it’s gone! Use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code> to ensure it is removed.</p>
 </section>
 </section>
 
