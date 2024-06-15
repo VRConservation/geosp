@@ -81,8 +81,10 @@ m.split_map(left_layer, right_layer)
 And then a legend
 
 ```python
-# Add legend
+# Add legend and explanatory text
 m.add_legend(title="Dynamic World Land Cover", builtin_legend="Dynamic_World")
+text = "2017 (left) and 2024 (right) land cover"
+m.add_text(text, fontsize=14, position='bottomleft')
 m.centerObject(region)
 m
 ```
