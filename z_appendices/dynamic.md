@@ -90,9 +90,9 @@ Schwing! To export the first map as a geotiff add this code
 
 ```python
 # Save Dynamic World data in GeoTIFF format
-output_path = "landcover.tif"
-landcover = geemap.dynamic_world(region, start_date, end_date, return_type="class")
-geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
+# output_path = "landcover.tif"
+# landcover = geemap.dynamic_world(region, start_date, end_date, return_type="class")
+# geemap.ee_export_image(landcover, filename=output_path, scale=10, region=region, file_per_band=False)
 ```
 
 **HALRIGHT!** <br>
