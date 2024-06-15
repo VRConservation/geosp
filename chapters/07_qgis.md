@@ -94,7 +94,7 @@ Click run
 
 ![select by location map](https://i.imgur.com/tqomvq6.png)
 
-Right-click the grid layer>Export>Save Selected features as (not in my screenshot that I have a copy of the grid layer that appears below)
+Right-click the grid layer>Export>Save Selected Features As (note in the screenshot that I have a copy of the grid layer that appears below the selected layer. Please ignore this)
 
 ![save selected features as](https://i.imgur.com/qsqCaw2.png)
 
