@@ -1,18 +1,23 @@
 # Python
 
-Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. However, even though Arcpy is a Python package, it is not easy or intuitive to use. I tried it, read an entire Arcpy book, and struggled using the esri notebooks, which are slow to load and not feature-rich.
+Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could just be me, but I tried using arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled through using esri notebooks. The language didn't stick with me or it was overly complicated. Sure you could run an analysis tool, and copy the arcpy code into a notebook to modify it, but when it came to developing codeblocks, I had a block.
 
 Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.
 
 ## Getting Started
 
-To be honest, getting started using a Windows computer was a total pain in the ass. Additionally, it is much easier to set everything up using the Apple or Linux operating systems. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
+To be honest, getting started using a Windows computer was a total pain in the ass. So if you're using Linux of Apple OS it will be much easier to set things up. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
 
-To get you up and running quickly, I've provided a cheat sheet in Appendix 1 that shortcuts the 414 videos and should have you running in an hour or less. Nevertheless, the videos will provide many tips and tricks I don't include in {doc}`/z_appendices/appendix1` you will find useful when learning and developing in your open-source journey. In other words, it's worth taking the time to run through this slowly to get set up correctly.
+```{important} Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.
+```
+
+To get you up and running quickly, I've provided a cheat sheet in in the {doc}`/z_appendices/appendix1` appendix that shortcuts the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
+
+However, you may choose to jump straight in without all the setup. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable and connected to your Google account, and it performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button to start a new notebook.
 
 ## Sentinel-2 Data
 
-Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable and connected to your Google account, and it performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
+Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. 
 
 ```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).
 ```
@@ -32,6 +37,7 @@ collection = "sentinel-2-l2a"
 
 # Create a bounding box centered near New River Lagoon in Tasmania
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
+# Use the inspector tool in Earth Engine or the [polyline tool](https://www.keene.edu/campus/maps/tool) to generate coordinates
 bbox = [146.5, -43.6, 146.7, -43.4]
 ```
 Search and load the data:
@@ -88,7 +94,7 @@ In the upper right corner of the map, click the wrench icon, then click the two 
 
 ![](https://i.imgur.com/XXdWssh.png)
 
-Go to your Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:
+Go to the Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:
 
 ```python
 # Add global carbon density map
@@ -230,7 +236,7 @@ The tutorials and workshops are supported by notebooks and videos to walk you th
 5. Below history in the upper right of your browser, click on the download raw file button, save the file, and then click to open it in VS Code. 
 6. Alternatively, go straight to the workshop notebooks, such as the [FOSS4G Workshop](https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb).
 
-Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.
+Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the miniconda/anaconda section of the FOSS4G workshop.
 
 ## Resources
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.

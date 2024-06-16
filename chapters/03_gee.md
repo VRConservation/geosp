@@ -5,7 +5,7 @@
 ## TL;DR
 
 - See the [Cloud-Based Remote Sensing with Google Earth Engine](https://www.eefabook.org/go-to-the-book.html) book or the [GEE Course](https://spatialthoughts.com/courses/google-earth-engine/) from Spatial Thoughts to get started.
-  GEE's strength is cloud-based analysis, not visualization. For better visualization/cartographic tools, see Chapters 4, 5, and 8.
+  GEE's strength is cloud-based analysis, not visualization. For better visualization/cartographic tools, see Chapters 4, 6, and 8.
 - See Chapter 4 and [Geemap](https://geemap.org/) for a way to deploy GEE using Python.
 
 ## Scenario
@@ -16,9 +16,9 @@ Yes! You've heard of this and think Google Earth will be easy. But when you chec
 
 ## DIY
 
-This scenario applies even if you have a GIS guy down the hall with the defunct plotter! Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Contrary to popular opinion, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
+This scenario applies even if you have a GIS guy down the hall with the defunct plotter! Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Technically Google Earth Engine isn't free or open source, but using it as an individual is free. It's extensive library and ability to run computations in the cloud make it an exceptional resource for use anywhere you have an internet connection on any type of computer.
 
-Here's how:
+And, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2). Here's how to get going:
 
 Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select see example:
 
@@ -96,7 +96,7 @@ Map.addLayer(dataset, vis_b, "Belowground biomass carbon");
 
 ![](https://i.imgur.com/7hkdrV0.png)
 
-Note that the belowground now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can also control visible layers by altering the Map.addLayer function to add the layer, but it won't be visible when you run the code:
+Note that the belowground layer now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can also control visible layers by altering the Map.addLayer function to add the layer, but it won't be visible when you run the code:
 
 ```javascript
 Map.addLayer(dataset, vis_b, "Belowground biomass carbon", false);
@@ -165,9 +165,8 @@ For the map we just made, you would likely want to add functionality such as a l
 There are many resources from getting started to the advanced use of Google Earth Engine:
 
 - **Spatial Thoughts, Ujaval Gandhi**. [End-to-End Google Earth Engine](https://courses.spatialthoughts.com/end-to-end-gee.html) provides full course materials that start with setting up the Earth Engine environment and move into more advanced topics such as machine learning and change detection.
-- **Remote Sensing with GEE**. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine [book](https://www.eefabook.org/) by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex using Earth Engine.
+- **Remote Sensing with GEE**. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine [book](https://www.eefabook.org/) by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex geospatial analysis.
 - **Awesome-GEE**. The Opengeos [Awesome-GEE](https://github.com/opengeos/Awesome-GEE) gitHub repo is a fantastic curated list of GEE resources. This incredible resource has everything from getting started to courses, papers, datasets, and more. You could lose yourself for days in here!
 — **GEE Google Group**. The Google Earth Engine Developers [listserv](https://groups.google.com/g/google-earth-engine-developers) is quite useful for answering many other questions.
 — **Awesome-GEE-Community-Catalog**. Not to be confused with Awesome-GEE, the [Awesome GEE Community Catalog](https://gee-community-catalog.org) is an equally awesome treasure trove of datasets ready for analysis and with sample code to start their use immediately.
 - **Visualization and Analysis of Brazil Floods 2024**. This [tutorial] has an excellent workflow design and superb explanations of remote sensing theory and concepts in this [tutorial](https://share.gishub.org/brazil_floods/#create-sentinel-1-sar-composites). In addition, the tutorial contains very useful text and code for analyzing synthetic aperture radar (SAR) imagery.
--- **RiverREM Python Package**. Available [here](https://github.com/OpenTopography/RiverREM). Automated river relative elevation model (REM) visualizations from DEM model input.

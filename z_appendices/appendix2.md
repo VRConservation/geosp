@@ -1,5 +1,5 @@
 # Visual Studio Code
-Get your integrated development environment set up to code like a pro
+Get your integrated development environment set up to code.
 
 ## Installation
 [Visual Studio Code](https://code.visualstudio.com/) is a powerful open-source code editor. There are other integrated development environments (IDEs) such as Pycharm or Spyder (comes with Anaconda), so choose the one that's best for you. Note that if you only use R, RStudio comes with an integrated terminal and IDE so you can solely work within RStudio. If you use multiple languages, however, VS Code is fantastic, used by many (so it makes tutorials and learning new packages or languages easier), and it has many plugins to make it easy to use.
@@ -19,6 +19,9 @@ Visual Studio Code has great documentation and setup tutorials so that we won't 
 11. Python
 
 Optional extensions include github copilot (requires a subscription) and chatgpt (requires a subscription for some versions). I highly recommend considering copilot as the chat and autocomplete, for it often suggests code that works or can help you resolve errors in your code when searches or your own editing don't work. It will also greatly speed up the process of producing code and seems to be improving rapidly. Copilot is free to students and possibly free through select nonprofit organizations.
+
+```{tip} Run jupyter notebooks in your browser by navigating to the file where you want to run the notebooks or have existing notebooks. Right click on a blank space in the file navigator then select Open in Terminal. Enter `conda activate yourenv` substituting yourenv for your virtual environment name. Then run `jupyter lab`. This will open a locahost window in your default web browser where you can edit existing or open new notebooks. 
+```
 
 ## Environment Variables Setup
 In many cases VS Code isn't properly set up with the terminal, usually in Windows. Open the terminal by clicking the Terminal Window in the top bar of VS Code and select 'New Terminal'. In the command line, enter `conda`. If you get a red error message, follow these steps:

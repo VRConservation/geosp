@@ -13,6 +13,7 @@ jupyter:
 ---
 
 # Dynamic World
+Use Dynamic World to compare land cover change over time.
 
 ## Dynamic World, Party Time, Excellent
 Dynamic is a worldwide dataset for landcover at 10m resolution. Using the broad land types from the dataset is an excellent way to examine land use change. The code is adapted from geemap [tutorial 114](https://geemap.org/notebooks/114_dynamic_world/). Bonus!
