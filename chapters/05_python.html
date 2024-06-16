@@ -492,7 +492,7 @@ document.write(`
 <p>Let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).</p>
+<p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/). If you run this in colab, add a % to the line, e.g., %pip install…</p>
 </div>
 <p>Install the dependencies:</p>
 <div class="cell docutils container">
@@ -512,11 +512,14 @@ collection = &quot;sentinel-2-l2a&quot;
 
 # Create a bounding box centered near New River Lagoon in Tasmania
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
-# Use the inspector tool in Earth Engine or the [polyline tool](https://www.keene.edu/campus/maps/tool) to generate coordinates
 bbox = [146.5, -43.6, 146.7, -43.4]
 </pre></div>
 </div>
 </div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Use Earth Engine’s inspector or the <a class="reference external" href="https://www.keene.edu/campus/maps/tool/">polyline tool</a> to generate coordinates.</p>
 </div>
 <p>Search and load the data:</p>
 <div class="cell docutils container">
@@ -667,7 +670,7 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 </section>
 <section id="easier-bboxing">
 <h2><span class="section-number">4.4. </span>Easier bboxing<a class="headerlink" href="#easier-bboxing" title="Link to this heading">#</a></h2>
-<p>As you can see in both examples, adding a bounding box can be semi-painful. There’s an excellent <a class="reference external" href="https://www.keene.edu/campus/maps/tool">Polyline Tool</a> that allows you to creates json text when you right-click on each point in a polygon.</p>
+<p>Boots and cats, boots and cats, boots and cats. Yeah! As you can see in both examples, adding a bounding box can be semi-painful. There’s an excellent <a class="reference external" href="https://www.keene.edu/campus/maps/tool">Polyline Tool</a> that allows you to creates json text when you right-click on each point in a polygon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import geemap and initialize earth engine
@@ -719,7 +722,7 @@ m
 </div>
 </div>
 </div>
-<p>It’s lengthy but gets you any polygon on the globe with many points.</p>
+<p>It’s lengthy but gets you any polygon on the globe with as many points as you like.</p>
 </section>
 <section id="leafmap">
 <h2><span class="section-number">4.5. </span>Leafmap<a class="headerlink" href="#leafmap" title="Link to this heading">#</a></h2>
