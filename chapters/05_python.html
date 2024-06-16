@@ -475,16 +475,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python">
 <h1><span class="section-number">4. </span>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h1>
-<p>Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. However, even though Arcpy is a Python package, it is not easy or intuitive to use. I tried it, read an entire Arcpy book, and struggled using the esri notebooks, which are slow to load and not feature-rich.</p>
+<p>Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could just be me, but I tried using arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled through using esri notebooks. The language didn’t stick with me or it was overly complicated. Sure you could run an analysis tool, and copy the arcpy code into a notebook to modify it, but when it came to developing codeblocks, I had a block.</p>
 <p>Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at <a class="reference external" href="http://leafmap.org">leafmap.org</a> and <a class="reference external" href="http://geemap.org">geemap.org</a> and videos at <a class="reference external" href="https://www.youtube.com/&#64;giswqs">Open Geospatial Solutions</a>. Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.</p>
 <section id="getting-started">
 <h2><span class="section-number">4.1. </span>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
-<p>To be honest, getting started using a Windows computer was a total pain in the ass. Additionally, it is much easier to set everything up using the Apple or Linux operating systems. It will take a few hours from scratch, but a great resource is at the <a class="reference external" href="http://gg.gg/1ats9t">Geog-414</a> course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn’t work well on my machine with Windows 11, but everything worked with Anaconda.</p>
-<p>To get you up and running quickly, I’ve provided a cheat sheet in Appendix 1 that shortcuts the 414 videos and should have you running in an hour or less. Nevertheless, the videos will provide many tips and tricks I don’t include in <a class="reference internal" href="../z_appendices/appendix1.html"><span class="doc">Virtual Environment</span></a> you will find useful when learning and developing in your open-source journey. In other words, it’s worth taking the time to run through this slowly to get set up correctly.</p>
+<p>To be honest, getting started using a Windows computer was a total pain in the ass. So if you’re using Linux of Apple OS it will be much easier to set things up. It will take a few hours from scratch, but a great resource is at the <a class="reference external" href="http://gg.gg/1ats9t">Geog-414</a> course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn’t work well on my machine with Windows 11, but everything worked with Anaconda.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.</p>
+</div>
+<p>To get you up and running quickly, I’ve provided a cheat sheet in in the <a class="reference internal" href="../z_appendices/appendix1.html"><span class="doc">Virtual Environment</span></a> appendix that shortcuts the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.</p>
+<p>However, you may choose to jump straight in without all the setup. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable and connected to your Google account, and it performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you’ve installed or executed is gone, although the code is saved. It’s great for quickly testing out code blocks. Open <a class="reference external" href="https://colab.research.google.com/">Colab</a> and click the blue ‘New notebook’ button to start a new notebook.</p>
 </section>
 <section id="sentinel-2-data">
 <h2><span class="section-number">4.2. </span>Sentinel-2 Data<a class="headerlink" href="#sentinel-2-data" title="Link to this heading">#</a></h2>
-<p>Let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable and connected to your Google account, and it performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you’ve installed or executed is gone, although the code is saved. It’s great for quickly testing out code blocks. Open <a class="reference external" href="https://colab.research.google.com/">Colab</a> and click the blue ‘New notebook’ button.</p>
+<p>Let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).</p>
@@ -507,6 +512,7 @@ collection = &quot;sentinel-2-l2a&quot;
 
 # Create a bounding box centered near New River Lagoon in Tasmania
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
+# Use the inspector tool in Earth Engine or the [polyline tool](https://www.keene.edu/campus/maps/tool) to generate coordinates
 bbox = [146.5, -43.6, 146.7, -43.4]
 </pre></div>
 </div>
@@ -569,7 +575,7 @@ m
 <p><img alt="" src="https://i.imgur.com/hKl0roO.png" /></p>
 <p>In the upper right corner of the map, click the wrench icon, then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:</p>
 <p><img alt="" src="https://i.imgur.com/XXdWssh.png" /></p>
-<p>Go to your Earth Engine <a class="reference external" href="https://code.earthengine.google.com/">code editor</a>, open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:</p>
+<p>Go to the Earth Engine <a class="reference external" href="https://code.earthengine.google.com/">code editor</a>, open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add global carbon density map
@@ -727,7 +733,7 @@ m
 <li><p>Below history in the upper right of your browser, click on the download raw file button, save the file, and then click to open it in VS Code.</p></li>
 <li><p>Alternatively, go straight to the workshop notebooks, such as the <a class="reference external" href="https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb">FOSS4G Workshop</a>.</p></li>
 </ol>
-<p>Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.</p>
+<p>Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the miniconda/anaconda section of the FOSS4G workshop.</p>
 </section>
 <section id="resources">
 <h2><span class="section-number">4.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
