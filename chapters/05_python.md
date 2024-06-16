@@ -19,7 +19,7 @@ However, you may choose to jump straight in without all the setup. Google Colab 
 
 Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. 
 
-```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).
+```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/). If you run this in colab, add a % to the line, e.g., %pip install...
 ```
 
 Install the dependencies:
@@ -37,9 +37,12 @@ collection = "sentinel-2-l2a"
 
 # Create a bounding box centered near New River Lagoon in Tasmania
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
-# Use the inspector tool in Earth Engine or the [polyline tool](https://www.keene.edu/campus/maps/tool) to generate coordinates
 bbox = [146.5, -43.6, 146.7, -43.4]
 ```
+
+```{hint} Use Earth Engine's inspector or the [polyline tool](https://www.keene.edu/campus/maps/tool/) to generate coordinates.
+```
+
 Search and load the data:
 
 ```python
@@ -175,7 +178,7 @@ Let's take another look at the lambda function to clip the raster. Lambda functi
 ```
 
 ## Easier bboxing
-As you can see in both examples, adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows you to creates json text when you right-click on each point in a polygon. 
+Boots and cats, boots and cats, boots and cats. Yeah! As you can see in both examples, adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows you to creates json text when you right-click on each point in a polygon. 
 
 ```python
 # Import geemap and initialize earth engine
@@ -222,7 +225,7 @@ bbox = ee.Geometry(capecod)
 m.addLayer(bbox, {}, 'Cape Cod')
 m
 ```
-It's lengthy but gets you any polygon on the globe with many points.
+It's lengthy but gets you any polygon on the globe with as many points as you like.
 
 ## Leafmap
 A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
