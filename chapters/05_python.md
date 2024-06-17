@@ -1,19 +1,19 @@
 # Python
 
-Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could just be me, but I tried using arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled through using esri notebooks. The language didn't stick with me or it was overly complicated. Sure you could run an analysis tool, and copy the arcpy code into a notebook to modify it, but when it came to developing codeblocks, I had a block.
+Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could just be me, but I tried using arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled using esri notebooks. The language didn't stick with me or it was overly complicated. Sure, you could run an analysis tool and copy the arcpy code into a notebook to modify it, but I had a 'block' developing code blocks.
 
 Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.
 
 ## Getting Started
 
-To be honest, getting started using a Windows computer was a total pain in the ass. So if you're using Linux of Apple OS it will be much easier to set things up. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
+To be honest, getting started using a Windows computer was a total pain in the ass. So, if you're using Linux or Apple OS, it will be much easier to set things up. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
 
 ```{important} Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.
 ```
 
 To get you up and running quickly, I've provided a cheat sheet in in the {doc}`/z_appendices/appendix1` appendix that shortcuts the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
 
-However, you may choose to jump straight in without all the setup. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable and connected to your Google account, and it performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button to start a new notebook.
+However, you may jump straight in without setting it all up using Colab. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button to start a new notebook.
 
 ## Sentinel-2 Data
 

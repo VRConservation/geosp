@@ -18,9 +18,9 @@ LIMIT
 
 ## DuckDB
 
-We'll use [DuckDB](https://duckdb.org/) for examples in this chapter. The software is fast, works seamlessly with many programming languages, including Python, R, and Javascript, and it's east to install. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets
+We'll use [DuckDB](https://duckdb.org/) for examples in this chapter. The software is fast, works seamlessly with many programming languages, including Python, R, and Javascript, and is easy to install. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets
 
-A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/). The course is highly recommended and includes tutorials on Python, Earth Engine, DuckDB, and PostGIS.
+A special thank you to Quisheng Wu for the DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/). The course is highly recommended and includes Python, Earth Engine, DuckDB, and PostGIS tutorials.
 
 ## Installation
 
@@ -28,9 +28,9 @@ Installation is straightforward: follow the instructions for the command line or
 
 ## Wood processing
 
-Let's move to an example from the University of California's Woody Biomass Utilization Group's Biomass Power Plant [Database](http://gg.gg/1as7ti). What do mills have to do with forest conservation? We're not talking about rapacious clearcutting from the past, but a sustainable forest management model that reduces wildfire and returns western forests to a healthier and more resilient state. Fires threaten most forests in the western United States due to more than a century of fire suppression. 
+Let's move to an example from the University of California's Woody Biomass Utilization Group's Biomass Power Plant [Database](http://gg.gg/1as7ti). What do mills have to do with forest conservation? We're not talking about rapacious clearcutting from the past but a sustainable forest management model that reduces wildfire and returns western forests to a healthier and more resilient state. Fires threaten most forests in the western United States due to more than a century of fire suppression. 
 
-Through ecological thinning and prescribed fire, unhealthy forests can return to a natural range of variation by lowering competition across stands. This approach can reduce compounding stresses from drought, insect infestations, and wildfire and create more resilient forests {cite}`north`. Thinning will produce large amounts of forest biomass potentially processed through community-based mills and biomass plants. Developing this infrastructure is one way to help solve the wildfire crisis threatening biodiversity and people.
+Through ecological thinning and prescribed fire, unhealthy forests can return to a natural range of variation by lowering competition across stands. This approach can reduce compounding stresses from drought, insect infestations, and wildfire and create more resilient forests {cite}`north`. Thinning will produce large amounts of forest biomass that can be processed through community-based mills and biomass plants. Developing this infrastructure is one way to help solve the wildfire crisis threatening biodiversity and people.
 
 First, import the dependencies.
 
@@ -63,7 +63,7 @@ con.sql('''
 con.table('sawmill')
 ```
 
-```{tip} Duckdb sql can be run in the command line and through Python as we are doing here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.
+```{tip} Duckdb can be run in the command line and through Python, as we do here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.
 
 ```
 

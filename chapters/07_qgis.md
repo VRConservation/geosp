@@ -27,15 +27,15 @@ Let's change the gray color of the raster to something easier to view. Click on 
 
 ![layers](https://i.imgur.com/E17z13S.png)
 
-This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma (when you're selecting magma, say MAGMA to yourself in a loud, authoritarian Dr. Evil voice).
+This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma (when you're selecting magma, say MAGMA to yourself in a loud, authoritarian [Dr. Evil voice](https://giphy.com/gifs/evil-BZlNhp9L5WINi)).
 
 ![pseudocolor](https://i.imgur.com/Kek44Zz.png)
 
-Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and for url: https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer. Click ok to activate.
+Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter the following for url: https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer. Click ok to activate.
 
 ![task force regions](https://i.imgur.com/VK0e3pM.png)
 
-The url comes from the ArcGIS online metadata page for [Forest Management Task Force Regions](https://www.arcgis.com/home/item.html?id=781f25e4b1a1419d8939b4b54b25433e&sublayer=0). On the page, you will see a URL and a copy sign. If you get to the Map Viewer instead of the metadata, click on Information and then the paper arrow icon to get to the page to copy the REST server url.
+The url comes from the ArcGIS online metadata page for [Forest Management Task Force Regions](https://www.arcgis.com/home/item.html?id=781f25e4b1a1419d8939b4b54b25433e&sublayer=0). On the page, you will see a url and a copy sign. If you get to the Map Viewer instead of the metadata, click on Information and then the paper arrow icon to get to the page to copy the REST server url.
 
 ![agol](https://i.imgur.com/duABhsL.jpeg)
 
@@ -62,7 +62,7 @@ Head back to the Layers panel, right-click the Task Force Regions layer, and sel
 
 ![region query](https://i.imgur.com/DrVABtI.png)
 
-Click OK to complete the query and close the box. Now, only the Sierra Nevada region will show. Right-click the layer in the Layers panel, select properties, and rename the layer to Sierra Nevada in the window that opens.
+Click OK to complete the query and close the box. Now, only the Sierra Nevada region will show. Right-click the layer in the Layers panel, select properties, and rename the layer to Sierra Nevada in the open window.
 
 At the top of the QGIS window, below the Project, Edit, and View windows, there is an attribute toolbar:
 
@@ -106,13 +106,13 @@ In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click t
 ### Attribute table edit
 You may notice a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake's Estero. This seems to be an error in the vector layer from the Task Force. Let's delete it so it doesn't appear in the subsequent analysis. 
 
-Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the icon's name). In the same toolbar, click on the info circle with the arrow. This is the Identify Features icon, which is useful for clicking on any area of the map to show the layers and information about the pixel you've clicked. Once you've selected Identify Features, click inside the polygon on the map.
+Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the icon's name). In the same toolbar, click on the info circle with the arrow. This is the Identify Features icon, which is useful for clicking on any map area to show the layers and information about the pixel you've clicked. Once you've selected Identify Features, click inside the polygon on the map.
 
 The polygon will change color to show it's selected, and an Identify Results box will open.
 
 ![identify results](https://i.imgur.com/oj9k64N.png)
 
-Values from the attribute table will appear, showing the fid, id, polygon values, and row and column indices. Note that the fid and id numbers are 201. Close that pane and then click the Open Attribute Table (F6) to the right of the Toolbox icon on the attribute toolbar, which looks like a table. Click the Sierra Clip layer to ensure it is selected in the Layers panel before clicking the Attribute Table icon.
+Values from the attribute table will appear, showing the fid, id, polygon values, and row and column indices. Note that the fid and id numbers are 201. Close that pane and click the Open Attribute Table (F6) to the right of the Toolbox icon on the attribute toolbar, which looks like a table. Click the Sierra Clip layer to ensure it is selected in the Layers panel before clicking the Attribute Table icon.
 
 ![attribute table](https://i.imgur.com/EUwvAiw.png)
 
@@ -156,7 +156,7 @@ Change the number of classes by clicking the arrows next to Classes below the Sy
 
 In this map, you'll notice that higher species richness is aggregated by hexagons in the foothill regions on either side of Sierra Nevada, and the lowest richness is at higher elevations. In the Styling panel under Rendering, you can use the slider to decrease the opacity and look underneath the layer. It might be interesting to import a hillshade layer to understand better where each hexagon lies or a lighter OSM basemap to see more reference cities and geography.
 
-Go back to QMS, type hillshade in the search function, and add the ESRI world hillshade. With Richness Stats selected, open the Styling pane and try different selections for the Layer blending mode. Multiply and Hard Light appear to be the best. If the layer disappears, you may need to click on Classify  to re-classify.
+Return to QMS, type hillshade in the search function, and add the ESRI world hillshade. With Richness Stats selected, open the Styling pane and try different selections for the Layer blending mode. Multiply and Hard Light appear to be the best. If the layer disappears, you may need to click on Classify  to re-classify.
 
 ### Layout/webmap
 We won't go into depth to create a layout for exporting your map. The steps are as follows:
