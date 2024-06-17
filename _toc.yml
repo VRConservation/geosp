@@ -18,6 +18,7 @@ parts:
       - file: chapters/08_aiml
       - file: chapters/09_R
       - file: chapters/10_future
+      - file: chapters/11_field
   - caption: Appendices
     chapters:
       - file: z_appendices/appendix1

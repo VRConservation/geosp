@@ -7,6 +7,13 @@ Whitebark pine example from EE and possibly make it into an app.
 
 ## AI
 
+From Josep Ferrer (@rfeers on twitter): In multiple linear regression, imagine you're baking.
+
+You've got different ingredients or variables.
+
+You need the perfect recipe (model) for your cake (prediction).
+
+Each ingredient's quantity (coefficient) affects the taste (outcome).
 
 ## Resources
 - [Jupyter generative AI](https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862)
