@@ -1,4 +1,4 @@
-# Field surveys
+# Field Surveys
 Your guide to open source field surveys
 
 Coming soon!
