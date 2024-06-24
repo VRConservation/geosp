@@ -73,7 +73,7 @@ Sentinel-2 true color image:
 The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
 
 ## Geemap
-Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data, all within a Python package environment developed by [Quisheng Wu](https://github.com/giswqs).
+Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data, all within a Python package environment developed by [Qiusheng Wu](https://github.com/giswqs).
 
 ```{admonition} Getting Started
 Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, Miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
@@ -228,7 +228,7 @@ m
 It's lengthy but gets you any polygon on the globe with as many points as you like.
 
 ## Leafmap
-A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
+A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Qiusheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
 
 The tutorials and workshops are supported by notebooks and videos to walk you through this excellent software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
 
