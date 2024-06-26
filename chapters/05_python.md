@@ -11,13 +11,14 @@ To be honest, getting started using a Windows computer was a total pain in the a
 ```{important} Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.
 ```
 
-To get you up and running quickly, I've provided a cheat sheet in in the {doc}`/z_appendices/appendix1` appendix that shortcuts the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
-
-However, you may jump straight in without setting it all up using Colab. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you've installed or executed is gone, although the code is saved. It's great for quickly testing out code blocks. Open [Colab](https://colab.research.google.com/) and click the blue 'New notebook' button to start a new notebook.
+To get you up and running quickly, I've provided a cheat sheet in the {doc}`/z_appendices/appendix1` appendix that shosummarizes the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
 
 ## Sentinel-2 Data
+Before you do that, let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. We'll run it in Colab. Click the Open in Colab button.
 
-Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. 
+[![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EgVOrLdWQdTjBJl_2itCs6LZGBXUGHZ1#scrollTo=KW1bwfGvFNiT)
+
+Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage is once you close the notebook, everything you've installed or executed will disappear, although the code is saved. It's great for quickly testing out code blocks.
 
 ```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/). If you run this in colab, add a % to the line, e.g., %pip install...
 ```
@@ -26,8 +27,18 @@ Install the dependencies:
 
 ```python
 # Uncomment the line below to install pystac and odc
-# pip install pystac-client odc-stac odc-geo
+# !pip install pystac-client odc-stac odc-geo
 ```
+
+and import
+
+```python
+# Import dependencies
+from pystac_client import Client
+from odc.stac import load
+import odc.geo.xr
+```
+
 Access data and create a bounding box:
 
 ```python
@@ -56,6 +67,9 @@ search = client.search(collections=[collection], bbox=bbox, datetime=datetime)
 # Pass the search results to the load function, which will lazy-load the data
 data = load(search.items(), bbox=bbox, groupby="solar_day", chunks={}, crs="EPSG:8857", resolution=10)
 ```
+
+The search.items() part of the data variable threw an error when running this codeblock in VS Code. It works in Colab, however.
+
 Visualize it:
 
 ```python
@@ -63,14 +77,14 @@ Visualize it:
 # Time=2 is an arbitrary time slice picked because there's few clouds
 data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=1500)
 
-# Alternately, we could visualise using odc.geo.xr's explore function
+# Alternately, you could visualise using odc.geo.xr's explore function
 # data.isel(time=2).explore(bands=["red", "green", "blue"], vmin=0, vmax=1500)
 ```
-Sentinel-2 true color image:
+Here's the resulting Sentinel-2 true color image:
 
 ![](https://i.imgur.com/ea6GCzY.png)
 
-The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
+The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs.
 
 ## Geemap
 Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data, all within a Python package environment developed by [Qiusheng Wu](https://github.com/giswqs).
@@ -126,6 +140,7 @@ vis_b = {
 m.setCenter(-120.2348, 38.8744, 9)
 m.addLayer(dataset, vis_a, 'Aboveground biomass carbon')
 m.addLayer(dataset, vis_b, 'Belowground biomass carbon')
+m
 ```
 Running that block will give you the following:
 
@@ -178,7 +193,7 @@ Let's take another look at the lambda function to clip the raster. Lambda functi
 ```
 
 ## Easier bboxing
-Boots and cats, boots and cats, boots and cats. Yeah! As you can see in both examples, adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows you to creates json text when you right-click on each point in a polygon. 
+Boots and cats, boots and cats, boots and cats. Yeah! No wait, it's bounding boxing, not beat boxing! As you can see in both examples, adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows you to creates json text when you right-click on each point in a polygon. 
 
 ```python
 # Import geemap and initialize earth engine
@@ -225,7 +240,7 @@ bbox = ee.Geometry(capecod)
 m.addLayer(bbox, {}, 'Cape Cod')
 m
 ```
-It's lengthy but gets you any polygon on the globe with as many points as you like.
+You may need to zoom into Cape Cod to see the box. This method is lengthy but gets you any polygon on the globe with as many points as you like.
 
 ## Leafmap
 A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Qiusheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
@@ -241,6 +256,8 @@ The tutorials and workshops are supported by notebooks and videos to walk you th
 
 Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the miniconda/anaconda section of the FOSS4G workshop.
 
+There are many more Python libraries focused on geospatial analysis. Go to github.com and search for them or find them through online tutorials, medium.com, X (twitter), and LinkedIn. Below are some additional resources to help you go deeper.
+
 ## Resources
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
 - [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.
@@ -250,4 +267,4 @@ Before running the code cells, ensure Leafmap is installed in your environment. 
 - [RiverREM](https://github.com/OpenTopography/RiverREM). A super cool Python package for automatically generating river relative elevation model (REM).
 - [lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
 - [Python for Ecologists](https://datacarpentry.org/python-ecology-lesson). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but it is a useful set of tutorials.
-- [Unlocking the Depths](http://gg.gg/1az3jj). A useful tutorial for mapping bathymetry and calculating lake volume. It may be behind a paywall.
+- [Unlocking the Depths](http://gg.gg/1az3jj). A useful tutorial for mapping bathymetry and calculating lake volume, although it may be behind a paywall.
