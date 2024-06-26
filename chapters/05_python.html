@@ -485,12 +485,13 @@ document.write(`
 <p class="admonition-title">Important</p>
 <p>Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.</p>
 </div>
-<p>To get you up and running quickly, I’ve provided a cheat sheet in in the <a class="reference internal" href="../z_appendices/appendix1.html"><span class="doc">Virtual Environment</span></a> appendix that shortcuts the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.</p>
-<p>However, you may jump straight in without setting it all up using Colab. Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage of Colab is once you close the notebook, everything you’ve installed or executed is gone, although the code is saved. It’s great for quickly testing out code blocks. Open <a class="reference external" href="https://colab.research.google.com/">Colab</a> and click the blue ‘New notebook’ button to start a new notebook.</p>
+<p>To get you up and running quickly, I’ve provided a cheat sheet in the <a class="reference internal" href="../z_appendices/appendix1.html"><span class="doc">Virtual Environment</span></a> appendix that shosummarizes the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.</p>
 </section>
 <section id="sentinel-2-data">
 <h2><span class="section-number">4.2. </span>Sentinel-2 Data<a class="headerlink" href="#sentinel-2-data" title="Link to this heading">#</a></h2>
-<p>Let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith.</p>
+<p>Before you do that, let’s look at a simple example from a GitHub <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith. We’ll run it in Colab. Click the Open in Colab button.</p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1EgVOrLdWQdTjBJl_2itCs6LZGBXUGHZ1#scrollTo=KW1bwfGvFNiT"><img alt="image" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage is once you close the notebook, everything you’ve installed or executed will disappear, although the code is saved. It’s great for quickly testing out code blocks.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/). If you run this in colab, add a % to the line, e.g., %pip install…</p>
@@ -499,7 +500,18 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Uncomment the line below to install pystac and odc
-# pip install pystac-client odc-stac odc-geo
+# !pip install pystac-client odc-stac odc-geo
+</pre></div>
+</div>
+</div>
+</div>
+<p>and import</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import dependencies
+from pystac_client import Client
+from odc.stac import load
+import odc.geo.xr
 </pre></div>
 </div>
 </div>
@@ -538,6 +550,7 @@ data = load(search.items(), bbox=bbox, groupby=&quot;solar_day&quot;, chunks={},
 </div>
 </div>
 </div>
+<p>The search.items() part of the data variable threw an error when running this codeblock in VS Code. It works in Colab, however.</p>
 <p>Visualize it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -545,15 +558,15 @@ data = load(search.items(), bbox=bbox, groupby=&quot;solar_day&quot;, chunks={},
 # Time=2 is an arbitrary time slice picked because there&#39;s few clouds
 data[[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=1500)
 
-# Alternately, we could visualise using odc.geo.xr&#39;s explore function
+# Alternately, you could visualise using odc.geo.xr&#39;s explore function
 # data.isel(time=2).explore(bands=[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;], vmin=0, vmax=1500)
 </pre></div>
 </div>
 </div>
 </div>
-<p>Sentinel-2 true color image:</p>
+<p>Here’s the resulting Sentinel-2 true color image:</p>
 <p><img alt="" src="https://i.imgur.com/ea6GCzY.png" /></p>
-<p>The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs. Thanks to Alex Leith for sharing this.</p>
+<p>The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs.</p>
 </section>
 <section id="geemap">
 <h2><span class="section-number">4.3. </span>Geemap<a class="headerlink" href="#geemap" title="Link to this heading">#</a></h2>
@@ -608,6 +621,7 @@ vis_b = {
 m.setCenter(-120.2348, 38.8744, 9)
 m.addLayer(dataset, vis_a, &#39;Aboveground biomass carbon&#39;)
 m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;)
+m
 </pre></div>
 </div>
 </div>
@@ -671,7 +685,7 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 </section>
 <section id="easier-bboxing">
 <h2><span class="section-number">4.4. </span>Easier bboxing<a class="headerlink" href="#easier-bboxing" title="Link to this heading">#</a></h2>
-<p>Boots and cats, boots and cats, boots and cats. Yeah! As you can see in both examples, adding a bounding box can be semi-painful. There’s an excellent <a class="reference external" href="https://www.keene.edu/campus/maps/tool">Polyline Tool</a> that allows you to creates json text when you right-click on each point in a polygon.</p>
+<p>Boots and cats, boots and cats, boots and cats. Yeah! No wait, it’s bounding boxing, not beat boxing! As you can see in both examples, adding a bounding box can be semi-painful. There’s an excellent <a class="reference external" href="https://www.keene.edu/campus/maps/tool">Polyline Tool</a> that allows you to creates json text when you right-click on each point in a polygon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import geemap and initialize earth engine
@@ -723,7 +737,7 @@ m
 </div>
 </div>
 </div>
-<p>It’s lengthy but gets you any polygon on the globe with as many points as you like.</p>
+<p>You may need to zoom into Cape Cod to see the box. This method is lengthy but gets you any polygon on the globe with as many points as you like.</p>
 </section>
 <section id="leafmap">
 <h2><span class="section-number">4.5. </span>Leafmap<a class="headerlink" href="#leafmap" title="Link to this heading">#</a></h2>
@@ -738,6 +752,7 @@ m
 <li><p>Alternatively, go straight to the workshop notebooks, such as the <a class="reference external" href="https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb">FOSS4G Workshop</a>.</p></li>
 </ol>
 <p>Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the miniconda/anaconda section of the FOSS4G workshop.</p>
+<p>There are many more Python libraries focused on geospatial analysis. Go to <a class="reference external" href="http://github.com">github.com</a> and search for them or find them through online tutorials, <a class="reference external" href="http://medium.com">medium.com</a>, X (twitter), and LinkedIn. Below are some additional resources to help you go deeper.</p>
 </section>
 <section id="resources">
 <h2><span class="section-number">4.6. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
@@ -750,7 +765,7 @@ m
 <li><p><a class="reference external" href="https://github.com/OpenTopography/RiverREM">RiverREM</a>. A super cool Python package for automatically generating river relative elevation model (REM).</p></li>
 <li><p><a class="reference external" href="https://developmentseed.org/blog/2023-10-23-lonboard">lonboard</a>. Python library for fast geospatial vector data visualization.</p></li>
 <li><p><a class="reference external" href="https://datacarpentry.org/python-ecology-lesson">Python for Ecologists</a>. The <a class="reference external" href="http://Datacarpentry.org">Datacarpentry.org</a> tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but it is a useful set of tutorials.</p></li>
-<li><p><a class="reference external" href="http://gg.gg/1az3jj">Unlocking the Depths</a>. A useful tutorial for mapping bathymetry and calculating lake volume. It may be behind a paywall.</p></li>
+<li><p><a class="reference external" href="http://gg.gg/1az3jj">Unlocking the Depths</a>. A useful tutorial for mapping bathymetry and calculating lake volume, although it may be behind a paywall.</p></li>
 </ul>
 </section>
 </section>

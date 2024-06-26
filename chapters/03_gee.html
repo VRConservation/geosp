@@ -499,18 +499,18 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 <p>That will open a new code editor with the following javascript code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var dataset = ee.ImageCollection(&quot;NASA/ORNL/biomass_carbon_density/v1&quot;);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NASA/ORNL/biomass_carbon_density/v1&quot;</span><span class="p">);</span>
 
-var visualization = {
-  bands: [&quot;agb&quot;],
-  min: -50.0,
-  max: 80.0,
-  palette: [&quot;d9f0a3&quot;, &quot;addd8e&quot;, &quot;78c679&quot;, &quot;41ab5d&quot;, &quot;238443&quot;, &quot;005a32&quot;],
-};
+<span class="n">var</span> <span class="n">visualization</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;agb&quot;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;d9f0a3&quot;</span><span class="p">,</span> <span class="s2">&quot;addd8e&quot;</span><span class="p">,</span> <span class="s2">&quot;78c679&quot;</span><span class="p">,</span> <span class="s2">&quot;41ab5d&quot;</span><span class="p">,</span> <span class="s2">&quot;238443&quot;</span><span class="p">,</span> <span class="s2">&quot;005a32&quot;</span><span class="p">],</span>
+<span class="p">};</span>
 
-Map.setCenter(-60.0, 7.0, 4);
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">60.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
 
-Map.addLayer(dataset, visualization, &quot;Aboveground biomass carbon&quot;);
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">visualization</span><span class="p">,</span> <span class="s2">&quot;Aboveground biomass carbon&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -522,13 +522,13 @@ Map.addLayer(dataset, visualization, &quot;Aboveground biomass carbon&quot;);
 <p>In this case, the Mosaic image has 4 bands related to above and belowground carbon, the latitude and longitude of a point clicked is (-68.16, 1.83), and the pixel size is 10km. Add in the belowground (bgb) carbon with</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var vis_b = {
-  bands: [&quot;bgb&quot;],
-  min: -50.0,
-  max: 80.0,
-  palette: [&quot;D6BCB1&quot;, &quot;AB8574&quot;, &quot;784E3D&quot;, &quot;3D2216&quot;, &quot;26140C&quot;, &quot;000000&quot;],
-};
-Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">vis_b</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bgb&quot;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;D6BCB1&quot;</span><span class="p">,</span> <span class="s2">&quot;AB8574&quot;</span><span class="p">,</span> <span class="s2">&quot;784E3D&quot;</span><span class="p">,</span> <span class="s2">&quot;3D2216&quot;</span><span class="p">,</span> <span class="s2">&quot;26140C&quot;</span><span class="p">,</span> <span class="s2">&quot;000000&quot;</span><span class="p">],</span>
+<span class="p">};</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s2">&quot;Belowground biomass carbon&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -536,7 +536,7 @@ Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 <p>You can zoom the map out and center to approximately world level by changing line 10 of the code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Map.setCenter(-24.83, 19.88, 2);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">24.83</span><span class="p">,</span> <span class="mf">19.88</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -544,28 +544,28 @@ Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 <p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does and standard coding practice (the double back slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python). You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Add global carbon density map
-var dataset = ee.ImageCollection(&quot;NASA/ORNL/biomass_carbon_density/v1&quot;);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
+<span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NASA/ORNL/biomass_carbon_density/v1&quot;</span><span class="p">);</span>
 
-// Add visual parameter variables
-var vis_a = {
-  bands: [&quot;agb&quot;],
-  min: -50.0,
-  max: 80.0,
-  palette: [&quot;d9f0a3&quot;, &quot;addd8e&quot;, &quot;78c679&quot;, &quot;41ab5d&quot;, &quot;238443&quot;, &quot;005a32&quot;],
-};
+<span class="o">//</span> <span class="n">Add</span> <span class="n">visual</span> <span class="n">parameter</span> <span class="n">variables</span>
+<span class="n">var</span> <span class="n">vis_a</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;agb&quot;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;d9f0a3&quot;</span><span class="p">,</span> <span class="s2">&quot;addd8e&quot;</span><span class="p">,</span> <span class="s2">&quot;78c679&quot;</span><span class="p">,</span> <span class="s2">&quot;41ab5d&quot;</span><span class="p">,</span> <span class="s2">&quot;238443&quot;</span><span class="p">,</span> <span class="s2">&quot;005a32&quot;</span><span class="p">],</span>
+<span class="p">};</span>
 
-var vis_b = {
-  bands: [&quot;bgb&quot;],
-  min: -50.0,
-  max: 80.0,
-  palette: [&quot;D6BCB1&quot;, &quot;AB8574&quot;, &quot;784E3D&quot;, &quot;3D2216&quot;, &quot;26140C&quot;, &quot;000000&quot;],
-};
+<span class="n">var</span> <span class="n">vis_b</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bgb&quot;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;D6BCB1&quot;</span><span class="p">,</span> <span class="s2">&quot;AB8574&quot;</span><span class="p">,</span> <span class="s2">&quot;784E3D&quot;</span><span class="p">,</span> <span class="s2">&quot;3D2216&quot;</span><span class="p">,</span> <span class="s2">&quot;26140C&quot;</span><span class="p">,</span> <span class="s2">&quot;000000&quot;</span><span class="p">],</span>
+<span class="p">};</span>
 
-// Center map and add layers
-Map.setCenter(-24.83, 19.88, 2);
-Map.addLayer(dataset, vis_a, &quot;Aboveground biomass carbon&quot;);
-Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
+<span class="o">//</span> <span class="n">Center</span> <span class="nb">map</span> <span class="ow">and</span> <span class="n">add</span> <span class="n">layers</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">24.83</span><span class="p">,</span> <span class="mf">19.88</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_a</span><span class="p">,</span> <span class="s2">&quot;Aboveground biomass carbon&quot;</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s2">&quot;Belowground biomass carbon&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -574,7 +574,7 @@ Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 <p>Note that the belowground layer now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can also control visible layers by altering the Map.addLayer function to add the layer, but it won’t be visible when you run the code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;, false);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s2">&quot;Belowground biomass carbon&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -590,12 +590,12 @@ Map.addLayer(dataset, vis_b, &quot;Belowground biomass carbon&quot;);
 <p>This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it ‘bbox’ (double-click geometry, type in bbox, and hit enter), but you can use the name geometry, remember to change the name from the code offered below from bbox to geometry. Under the dataset variable, change the code to the ImageCollection as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Add global carbon density map
-var dataset = ee
-  .ImageCollection(&quot;NASA/ORNL/biomass_carbon_density/v1&quot;)
-  .map(function (image) {
-    return image.clip(bbox);
-  });
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
+<span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span>
+  <span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NASA/ORNL/biomass_carbon_density/v1&quot;</span><span class="p">)</span>
+  <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bbox</span><span class="p">);</span>
+  <span class="p">});</span>
 </pre></div>
 </div>
 </div>
@@ -603,8 +603,8 @@ var dataset = ee
 <p>Note that the end of the dataset line no longer has a semicolon since the end of the code line now follows the bbox clip. Change the map center and zoom into your bounding box by changing the Map.setCenter function (line 21):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Center map and add layers
-Map.setCenter(-120.2348, 38.8744, 9);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Center</span> <span class="nb">map</span> <span class="ow">and</span> <span class="n">add</span> <span class="n">layers</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">120.2348</span><span class="p">,</span> <span class="mf">38.8744</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -614,9 +614,9 @@ Map.setCenter(-120.2348, 38.8744, 9);
 <p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com/">Snazzy Maps</a>, selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there’s an easier way using the <a class="reference external" href="https://github.com/aazuspan/snazzy">snazzy</a> github repository that reduces the lines of code to 2 using the url for the snazzy basemap subtle grayscale (or choose whichever one you like):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Change basemap to snazzy subtle grayscale
-var snazzy = require(&quot;users/aazuspan/snazzy:styles&quot;);
-snazzy.addStyle(&quot;https://snazzymaps.com/style/15/subtle-grayscale&quot;, &quot;Gray&quot;);
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Change</span> <span class="n">basemap</span> <span class="n">to</span> <span class="n">snazzy</span> <span class="n">subtle</span> <span class="n">grayscale</span>
+<span class="n">var</span> <span class="n">snazzy</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&quot;users/aazuspan/snazzy:styles&quot;</span><span class="p">);</span>
+<span class="n">snazzy</span><span class="o">.</span><span class="n">addStyle</span><span class="p">(</span><span class="s2">&quot;https://snazzymaps.com/style/15/subtle-grayscale&quot;</span><span class="p">,</span> <span class="s2">&quot;Gray&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
