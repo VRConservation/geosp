@@ -2,8 +2,6 @@
 
 The language you must learn for geospatial analysis!
 
-Coming Soon!
-<!-- 
 ## New
 
 I'm new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.
@@ -60,10 +58,12 @@ Read the sawmill .shp file and create the sawmill table.
 # Create sawmill table from shp file and show table
 con.sql('''
     CREATE TABLE IF NOT EXISTS sawmill as
-    SELECT * FROM ST_Read('C:/Users/vance/Downloads/CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp')
+    SELECT * FROM ST_Read('./CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp')
 ''')
 con.table('sawmill')
 ```
+
+Note that ./ reads the sawmill shape file in the CurrentSawmill file if you've cloned the repo to your local computer. If you downloaded a shp file in Windows to your Downloads folder replace the path with 'C:/Users/your_user_name/Downloads/shapefilename.shp'.
 
 ```{tip} Duckdb can be run in the command line and through Python, as we do here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.
 
@@ -98,14 +98,14 @@ Import the biomass database, then create the biomass table and show
 
 ```python
 # Import the Biomass dataset
-con.sql("SELECT * FROM ST_Read('C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')")
+con.sql("SELECT * FROM ST_Read('./CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')")
 ```
 
 ```python
 # Create biomass table from the shp file and show
 con.sql('''
     CREATE TABLE IF NOT EXISTS biomass as
-    SELECT * FROM ST_Read('C:/Users/vance/Downloads/CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')
+    SELECT * FROM ST_Read('./CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')
 ''')
 con.table('biomass')
 ```
@@ -140,7 +140,7 @@ Installing the Geo Data Viewer plugin for VS Code will let you quickly view spat
 
 ![lewo](https://i.imgur.com/cb48hqP.png)
 
-The Lewis's csv file is quite large, but DuckDB quickly runs through its ~140k rows. First, import the packages and connect to DuckDB
+First, import the packages and connect to DuckDB
 
 ```python
 # Import and connect
@@ -153,6 +153,8 @@ con.load_extension("httpfs")
 con.install_extension("spatial")
 con.load_extension("spatial")
 ```
+
+The Lewis's csv file is quite large, but DuckDB quickly runs through its ~140k rows. 
 
 Create a table called lewo, short for Lewis's Woodpecker. The csv file is in the repo's test folder. Note the use of ST_Point to assign the lat-lon columns to geometry.
 
@@ -217,7 +219,5 @@ Right-clicking the csv file and selecting View Map produces a heat map. It seems
 - **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. This is a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
 - **[Lonboard](https://developmentseed.org/lonboard/latest/)**. Lonboard is a Python library for fast vector processing. The [DuckDB Spatial](https://developmentseed.org/lonboard/latest/examples/duckdb/) tutorial links Lonboard to DuckDB and python to create a heatmap. 
 
-
-## Notes
-parquet file analysis? See parquet.ipynb
--->
+<!-- ## Notes
+parquet file analysis? See parquet.ipynb -->
