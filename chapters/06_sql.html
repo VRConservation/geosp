@@ -534,7 +534,7 @@ LIMIT</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create sawmill table from shp file and show table</span>
 <span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">    CREATE TABLE IF NOT EXISTS sawmill as</span>
-<span class="s1">    SELECT * FROM ST_Read(&#39;./CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp&#39;)</span>
+<span class="s1">    SELECT * FROM ST_Read(&#39;./wood.shp&#39;)</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
 </pre></div>
@@ -577,7 +577,7 @@ LIMIT</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Biomass dataset</span>
-<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM ST_Read(&#39;./CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -587,7 +587,7 @@ LIMIT</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from the shp file and show</span>
 <span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
-<span class="s1">    SELECT * FROM ST_Read(&#39;./CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp&#39;)</span>
+<span class="s1">    SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;biomass&#39;</span><span class="p">)</span>
 </pre></div>
