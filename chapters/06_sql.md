@@ -58,7 +58,7 @@ Read the sawmill .shp file and create the sawmill table.
 # Create sawmill table from shp file and show table
 con.sql('''
     CREATE TABLE IF NOT EXISTS sawmill as
-    SELECT * FROM ST_Read('./CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp')
+    SELECT * FROM ST_Read('./wood.shp')
 ''')
 con.table('sawmill')
 ```
@@ -98,14 +98,14 @@ Import the biomass database, then create the biomass table and show
 
 ```python
 # Import the Biomass dataset
-con.sql("SELECT * FROM ST_Read('./CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')")
+con.sql("SELECT * FROM ST_Read('./biomass.shp')")
 ```
 
 ```python
 # Create biomass table from the shp file and show
 con.sql('''
     CREATE TABLE IF NOT EXISTS biomass as
-    SELECT * FROM ST_Read('./CurrentBiomass/Current_Wood_Facility_Database_Biomass.shp')
+    SELECT * FROM ST_Read('./biomass.shp')
 ''')
 con.table('biomass')
 ```
