@@ -2,6 +2,8 @@
 
 The language you must learn for geospatial analysis!
 
+Coming Soon!
+<!-- 
 ## New
 
 I'm new to using SQL for geospatial analysis, but I am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL is the universal database management language, so geospatial aside, if you work with data, you must learn how to use it. The basic structure of a SQL query is shown in the tips window. Usually, just the CREATE and SELECT * FROM commands are used in data exploration, followed by finer-scale querying.
@@ -55,7 +57,7 @@ con.load_extension("spatial")
 Read the sawmill .shp file and create the sawmill table.
 
 ```python
-# Create sawmill table from shp file and show
+# Create sawmill table from shp file and show table
 con.sql('''
     CREATE TABLE IF NOT EXISTS sawmill as
     SELECT * FROM ST_Read('C:/Users/vance/Downloads/CurrentSawmill/Current_Wood_Facility_Database_Primary_Wood_Processing.shp')
@@ -215,7 +217,7 @@ Right-clicking the csv file and selecting View Map produces a heat map. It seems
 - **[Mark Litwintschik](https://tech.marksblogg.com/duckdb-gis-spatial-extension.html)**. This is a great data and geospatial blog featuring several tutorials running the DuckDB spatial extension.
 - **[Lonboard](https://developmentseed.org/lonboard/latest/)**. Lonboard is a Python library for fast vector processing. The [DuckDB Spatial](https://developmentseed.org/lonboard/latest/examples/duckdb/) tutorial links Lonboard to DuckDB and python to create a heatmap. 
 
-<!-- 
+
 ## Notes
 parquet file analysis? See parquet.ipynb
 -->
