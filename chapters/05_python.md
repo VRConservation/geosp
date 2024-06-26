@@ -1,17 +1,17 @@
 # Python
 
-Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could just be me, but I tried using arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled using esri notebooks. The language didn't stick with me or it was overly complicated. Sure, you could run an analysis tool and copy the arcpy code into a notebook to modify it, but I had a 'block' developing code blocks.
+Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could be me, but I tried using Arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled using ESRI notebooks. The language didn't stick with me, and it was overly complicated. Sure, you could run an analysis tool and copy the Arcpy code into a notebook to modify it, but I had a 'block' developing code blocks.
 
-Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.
+Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, opening up another world to using Python to analyze data rapidly.
 
 ## Getting Started
 
-To be honest, getting started using a Windows computer was a total pain in the ass. So, if you're using Linux or Apple OS, it will be much easier to set things up. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
+To be honest, getting started using a Windows computer was a total pain in the ass. So, if you're using Linux or Apple OS, setting things up will be much easier. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
 
 ```{important} Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.
 ```
 
-To get you up and running quickly, I've provided a cheat sheet in the {doc}`/z_appendices/appendix1` appendix that shosummarizes the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
+To get you up and running quickly, I've provided a cheat sheet in the {doc}`/z_appendices/appendix1` appendix that summarizes the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
 
 ## Sentinel-2 Data
 Before you do that, let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. We'll run it in Colab. Click the Open in Colab button.
@@ -20,7 +20,7 @@ Before you do that, let's look at a simple example from a GitHub [gist](https://
 
 Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage is once you close the notebook, everything you've installed or executed will disappear, although the code is saved. It's great for quickly testing out code blocks.
 
-```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/). If you run this in colab, add a % to the line, e.g., %pip install...
+```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).
 ```
 
 Install the dependencies:
@@ -68,7 +68,7 @@ search = client.search(collections=[collection], bbox=bbox, datetime=datetime)
 data = load(search.items(), bbox=bbox, groupby="solar_day", chunks={}, crs="EPSG:8857", resolution=10)
 ```
 
-The search.items() part of the data variable threw an error when running this codeblock in VS Code. It works in Colab, however.
+The search.items() part of the data variable threw an error when running this codeblock in VS Code. However, it works in Colab.
 
 Visualize it:
 
@@ -240,7 +240,7 @@ bbox = ee.Geometry(capecod)
 m.addLayer(bbox, {}, 'Cape Cod')
 m
 ```
-You may need to zoom into Cape Cod to see the box. This method is lengthy but gets you any polygon on the globe with as many points as you like.
+You may need to zoom into Cape Cod to see the box. This method is lengthy but allows you to create any polygon on the globe with as many points as you like.
 
 ## Leafmap
 A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Qiusheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
@@ -256,7 +256,7 @@ The tutorials and workshops are supported by notebooks and videos to walk you th
 
 Before running the code cells, ensure Leafmap is installed in your environment. For a quick starter guide on how to do this, see the miniconda/anaconda section of the FOSS4G workshop.
 
-There are many more Python libraries focused on geospatial analysis. Go to github.com and search for them or find them through online tutorials, medium.com, X (twitter), and LinkedIn. Below are some additional resources to help you go deeper.
+There are many more Python libraries focused on geospatial analysis. Go to github.com and search for them or find them through online tutorials, medium.com, X (Twitter), and LinkedIn. Below are some additional resources to help you go deeper.
 
 ## Resources
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
