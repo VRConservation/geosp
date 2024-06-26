@@ -584,7 +584,7 @@ LIMIT</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from the shp file and show</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from the shp file and show table</span>
 <span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
 <span class="s1">    SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)</span>
@@ -625,7 +625,7 @@ LIMIT</p>
 <h2><span class="section-number">5.5. </span>Lewis’s Woodpecker<a class="headerlink" href="#lewis-s-woodpecker" title="Link to this heading">#</a></h2>
 <p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
 <p><img alt="Lewis pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg" /></p>
-<p>Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example, right-clicking on the Lewis’s Woodpecker csv file in the test folder (if you’ve cloned this repo) and selecting View Map will give you</p>
+<p>Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example, if you cloned the repo, right-clicking on the Lewis’s Woodpecker csv file in the test/lewo folder and selecting View Map will give you</p>
 <p><img alt="lewo" src="https://i.imgur.com/cb48hqP.png" /></p>
 <p>First, import the packages and connect to DuckDB</p>
 <div class="cell docutils container">
@@ -652,7 +652,7 @@ LIMIT</p>
 <span class="s2">    CREATE TABLE lewo AS</span>
 <span class="s2">    SELECT *,</span>
 <span class="s2">        ST_Point(LONGITUDE, LATITUDE) as geometry</span>
-<span class="s2">    FROM &quot;./test/lewo_clip.csv&quot; </span>
+<span class="s2">    FROM &quot;./lewo/lewo.csv&quot; </span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
 
