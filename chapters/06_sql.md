@@ -102,7 +102,7 @@ con.sql("SELECT * FROM ST_Read('./biomass.shp')")
 ```
 
 ```python
-# Create biomass table from the shp file and show
+# Create biomass table from the shp file and show table
 con.sql('''
     CREATE TABLE IF NOT EXISTS biomass as
     SELECT * FROM ST_Read('./biomass.shp')
@@ -136,7 +136,7 @@ Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of 
 
 ![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
 
-Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, right-clicking on the Lewis's Woodpecker csv file in the test folder (if you've cloned this repo) and selecting View Map will give you
+Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, if you cloned the repo, right-clicking on the Lewis's Woodpecker csv file in the test/lewo folder and selecting View Map will give you
 
 ![lewo](https://i.imgur.com/cb48hqP.png)
 
@@ -164,7 +164,7 @@ sql = ("""
     CREATE TABLE lewo AS
     SELECT *,
         ST_Point(LONGITUDE, LATITUDE) as geometry
-    FROM "./test/lewo_clip.csv" 
+    FROM "./lewo/lewo.csv" 
 """)
 con.execute(sql)
 
