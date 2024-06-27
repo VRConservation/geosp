@@ -476,25 +476,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="google-earth-engine">
 <h1><span class="section-number">2. </span>Google Earth Engine<a class="headerlink" href="#google-earth-engine" title="Link to this heading">#</a></h1>
-<p><strong>Your intro to geospatial analysis in the cloud</strong>.</p>
+<p>Your introduction to geospatial analysis in the cloud</p>
 <section id="tl-dr">
 <h2><span class="section-number">2.1. </span>TL;DR<a class="headerlink" href="#tl-dr" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>See the <a class="reference external" href="https://www.eefabook.org/go-to-the-book.html">Cloud-Based Remote Sensing with Google Earth Engine</a> book or the <a class="reference external" href="https://spatialthoughts.com/courses/google-earth-engine/">GEE Course</a> from Spatial Thoughts to get started.
-GEE’s strength is cloud-based analysis, not visualization. For better visualization/cartographic tools, see Chapters 4, 6, and 8.</p></li>
-<li><p>See Chapter 4 and <a class="reference external" href="https://geemap.org/">Geemap</a> for a way to deploy GEE using Python.</p></li>
+<li><p>Google Earth Engine is a rich resource with petabytes of datasets and the ability to analyze data in the cloud rapidly.</p></li>
+<li><p>GEE’s strength is cloud-based analysis, not visualization. For better visualization/cartographic tools, see Chapters 4, 6, and 8.</p></li>
+<li><p>See Chapter 4 and <a class="reference external" href="https://geemap.org/">Geemap</a> for a way to deploy Earth Engine using Python.</p></li>
 </ul>
 </section>
 <section id="scenario">
 <h2><span class="section-number">2.2. </span>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h2>
-<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are, and ask the GIS guy. He peers up above his array of screens and says he’s busy working on a dozen other projects; he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.</p>
-<p>Yes! You’ve heard of this and think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language.</p>
+<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the room where the map plotters are located and ask the ‘GIS guy’ for help. He peers up above his array of screens and says he’s busy working on a dozen other projects; he might be able to get you something in two weeks. He suggests you check out Google Earth Engine.</p>
+<p>Yes! You’ve heard of this and think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language. Damn!</p>
 </section>
 <section id="diy">
 <h2><span class="section-number">2.3. </span>DIY<a class="headerlink" href="#diy" title="Link to this heading">#</a></h2>
-<p>This scenario applies even if you have a GIS guy down the hall with the defunct plotter! Many of you are too small and can’t afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Technically Google Earth Engine isn’t free or open source, but using it as an individual is free. Its extensive library and ability to run computations in the cloud make it an exceptional resource for use anywhere you have an internet connection on any computer.</p>
-<p>And it’s not that difficult to start. The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>. Here’s how to get going:</p>
-<p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select see example:</p>
+<p>This scenario applies even if you don’t have a GIS guy down the hall with the defunct plotter! So, how do you DIY the donor’s needs?</p>
+<p>Google Earth Engine may be one of the most ubiquitous free and open-source software packages. Technically, It isn’t free or open-source, but using it as an individual, nonprofit, or student is free. Its extensive library and ability to run computations in the cloud make it an exceptional resource for use anywhere you have an internet connection on any computer. And it’s not that difficult to start despite the use of Javascript!</p>
+<p>The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>.</p>
+<p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example:</p>
 <p><img alt="aboveground | 500" src="https://i.imgur.com/z3xt9WD.png" /></p>
 <p>That will open a new code editor with the following javascript code:</p>
 <div class="cell docutils container">
@@ -515,11 +516,11 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </div>
 </div>
 </div>
-<p>Clicking run will give you a basic map of aboveground biomass:</p>
-<p><img alt="" src="https://i.imgur.com/m7dOCRr.png" /></p>
-<p>You can zoom in or out and click the layer on or off. Selecting the inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:</p>
-<p><img alt="" src="https://i.imgur.com/LZcLWWh.png" /></p>
-<p>In this case, the Mosaic image has 4 bands related to above and belowground carbon, the latitude and longitude of a point clicked is (-68.16, 1.83), and the pixel size is 10km. Add in the belowground (bgb) carbon with</p>
+<p>Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass:</p>
+<p><img alt="abg" src="https://i.imgur.com/m7dOCRr.png" /></p>
+<p>You can zoom in or out and click the layer on or off. Selecting the Inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:</p>
+<p><img alt="inspector" src="https://i.imgur.com/LZcLWWh.png" /></p>
+<p>In this case, the Mosaic image has four bands related to above and belowground carbon, the latitude and longitude of a point clicked is (-68.16, 1.83), and the pixel size is 10 km. Add in the belowground (bgb) carbon with</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">vis_b</span> <span class="o">=</span> <span class="p">{</span>
@@ -541,7 +542,7 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </div>
 </div>
 </div>
-<p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does and standard coding practice (the double back slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python). You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image:</p>
+<p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does is standard coding practice. The double forward slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python. You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
@@ -570,8 +571,8 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </div>
 </div>
 </div>
-<p><img alt="" src="https://i.imgur.com/7hkdrV0.png" /></p>
-<p>Note that the belowground layer now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can also control visible layers by altering the Map.addLayer function to add the layer, but it won’t be visible when you run the code:</p>
+<p><img alt="bgb_world" src="https://i.imgur.com/7hkdrV0.png" /></p>
+<p>Note that the belowground layer now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can alter the layer visibility by changing the <code class="docutils literal notranslate"><span class="pre">Map.addLayer</span></code> command with a true (visible) or false argument (added but visible) after the layer name:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s2">&quot;Belowground biomass carbon&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
@@ -579,15 +580,16 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </div>
 </div>
 </div>
+<p>Note the command structure: Map.addLayer(Dataset or feature to add to the map, visualization parameters, layer name, shown (true or false for shown/not shown), opacity). To see the arguments for any command, click Docs in the left panel and type the command name to search for it. Select the name and the API reference will appear.</p>
 </section>
 <section id="aoi-clip">
 <h2><span class="section-number">2.4. </span>AOI Clip<a class="headerlink" href="#aoi-clip" title="Link to this heading">#</a></h2>
 <p>Getting back to the original request, you can clip the dataset to an area of interest, in this case, around Lake Tahoe. You can clip the map to datasets such as Tiger Lines for states or by country. Clipping by specific shape files requires you to upload the vector as a shape file into Earth Engine. This is fiddly and not as easy as dragging/dropping into Arc, QGIS, or online software such as Felt or Earth Blox. We’ll keep this to a simple box.</p>
 <p>Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe:</p>
-<p><img alt="" src="https://i.imgur.com/wqAZ3bC.png" /></p>
-<p>Enter a search in the box at the top of Earth Engine, such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and draft a square in the area</p>
-<p><img alt="" src="https://i.imgur.com/Il9YmB4.png" /></p>
-<p>This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it ‘bbox’ (double-click geometry, type in bbox, and hit enter), but you can use the name geometry, remember to change the name from the code offered below from bbox to geometry. Under the dataset variable, change the code to the ImageCollection as follows:</p>
+<p><img alt="tahoe" src="https://i.imgur.com/wqAZ3bC.png" /></p>
+<p>Enter a search in the box at the top of Earth Engine, such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and drag a square in the area.</p>
+<p><img alt="aoi" src="https://i.imgur.com/Il9YmB4.png" /></p>
+<p>This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it ‘bbox’ (double-click geometry, type in bbox, and hit enter), but you can use the name geometry. If you use the default name or name it something else, remember to change the name from the code below from bbox to geometry (or your name). Under the dataset variable, change the code to the ImageCollection as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
@@ -610,8 +612,8 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </div>
 </div>
 <p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again to get</p>
-<p><img alt="" src="https://i.imgur.com/u320Y7K.png" /></p>
-<p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com/">Snazzy Maps</a>, selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there’s an easier way using the <a class="reference external" href="https://github.com/aazuspan/snazzy">snazzy</a> GitHub repository that reduces the lines of code to 2 using the url for the snazzy basemap subtle grayscale (or choose whichever one you like):</p>
+<p><img alt="clipped_bg" src="https://i.imgur.com/u320Y7K.png" /></p>
+<p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com">Snazzy Maps</a>, selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there’s an easier way using the <a class="reference external" href="https://github.com/aazuspan/snazzy">snazzy</a> GitHub repository to reduce the total lines to two. Here, I used the Snazzy grayscale URL:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Change</span> <span class="n">basemap</span> <span class="n">to</span> <span class="n">snazzy</span> <span class="n">subtle</span> <span class="n">grayscale</span>
@@ -622,9 +624,9 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 </div>
 </div>
 <p>Once you hit enter, you will have ‘Gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other defaults you can add without much code and can be found <a class="reference external" href="http://gg.gg/1ats42">here</a>. Here is what the basemap bar in the upper right of the map pane looks like after adding the gray basemap:</p>
-<p><img alt="" src="https://i.imgur.com/X16YsFz.png" /></p>
+<p><img alt="gray" src="https://i.imgur.com/X16YsFz.png" /></p>
 <p>Altogether, the map now looks like the following (with the belowground layer turned off):</p>
-<p><img alt="" src="https://i.imgur.com/uoXwumv.png" /></p>
+<p><img alt="abg" src="https://i.imgur.com/uoXwumv.png" /></p>
 <p>The full code is <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>. Congratulations, you’ve made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.</p>
 </section>
 <section id="geospatial-eda">
@@ -637,9 +639,9 @@ GEE’s strength is cloud-based analysis, not visualization. For better visualiz
 <p>There are many resources from getting started to the advanced use of Google Earth Engine:</p>
 <ul class="simple">
 <li><p><strong>Spatial Thoughts, Ujaval Gandhi</strong>. <a class="reference external" href="https://courses.spatialthoughts.com/end-to-end-gee.html">End-to-End Google Earth Engine</a> provides full course materials that start with setting up the Earth Engine environment and move into more advanced topics such as machine learning and change detection.</p></li>
-<li><p><strong>Remote Sensing with GEE</strong>. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine <a class="reference external" href="https://www.eefabook.org/">book</a> by Rebecca Moore et al. As a remote sensing textbook, this book is worth reading and guides you through nearly everything from basic to complex geospatial analysis.</p></li>
+<li><p><strong>Remote Sensing with GEE</strong>. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine <a class="reference external" href="https://www.eefabook.org/">book</a> by Rebecca Moore et al. This book is worth reading as a standalone remote sensing textbook and expertly guides you through everything from basic to complex geospatial analysis.</p></li>
 <li><p><strong>Awesome-GEE</strong>. The Opengeos <a class="reference external" href="https://github.com/opengeos/Awesome-GEE">Awesome-GEE</a> GitHub repo is a fantastic curated list of GEE resources. This incredible resource has everything from getting started to courses, papers, datasets, and more. You could lose yourself for days in here!
-— <strong>GEE Google Group</strong>. The Google Earth Engine Developers <a class="reference external" href="https://groups.google.com/g/google-earth-engine-developers">listserv</a> is quite useful for answering many other questions.
+— <strong>GEE Google Group</strong>. The Google Earth Engine Developers <a class="reference external" href="https://groups.google.com/g/google-earth-engine-developers">listserv</a> is useful for answering many other questions, especially when you get stuck.
 — <strong>Awesome-GEE-Community-Catalog</strong>. Not to be confused with Awesome-GEE, the <a class="reference external" href="https://gee-community-catalog.org">Awesome GEE Community Catalog</a> is an equally awesome treasure trove of datasets ready for analysis and with sample code to start their use immediately.</p></li>
 <li><p><strong>Visualization and Analysis of Brazil Floods 2024</strong>. This [tutorial] has an excellent workflow design and superb explanations of remote sensing theory and concepts in this <a class="reference external" href="https://share.gishub.org/brazil_floods/#create-sentinel-1-sar-composites">tutorial</a>. In addition, the tutorial contains very useful text and code for analyzing synthetic aperture radar (SAR) imagery.</p></li>
 </ul>
