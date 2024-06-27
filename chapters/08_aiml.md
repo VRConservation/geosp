@@ -1,6 +1,9 @@
 # AI & ML
 Coming soon!
 <!-- 
+
+ It could be that AI helps to democratize geospatial analysis by lowering the cost of entry to geospatial data and software. Democratization of data medium article 
+ 
 A curated list of resources, tools, frameworks, articles, and projects related to Machine Learning Operations (MLOps): https://github.com/Pythondeveloper6/Awesome-MLOPS?tab=readme-ov-file#paid-courses
 
 ## Machine Learning

@@ -2,7 +2,7 @@
 
 Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. It could be me, but I tried using Arcpy, read through and tried the tutorials from an entire Arcpy book, and struggled using ESRI notebooks. The language didn't stick with me, and it was overly complicated. Sure, you could run an analysis tool and copy the Arcpy code into a notebook to modify it, but I had a 'block' developing code blocks.
 
-Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, opening up another world to using Python to analyze data rapidly.
+Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, opening up another world to analyze geospatial data.
 
 ## Getting Started
 
@@ -11,14 +11,14 @@ To be honest, getting started using a Windows computer was a total pain in the a
 ```{important} Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.
 ```
 
-To get you up and running quickly, I've provided a cheat sheet in the {doc}`/z_appendices/appendix1` appendix that summarizes the Geog-414 videos and should have you started quickly. You may want to refer to the videos if you get stuck.
+To get you up and running quickly, I've provided a cheat sheet in the {doc}`/z_appendices/appendix1` appendix that summarizes the Geog-414 videos and should have you started quickly. However, you may want to refer to the videos if you get stuck.
 
 ## Sentinel-2 Data
 Before you do that, let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. We'll run it in Colab. Click the Open in Colab button.
 
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EgVOrLdWQdTjBJl_2itCs6LZGBXUGHZ1#scrollTo=KW1bwfGvFNiT)
 
-Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage is once you close the notebook, everything you've installed or executed will disappear, although the code is saved. It's great for quickly testing out code blocks.
+Google Colab is an online notebook that lets you write and execute code. Its advantage is that it is shareable, connected to your Google account, and performs calculations in the cloud. The disadvantage is once you close the notebook, everything you've installed or executed will disappear, although the code is saved. It's great for quickly testing out Python script in a notebook environment.
 
 ```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).
 ```
@@ -42,11 +42,11 @@ import odc.geo.xr
 Access data and create a bounding box:
 
 ```python
-# Earth search is managed by Element-84 and provides access to a wide range of data sources
+# Earth search provides access to a wide range of data sources
 client = Client.open("https://earth-search.aws.element84.com/v1")
 collection = "sentinel-2-l2a"
 
-# Create a bounding box centered near New River Lagoon in Tasmania
+# Create a bounding box centered in Tasmania
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
 bbox = [146.5, -43.6, 146.7, -43.4]
 ```
@@ -57,8 +57,8 @@ bbox = [146.5, -43.6, 146.7, -43.4]
 Search and load the data:
 
 ```python
-# Datetime can be a single date, like YEAR, YEAR-MONTH or YEAR-MONTH-DAY
-# or a range, like YEAR-MONTH/YEAR-MONTH
+# Datetime can be a single date, YEAR, YEAR-MONTH or YEAR-MONTH-DAY
+# or a range, YEAR-MONTH/YEAR-MONTH
 datetime = "2023-12"
 
 # Run a lazy-loaded search of the STAC API
@@ -146,7 +146,7 @@ Running that block will give you the following:
 
 ![](https://i.imgur.com/uAQ9wBz.jpeg)
 
-If you return to the wrench icon and select the layers icon to the left, you can switch layers on and off
+If you return to the wrench icon and select the layers icon to the left, you can switch layers on and off.
 
 ![](https://i.imgur.com/RzJfVjV.png)
 
@@ -193,7 +193,7 @@ Let's take another look at the lambda function to clip the raster. Lambda functi
 ```
 
 ## Easier bboxing
-Boots and cats, boots and cats, boots and cats. Yeah! No wait, it's bounding boxing, not beat boxing! As you can see in both examples, adding a bounding box can be semi-painful. There's an excellent [Polyline Tool](https://www.keene.edu/campus/maps/tool) that allows you to creates json text when you right-click on each point in a polygon. 
+Boots and cats, boots and cats, boots and cats. Yeah! No wait, it's bounding boxing, not beat boxing! As you can see in both examples, adding the code for a bounding box can be semi-painful. The [Polyline Tool](https://www.keene.edu/campus/maps/tool) allows you to create the needed code when you right-click each point in a polygon. 
 
 ```python
 # Import geemap and initialize earth engine
@@ -240,12 +240,12 @@ bbox = ee.Geometry(capecod)
 m.addLayer(bbox, {}, 'Cape Cod')
 m
 ```
-You may need to zoom into Cape Cod to see the box. This method is lengthy but allows you to create any polygon on the globe with as many points as you like.
+You may need to zoom into Cape Cod to see the box. This somewhat lengthy method allows you to create any global polygon with as many points as you like.
 
 ## Leafmap
 A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Qiusheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
 
-The tutorials and workshops are supported by notebooks and videos to walk you through this excellent software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
+Notebooks and videos support the tutorials and workshops to walk you through this excellent software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
 
 1. Click workshops in leafmap.org
 2. Select the workshop
@@ -262,7 +262,7 @@ There are many more Python libraries focused on geospatial analysis. Go to githu
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
 - [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.
 - [Open Geospatial Solutions](https://github.com/opengeos) hosts many open-source geospatial software projects and datasets.
-[Spatial Thoughts](https://spatialthoughts.com), run by Ujaval Gandhi, offers a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site also offers many other free and paid courses and tutorials for geospatial analysis.
+[Spatial Thoughts](https://spatialthoughts.com), run by Ujaval Gandhi, offers a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site also provides many other free and paid courses and tutorials for geospatial analysis.
 - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
 - [RiverREM](https://github.com/OpenTopography/RiverREM). A super cool Python package for automatically generating river relative elevation model (REM).
 - [lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
