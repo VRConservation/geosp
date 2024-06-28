@@ -646,7 +646,7 @@ LIMIT</p>
 <h2><span class="section-number">5.5. </span>Lewis’s Woodpecker<a class="headerlink" href="#lewis-s-woodpecker" title="Link to this heading">#</a></h2>
 <p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis (<a class="reference internal" href="#lewo"><span class="std std-numref">Fig. 5.5</span></a>). Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
 <figure class="align-default" id="lewo">
-<a class="reference internal image-reference" href="figures/sql/lewo.png"><img alt="figures/sql/lewo.png" src="figures/sql/lewo.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/lewo.jpg"><img alt="../_images/lewo.jpg" src="../_images/lewo.jpg" style="height: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Lewis’s Woodpecker (<em>Melanerpes lewis</em>). Photo courtesy of <a class="reference external" href="http://wikimedia.org">wikimedia.org</a>.</span><a class="headerlink" href="#lewo" title="Link to this image">#</a></p>
 </figcaption>
@@ -693,7 +693,7 @@ LIMIT</p>
 </div>
 </div>
 <p>If the FROM “./lew/lewo.csv” statement throws an error, try replacing the file path by right-clicking the file in your computer and selecting copy path, then passing that file path in place of “./lewo/low.csv”. With Windows, change the slashes to / instead of \ for the file path.</p>
-<p>Then, count the total observations by state.</p>
+<p>Then, count the total observations by state (<a class="reference internal" href="#lewo-state"><span class="std std-numref">Fig. 5.7</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count by state</span>
@@ -709,6 +709,12 @@ LIMIT</p>
 </div>
 </div>
 <p><img alt="lewo_state" src="https://i.imgur.com/1sGQLD1.png" /></p>
+<figure class="align-default" id="lewo-state">
+<a class="reference internal image-reference" href="../_images/lewo_state.png"><img alt="../_images/lewo_state.png" src="../_images/lewo_state.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Lewis’s Woodpecker counts by state.</span><a class="headerlink" href="#lewo-state" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Select the Washington observations and name the new table ‘wash’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -735,8 +741,13 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p>Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis’s Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest:</p>
-<p><img alt="Wash" src="https://i.imgur.com/nGiuDxq.png" /></p>
+<p>Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis’s Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest (<a class="reference internal" href="#wash"><span class="std std-numref">Fig. 5.8</span></a>).</p>
+<figure class="align-default" id="wash">
+<a class="reference internal image-reference" href="../_images/wash.png"><img alt="../_images/wash.png" src="../_images/wash.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Distribution heatmap in Washington state of Lewis’s Woodpecker.</span><a class="headerlink" href="#wash" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Hopefully, these examples are enough to get you started. The resources below have more detailed examples and videos to go deeper. Make sure to practice and try out queries, joins, and other spatial functions with different datasets, including geosjson and geoparquet, to go beyond using shp and csv files.</p>
 </section>
 <section id="resources">
