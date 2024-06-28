@@ -25,7 +25,7 @@ The full code for this example can be found [here](https://code.earthengine.goog
 Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example ({numref}`globalabg`)
 
 ```{figure} /figures/gee/globalabg.png
-:height: 300px
+:height: 400px
 :name: globalabg
 Global above and belowground biomass carbon dataset.
 ```
