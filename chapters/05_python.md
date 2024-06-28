@@ -154,13 +154,22 @@ m.addLayer(dataset, vis_a, 'Aboveground biomass carbon')
 m.addLayer(dataset, vis_b, 'Belowground biomass carbon')
 m
 ```
-Running that block will give you the following:
+Running that code block will result in {numref}`bgb_py`.
 
-![](https://i.imgur.com/uAQ9wBz.jpeg)
 
-If you return to the wrench icon and select the layers icon to the left, you can switch layers on and off.
+```{figure} /figures/python/bgb_py.png
+:height: 500px
+:name: bgb_py
+Adding above and belowground biomass carbon with belowground showing.
+```
 
-![](https://i.imgur.com/RzJfVjV.png)
+If you return to the wrench icon and select the layers icon to the left, you can switch layers on and off ({numref}`layers`).
+
+```{figure} /figures/python/layers.png
+:height: 300px
+:name: layers
+Layers panel.
+```
 
 Add a new code block and add an area of interest called bbox, short for bounding box:
 
