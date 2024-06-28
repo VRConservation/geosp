@@ -545,8 +545,13 @@ LIMIT</p>
 <p class="admonition-title">Tip</p>
 <p>Duckdb can be run in the command line and through Python, as we do here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.</p>
 </div>
-<p><img alt="sawmill-all" src="https://i.imgur.com/ptLCP0F.png" /></p>
-<p>View the sawmill table schema, then sum # sawmills by county</p>
+<p><a class="reference internal" href="#sawmill"><span class="std std-numref">Fig. 5.1</span></a> shows the tabular result after executing that codeblock. The output is truncated by rows and columns so it’s often worthwhile viewing the table schema to inform future queries (<a class="reference internal" href="#schema"><span class="std std-numref">Fig. 5.2</span></a>).</p>
+<figure class="align-default" id="sawmill">
+<a class="reference internal image-reference" href="../_images/sawmill.png"><img alt="../_images/sawmill.png" src="../_images/sawmill.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The entire sawmill dataset (columns and rows truncated).</span><a class="headerlink" href="#sawmill" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View sawmill table schema</span>
@@ -557,7 +562,12 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p><img alt="sawmill-schema" src="https://i.imgur.com/gM9AJtB.png" /></p>
+<figure class="align-default" id="schema">
+<a class="reference internal image-reference" href="../_images/schema.png"><img alt="../_images/schema.png" src="../_images/schema.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Sawmill table schema.</span><a class="headerlink" href="#schema" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum sawmills by county</span>
