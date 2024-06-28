@@ -160,14 +160,13 @@ Note that the end of the dataset line no longer has a semicolon since the end of
 Map.setCenter(-120.2348, 38.8744, 9);
 ```
 
-Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again ({numref}`clipped_bg`)
+Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again ({numref}`clipped_bg`).
 
 ```{figure} /figures/gee/clipped_bg.png
 :height: 500px
 :name: clipped_bg
-Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.
+Belowground biomass clipped to the area of interest.
 ```
-![clipped_bg](https://i.imgur.com/u320Y7K.png)
 
 Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to [Snazzy Maps](https://snazzymaps.com), selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we'll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there's an easier way using the [snazzy](https://github.com/aazuspan/snazzy) GitHub repository to reduce the total lines to two. Here, I used the Snazzy grayscale URL:
 
@@ -177,9 +176,13 @@ var snazzy = require("users/aazuspan/snazzy:styles");
 snazzy.addStyle("https://snazzymaps.com/style/15/subtle-grayscale", "Gray");
 ```
 
-Once you hit enter, you will have 'Gray' as an additional map option in the middle right portion of your screen to go along with the default 'Map' and 'Satellite' options. Earth Engine has other defaults you can add without much code and can be found [here](http://gg.gg/1ats42). Here is what the basemap bar in the upper right of the map pane looks like after adding the gray basemap:
+Once you hit enter, you will have 'Gray' as an additional map option in the middle right portion of your screen to go along with the default 'Map' and 'Satellite' options. Earth Engine has other defaults you can add without much code and can be found [here](http://gg.gg/1ats42). After adding the gray basemap the basemap selection bar changes ({numbref}`gray`).
 
-![gray](https://i.imgur.com/X16YsFz.png)
+```{figure} /figures/gee/gray.png
+:height: 300px
+:name: gray
+Belowground biomass clipped to the area of interest.
+```
 
 Altogether, the map now looks like the following (with the belowground layer turned off):
 
