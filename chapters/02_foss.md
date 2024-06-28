@@ -18,9 +18,13 @@ jupyter:
 Free and open-source (FOSS) geospatial tools and software are essential for data democratization, equitable planning, and preserving natural resources because they provide accessible and transparent ways to analyze and visualize spatial data. FOSS tools enable individuals and communities to access, analyze, and share geospatial information regardless of their financial resources. By harnessing them, users can make informed decisions about land use planning, resource management, and environmental conservation. Additionally, the open nature of these tools fosters collaboration and innovation among diverse stakeholders, leading to more inclusive and sustainable solutions for our communities and the environment. Ultimately, FOSS geospatial tools are crucial in promoting transparency, equity, and sustainability in decision-making processes related to biodiversity conservation.
 
 ## Participatory Rural Appraisal
-For a portion of my graduate school research, I did community-based mapping, working with indigenous villages in a community-run reserve called Chimalapas in Oaxaca, Mexico, using participatory rural appraisal (PRA) tools. PRA involves local community members in the assessment process, enabling them to actively contribute their knowledge, experiences, and perspectives regarding natural resources. This inclusive approach ensures that the assessment reflects the needs and priorities of the community, leading to more relevant and sustainable resource management decisions. Secondly, PRA fosters community empowerment by building local capacity, enhancing collective decision-making, and promoting ownership of development initiatives. 
+For a portion of my graduate school research, I did community-based mapping, working with indigenous villages in a community-run reserve called Chimalapas in Oaxaca, Mexico, using participatory rural appraisal (PRA) tools. PRA involves local community members in the assessment process, enabling them to actively contribute their knowledge, experiences, and perspectives regarding natural resources {numref}`pra`. This inclusive approach ensures that the assessment reflects the needs and priorities of the community, leading to more relevant and sustainable resource management decisions. Secondly, PRA fosters community empowerment by building local capacity, enhancing collective decision-making, and promoting ownership of development initiatives. 
 
-![pra](/figures/pra.jpg)
+```{figure} /figures/pra.png
+:height: 300px
+:name: pra
+Participatory rural appraisal session led by local community member.
+```
 
 The tools are simple; mapping can be drawing a diagram in the dirt or sand or working with villagers to create a model of how they perceive their local landscape. Other tools can involve using rocks or beans to quantify seasonal differences in crop yields or natural resource utilization. The exercises aimed to develop the spatial perception of how communities perceived their geography and determine what was important in managing and living in the natural world.
 

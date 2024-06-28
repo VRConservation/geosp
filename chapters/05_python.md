@@ -243,7 +243,7 @@ m
 You may need to zoom into Cape Cod to see the box. This somewhat lengthy method allows you to create any global polygon with as many points as you like.
 
 ## Leafmap
-A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Qiusheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
+A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Qiusheng Wu and focused on geospatial data analysis and visualization. Leafmap is increasing its 3d capabilities, great for terrain and building visualization. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the Leafmap workshops, which will guide you through installation, examples, and many use cases.
 
 Notebooks and videos support the tutorials and workshops to walk you through this excellent software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
 
