@@ -551,7 +551,6 @@ document.write(`
 <p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">True color Sentinel-2 image.</span><a class="headerlink" href="#sentinel" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><img alt="" src="https://i.imgur.com/ea6GCzY.png" /></p>
 <p>The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs.</p>
 </section>
 <section id="geemap">
@@ -570,10 +569,20 @@ document.write(`
 <span class="n">m</span>
 </pre></div>
 </div>
-<p>That will give you a generic world map with map widgets:</p>
-<p><img alt="" src="https://i.imgur.com/hKl0roO.png" /></p>
-<p>In the upper right corner of the map, click the wrench icon, then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:</p>
-<p><img alt="" src="https://i.imgur.com/XXdWssh.png" /></p>
+<p>To give you a generic world map with map widgets (<a class="reference internal" href="#m"><span class="std std-numref">Fig. 4.2</span></a>).</p>
+<figure class="align-default" id="m">
+<a class="reference internal image-reference" href="../_images/m.png"><img alt="../_images/m.png" src="../_images/m.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Interactive map in Geemap.</span><a class="headerlink" href="#m" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the upper right corner of the map, click the wrench icon, then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter (<a class="reference internal" href="#convert"><span class="std std-numref">Fig. 4.3</span></a>).</p>
+<figure class="align-default" id="convert">
+<a class="reference internal image-reference" href="../_images/convert.png"><img alt="../_images/convert.png" src="../_images/convert.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Textbox converter for Earth Engine Javascript to Python.</span><a class="headerlink" href="#convert" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Go to the Earth Engine <a class="reference external" href="https://code.earthengine.google.com/">code editor</a>, open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add global carbon density map</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">)</span>
