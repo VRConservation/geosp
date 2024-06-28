@@ -176,7 +176,7 @@ var snazzy = require("users/aazuspan/snazzy:styles");
 snazzy.addStyle("https://snazzymaps.com/style/15/subtle-grayscale", "Gray");
 ```
 
-Once you hit enter, you will have 'Gray' as an additional map option in the middle right portion of your screen to go along with the default 'Map' and 'Satellite' options. Earth Engine has other defaults you can add without much code and can be found [here](http://gg.gg/1ats42). After adding the gray basemap the basemap selection bar changes ({numbref}`gray`).
+Once you hit enter, you will have 'Gray' as an additional map option in the middle right portion of your screen to go along with the default 'Map' and 'Satellite' options. Earth Engine has other defaults you can add without much code and can be found [here](http://gg.gg/1ats42). After adding the gray basemap the basemap selection bar changes ({numref}`gray`).
 
 ```{figure} /figures/gee/gray.png
 :height: 200px

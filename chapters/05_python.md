@@ -80,8 +80,13 @@ data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=
 # Alternately, you could visualise using odc.geo.xr's explore function
 # data.isel(time=2).explore(bands=["red", "green", "blue"], vmin=0, vmax=1500)
 ```
-Here's the resulting Sentinel-2 true color image:
+{numref}`sentinel` shows the resulting Sentinel-2 true color image.
 
+```{figure} /figures/python/sentinel.png
+:height: 500px
+:name: sentinel
+True color Sentinel-2 image.
+```
 ![](https://i.imgur.com/ea6GCzY.png)
 
 The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs.
