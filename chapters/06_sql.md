@@ -86,6 +86,7 @@ con.sql('''
 :name: schema
 Sawmill table schema.
 ```
+Let's run a query that sums sawmills by county ({numref}`county`).
 
 ```python
 # Sum sawmills by county
@@ -97,7 +98,11 @@ con.sql('''
 ''')
 ```
 
-![sawmill-county](https://i.imgur.com/GeX2mE6.png)
+```{figure} /figures/sql/county.png
+:height: 500px
+:name: county
+Sum of total sawmills by county.
+```
 
 Import the biomass database, then create and show the table.
 
@@ -115,7 +120,7 @@ con.sql('''
 con.table('biomass')
 ```
 
-View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal.
+View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal ({numref}`mw`).
 
 ```python
 # View biomass table schema
@@ -136,14 +141,28 @@ con.sql('''
 ''')
 ```
 
+```{figure} /figures/sql/mw.png
+:height: 500px
+:name: mw
+Sum of total megawats of biomass plants by county.
+```
+
 ## Lewis's Woodpecker
-Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis's Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects ([Wikipedia](https://en.wikipedia.org/wiki/Lewis%27s_woodpecker)). We'll examine a dataset of Lewis's species occurrence from eBird.
+Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis ({numref}`lewo`). Although locally common, its breeding and migratory habits are not extensively known. Lewis's Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects ([Wikipedia](https://en.wikipedia.org/wiki/Lewis%27s_woodpecker)). We'll examine a dataset of Lewis's species occurrence from eBird.
 
-![Lewis pic](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg)
+```{figure} /figures/sql/lewo.png
+:height: 500px
+:name: lewo
+Lewis's Woodpecker (_Melanerpes lewis_). Photo courtesy of wikimedia.org.
+```
 
-Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, if you cloned the repo, right-clicking on the Lewis's Woodpecker csv file in the test/lewo folder and selecting View Map will give you the following map:
+Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, if you cloned the repo, right-clicking on the Lewis's Woodpecker csv file in the test/lewo folder and selecting View Map will give a distribution heatmap ({numref}`lewo_distrib`).
 
-![lewo](https://i.imgur.com/cb48hqP.png)
+```{figure} /figures/sql/lewo_distrib.png
+:height: 500px
+:name: lewo_distrib
+Lewis's Woodpecker distribution heatmap in the western United States.
+```
 
 To analyze the woodpecker data, import the packages and connect to DuckDB.
 
