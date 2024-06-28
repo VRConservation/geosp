@@ -25,7 +25,7 @@ The full code for this example can be found [here](https://code.earthengine.goog
 Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example ({numref}`globalabg`).
 
 ```{figure} /figures/gee/globalabg.png
-:height: 400px
+:height: 500px
 :name: globalabg
 Global above and belowground biomass carbon dataset.
 ```
@@ -47,7 +47,7 @@ Map.setCenter(-60.0, 7.0, 4);
 Map.addLayer(dataset, visualization, "Aboveground biomass carbon");
 ```
 
-Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass ({numref}`abg`)
+Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass ({numref}`abg`).
 
 ```{figure} /figures/gee/abg.png
 :height: 500px
@@ -55,9 +55,13 @@ Clicking Run in the upper right of the interface will give you a basic map of ab
 Aboveground biomass output.
 ```
 
-You can zoom in or out and click the layer on or off. Selecting the Inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:
+You can zoom in or out and click the layer on or off. Selecting the Inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed ({numref}`inspector`).
 
-![inspector](https://i.imgur.com/LZcLWWh.png)
+```{figure} /figures/gee/inspector.png
+:height: 500px
+:name: inspector
+Using the inspector tab in the console to get pixel information.
+```
 
 In this case, the Mosaic image has four bands related to above and belowground carbon, the latitude and longitude of a point clicked is (-68.16, 1.83), and the pixel size is 10 km. Add in the belowground (bgb) carbon with
 
