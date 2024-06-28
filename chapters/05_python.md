@@ -87,7 +87,6 @@ data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=
 :name: sentinel
 True color Sentinel-2 image.
 ```
-![](https://i.imgur.com/ea6GCzY.png)
 
 The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs.
 
@@ -108,13 +107,21 @@ geemap.ee_initialize()
 m = geemap.Map()
 m
 ```
-That will give you a generic world map with map widgets:
+To give you a generic world map with map widgets ({numref}`m`).
 
-![](https://i.imgur.com/hKl0roO.png)
+```{figure} /figures/python/m.png
+:height: 500px
+:name: m
+Interactive map in Geemap.
+```
 
-In the upper right corner of the map, click the wrench icon, then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:
+In the upper right corner of the map, click the wrench icon, then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter ({numref}`convert`).
 
-![](https://i.imgur.com/XXdWssh.png)
+```{figure} /figures/python/convert.png
+:height: 300px
+:name: convert
+Textbox converter for Earth Engine Javascript to Python.
+```
 
 Go to the Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:
 
