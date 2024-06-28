@@ -64,12 +64,15 @@ con.table('sawmill')
 Note that ./ reads the sawmill shape file in the CurrentSawmill file if you've cloned the repo to your local computer. If you downloaded a shp file in Windows to your Downloads folder, replace the path to where you've stored the shp files, for example 'C:/Users/your_user_name/Downloads/shapefilename.shp'.
 
 ```{tip} Duckdb can be run in the command line and through Python, as we do here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.
-
 ```
 
-![sawmill-all](https://i.imgur.com/ptLCP0F.png)
+{numref}`sawmill` shows the tabular result after executing that codeblock. The output is truncated by rows and columns so it's often worthwhile viewing the table schema to inform future queries ({numref}`schema`).
 
-View the sawmill table schema, then sum # sawmills by county
+```{figure} /figures/sql/sawmill.png
+:height: 500px
+:name: sawmill
+The entire sawmill dataset (columns and rows truncated).
+```
 
 ```python
 # View sawmill table schema
@@ -78,7 +81,11 @@ con.sql('''
 ''')
 ```
 
-![sawmill-schema](https://i.imgur.com/gM9AJtB.png)
+```{figure} /figures/sql/schema.png
+:height: 500px
+:name: schema
+Sawmill table schema.
+```
 
 ```python
 # Sum sawmills by county

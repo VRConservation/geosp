@@ -195,7 +195,7 @@ m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
 m.addLayer(aoi, vis_a, 'AOI aboveground biomass carbon')
 m
 ```
-If you turn off the aboveground and belowground maps, a map with the clipped aboveground biomass carbon layer will result ({numref}`clip).
+If you turn off the aboveground and belowground maps, a map with the clipped aboveground biomass carbon layer will result ({numref}`clip`).
 
 ```{figure} /figures/python/clip.png
 :height: 500px
