@@ -497,39 +497,8 @@ document.write(`
 <p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).</p>
 </div>
 <p>Install the dependencies:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Uncomment the line below to install pystac and odc
-# !pip install pystac-client odc-stac odc-geo
-</pre></div>
-</div>
-</div>
-</div>
 <p>and import</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import dependencies
-from pystac_client import Client
-from odc.stac import load
-import odc.geo.xr
-</pre></div>
-</div>
-</div>
-</div>
 <p>Access data and create a bounding box:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Earth search provides access to a wide range of data sources
-client = Client.open(&quot;https://earth-search.aws.element84.com/v1&quot;)
-collection = &quot;sentinel-2-l2a&quot;
-
-# Create a bounding box centered in Tasmania
-# The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
-bbox = [146.5, -43.6, 146.7, -43.4]
-</pre></div>
-</div>
-</div>
-</div>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Use Earth Engine’s inspector or the <a class="reference external" href="https://www.keene.edu/campus/maps/tool/">polyline tool</a> to generate coordinates.</p>
