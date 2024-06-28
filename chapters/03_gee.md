@@ -28,7 +28,7 @@ Once you log into [Earth Engine](https://code.earthengine.google.com/), search f
 
 That will open a new code editor with the following javascript code:
 
-```javascript
+```js
 var dataset = ee.ImageCollection("NASA/ORNL/biomass_carbon_density/v1");
 
 var visualization = {
