@@ -22,7 +22,7 @@ Google Earth Engine may be one of the most ubiquitous free and open-source softw
 
 The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
 
-Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example ({numref}`globalabg`)
+Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example ({numref}`globalabg`).
 
 ```{figure} /figures/gee/globalabg.png
 :height: 400px
@@ -47,9 +47,13 @@ Map.setCenter(-60.0, 7.0, 4);
 Map.addLayer(dataset, visualization, "Aboveground biomass carbon");
 ```
 
-Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass:
+Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass ({numref}`abg`)
 
-![abg](https://i.imgur.com/m7dOCRr.png)
+```{figure} /figures/gee/abg.png
+:height: 500px
+:name: abg
+Aboveground biomass output.
+```
 
 You can zoom in or out and click the layer on or off. Selecting the Inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:
 
