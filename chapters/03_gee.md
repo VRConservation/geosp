@@ -179,21 +179,19 @@ snazzy.addStyle("https://snazzymaps.com/style/15/subtle-grayscale", "Gray");
 Once you hit enter, you will have 'Gray' as an additional map option in the middle right portion of your screen to go along with the default 'Map' and 'Satellite' options. Earth Engine has other defaults you can add without much code and can be found [here](http://gg.gg/1ats42). After adding the gray basemap the basemap selection bar changes ({numbref}`gray`).
 
 ```{figure} /figures/gee/gray.png
-:height: 300px
-:width: 400px
+:height: 200px
+:width: 600px
 :name: gray
 Gray basemap bar after adding the grayscale map.
 ```
 
-Altogether, the map now looks like the following (with the belowground layer turned off):
+Altogether, the map now looks like {numref}`abg_tahoe` once the belowground layer is turned off.
 
-```{figure} /figures/gee/gray.png
-:height: 300px
-:width: 400px
-:name: gray
+```{figure} /figures/gee/abg_tahoe.png
+:height: 500px
+:name: abg_tahoe
 Gray basemap bar after adding the grayscale map.
 ```
-![abg](https://i.imgur.com/uoXwumv.png)
 
 The full code is [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2). Congratulations, you've made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.
 
