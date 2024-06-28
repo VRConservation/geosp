@@ -56,7 +56,7 @@ bbox = [146.5, -43.6, 146.7, -43.4]
 
 Search and load the data:
 
-```python
+```ipython3
 # Datetime can be a single date, YEAR, YEAR-MONTH or YEAR-MONTH-DAY
 # or a range, YEAR-MONTH/YEAR-MONTH
 datetime = "2023-12"
@@ -72,7 +72,7 @@ The search.items() part of the data variable threw an error when running this co
 
 Visualize it:
 
-```python
+```ipython3
 # Visualize the data
 # Time=2 is an arbitrary time slice picked because there's few clouds
 data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=1500)
@@ -95,7 +95,7 @@ Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list
 
 Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a Jupyter notebook and add the following code block:
 
-```python
+```ipython3
 # Import geemap and create an interactive map
 import ee
 import geemap
@@ -113,7 +113,7 @@ In the upper right corner of the map, click the wrench icon, then click the two 
 
 Go to the Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:
 
-```python
+```ipython3
 # Add global carbon density map
 dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1')
 
@@ -155,20 +155,20 @@ Add a new code block and add an area of interest called bbox, short for bounding
 ```{tip} To run the code in a code block, click ctrl/command + enter. To run the code and add a new code block, click alt + enter.
 ```
 
-```python
+```ipython3
 # Add an area of interest
 bbox = [-121.1874, 38.2931, -119.5262, 39.2884]
 bbox = ee.Geometry.Rectangle(bbox)
 ```
 Then clip the carbon raster to the AOI:
 
-```python
+```ipython3
 # Clip the dataset to the area of interest
 aoi = dataset.map(lambda image: image.clip(bbox))
 ```
 Now add the clipped rasters:
 
-```python
+```ipython3
 # Add the clipped dataset to the map
 m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
 m.addLayer(aoi, vis_a, 'AOI aboveground biomass carbon')
@@ -180,7 +180,7 @@ If you turn off the aboveground and belowground maps, your map will now look lik
 
 Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map, you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to the code block to
 
-```python
+```ipython3
 # Center map and add layers
 m.setCenter(-120.2348, 38.8744, 9)
 m.addLayer(dataset, vis_a, 'Aboveground biomass carbon', False)
@@ -195,7 +195,7 @@ Let's take another look at the lambda function to clip the raster. Lambda functi
 ## Easier bboxing
 Boots and cats, boots and cats, boots and cats. Yeah! No wait, it's bounding boxing, not beat boxing! As you can see in both examples, adding the code for a bounding box can be semi-painful. The [Polyline Tool](https://www.keene.edu/campus/maps/tool) allows you to create the needed code when you right-click each point in a polygon. 
 
-```python
+```ipython3
 # Import geemap and initialize earth engine
 import ee
 import geemap
@@ -205,7 +205,7 @@ m = geemap.Map()
 
 In the Polyline Tool, I've right-clicked 3 points around Cape Cod, Massachusetts, in the United States, then clicked close shape to get a square. Then, I copied the curly brackets and the geojson coordinates in between and assigned them to a variable. Then, convert the geojson coordinates to an earth engine geometry type and map.
 
-```python
+```ipython3
 # Add the coordinates from the Polyline tool and assign to a variable
 capecod = {
     "coordinates": [
