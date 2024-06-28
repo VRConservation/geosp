@@ -568,6 +568,7 @@ LIMIT</p>
 <p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Sawmill table schema.</span><a class="headerlink" href="#schema" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Let’s run a query that sums sawmills by county (<a class="reference internal" href="#county"><span class="std std-numref">Fig. 5.3</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum sawmills by county</span>
@@ -581,7 +582,12 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p><img alt="sawmill-county" src="https://i.imgur.com/GeX2mE6.png" /></p>
+<figure class="align-default" id="county">
+<a class="reference internal image-reference" href="../_images/county.png"><img alt="../_images/county.png" src="../_images/county.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Sum of total sawmills by county.</span><a class="headerlink" href="#county" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Import the biomass database, then create and show the table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -603,7 +609,7 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal.</p>
+<p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal (<a class="reference internal" href="#mw"><span class="std std-numref">Fig. 5.4</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View biomass table schema</span>
@@ -629,13 +635,29 @@ LIMIT</p>
 </div>
 </div>
 </div>
+<figure class="align-default" id="mw">
+<a class="reference internal image-reference" href="../_images/mw.png"><img alt="../_images/mw.png" src="../_images/mw.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Sum of total megawats of biomass plants by county.</span><a class="headerlink" href="#mw" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="lewis-s-woodpecker">
 <h2><span class="section-number">5.5. </span>Lewis’s Woodpecker<a class="headerlink" href="#lewis-s-woodpecker" title="Link to this heading">#</a></h2>
-<p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis. Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
-<p><img alt="Lewis pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lewis%27s_Woodpecker.jpg/330px-Lewis%27s_Woodpecker.jpg" /></p>
-<p>Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example, if you cloned the repo, right-clicking on the Lewis’s Woodpecker csv file in the test/lewo folder and selecting View Map will give you the following map:</p>
-<p><img alt="lewo" src="https://i.imgur.com/cb48hqP.png" /></p>
+<p>Lewis’s Woodpecker (<em>Melanerpes lewis</em>) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis (<a class="reference internal" href="#lewo"><span class="std std-numref">Fig. 5.5</span></a>). Although locally common, its breeding and migratory habits are not extensively known. Lewis’s Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects (<a class="reference external" href="https://en.wikipedia.org/wiki/Lewis%27s_woodpecker">Wikipedia</a>). We’ll examine a dataset of Lewis’s species occurrence from eBird.</p>
+<figure class="align-default" id="lewo">
+<a class="reference internal image-reference" href="figures/sql/lewo.png"><img alt="figures/sql/lewo.png" src="figures/sql/lewo.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Lewis’s Woodpecker (<em>Melanerpes lewis</em>). Photo courtesy of <a class="reference external" href="http://wikimedia.org">wikimedia.org</a>.</span><a class="headerlink" href="#lewo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a <a class="reference external" href="http://kepler.gl">kepler.gl</a> viewer. For example, if you cloned the repo, right-clicking on the Lewis’s Woodpecker csv file in the test/lewo folder and selecting View Map will give a distribution heatmap (<a class="reference internal" href="#lewo-distrib"><span class="std std-numref">Fig. 5.6</span></a>).</p>
+<figure class="align-default" id="lewo-distrib">
+<a class="reference internal image-reference" href="../_images/lewo_distrib.png"><img alt="../_images/lewo_distrib.png" src="../_images/lewo_distrib.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Lewis’s Woodpecker distribution heatmap in the western United States.</span><a class="headerlink" href="#lewo-distrib" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>To analyze the woodpecker data, import the packages and connect to DuckDB.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
