@@ -157,7 +157,7 @@ m
 Running that code block will result in {numref}`bgb_py`.
 
 
-```{figure} /figures/python/bgb_py.png
+```{figure} /figures/python/bgb_py.jpg
 :height: 500px
 :name: bgb_py
 Adding above and belowground biomass carbon with belowground showing.
