@@ -495,7 +495,7 @@ document.write(`
 <p>This scenario applies even if you don’t have a GIS guy down the hall with the defunct plotter! So, how do you DIY the donor’s needs?</p>
 <p>Google Earth Engine may be one of the most ubiquitous free and open-source software packages. Technically, It isn’t free or open-source, but using it as an individual, nonprofit, or student is free. Its extensive library and ability to run computations in the cloud make it an exceptional resource for use anywhere you have an internet connection on any computer. And it’s not that difficult to start despite the use of Javascript!</p>
 <p>The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>.</p>
-<p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example (<a class="reference internal" href="#globalabg"><span class="std std-numref">Fig. 2.1</span></a>)</p>
+<p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example (<a class="reference internal" href="#globalabg"><span class="std std-numref">Fig. 2.1</span></a>).</p>
 <figure class="align-default" id="globalabg">
 <a class="reference internal image-reference" href="../_images/globalabg.png"><img alt="../_images/globalabg.png" src="../_images/globalabg.png" style="height: 400px;" /></a>
 <figcaption>
@@ -521,8 +521,13 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass:</p>
-<p><img alt="abg" src="https://i.imgur.com/m7dOCRr.png" /></p>
+<p>Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass (<a class="reference internal" href="#abg"><span class="std std-numref">Fig. 2.2</span></a>)</p>
+<figure class="align-default" id="abg">
+<a class="reference internal image-reference" href="../_images/abg.png"><img alt="../_images/abg.png" src="../_images/abg.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Aboveground biomass output.</span><a class="headerlink" href="#abg" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>You can zoom in or out and click the layer on or off. Selecting the Inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:</p>
 <p><img alt="inspector" src="https://i.imgur.com/LZcLWWh.png" /></p>
 <p>In this case, the Mosaic image has four bands related to above and belowground carbon, the latitude and longitude of a point clicked is (-68.16, 1.83), and the pixel size is 10 km. Add in the belowground (bgb) carbon with</p>
