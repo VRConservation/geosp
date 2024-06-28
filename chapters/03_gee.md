@@ -180,8 +180,9 @@ Once you hit enter, you will have 'Gray' as an additional map option in the midd
 
 ```{figure} /figures/gee/gray.png
 :height: 300px
+:width: 200px
 :name: gray
-Belowground biomass clipped to the area of interest.
+Gray basemap bar after adding the grayscale map.
 ```
 
 Altogether, the map now looks like the following (with the belowground layer turned off):
