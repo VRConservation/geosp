@@ -180,13 +180,19 @@ Once you hit enter, you will have 'Gray' as an additional map option in the midd
 
 ```{figure} /figures/gee/gray.png
 :height: 300px
-:width: 200px
+:width: 400px
 :name: gray
 Gray basemap bar after adding the grayscale map.
 ```
 
 Altogether, the map now looks like the following (with the belowground layer turned off):
 
+```{figure} /figures/gee/gray.png
+:height: 300px
+:width: 400px
+:name: gray
+Gray basemap bar after adding the grayscale map.
+```
 ![abg](https://i.imgur.com/uoXwumv.png)
 
 The full code is [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2). Congratulations, you've made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.
