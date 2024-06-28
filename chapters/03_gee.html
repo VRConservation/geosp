@@ -557,7 +557,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does is standard coding practice. The double forward slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python. You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image:</p>
+<p>Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does is standard coding practice. The double forward slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python. You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image (<a class="reference internal" href="#bgb-world"><span class="std std-numref">Fig. 2.4</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
@@ -586,7 +586,12 @@ document.write(`
 </div>
 </div>
 </div>
-<p><img alt="bgb_world" src="https://i.imgur.com/7hkdrV0.png" /></p>
+<figure class="align-default" id="bgb-world">
+<a class="reference internal image-reference" href="../_images/bgb_world.png"><img alt="../_images/bgb_world.png" src="../_images/bgb_world.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Adding carbon density map at the world level.</span><a class="headerlink" href="#bgb-world" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Note that the belowground layer now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can alter the layer visibility by changing the <code class="docutils literal notranslate"><span class="pre">Map.addLayer</span></code> command with a true (visible) or false argument (added but visible) after the layer name:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,10 +605,20 @@ document.write(`
 <section id="aoi-clip">
 <h2><span class="section-number">2.4. </span>AOI Clip<a class="headerlink" href="#aoi-clip" title="Link to this heading">#</a></h2>
 <p>Getting back to the original request, you can clip the dataset to an area of interest, in this case, around Lake Tahoe. You can clip the map to datasets such as Tiger Lines for states or by country. Clipping by specific shape files requires you to upload the vector as a shape file into Earth Engine. This is fiddly and not as easy as dragging/dropping into Arc, QGIS, or online software such as Felt or Earth Blox. We’ll keep this to a simple box.</p>
-<p>Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe:</p>
-<p><img alt="tahoe" src="https://i.imgur.com/wqAZ3bC.png" /></p>
-<p>Enter a search in the box at the top of Earth Engine, such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and drag a square in the area.</p>
-<p><img alt="aoi" src="https://i.imgur.com/Il9YmB4.png" /></p>
+<p>Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe (<a class="reference internal" href="#tahoe"><span class="std std-numref">Fig. 2.5</span></a>).</p>
+<figure class="align-default" id="tahoe">
+<a class="reference internal image-reference" href="../_images/tahoe.png"><img alt="../_images/tahoe.png" src="../_images/tahoe.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Zooming to an area of interest. Note the highlighted rectangle/polygon buttons to add geometry vector layers.</span><a class="headerlink" href="#tahoe" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Enter a search in the box at the top of Earth Engine, such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and drag a square in the area (<a class="reference internal" href="#aoi"><span class="std std-numref">Fig. 2.6</span></a>).</p>
+<figure class="align-default" id="aoi">
+<a class="reference internal image-reference" href="../_images/aoi.png"><img alt="../_images/aoi.png" src="../_images/aoi.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.</span><a class="headerlink" href="#aoi" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it ‘bbox’ (double-click geometry, type in bbox, and hit enter), but you can use the name geometry. If you use the default name or name it something else, remember to change the name from the code below from bbox to geometry (or your name). Under the dataset variable, change the code to the ImageCollection as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -626,7 +641,13 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again to get</p>
+<p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again (<a class="reference internal" href="#clipped-bg"><span class="std std-numref">Fig. 2.7</span></a>)</p>
+<figure class="align-default" id="clipped-bg">
+<a class="reference internal image-reference" href="../_images/clipped_bg.png"><img alt="../_images/clipped_bg.png" src="../_images/clipped_bg.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.</span><a class="headerlink" href="#clipped-bg" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p><img alt="clipped_bg" src="https://i.imgur.com/u320Y7K.png" /></p>
 <p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com">Snazzy Maps</a>, selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there’s an easier way using the <a class="reference external" href="https://github.com/aazuspan/snazzy">snazzy</a> GitHub repository to reduce the total lines to two. Here, I used the Snazzy grayscale URL:</p>
 <div class="cell docutils container">
