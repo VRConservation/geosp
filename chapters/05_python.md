@@ -195,9 +195,13 @@ m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
 m.addLayer(aoi, vis_a, 'AOI aboveground biomass carbon')
 m
 ```
-If you turn off the aboveground and belowground maps, your map will now look like the following, with only the clipped aboveground biomass carbon layer showing:
+If you turn off the aboveground and belowground maps, a map with the clipped aboveground biomass carbon layer will result ({numref}`clip).
 
-![](https://i.imgur.com/DDRJeDF.png)
+```{figure} /figures/python/clip.png
+:height: 500px
+:name: clip
+Raster clipped to area of interest with aboveground biomass carbon visible.
+```
 
 Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map, you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to the code block to
 
