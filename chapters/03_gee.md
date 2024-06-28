@@ -22,9 +22,13 @@ Google Earth Engine may be one of the most ubiquitous free and open-source softw
 
 The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
 
-Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example:
+Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example ({numref}`globalabg`)
 
-![aboveground | 500](https://i.imgur.com/z3xt9WD.png)
+```{figure} /figures/gee/globalabg.png
+:height: 300px
+:name: globalabg
+Global above and belowground biomass carbon dataset.
+```
 
 That will open a new code editor with the following javascript code:
 
