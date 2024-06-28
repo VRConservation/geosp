@@ -150,7 +150,7 @@ Sum of total megawats of biomass plants by county.
 ## Lewis's Woodpecker
 Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of woodpecker named after 19th-century explorer Meriwether Lewis ({numref}`lewo`). Although locally common, its breeding and migratory habits are not extensively known. Lewis's Woodpeckers also engage in some un-woodpeckery behaviors such as hawking insects ([Wikipedia](https://en.wikipedia.org/wiki/Lewis%27s_woodpecker)). We'll examine a dataset of Lewis's species occurrence from eBird.
 
-```{figure} /figures/sql/lewo.png
+```{figure} /figures/sql/lewo.jpg
 :height: 500px
 :name: lewo
 Lewis's Woodpecker (_Melanerpes lewis_). Photo courtesy of wikimedia.org.
@@ -196,7 +196,7 @@ con.table("lewo")
 
 If the FROM "./lew/lewo.csv" statement throws an error, try replacing the file path by right-clicking the file in your computer and selecting copy path, then passing that file path in place of "./lewo/low.csv". With Windows, change the slashes to / instead of \ for the file path.
 
-Then, count the total observations by state.
+Then, count the total observations by state ({numref}`lewo_state`).
 
 ```python
 # Count by state
@@ -209,6 +209,12 @@ con.sql('''
 ''')
 ```
 ![lewo_state](https://i.imgur.com/1sGQLD1.png)
+
+```{figure} /figures/sql/lewo_state.png
+:height: 500px
+:name: lewo_state
+Lewis's Woodpecker counts by state.
+```
 
 Select the Washington observations and name the new table 'wash'.
 
@@ -232,9 +238,13 @@ wash_df = con.execute("SELECT * FROM wash").fetchdf()
 wash_df.to_csv('test/wash.csv', index=False)
 ```
 
-Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis's Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest:
+Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis's Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest ({numref}`wash`).
 
-![Wash](https://i.imgur.com/nGiuDxq.png)
+```{figure} /figures/sql/wash.png
+:height: 500px
+:name: wash
+Distribution heatmap in Washington state of Lewis's Woodpecker.
+```
 
 Hopefully, these examples are enough to get you started. The resources below have more detailed examples and videos to go deeper. Make sure to practice and try out queries, joins, and other spatial functions with different datasets, including geosjson and geoparquet, to go beyond using shp and csv files.
 
