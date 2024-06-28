@@ -81,7 +81,7 @@ You can zoom the map out and center to approximately world level by changing lin
 Map.setCenter(-24.83, 19.88, 2);
 ```
 
-Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does is standard coding practice. The double forward slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python. You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image:
+Hit run or control + enter (windows) or command + enter (mac) to run the new code. Cleaning up the code and adding comments with // to explain what each section does is standard coding practice. The double forward slash allows you to add a comment that does not run when the code executes and is equivalent to the hashtag for Python. You can comment out any line of code by clicking on the line and typing the control/command enter on your keyboard. A reorganization will give you the following code and image ({numref}`bgb_world`).
 
 ```javascript
 // Add global carbon density map
@@ -108,7 +108,11 @@ Map.addLayer(dataset, vis_a, "Aboveground biomass carbon");
 Map.addLayer(dataset, vis_b, "Belowground biomass carbon");
 ```
 
-![bgb_world](https://i.imgur.com/7hkdrV0.png)
+```{figure} /figures/gee/bgb_world.png
+:height: 500px
+:name: bgb_world
+Adding carbon density map at the world level.
+```
 
 Note that the belowground layer now shows up on top. Turn it off by clicking the checkmark in the layers tab, or to view it first, reverse the order of the code, e.g., line 22 moved to 21. You can alter the layer visibility by changing the `Map.addLayer` command with a true (visible) or false argument (added but visible) after the layer name:
 
@@ -122,13 +126,21 @@ Note the command structure: Map.addLayer(Dataset or feature to add to the map, v
 
 Getting back to the original request, you can clip the dataset to an area of interest, in this case, around Lake Tahoe. You can clip the map to datasets such as Tiger Lines for states or by country. Clipping by specific shape files requires you to upload the vector as a shape file into Earth Engine. This is fiddly and not as easy as dragging/dropping into Arc, QGIS, or online software such as Felt or Earth Blox. We'll keep this to a simple box.
 
-Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe:
+Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe ({numref}`tahoe`).
 
-![tahoe](https://i.imgur.com/wqAZ3bC.png)
+```{figure} /figures/gee/tahoe.png
+:height: 500px
+:name: tahoe
+Zooming to an area of interest. Note the highlighted rectangle/polygon buttons to add geometry vector layers.
+```
 
-Enter a search in the box at the top of Earth Engine, such as 'South Lake Tahoe, CA, USA'. In the map pane, click on the square 'Draw a Rectangle' button highlighted and drag a square in the area.
+Enter a search in the box at the top of Earth Engine, such as 'South Lake Tahoe, CA, USA'. In the map pane, click on the square 'Draw a Rectangle' button highlighted and drag a square in the area ({numref}`aoi`).
 
-![aoi](https://i.imgur.com/Il9YmB4.png)
+```{figure} /figures/gee/aoi.png
+:height: 500px
+:name: aoi
+Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.
+```
 
 This will add a layer in the imports section of the top of your code called geometry (var geometry: Polygon, 4 vertices). I have changed the name by double-clicking the layer name in the code editor to rename it 'bbox' (double-click geometry, type in bbox, and hit enter), but you can use the name geometry. If you use the default name or name it something else, remember to change the name from the code below from bbox to geometry (or your name). Under the dataset variable, change the code to the ImageCollection as follows:
 
@@ -148,8 +160,13 @@ Note that the end of the dataset line no longer has a semicolon since the end of
 Map.setCenter(-120.2348, 38.8744, 9);
 ```
 
-Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again to get
+Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again ({numref}`clipped_bg`)
 
+```{figure} /figures/gee/clipped_bg.png
+:height: 500px
+:name: clipped_bg
+Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.
+```
 ![clipped_bg](https://i.imgur.com/u320Y7K.png)
 
 Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to [Snazzy Maps](https://snazzymaps.com), selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we'll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there's an easier way using the [snazzy](https://github.com/aazuspan/snazzy) GitHub repository to reduce the total lines to two. Here, I used the Snazzy grayscale URL:
