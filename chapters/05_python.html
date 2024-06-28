@@ -649,8 +649,13 @@ document.write(`
 <span class="n">m</span>
 </pre></div>
 </div>
-<p>If you turn off the aboveground and belowground maps, your map will now look like the following, with only the clipped aboveground biomass carbon layer showing:</p>
-<p><img alt="" src="https://i.imgur.com/DDRJeDF.png" /></p>
+<p>If you turn off the aboveground and belowground maps, a map with the clipped aboveground biomass carbon layer will result ({numref}`clip).</p>
+<figure class="align-default" id="clip">
+<a class="reference internal image-reference" href="../_images/clip.png"><img alt="../_images/clip.png" src="../_images/clip.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Raster clipped to area of interest with aboveground biomass carbon visible.</span><a class="headerlink" href="#clip" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map, you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to the code block to</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Center map and add layers</span>
 <span class="n">m</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">120.2348</span><span class="p">,</span> <span class="mf">38.8744</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
