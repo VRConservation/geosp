@@ -25,14 +25,14 @@ Google Colab is an online notebook that lets you write and execute code. Its adv
 
 Install the dependencies:
 
-```python
+```{code-cell} ipython3
 # Uncomment the line below to install pystac and odc
 # !pip install pystac-client odc-stac odc-geo
 ```
 
 and import
 
-```python
+```{code-cell} ipython3
 # Import dependencies
 from pystac_client import Client
 from odc.stac import load
@@ -41,7 +41,7 @@ import odc.geo.xr
 
 Access data and create a bounding box:
 
-```python
+```{code-cell} ipython3
 # Earth search provides access to a wide range of data sources
 client = Client.open("https://earth-search.aws.element84.com/v1")
 collection = "sentinel-2-l2a"
