@@ -641,14 +641,13 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again (<a class="reference internal" href="#clipped-bg"><span class="std std-numref">Fig. 2.7</span></a>)</p>
+<p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again (<a class="reference internal" href="#clipped-bg"><span class="std std-numref">Fig. 2.7</span></a>).</p>
 <figure class="align-default" id="clipped-bg">
 <a class="reference internal image-reference" href="../_images/clipped_bg.png"><img alt="../_images/clipped_bg.png" src="../_images/clipped_bg.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.</span><a class="headerlink" href="#clipped-bg" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Belowground biomass clipped to the area of interest.</span><a class="headerlink" href="#clipped-bg" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><img alt="clipped_bg" src="https://i.imgur.com/u320Y7K.png" /></p>
 <p>Given the clash of colors for the brown and green carbon, it might help to change the basemap. This can be relatively simple or complicated in Earth Engine. Going to <a class="reference external" href="https://snazzymaps.com">Snazzy Maps</a>, selecting a basemap you like, and copying the javascript can make your work easier. In Snazzy, we’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but there’s an easier way using the <a class="reference external" href="https://github.com/aazuspan/snazzy">snazzy</a> GitHub repository to reduce the total lines to two. Here, I used the Snazzy grayscale URL:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -659,8 +658,13 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Once you hit enter, you will have ‘Gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other defaults you can add without much code and can be found <a class="reference external" href="http://gg.gg/1ats42">here</a>. Here is what the basemap bar in the upper right of the map pane looks like after adding the gray basemap:</p>
-<p><img alt="gray" src="https://i.imgur.com/X16YsFz.png" /></p>
+<p>Once you hit enter, you will have ‘Gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other defaults you can add without much code and can be found <a class="reference external" href="http://gg.gg/1ats42">here</a>. After adding the gray basemap the basemap selection bar changes ().</p>
+<figure class="align-default" id="gray">
+<a class="reference internal image-reference" href="../_images/gray.png"><img alt="../_images/gray.png" src="../_images/gray.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Belowground biomass clipped to the area of interest.</span><a class="headerlink" href="#gray" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Altogether, the map now looks like the following (with the belowground layer turned off):</p>
 <p><img alt="abg" src="https://i.imgur.com/uoXwumv.png" /></p>
 <p>The full code is <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>. Congratulations, you’ve made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.</p>
