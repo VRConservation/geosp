@@ -20,7 +20,7 @@ Free and open-source (FOSS) geospatial tools and software are essential for data
 ## Participatory Rural Appraisal
 For a portion of my graduate school research, I did community-based mapping, working with indigenous villages in a community-run reserve called Chimalapas in Oaxaca, Mexico, using participatory rural appraisal (PRA) tools. PRA involves local community members in the assessment process, enabling them to actively contribute their knowledge, experiences, and perspectives regarding natural resources {numref}`pra`. This inclusive approach ensures that the assessment reflects the needs and priorities of the community, leading to more relevant and sustainable resource management decisions. Secondly, PRA fosters community empowerment by building local capacity, enhancing collective decision-making, and promoting ownership of development initiatives. 
 
-```{figure} /figures/pra.png
+```{figure} /figures/pra.jpg
 :height: 300px
 :name: pra
 Participatory rural appraisal session led by local community member.
