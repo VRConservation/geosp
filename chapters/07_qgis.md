@@ -27,34 +27,56 @@ We will follow the following workflow to examine species richness:
 Grayscale raster of wildlife species richness imported into QGIS.
 ```
 
-![wsr_gray](https://i.imgur.com/4mzQ5OI.png)
+Let's change the gray color of the raster to something easier to view. Click on the Open Layer Styling panel in the upper left corner (or F7) in the layers panel. The wildlife species richness layer will become active after you click it ({numref}`layers`).
 
-Let's change the gray color of the raster to something easier to view. Click on the Open Layer Styling panel in the upper left corner (or F7) in the layers panel. The wildlife species richness layer will become active after you click it.
+```{figure} /figures/qgis/layers.png
+:height: 500px
+:name: layers
+QGIS Layers panel.
+```
 
-![layers](https://i.imgur.com/E17z13S.png)
+This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you're selecting magma, say MAGMA to yourself in a mysterious, authoritarian [Dr. Evil voice](https://giphy.com/gifs/evil-BZlNhp9L5WINi) ({numref}`pseudo`).
 
-This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma (when you're selecting magma, say MAGMA to yourself in a loud, authoritarian [Dr. Evil voice](https://giphy.com/gifs/evil-BZlNhp9L5WINi)).
+```{figure} /figures/qgis/pseudo.png
+:height: 500px
+:name: pseudo
+Changing the raster to a magma color ramp using the Layer Styling panel.
+```
 
-![pseudocolor](https://i.imgur.com/Kek44Zz.png)
+Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter the following for url: https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer. Click ok to activate ({numref}`tfr`).
 
-Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter the following for url: https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer. Click ok to activate.
+```{figure} /figures/qgis/tfr.png
+:height: 500px
+:name: pseudo
+Adding the Task Force Regions using the ArcGIS REST server connection.
+```
 
-![task force regions](https://i.imgur.com/VK0e3pM.png)
+The url comes from the ArcGIS online metadata page for [Forest Management Task Force Regions](https://www.arcgis.com/home/item.html?id=781f25e4b1a1419d8939b4b54b25433e&sublayer=0). On the page, you will see a url and a copy sign. If you get to the Map Viewer instead of the metadata, click on Information and then the paper arrow icon to get to the page to copy the REST server url ({numref}`agol`). 
 
-The url comes from the ArcGIS online metadata page for [Forest Management Task Force Regions](https://www.arcgis.com/home/item.html?id=781f25e4b1a1419d8939b4b54b25433e&sublayer=0). On the page, you will see a url and a copy sign. If you get to the Map Viewer instead of the metadata, click on Information and then the paper arrow icon to get to the page to copy the REST server url.
+```{figure} /figures/qgis/agol.jpg
+:height: 500px
+:name: agol
+ArcGIS online view of the Wildfire and Forest Resilience Task Force Regions.
+```
 
-![agol](https://i.imgur.com/duABhsL.jpeg)
-
-For some reason, some links to REST servers do not work at all or do not work the first time you create the connection. It's worth trying to delete and add the server again. 
+For some reason, some links to REST servers do not work at all or do not work the first time you create the connection. If this happens, it is worth trying to delete and add the server again. 
 
 ### Style layers
-Now that the Task Force REgions have been added click the arrow to the left of the new connection and drag the vector layer onto the map window or down to the layers panel. Turn off the species richness raster layer by clicking the eye to the left of the layer name in the layers panel. The task force regions should show up with a random color and outline in black. When added, the layer should be selected, so click on the Open the Layer Styling Panel icon in the upper left of the layer panel (or F7) to re-open the symbology or styling panel.
+Now that the Task Force REgions have been added click the arrow to the left of the new connection and drag the vector layer onto the map window or down to the layers panel. Turn off the species richness raster layer by clicking the eye to the left of the layer name in the layers panel. The task force regions should show up with a random color and outline in black. When added, the layer should be selected, so click on the Open the Layer Styling Panel icon in the upper left of the layer panel (or F7) to re-open the symbology or styling panel ({numref}`tfr_style`).
 
-![tf regions styling](https://i.imgur.com/KKp5U2a.png)
+```{figure} /figures/qgis/tfr_style.png
+:height: 500px
+:name: tfr_style
+Opening the Layer Styling panel with the Task Force Regions selected.
+```
 
-Under Single Symbol, click Simple Fill under Fill. Click the arrow next to the fill color and select the box for Transparent Fill. You can also play around with the colors to see how they change. In the lower right of the Layer Styling box, the box for Live updates should be checked, and the changes are instantaneous. When you click the Transparent Fill, the layer will seem to disappear since the basemap is black. Never fear, it's still there. Click the arrow next to Stroke Color, and under Standard colors, select white, and the regions will appear in white.
+Under Single Symbol, click Simple Fill under Fill. Click the arrow next to the fill color and select the box for Transparent Fill. You can also play around with the colors to see how they change. In the lower right of the Layer Styling box, the box for Live updates should be checked, and the changes are instantaneous. When you click the Transparent Fill, the layer will seem to disappear since the basemap is black. Never fear, it's still there. Click the arrow next to Stroke Color, and under Standard colors, select white, and the regions will appear in white ({numref}`white`).
 
-![task force white](https://i.imgur.com/V6mgBV5.png)
+```{figure} /figures/qgis/white.png
+:height: 500px
+:name: white
+Changing the Regions to white border no fill using the Layer Styling panel.
+```
 
 ### Processing toolboxes
 Head back to the Layers panel, right-click the Task Force Regions layer, and select Filter. We will filter the vector layer to only show the Sierra Nevada and Cascade Region. This will bring up the Query Builder window:
@@ -64,45 +86,77 @@ Head back to the Layers panel, right-click the Task Force Regions layer, and sel
 3. In the upper right Values box, click on Sample, bringing up the possible names
 4. Double click Sierra - Cascade - Inyo
 5. 'Sierra - Cascade - Inyo' will appear in the Expression window below.
-6. To ensure the expression is valid, click test, and the Query Result will say the where clause returned 1 row. Congratulations, you just completed a data query. 
+6. To ensure the expression is valid, click test, and the Query Result will say the where clause returned 1 row. Congratulations, you just completed a data query with the clause returning 1 row ({numref}`query`). 
 
-![region query](https://i.imgur.com/DrVABtI.png)
+```{figure} /figures/qgis/query.png
+:height: 500px
+:name: query
+Using the Query Builder to select the Sierra - Cascade - Inyo region.
+```
 
 Click OK to complete the query and close the box. Now, only the Sierra Nevada region will show. Right-click the layer in the Layers panel, select properties, and rename the layer to Sierra Nevada in the open window.
 
-At the top of the QGIS window, below the Project, Edit, and View windows, there is an attribute toolbar:
+At the top of the QGIS window, below the Project, Edit, and View windows, there is an Attribute Toolbar ({numref}`attrib`)
 
-![attributes toolbar](https://i.imgur.com/qEzv3Gn.png)
+```{figure} /figures/qgis/attrib.png
+:height: 500px
+:name: attrib
+Toolbar showing the attributes icon (red circle).
+```
 
-Click on the cog icon to open the Processing Toolbox. If you left the Layers Styling panel open, close it to maximize the Toolbox pane. In the search panel, type grid, and double-click on create grid to open the grid tool.
+Click on the cog icon to open the Processing Toolbox. If you left the Layers Styling panel open, close it to maximize the Toolbox pane. In the search panel, type grid, and double-click on create grid to open the grid tool ({numref}`grid`).
 
-![create grid](https://i.imgur.com/QnOBylo.png)
+```{figure} /figures/qgis/grid.png
+:height: 500px
+:name: grid
+Toolbar showing the attributes icon (red circle).
+```
 
-Fill out the tool with the following:
+Fill out the tool with the following parameters ({numref}`extent`):
 
 1. Grid type: Hexagon
 2. Grid extent: Click the arrow, select Calculate from Layer, and select Sierra Nevada
 
-![grid extent](https://i.imgur.com/dYOZL20.png)
+```{figure} /figures/qgis/extent.png
+:height: 500px
+:name: extent
+Create Grid tool parameterss showing Calculate from Layers/Sierra Nevada selected.
+```
 
 3. For horizontal and Vertical spacing, enter 10000 meters. If you see degrees as the option, change the CRS projection to EPSG:3310 NAD83/California Albers. You may need to change the QGIS settings to default to this projection, which can be tricky.
 4. Click run. It should take a short time to create, and a tessellated grid of hexagons will appear over the Sierra Nevada region. Then, close the tool window and the processing toolbox.
 
-Open the Layer Styling Pane>Simple Fill>Fill color>Transparent>Stroke Color>Light Blue. Make sure to click on the light blue in the circle, and within the triangle, click on the corner of the triangle for the color (in this case, lower left).
+Open the Layer Styling Pane>Simple Fill>Fill color>Transparent>Stroke Color>Light Blue. Make sure to click on the light blue in the circle, and within the triangle, click on the corner of the triangle for the color ({numref}`hex`).
 
-![grid color light blue](https://i.imgur.com/QdizHlz.png)
+```{figure} /figures/qgis/hex.png
+:height: 500px
+:name: hex
+Tessellated hexagon grid covering the map extent.
+```
 
-We need to clip the hexagons outside the Sierra region. Close the Layer Styling Pane and open the Processing Toolbox. Start typing Select by location and double-click the toolbox with the same name. Fill out the toolbox with Select features from Grid, where the features Intersect, and compare to features from Sierra Nevada.
+We need to clip the hexagons outside the Sierra region. Close the Layer Styling Pane and open the Processing Toolbox. Start typing Select by location and double-click the toolbox with the same name. Fill out the toolbox with Select features from Grid, where the features Intersect, and compare to features from Sierra Nevada ({numref}`location`).
 
-![select by location](https://i.imgur.com/8Pqf61k.png)
+```{figure} /figures/qgis/location.png
+:height: 500px
+:name: location
+Select by Location tool.
+```
 
-Click run
+Click run ({numref}`select`)
 
-![select by location map](https://i.imgur.com/tqomvq6.png)
+```{figure} /figures/qgis/select.png
+:height: 500px
+:name: select
+Selected Sierra region for the tessellated hex grid.
+```
 
-Right-click the grid layer>Export>Save Selected Features As (note in the screenshot that I have a copy of the grid layer that appears below the selected layer. Please ignore this)
+Right-click the grid layer>Export>Save Selected Features As ({numref}`save`). Note in the screenshot that I have a copy of the grid layer that appears below the selected layer. Please ignore this.
 
-![save selected features as](https://i.imgur.com/qsqCaw2.png)
+```{figure} /figures/qgis/save.png
+:height: 500px
+:name: save
+Export/Save Selected Features As.
+```
 
 In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click the 3 dots to the right and navigate to the folder where you've saved the project), Layer name: Sierra Clip, and click ok. You should get a Layer Export success message at the top of the map window. 
 
@@ -110,23 +164,35 @@ In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click t
 `
 
 ### Attribute table edit
-You may notice a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake's Estero. This seems to be an error in the vector layer from the Task Force. Let's delete it so it doesn't appear in the subsequent analysis. 
+You may notice a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake's Estero that appears as a solo hexagon ({numref}`save`). This seems to be an error in the vector layer from the Task Force. Let's delete it so it doesn't appear in the subsequent analysis. 
 
 Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the icon's name). In the same toolbar, click on the info circle with the arrow. This is the Identify Features icon, which is useful for clicking on any map area to show the layers and information about the pixel you've clicked. Once you've selected Identify Features, click inside the polygon on the map.
 
-The polygon will change color to show it's selected, and an Identify Results box will open.
+The polygon will change color to show it's selected, and an Identify Results box will open ({numref}`id`).
 
-![identify results](https://i.imgur.com/oj9k64N.png)
+```{figure} /figures/qgis/id.png
+:height: 500px
+:name: id
+Finding the value of the errant hexagon using Identify Results.
+```
 
-Values from the attribute table will appear, showing the fid, id, polygon values, and row and column indices. Note that the fid and id numbers are 201. Close that pane and click the Open Attribute Table (F6) to the right of the Toolbox icon on the attribute toolbar, which looks like a table. Click the Sierra Clip layer to ensure it is selected in the Layers panel before clicking the Attribute Table icon.
+Values from the attribute table will appear, showing the fid, id, polygon values, and row and column indices. Note that the fid and id numbers are 201. Close that pane and click the Open Attribute Table (F6) to the right of the Toolbox icon on the attribute toolbar, which looks like a table. Click the Sierra Clip layer to ensure it is selected in the Layers panel before clicking the Attribute Table icon. 
 
-![attribute table](https://i.imgur.com/EUwvAiw.png)
+```{figure} /figures/qgis/table.png
+:height: 500px
+:name: table
+Sierra Clip attribute table.
+```
 
-In the attribute table, you will see the different fields for the layer. This is a simple table since it is a series of polygons. Try selecting other layers in your project to see how each attribute table differs. However, since it is a raster layer, the species richness layer will not have an attribute. However, the richness layer will show values if you click the Identify Features and show values stored by pixel in the raster. Opening attribute tables is often the best way to understand the data you are analyzing.
+In the attribute table, you will see the different fields for the layer ({numref}`table`). This is a simple table since it is a series of polygons. Try selecting other layers in your project to see how each attribute table differs. However, since it is a raster layer, the species richness layer will not have an attribute. The species richness layer will show values if you click the Identify Features and show values stored by pixel in the raster. Opening attribute tables is often the best way to understand the data you are analyzing.
 
-Click on the pencil icon at the top left of the layer to activate editing mode. Then, select the 201 fid/id row by clicking on the row number to the left. It should be row 6.
+Click on the pencil icon at the top left of the layer to activate editing mode ({numref}`edit`). Then, select the 201 fid/id row by clicking on the row number to the left. It should be row 6.
 
-![attribute table edit mode](https://i.imgur.com/v01H9Lr.png)
+```{figure} /figures/qgis/edit.png
+:height: 500px
+:name: edit
+Clicking the pencil (red circle) to enable edit mode in the attribute table.
+```
 
 Click the delete button on your keyboard, de-select the pencil editor, accept save changes, and close the attribute table. You'll notice the Marin hexagon is gone.
 
@@ -150,13 +216,21 @@ Close the processing toolbox, and with the layer selected, open the Layer Stylin
 
 1. Change Single Symbol to Graduated.
 2. Click the arrow next to Value and scroll down to select _mean.
-3. Towards the bottom of the panel, click the classify button and turn off the Sierra Clip and Sierra Nevada layers in the layers panel
+3. Towards the bottom of the panel, click the classify button and turn off the Sierra Clip and Sierra Nevada layers in the layers panel ({numref}`class`)
 
-![classify](https://i.imgur.com/z4a2UXp.png)
+```{figure} /figures/qgis/class.png
+:height: 500px
+:name: class
+Layer Styling panel. The Classify button is in the lower left next to the green plus and red minus signs.
+```
 
-4. Click on the color ramp and change to Viridis (or if you're feeling the Dr. Evil thing, select Magma!). Your map should look like the following:
+4. Click on the color ramp and change to Viridis (or if you're feeling the Dr. Evil thing, select Magma!). Your map should look like {numref}`vir`.
 
-![viridis](https://i.imgur.com/ZJK7lOK.png)
+```{figure} /figures/qgis/vir.png
+:height: 500px
+:name: vir
+Selecting the viridis Color ramp in the Layer Styling panel.
+```
 
 Change the number of classes by clicking the arrows next to Classes below the Symbol/Values/Legend box. To change the type of classification, click next to the Mode button. The default is Equal Count (Quantile), but Natural Breaks (Jenks) or Standard Deviation are often used depending on the data and how you intend to portray it. Try these out with different numbers of classes and see how the map changes. Don't forget to type Save S or Project/Save. Also, check out what happens when you select a different field Value. 
 
