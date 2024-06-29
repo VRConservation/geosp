@@ -521,18 +521,18 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">QGIS Layers panel.</span><a class="headerlink" href="#layers" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you’re selecting magma, say MAGMA to yourself in a mysterious, authoritarian <a class="reference external" href="https://giphy.com/gifs/evil-BZlNhp9L5WINi">Dr. Evil voice</a> (<code class="xref std std-numref docutils literal notranslate"><span class="pre">pseudo</span></code>).</p>
+<p>This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you’re selecting magma, say MAGMA to yourself in a mysterious, authoritarian <a class="reference external" href="https://giphy.com/gifs/evil-BZlNhp9L5WINi">Dr. Evil voice</a>. <a class="reference internal" href="#pseudo"><span class="std std-numref">Fig. 6.3</span></a> is the resulting change in the raster.</p>
 <figure class="align-default" id="pseudo">
-<a class="reference internal image-reference" href="../_images/pseudo.png"><img alt="../_images/pseudo.png" src="../_images/pseudo.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="figures/qgis/pseuo.png"><img alt="figures/qgis/pseuo.png" src="figures/qgis/pseuo.png" style="height: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Changing the raster to a magma color ramp using the Layer Styling panel.</span><a class="headerlink" href="#pseudo" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter <a class="reference external" href="https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer">this url</a>. Click ok to activate (<code class="xref std std-numref docutils literal notranslate"><span class="pre">tfr</span></code>).</p>
-<figure class="align-default" id="id1">
+<p>Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter <a class="reference external" href="https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer">this url</a>. Click ok to activate (<a class="reference internal" href="#tfr"><span class="std std-numref">Fig. 6.4</span></a>).</p>
+<figure class="align-default" id="tfr">
 <a class="reference internal image-reference" href="../_images/tfr.png"><img alt="../_images/tfr.png" src="../_images/tfr.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Adding the Task Force Regions using the ArcGIS REST server connection.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Adding the Task Force Regions using the ArcGIS REST server connection.</span><a class="headerlink" href="#tfr" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The url comes from the ArcGIS online metadata page for <a class="reference external" href="https://www.arcgis.com/home/item.html?id=781f25e4b1a1419d8939b4b54b25433e&amp;amp;sublayer=0">Forest Management Task Force Regions</a>. On the page, you will see a url and a copy sign. If you get to the Map Viewer instead of the metadata, click on Information and then the paper arrow icon to get to the page to copy the REST server url (<a class="reference internal" href="#agol"><span class="std std-numref">Fig. 6.5</span></a>).</p>
@@ -581,7 +581,7 @@ document.write(`
 <p>Click OK to complete the query and close the box. Now, only the Sierra Nevada region will show. Right-click the layer in the Layers panel, select properties, and rename the layer to Sierra Nevada in the open window.</p>
 <p>At the top of the QGIS window, below the Project, Edit, and View windows, there is an Attribute Toolbar (<a class="reference internal" href="#attrib"><span class="std std-numref">Fig. 6.9</span></a>)</p>
 <figure class="align-default" id="attrib">
-<a class="reference internal image-reference" href="../_images/attrib.png"><img alt="../_images/attrib.png" src="../_images/attrib.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/attrib.png"><img alt="../_images/attrib.png" src="../_images/attrib.png" style="width: 600px; height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Toolbar showing the attributes icon (red circle).</span><a class="headerlink" href="#attrib" title="Link to this image">#</a></p>
 </figcaption>
