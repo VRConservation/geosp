@@ -35,9 +35,9 @@ Let's change the gray color of the raster to something easier to view. Click on 
 QGIS Layers panel.
 ```
 
-This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you're selecting magma, say MAGMA to yourself in a mysterious, authoritarian [Dr. Evil voice](https://giphy.com/gifs/evil-BZlNhp9L5WINi) ({numref}`pseudo`).
+This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you're selecting magma, say MAGMA to yourself in a mysterious, authoritarian [Dr. Evil voice](https://giphy.com/gifs/evil-BZlNhp9L5WINi). {numref}`pseudo` is the resulting change in the raster.
 
-```{figure} /figures/qgis/pseudo.png
+```{figure} /figures/qgis/pseuo.png
 :height: 500px
 :name: pseudo
 Changing the raster to a magma color ramp using the Layer Styling panel.
@@ -47,7 +47,7 @@ Close the layer styling panel and return to the browser, where the ArcGIS Rest S
 
 ```{figure} /figures/qgis/tfr.png
 :height: 500px
-:name: pseudo
+:name: tfr
 Adding the Task Force Regions using the ArcGIS REST server connection.
 ```
 
@@ -99,7 +99,8 @@ Click OK to complete the query and close the box. Now, only the Sierra Nevada re
 At the top of the QGIS window, below the Project, Edit, and View windows, there is an Attribute Toolbar ({numref}`attrib`)
 
 ```{figure} /figures/qgis/attrib.png
-:height: 500px
+:height: 250px
+:width: 600px
 :name: attrib
 Toolbar showing the attributes icon (red circle).
 ```
