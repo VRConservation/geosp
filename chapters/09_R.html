@@ -622,11 +622,11 @@ plot(las, bg = &quot;white&quot;, size = 4)
 <figure class="align-default" id="model">
 <a class="reference internal image-reference" href="../_images/model.png"><img alt="../_images/model.png" src="../_images/model.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8.7 </span><span class="caption-text">Model of trees from las file in 3d.</span><a class="headerlink" href="#model" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 8.7 </span><span class="caption-text">Model of trees in 3d from las file.</span><a class="headerlink" href="#model" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <!-- <video src="../_static/3dmodel.mp4"></video> -->
-<p>Rasterize a canopy height model and plot it. Note that the highest trees appear in the lower right corner, the same as in the 3D model.</p>
+<p>Rasterize a canopy height model and plot it. Note that the highest trees appear in the lower right corner, the same as in the 3D model (<a class="reference internal" href="#rasterize"><span class="std std-numref">Fig. 8.8</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Rasterize canopy height model
@@ -636,8 +636,13 @@ plot(chm, col = height.colors(50))
 </div>
 </div>
 </div>
-<p><img alt="rasterized_las" src="https://i.imgur.com/20jBlqP.png" /></p>
-<p>Locate the tree-top centers.</p>
+<figure class="align-default" id="rasterize">
+<a class="reference internal image-reference" href="../_images/rasterize.png"><img alt="../_images/rasterize.png" src="../_images/rasterize.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8.8 </span><span class="caption-text">Rasterized canopy height model.</span><a class="headerlink" href="#rasterize" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Locate the tree-top centers (<a class="reference internal" href="#centers"><span class="std std-numref">Fig. 8.9</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Locate the tree tops and plot
@@ -647,8 +652,13 @@ plot(sf::st_geometry(ttops), add = TRUE, pch = 3)
 </div>
 </div>
 </div>
-<p><img alt="centers" src="https://i.imgur.com/u4Edfbm.png" /></p>
-<p>You can also add the tree top centers to a 3d model.</p>
+<figure class="align-default" id="centers">
+<a class="reference internal image-reference" href="../_images/centers.png"><img alt="../_images/centers.png" src="../_images/centers.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Tree top centers in the rasterized canopy height model.</span><a class="headerlink" href="#centers" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You can also add the tree top centers to a 3d model (<a class="reference internal" href="#tops"><span class="std std-numref">Fig. 8.10</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add 3d tree tops
@@ -657,8 +667,14 @@ add_treetops3d(x, ttops)
 </div>
 </div>
 </div>
+<figure class="align-default" id="tops">
+<a class="reference internal image-reference" href="../_images/tops.png"><img alt="../_images/tops.png" src="../_images/tops.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8.10 </span><span class="caption-text">Screenshot of the tree centers video in the 3d model.</span><a class="headerlink" href="#tops" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <!-- <video controls src="/figures/tops.mp4" title="3d Treetops"></video> -->
-<p>Finally, you can add custom metrics with a geometry argument that shows each tree as a convex shaded by height:</p>
+<p>Finally, you can add custom metrics with a geometry argument that shows each tree as a convex hull shaded by height (<a class="reference internal" href="#convex"><span class="std std-numref">Fig. 8.11</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>metrics &lt;- crown_metrics(las, func = ccm, geom = &quot;convex&quot;)
@@ -667,8 +683,12 @@ plot(metrics[&quot;z_max&quot;], pal = hcl.colors)
 </div>
 </div>
 </div>
-<p>Creates</p>
-<p><img alt="convexhulls" src="https://i.imgur.com/gelwCHp.png" /></p>
+<figure class="align-default" id="convex">
+<a class="reference internal image-reference" href="../_images/convex.png"><img alt="../_images/convex.png" src="../_images/convex.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8.11 </span><span class="caption-text">Convex hulls of each tree in the canopy height model shaded by height.</span><a class="headerlink" href="#convex" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="duckdb">
 <h2><span class="section-number">8.5. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
