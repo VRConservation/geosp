@@ -143,7 +143,7 @@ We need to clip the hexagons outside the Sierra region. Close the Layer Styling 
 Select by Location tool.
 ```
 
-Click run ({numref}`select`)
+Click run, resulting in a hex grid for the Sierra region ({numref}`select`).
 
 ```{figure} /figures/qgis/select.png
 :height: 500px
@@ -161,8 +161,8 @@ Export/Save Selected Features As.
 
 In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click the 3 dots to the right and navigate to the folder where you've saved the project), Layer name: Sierra Clip, and click ok. You should get a Layer Export success message at the top of the map window. 
 
-`{note} That's a lot of work to create hex layers; they're not even transverse hexagons! You can create hexbins at the click of a button using the kepler.gl open app that can be used within VS Code or in a jupyter notebook.
-`
+```{note} That's a lot of work to create hex layers; they're not even transverse hexagons! You can create hexbins at the click of a button using the kepler.gl open app that can be used within VS Code or in a jupyter notebook.
+```
 
 ### Attribute table edit
 You may notice a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake's Estero that appears as a solo hexagon ({numref}`save`). This seems to be an error in the vector layer from the Task Force. Let's delete it so it doesn't appear in the subsequent analysis. 
