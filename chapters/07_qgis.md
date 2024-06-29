@@ -99,7 +99,7 @@ Click OK to complete the query and close the box. Now, only the Sierra Nevada re
 At the top of the QGIS window, below the Project, Edit, and View windows, there is an Attribute Toolbar ({numref}`attrib`)
 
 ```{figure} /figures/qgis/attrib.png
-:height: 40px
+:height: 30px
 :width: 400px
 :name: attrib
 Toolbar showing the attributes icon (red circle).
