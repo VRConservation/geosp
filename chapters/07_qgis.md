@@ -19,7 +19,13 @@ We will follow the following workflow to examine species richness:
 ### Add data
 1. If you haven't already installed the QuickMapServices plugin, go to Plugins/Not installed, look for QuickMapServices, and select Install Plugin. In QMS, search for Dark Matter and click Add to add it as a basemap.
 2. Go to the [Biodiviersity Conservation](https://rrk.sdsc.edu/sierra.html#bio_conserv) dataset for the California Wildfire Task Force Regional Resource Kits. Under Species Diversity/Wildlife Species Richness, click the pull-down menu for Raw Data, download, then unzip the tif file.
-3. Add your downloads folder to favorites in the browser panel by navigating to your downloads, right-clicking, and selecting add to favorites. In the favorites at the top of the panel, open downloads, the species richness file, then draft the tif onto the map canvas. It should appear on the map and in your layers:
+3. Add your downloads folder to favorites in the browser panel by navigating to your downloads, right-clicking, and selecting add to favorites. In the favorites at the top of the panel, open downloads, the species richness file, then draft the tif onto the map canvas. It should appear on the map and in your layers ({numref}`wsr_gray`).
+
+```{figure} /figures/qgis/wsr_gray.png
+:height: 500px
+:name: wsr_gray
+Grayscale raster of wildlife species richness imported into QGIS.
+```
 
 ![wsr_gray](https://i.imgur.com/4mzQ5OI.png)
 

@@ -208,7 +208,6 @@ con.sql('''
     LIMIT 10
 ''')
 ```
-![lewo_state](https://i.imgur.com/1sGQLD1.png)
 
 ```{figure} /figures/sql/lewo_state.png
 :height: 500px
