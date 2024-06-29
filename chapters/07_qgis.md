@@ -100,7 +100,7 @@ At the top of the QGIS window, below the Project, Edit, and View windows, there 
 
 ```{figure} /figures/qgis/attrib.png
 :height: 50px
-:width: 400px
+:width: 300px
 :name: attrib
 Toolbar showing the attributes icon (red circle).
 ```
