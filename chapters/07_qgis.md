@@ -37,7 +37,7 @@ QGIS Layers panel.
 
 This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you're selecting magma, say MAGMA to yourself in a mysterious, authoritarian [Dr. Evil voice](https://giphy.com/gifs/evil-BZlNhp9L5WINi). {numref}`pseudo` is the resulting change in the raster.
 
-```{figure} /figures/qgis/pseuo.png
+```{figure} /figures/qgis/pseudo.png
 :height: 500px
 :name: pseudo
 Changing the raster to a magma color ramp using the Layer Styling panel.
@@ -100,7 +100,7 @@ At the top of the QGIS window, below the Project, Edit, and View windows, there 
 
 ```{figure} /figures/qgis/attrib.png
 :height: 250px
-:width: 600px
+:width: 400px
 :name: attrib
 Toolbar showing the attributes icon (red circle).
 ```
