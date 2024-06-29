@@ -30,7 +30,7 @@ Grayscale raster of wildlife species richness imported into QGIS.
 Let's change the gray color of the raster to something easier to view. Click on the Open Layer Styling panel in the upper left corner (or F7) in the layers panel. The wildlife species richness layer will become active after you click it ({numref}`layers`).
 
 ```{figure} /figures/qgis/layers.png
-:height: 500px
+:height: 300px
 :name: layers
 QGIS Layers panel.
 ```
@@ -43,10 +43,10 @@ This opens the styling panel. Underneath the layer name, click the Singleband gr
 Changing the raster to a magma color ramp using the Layer Styling panel.
 ```
 
-Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter the following for url: https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer. Click ok to activate ({numref}`tfr`).
+Close the layer styling panel and return to the browser, where the ArcGIS Rest Server is located. Right-click and select New Connection. Under the name, enter Task Force Regions, and enter [this url](https://services1.arcgis.com/gGHDlz6USftL5Pau/arcgis/rest/services/Forest_Management_Task_Force_Regions/FeatureServer). Click ok to activate ({numref}`tfr`).
 
 ```{figure} /figures/qgis/tfr.png
-:height: 500px
+:height: 300px
 :name: pseudo
 Adding the Task Force Regions using the ArcGIS REST server connection.
 ```
