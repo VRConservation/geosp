@@ -18,7 +18,7 @@ LIMIT
 
 ## DuckDB
 
-In this chapter, we'll use [DuckDB](https://duckdb.org/) as the SQL software package. DuckDB is fast, works seamlessly with many programming languages, including Python, R, and Javascript, and is easy to install. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets.
+In this chapter, we will use [DuckDB](https://duckdb.org/) as the SQL software package. DuckDB is fast, works seamlessly with many programming languages, including Python, R, and Javascript, and is easy to install. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets.
 
 ## Installation
 
@@ -61,7 +61,7 @@ con.sql('''
 con.table('sawmill')
 ```
 
-Note that ./ reads the sawmill shape file in the CurrentSawmill file if you've cloned the repo to your local computer. If you downloaded a shp file in Windows to your Downloads folder, replace the path to where you've stored the shp files, for example 'C:/Users/your_user_name/Downloads/shapefilename.shp'.
+Note that ./ reads the sawmill shape file in the CurrentSawmill file if you've cloned the repo to your local computer. If you downloaded a shp file in Windows to your Downloads folder, replace the path to where you've stored the shp files, for example, 'C:/Users/your_user_name/Downloads/shapefilename.shp'.
 
 ```{tip} Duckdb can be run in the command line and through Python, as we do here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.
 ```
@@ -194,7 +194,7 @@ con.execute(sql)
 con.table("lewo")
 ```
 
-If the FROM "./lew/lewo.csv" statement throws an error, try replacing the file path by right-clicking the file in your computer and selecting copy path, then passing that file path in place of "./lewo/low.csv". With Windows, change the slashes to / instead of \ for the file path.
+If the FROM "./lew/lewo.csv" statement throws an error, try replacing the file path by right-clicking the file in your computer and selecting copy path, then passing that file path in place of "./lewo/low.csv". For Windows, change the slashes to / instead of \ for the file path.
 
 Then, count the total observations by state ({numref}`lewo_state`).
 
@@ -237,7 +237,7 @@ wash_df = con.execute("SELECT * FROM wash").fetchdf()
 wash_df.to_csv('test/wash.csv', index=False)
 ```
 
-Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis's Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest ({numref}`wash`).
+Right-clicking the csv file and selecting View Map produces a heat map. It shows that Lewis's Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest ({numref}`wash`).
 
 ```{figure} /figures/sql/wash.png
 :height: 500px

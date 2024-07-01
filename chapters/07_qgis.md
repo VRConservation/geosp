@@ -91,7 +91,7 @@ Head back to the Layers panel, right-click the Task Force Regions layer, and sel
 ```{figure} /figures/qgis/query.png
 :height: 500px
 :name: query
-Using the Query Builder to select the Sierra - Cascade - Inyo region.
+Using the Query Builder to select the Sierra-Cascade-Inyo region.
 ```
 
 Click OK to complete the query and close the box. Now, only the Sierra Nevada region will show. Right-click the layer in the Layers panel, select properties, and rename the layer to Sierra Nevada in the open window.
@@ -105,7 +105,7 @@ At the top of the QGIS window, below the Project, Edit, and View windows, there 
 Toolbar showing the attributes icon (red circle).
 ```
 
-Click on the cog icon to open the Processing Toolbox. If you left the Layers Styling panel open, close it to maximize the Toolbox pane. In the search panel, type grid, and double-click on create grid to open the grid tool ({numref}`grid`).
+Click on the cog icon to open the Processing Toolbox. If you left the Layers Styling panel open, close it to maximize the Toolbox pane. In the search panel, type grid, and double-click on Create Grid to open the grid tool ({numref}`grid`).
 
 ```{figure} /figures/qgis/grid.png
 :height: 500px
@@ -121,7 +121,7 @@ Fill out the tool with the following parameters ({numref}`extent`):
 ```{figure} /figures/qgis/extent.png
 :height: 500px
 :name: extent
-Create Grid tool parameterss showing Calculate from Layers/Sierra Nevada selected.
+Create Grid tool parameters showing Calculate from Layers/Sierra Nevada selected.
 ```
 
 3. For horizontal and Vertical spacing, enter 10000 meters. If you see degrees as the option, change the CRS projection to EPSG:3310 NAD83/California Albers. You may need to change the QGIS settings to default to this projection, which can be tricky.
@@ -151,7 +151,7 @@ Click run, resulting in a hex grid for the Sierra region ({numref}`select`).
 Selected Sierra region for the tessellated hex grid.
 ```
 
-Right-click the grid layer>Export>Save Selected Features As ({numref}`save`). Note in the screenshot that I have a copy of the grid layer that appears below the selected layer. Please ignore this.
+Right-click the grid layer>Export>Save Selected Features As ({numref}`save`). The screenshot shows that I have a copy of the grid layer that appears below the selected layer. Please ignore this.
 
 ```{figure} /figures/qgis/save.png
 :height: 500px
@@ -159,7 +159,7 @@ Right-click the grid layer>Export>Save Selected Features As ({numref}`save`). No
 Export/Save Selected Features As.
 ```
 
-In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click the 3 dots to the right and navigate to the folder where you've saved the project), Layer name: Sierra Clip, and click ok. You should get a Layer Export success message at the top of the map window. 
+In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click the three dots to the right and navigate to the folder where you've saved the project), Layer name: Sierra Clip, and click ok. You should get a Layer Export success message at the top of the map window. 
 
 ```{note} That's a lot of work to create hex layers; they're not even transverse hexagons! You can create hexbins at the click of a button using the kepler.gl open app that can be used within VS Code or in a jupyter notebook.
 ```
@@ -167,7 +167,7 @@ In the save dialog box, enter Format: Geopackage, File Name Sierra Clip (click t
 ### Attribute table edit
 You may notice a polygon to the west in Marin County covering some of Point Reyes National Seashore near Drake's Estero that appears as a solo hexagon ({numref}`save`). This seems to be an error in the vector layer from the Task Force. Let's delete it so it doesn't appear in the subsequent analysis. 
 
-Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the icon's name). In the same toolbar, click on the info circle with the arrow. This is the Identify Features icon, which is useful for clicking on any map area to show the layers and information about the pixel you've clicked. Once you've selected Identify Features, click inside the polygon on the map.
+Zoom into the polygon by pressing the + icon in the attribute toolbar and using the hand to the left to pan to the location (hover over the icons to get the icon's name). In the same toolbar, click on the info circle with the arrow. The Identify Features icon is useful for clicking on any map area to show the layers and information about the pixel you've clicked. Once you've selected Identify Features, click inside the polygon on the map.
 
 The polygon will change color to show it's selected, and an Identify Results box will open ({numref}`id`).
 
@@ -185,7 +185,7 @@ Values from the attribute table will appear, showing the fid, id, polygon values
 Sierra Clip attribute table.
 ```
 
-In the attribute table, you will see the different fields for the layer ({numref}`table`). This is a simple table since it is a series of polygons. Try selecting other layers in your project to see how each attribute table differs. However, since it is a raster layer, the species richness layer will not have an attribute. The species richness layer will show values if you click the Identify Features and show values stored by pixel in the raster. Opening attribute tables is often the best way to understand the data you are analyzing.
+In the attribute table, you will see the different fields for the layer ({numref}`table`). This is a simple table since it is a series of polygons. Try selecting other layers in your project to see how each attribute table differs. However, since it is a raster layer, the species richness layer will not have an attribute. If you click the Identify Features, the species richness layer will show values stored by pixel in the raster. Opening attribute tables is often the best way to understand the data you are analyzing.
 
 Click on the pencil icon at the top left of the layer to activate editing mode ({numref}`edit`). Then, select the 201 fid/id row by clicking on the row number to the left. It should be row 6.
 
@@ -202,7 +202,7 @@ Zoom back to Sierra Clip by right-clicking the layer and selecting Zoom to layer
 
 1. Input layer: leave as Sierra Clip.
 2. Raster layer: click the arrow and select wildlife species richness.
-3. Statistics to calculate: click the 3 dot box to the right and make sure Count, Sum, Mean, and Maximum are checked.
+3. Statistics to calculate: click the three dot box to the right and make sure Count, Sum, Mean, and Maximum are checked.
 4. Click the blue arrow in the upper right to go back, and then click run.
 5. Depending on your computer speed, The process may take ~ one minute to run. Close the Zonal Stats tool when completed.
 
