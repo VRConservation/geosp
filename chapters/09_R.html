@@ -486,7 +486,7 @@ document.write(`
 <p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Javascript, Python, and R code comparison. Adapted from <a class="reference external" href="http://gg.gg/19zkau">rgee</a>. Note that Python requires additional commands to run Earth Engine.</span><a class="headerlink" href="#comparison" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>It’s similar enough to organize each coding language in your head, almost like learning Spanish and Portuguese. It’s probably better to focus on one or the other. Still, you may find that one language sometimes offers better packages, processes data faster than the other, or is preferred in a particular workplace.</p>
+<p>It’s similar enough to organize each coding language in your head, almost like learning Spanish and Portuguese. It’s probably better to focus on one or the other. Still, you may find that one language sometimes offers better packages, processes data faster, or is preferred in a particular workplace.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>R has the somewhat annoying symbol for variables or assignment operator of &lt;-. Still, you can quickly create it using the keyboard shortcut Alt/Option and - (Alt and minus sign) in Windows/Mac.</p>
@@ -517,12 +517,12 @@ document.write(`
 <span class="n">library</span><span class="p">(</span><span class="n">DataExplorer</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Download the <a class="reference external" href="https://www.kaggle.com/datasets/rtatman/chocolate-bar-ratings/data">chocoloate bar ratings</a> dataset from kaggle and copy the path to wherever you stored it.</p>
+<p>Download the <a class="reference external" href="https://www.kaggle.com/datasets/rtatman/chocolate-bar-ratings/data">chocoloate bar ratings</a> dataset from kaggle and copy the path to wherever you store it.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>If you use Windows OS, right-clicking on a file and selecting copying the path to the file will create a file pathway with backslashes rather than forward slashes and create an error when you run <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code>. Install <a class="reference external" href="https://pathcopycopy.github.io/">Path Copy Copy</a>, right-click, select Show more options, and then Copy Unix Path.</p>
 </div>
-<p>Read the csv file, show the top 10, and total rows</p>
+<p>Read the csv file, show the top 10 and total rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#read csv
@@ -655,7 +655,7 @@ plot(sf::st_geometry(ttops), add = TRUE, pch = 3)
 <figure class="align-default" id="centers">
 <a class="reference internal image-reference" href="../_images/centers.png"><img alt="../_images/centers.png" src="../_images/centers.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Tree top centers in the rasterized canopy height model.</span><a class="headerlink" href="#centers" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Treetop centers in the rasterized canopy height model.</span><a class="headerlink" href="#centers" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>You can also add the tree top centers to a 3d model (<a class="reference internal" href="#tops"><span class="std std-numref">Fig. 8.10</span></a>).</p>
@@ -693,7 +693,7 @@ plot(metrics[&quot;z_max&quot;], pal = hcl.colors)
 <section id="duckdb">
 <h2><span class="section-number">8.5. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
 <p>Yes, you can execute DuckDB in R! DuckDB is everywhere, and because it uses SQL syntax, it looks similar to Python.</p>
-<p>Install DuckDB, import the library, and create an in-memory database</p>
+<p>Install DuckDB, import the library, and create an in-memory database.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Install and import duckdb

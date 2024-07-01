@@ -493,7 +493,7 @@ LIMIT</p>
 </section>
 <section id="duckdb">
 <h2><span class="section-number">5.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
-<p>In this chapter, we’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> as the SQL software package. DuckDB is fast, works seamlessly with many programming languages, including Python, R, and Javascript, and is easy to install. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets.</p>
+<p>In this chapter, we will use <a class="reference external" href="https://duckdb.org/">DuckDB</a> as the SQL software package. DuckDB is fast, works seamlessly with many programming languages, including Python, R, and Javascript, and is easy to install. DuckDB also has a spatial extension to perform queries and analyze geospatial data, which we will look at in this chapter. The big advantage of DuckDB is its speed in processing large datasets.</p>
 </section>
 <section id="installation">
 <h2><span class="section-number">5.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
@@ -540,7 +540,7 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p>Note that ./ reads the sawmill shape file in the CurrentSawmill file if you’ve cloned the repo to your local computer. If you downloaded a shp file in Windows to your Downloads folder, replace the path to where you’ve stored the shp files, for example ‘C:/Users/your_user_name/Downloads/shapefilename.shp’.</p>
+<p>Note that ./ reads the sawmill shape file in the CurrentSawmill file if you’ve cloned the repo to your local computer. If you downloaded a shp file in Windows to your Downloads folder, replace the path to where you’ve stored the shp files, for example, ‘C:/Users/your_user_name/Downloads/shapefilename.shp’.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Duckdb can be run in the command line and through Python, as we do here. There are several ways to do this, but wrapping the commands in con.sql with parenthesis and two sets of double or single quotes is easier to code and read.</p>
@@ -692,7 +692,7 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p>If the FROM “./lew/lewo.csv” statement throws an error, try replacing the file path by right-clicking the file in your computer and selecting copy path, then passing that file path in place of “./lewo/low.csv”. With Windows, change the slashes to / instead of \ for the file path.</p>
+<p>If the FROM “./lew/lewo.csv” statement throws an error, try replacing the file path by right-clicking the file in your computer and selecting copy path, then passing that file path in place of “./lewo/low.csv”. For Windows, change the slashes to / instead of \ for the file path.</p>
 <p>Then, count the total observations by state (<a class="reference internal" href="#lewo-state"><span class="std std-numref">Fig. 5.7</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -740,7 +740,7 @@ LIMIT</p>
 </div>
 </div>
 </div>
-<p>Right-clicking the csv file and selecting View Map produces a heat map. It seems to show that Lewis’s Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest (<a class="reference internal" href="#wash"><span class="std std-numref">Fig. 5.8</span></a>).</p>
+<p>Right-clicking the csv file and selecting View Map produces a heat map. It shows that Lewis’s Woodpeckers prefer the Hood River and a certain elevation along the Pacific Crest (<a class="reference internal" href="#wash"><span class="std std-numref">Fig. 5.8</span></a>).</p>
 <figure class="align-default" id="wash">
 <a class="reference internal image-reference" href="../_images/wash.png"><img alt="../_images/wash.png" src="../_images/wash.png" style="height: 500px;" /></a>
 <figcaption>
