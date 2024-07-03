@@ -21,6 +21,21 @@ Nevertheless, I'm going to take a crack at it with a few ideas given where the f
 ## Hybrid workflows
 Use case of CMP analog conceptual model development with fine-scale veg map and planning, such as Marin Forest Health Strategy. Adapt/paste the storymap.
 
+```{admonition} Marin Forest Health Strategy
+:class: tip
+Case 1 text. And a whole lot more text
+```
+
+```{admonition} SQL to Leafmap Workflow
+:class: tip
+Case 2 text. And a whole lot more text
+```
+
+```{admonition} Cube or raster stack
+:class: tip
+Case 3 text. And a whole lot more text
+```
+
 ## Online
 There are a number of emerging free and open source online mapping options, some code-based, others that allow you to upload datasets and yet others still that have an entire system for analysis and planning based within predefined visualization tools. Here are several that are worth checking out:
 

@@ -3,11 +3,9 @@ Your guide to open source field surveys
 
 Coming soon!
 
-```{admonition} Case 1
-:class: tip
-Case 1 text. And a whole lot more text
-```
+## Background
 
+## Tutorial
 
 
 ## Resources
