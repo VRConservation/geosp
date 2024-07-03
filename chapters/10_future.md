@@ -9,9 +9,9 @@ There's a lot to learn in the geospatial world, and open source usually requires
 
 Nevertheless, I'm going to take a crack at it with a few ideas given where the field seems to be headed and most of these are already happening. However, they may not be fully adopted in the mainstream. Luckily for me, executable books are easily updated, but here we go
 
-1. **Cloud native**.
+1. **Cloud native**. Geocomputation in the cloud is faster than your own machine and requires fewer storage resources. It's likely that all data, processing, and analysis goes to the cloud or something similar.
 2. **Geospatial files**. This is an exciting one. Yet despite being mundane, so necessary. File structure changed to geoparquet or other more portable, quick indexing files
-3. **Visualization**. 
+3. **Visualization**. Easier, more creative, and creating visualization with fewer lines of code will be possible. It's great how flexible R and Python are for creating map and graphic visualization but 10-20 lines of code (or more) for a scatterplot could be much simpler.
 4. **Lidar everywhere**. Plus higher resolution imagery all round- but at a cost
 5. **Open source hardware & software**. 
 6. **Geo data atlas**. Comprehensive, standardized, and regularly updated datasets available in online libraries, importable to your analysis with a link, centrally located, and in decade long time-series.
@@ -22,6 +22,8 @@ Nevertheless, I'm going to take a crack at it with a few ideas given where the f
 Use case of CMP analog conceptual model development with fine-scale veg map and planning, such as Marin Forest Health Strategy. Adapt/paste the storymap.
 
 ## Online
+There are a number of emerging free and open source online mapping options, some code-based, others that allow you to upload datasets and yet others still that have an entire system for analysis and planning based within predefined visualization tools. Here are several that are worth checking out:
+
 - [rapid editor](https://rapideditor.org/edit). Rapid editor integrates advanced mapping tools, authoritative geospatial open data, and cutting-edge technology to empower OpenStreetMap mappers at all levels.
 - [kepler.gl](https://kepler.gl/). Open-source geospatial analysis tool for large-scale datasets.
 - [py.cafe](https://py.cafe/). Run, edit, and share python apps in your browser.

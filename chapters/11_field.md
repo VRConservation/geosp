@@ -10,6 +10,11 @@ Coming soon!
 
 -->
 
+```{admonition} Case 1
+:class: tip
+Case 1 text
+```
+
 ## Resources
 - **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and setup, but you have to export the csv or geojson files then load into your geospatial platform of choice.
 - **[ODK](https://getodk.org)**. Free if you can self host and support.
