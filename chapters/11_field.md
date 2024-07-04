@@ -25,7 +25,7 @@ $$
 \sum_{i=1}^n TPA (DBH/25.4)^{1.6} 
 $$
 
-Where TPA = trees/acre and DBH = diameter breast height ({cite}`north` {cite}`woodall` {cite}`reineke`)  (North et al., 2022, Woodall et al., 2007, Reineke, 1993). SDI is used by foresters and ecologists and can be used as a relative measure of how crowded a stand is, show competition between trees, or as an overall measure of forest health (North et al., 2022).
+Where TPA = trees/acre and DBH = diameter breast height ({cite}`north`, `woodall`, `reineke`). SDI is used by foresters and ecologists and can be used as a relative measure of how crowded a stand is, show competition between trees, or as an overall measure of forest health (North et al., 2022).
 
 ## Methodology
 To start measuring forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the Norleywood Enclosure in the New Forest National Park. The dataset shown is the first three plots measured.
