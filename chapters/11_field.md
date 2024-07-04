@@ -4,6 +4,7 @@ Your guide to open source field surveys
 Coming soon!
 
 ## Background
+Field surveys to create geospatial data are a common practice, but can require costly hardware, subscriptions for cloud data and synching
 
 ## Tutorial
 
