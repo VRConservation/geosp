@@ -1,3 +1,18 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.16.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
+<!-- #region -->
 # Google Earth Engine
 
 Your introduction to geospatial analysis in the cloud
@@ -211,3 +226,4 @@ There are many resources from getting started to the advanced use of Google Eart
 — **GEE Google Group**. The Google Earth Engine Developers [listserv](https://groups.google.com/g/google-earth-engine-developers) is useful for answering many other questions, especially when you get stuck.
 — **Awesome-GEE-Community-Catalog**. Not to be confused with Awesome-GEE, the [Awesome GEE Community Catalog](https://gee-community-catalog.org) is an equally awesome treasure trove of datasets ready for analysis and with sample code to start their use immediately.
 - **Visualization and Analysis of Brazil Floods 2024**. This [tutorial] has an excellent workflow design and superb explanations of remote sensing theory and concepts in this [tutorial](https://share.gishub.org/brazil_floods/#create-sentinel-1-sar-composites). In addition, the tutorial contains very useful text and code for analyzing synthetic aperture radar (SAR) imagery.
+<!-- #endregion -->
