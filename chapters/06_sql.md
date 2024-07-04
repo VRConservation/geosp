@@ -156,7 +156,7 @@ Lewis's Woodpecker (_Melanerpes lewis_) is a striking North American species of 
 Lewis's Woodpecker (_Melanerpes lewis_). Photo courtesy of wikimedia.org.
 ```
 
-Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, if you cloned the repo, right-clicking on the Lewis's Woodpecker csv file in the test/lewo folder and selecting View Map will give a distribution heatmap ({numref}`lewo_distrib`).
+Installing the Geo Data Viewer plugin for VS Code will let you quickly view spatial datasets in a kepler.gl viewer. For example, if you clone the repo, right-click on the Lewis's Woodpecker csv file in the test/lewo folder, and select View Map you'll get a species distribution heatmap ({numref}`lewo_distrib`).
 
 ```{figure} /figures/sql/lewo_distrib.png
 :height: 500px

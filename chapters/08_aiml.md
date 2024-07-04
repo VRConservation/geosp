@@ -20,6 +20,8 @@ Coming soon!
  
 A curated list of resources, tools, frameworks, articles, and projects related to Machine Learning Operations (MLOps): https://github.com/Pythondeveloper6/Awesome-MLOPS?tab=readme-ov-file#paid-courses
 
+Come back to this space in a year or so when AI might have more applications that are useful. Right now a lot of promise and whiz bang stuff but nothing earth shattering.
+
 ## Machine Learning
 Whitebark pine example from EE and possibly make it into an app.
 
