@@ -57,6 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11_field';</script>
     <link rel="canonical" href="https://3point.xyz/geosp/chapters/11_field.html" />
     <link rel="icon" href="../_static/cover.png"/>
@@ -458,8 +460,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">10.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">10.2. Tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">10.3. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">10.2. Quick start</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sdi">10.3. SDI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">10.4. Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">10.5. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -477,17 +481,41 @@ document.write(`
 <p>Coming soon!</p>
 <section id="background">
 <h2><span class="section-number">10.1. </span>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
-<p>Field surveys to create geospatial data are a common practice, but can require costly hardware, subscriptions for cloud data and synching</p>
+<p>Using field surveys to create geospatial data is a common practice, but can require costly hardware, subscriptions for cloud data and syncing. I’ve found that QField that syncs with QGIS could be great, but the forms are clunky, and the cloud setup is not easy. I got it to work, but didn’t like entering the data. ESRI’s Survey 123 is a paid software, part of a subscription to Arc or other software. It is very easy to set up and sync data plus you have instant maps of recorded data in the field. Survey 123 was quickest to pinpoint gps location. It comes at a cost, however, but if you do a lot of field surveys, it may be worth it. The data is accessible, after you send it, in the Portal tab of the catalog window. Very seamless.</p>
+<p>Even if you do conduct a lot of surveys, the Kobo Toolbox is brilliant. Survey forms are easy to set up and sync to your phone and filling them out in the field is easy. Plus there does not seem to be any limit to storing data or pricing, which is a huge plus. Kobo is used by many humanitarian organizations in the field throughout the world during crises so the software developers here have made it very easy to use.</p>
 </section>
-<section id="tutorial">
-<h2><span class="section-number">10.2. </span>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h2>
+<section id="quick-start">
+<h2><span class="section-number">10.2. </span>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Sign up for an account at Kobo Toolbox. Download KoboCollect to your phone and sign in.</p></li>
+<li><p>In Kobo toolbox open the forms and add questions then Deploy once it’s ready.</p></li>
+<li><p>Sync the survey to your phone (Download form) and make sure it’s uploaded and working.</p></li>
+<li><p>In the field, open the Kobo app, click + Start new form and enter the data.</p></li>
+<li><p>When finished collecting go to Ready to send, select all, and send.</p></li>
+<li><p>Back at the your online Kobo account, click the data tab and all the forms you filled out will be there.</p></li>
+<li><p>Download the data as excel, csv, or geojson. I found the excel download best, then converted that file to csv after modifying unnecessary columns. Note that you don’t need add date, unique field, time as fields to the form since they are automatically added.</p></li>
+<li><p>Import the csv into a notebook, QGIS, or Kepler to view it.</p></li>
+</ol>
+</section>
+<section id="sdi">
+<h2><span class="section-number">10.3. </span>SDI<a class="headerlink" href="#sdi" title="Link to this heading">#</a></h2>
+<p>Stand density index is a measure of forest health. The stand density index (SDI) is the calculation of the size (DBH) and number of trees or trees/acre in a stand and calculated with the formula</p>
+<div class="math notranslate nohighlight">
+\[ 
+\sum_{i=1}^n TPA (DBH/25.4)^{1.6} 
+\]</div>
+<p>Where TPA = trees/acre and DBH = diameter breast height (<span id="id1">[<a class="reference internal" href="bibliography.html#id10" title="Malcolm P North, Ryan E Tompkins, Alexis A Bernal, Brandon M Collins, Scott L Stephens, and Robert A York. Operational resilience in western us frequent-fire forests. Forest Ecology and Management, 507:120004, 2022.">North <em>et al.</em>, 2022</a>]</span> <code class="docutils literal notranslate"><span class="pre">woodall</span></code> <code class="docutils literal notranslate"><span class="pre">reineke</span></code>)  (North et al., 2022, Woodall et al., 2007, Reineke, 1993). SDI is used by foresters and ecologists and can be used as a relative measure of how crowded a stand is, show competition between trees, or as an overall measure of forest health (North et al., 2022).</p>
+</section>
+<section id="methodology">
+<h2><span class="section-number">10.4. </span>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
+<p>To start measuring forest health in a local forest stand, I measured trees &gt; 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the Norleywood Enclosure in the New Forest National Park. The dataset shown is the first three plots measured.</p>
 </section>
 <section id="resources">
-<h2><span class="section-number">10.3. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">10.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://www.kobotoolbox.org">Kobo Toolbox</a></strong>. Open source data collection platform that’s easy to use and setup, but you have to export the csv or geojson files then load into your geospatial platform of choice.</p></li>
+<li><p><strong><a class="reference external" href="https://www.kobotoolbox.org">Kobo Toolbox</a></strong>. Open source data collection platform that’s easy to use and setup. It’s really a form app that syncs to the cloud so you need export the csv or geojson files then load into your geospatial analysis software of choice.</p></li>
 <li><p><strong><a class="reference external" href="https://getodk.org">ODK</a></strong>. Free if you can self host and support.</p></li>
-<li><p><strong><a class="reference external" href="https://qfield.org">QField</a></strong>. Survey and digitize data mobile app that syncs to QGIS. The QField setup tutorial from <a class="reference external" href="https://gisgeography.com/qfield/">gisgeography.com</a> runs you through the basics to get up and running. QField would be amazing if it was easy to set up and use. Unfortunately, I found the interface and cloud hosting to be difficult and the forms in the app not very easy to use. You cannot have huge files in the cloud before charges are incurred. Great idea, but needs a lot more work to be easier to use.</p></li>
+<li><p><strong><a class="reference external" href="https://qfield.org">QField</a></strong>. Survey and digitize data mobile app that syncs to QGIS. The QField setup tutorial from <a class="reference external" href="https://gisgeography.com/qfield/">GISGeography</a> runs you through the basics to get up and running. QField would be amazing if it was easy to set up and use. Unfortunately, I found setup and use not easy to use. The cloud sync works but does not allow much storage. You can pay for increased storage, however. Great idea, but needs a lot more work to be easier to use.</p></li>
 </ul>
 </section>
 </section>
@@ -557,8 +585,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">10.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">10.2. Tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">10.3. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">10.2. Quick start</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sdi">10.3. SDI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">10.4. Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">10.5. Resources</a></li>
 </ul>
   </nav></div>
 
