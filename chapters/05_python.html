@@ -497,72 +497,52 @@ document.write(`
 <p>‘Uncommenting’ a line in Python means removing the hashtag before the command or clicking on the line, then clicking control or command plus backslash (/).</p>
 </div>
 <p>Install the dependencies:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Uncomment the line below to install pystac and odc
-# !pip install pystac-client odc-stac odc-geo
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment the line below to install pystac and odc</span>
+<span class="c1"># !pip install pystac-client odc-stac odc-geo</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>and import</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import dependencies
-from pystac_client import Client
-from odc.stac import load
-import odc.geo.xr
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import dependencies</span>
+<span class="kn">from</span> <span class="nn">pystac_client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">odc.stac</span> <span class="kn">import</span> <span class="n">load</span>
+<span class="kn">import</span> <span class="nn">odc.geo.xr</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Access data and create a bounding box:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Earth search provides access to a wide range of data sources
-client = Client.open(&quot;https://earth-search.aws.element84.com/v1&quot;)
-collection = &quot;sentinel-2-l2a&quot;
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Earth search provides access to a wide range of data sources</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;https://earth-search.aws.element84.com/v1&quot;</span><span class="p">)</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="s2">&quot;sentinel-2-l2a&quot;</span>
 
-# Create a bounding box centered in Tasmania
-# The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
-bbox = [146.5, -43.6, 146.7, -43.4]
+<span class="c1"># Create a bounding box centered in Tasmania</span>
+<span class="c1"># The bounding box is lower-left x, lower-left y, upper-right x, upper-right y</span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="p">[</span><span class="mf">146.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">43.6</span><span class="p">,</span> <span class="mf">146.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">43.4</span><span class="p">]</span>
 </pre></div>
-</div>
-</div>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Use Earth Engine’s inspector or the <a class="reference external" href="https://www.keene.edu/campus/maps/tool/">polyline tool</a> to generate coordinates.</p>
 </div>
 <p>Search and load the data:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Datetime can be a single date, YEAR, YEAR-MONTH or YEAR-MONTH-DAY
-# or a range, YEAR-MONTH/YEAR-MONTH
-datetime = &quot;2023-12&quot;
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datetime can be a single date, YEAR, YEAR-MONTH or YEAR-MONTH-DAY</span>
+<span class="c1"># or a range, YEAR-MONTH/YEAR-MONTH</span>
+<span class="n">datetime</span> <span class="o">=</span> <span class="s2">&quot;2023-12&quot;</span>
 
-# Run a lazy-loaded search of the STAC API
-search = client.search(collections=[collection], bbox=bbox, datetime=datetime)
+<span class="c1"># Run a lazy-loaded search of the STAC API</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">collections</span><span class="o">=</span><span class="p">[</span><span class="n">collection</span><span class="p">],</span> <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">,</span> <span class="n">datetime</span><span class="o">=</span><span class="n">datetime</span><span class="p">)</span>
 
-# Pass the search results to the load function, which will lazy-load the data
-data = load(search.items(), bbox=bbox, groupby=&quot;solar_day&quot;, chunks={}, crs=&quot;EPSG:8857&quot;, resolution=10)
+<span class="c1"># Pass the search results to the load function, which will lazy-load the data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="s2">&quot;solar_day&quot;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{},</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:8857&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>The search.items() part of the data variable threw an error when running this codeblock in VS Code. However, it works in Colab.</p>
 <p>Visualize it:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Visualize the data
-# Time=2 is an arbitrary time slice picked because there&#39;s few clouds
-data[[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=1500)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize the data</span>
+<span class="c1"># Time=2 is an arbitrary time slice picked because there&#39;s few clouds</span>
+<span class="n">data</span><span class="p">[[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">to_array</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1500</span><span class="p">)</span>
 
-# Alternately, you could visualise using odc.geo.xr&#39;s explore function
-# data.isel(time=2).explore(bands=[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;], vmin=0, vmax=1500)
+<span class="c1"># Alternately, you could visualise using odc.geo.xr&#39;s explore function</span>
+<span class="c1"># data.isel(time=2).explore(bands=[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;], vmin=0, vmax=1500)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p><a class="reference internal" href="#sentinel"><span class="std std-numref">Fig. 4.1</span></a> shows the resulting Sentinel-2 true color image.</p>
 <figure class="align-default" id="sentinel">
@@ -581,17 +561,13 @@ data[[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]].isel(time=2).to_arr
 <p>Watch this <a class="reference external" href="https://www.youtube.com/watch?v=gyQ6wBqYGks&amp;amp;list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&amp;amp;index=3">installation video</a> followed by this <a class="reference external" href="https://www.youtube.com/watch?v=gyQ6wBqYGks&amp;amp;list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&amp;amp;index=3">vs code and github</a> video. If you already have an IDE, Miniconda, and virtual env’s installed, go to the Geemap <a class="reference external" href="https://geemap.org/installation/">installation</a> page.</p>
 </div>
 <p>Let’s look at how to visualize the same map from Chapter 2 using Geemap. Open a Jupyter notebook and add the following code block:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import geemap and create an interactive map
-import ee
-import geemap
-geemap.ee_initialize()
-m = geemap.Map()
-m
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import geemap and create an interactive map</span>
+<span class="kn">import</span> <span class="nn">ee</span>
+<span class="kn">import</span> <span class="nn">geemap</span>
+<span class="n">geemap</span><span class="o">.</span><span class="n">ee_initialize</span><span class="p">()</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">m</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>To give you a generic world map with map widgets (<a class="reference internal" href="#m"><span class="std std-numref">Fig. 4.2</span></a>).</p>
 <figure class="align-default" id="m">
@@ -608,38 +584,34 @@ m
 </figcaption>
 </figure>
 <p>Go to the Earth Engine <a class="reference external" href="https://code.earthengine.google.com/">code editor</a>, open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add global carbon density map
-dataset = ee.ImageCollection(&#39;NASA/ORNL/biomass_carbon_density/v1&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add global carbon density map</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">)</span>
 
-# def func_rif(image)return image.clip(bbox)};: \
-#                     .map(function(image){return image.clip(bbox)} \
-#                     .map(func_rif)
+<span class="c1"># def func_rif(image)return image.clip(bbox)};: \</span>
+<span class="c1">#                     .map(function(image){return image.clip(bbox)} \</span>
+<span class="c1">#                     .map(func_rif)</span>
 
-# Add visual parameter variables
-vis_a = {
-  &#39;bands&#39;: [&#39;agb&#39;],
-  &#39;min&#39;: -50.0,
-  &#39;max&#39;: 80.0,
-  &#39;palette&#39;: [&#39;d9f0a3&#39;, &#39;addd8e&#39;, &#39;78c679&#39;, &#39;41ab5d&#39;, &#39;238443&#39;, &#39;005a32&#39;]
-}
+<span class="c1"># Add visual parameter variables</span>
+<span class="n">vis_a</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;bands&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;agb&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="s1">&#39;palette&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;d9f0a3&#39;</span><span class="p">,</span> <span class="s1">&#39;addd8e&#39;</span><span class="p">,</span> <span class="s1">&#39;78c679&#39;</span><span class="p">,</span> <span class="s1">&#39;41ab5d&#39;</span><span class="p">,</span> <span class="s1">&#39;238443&#39;</span><span class="p">,</span> <span class="s1">&#39;005a32&#39;</span><span class="p">]</span>
+<span class="p">}</span>
 
-vis_b = {
-  &#39;bands&#39;: [&#39;bgb&#39;],
-  &#39;min&#39;: -50.0,
-  &#39;max&#39;: 80.0,
-  &#39;palette&#39;: [&#39;D6BCB1&#39;, &#39;AB8574&#39;, &#39;784E3D&#39;, &#39;3D2216&#39;, &#39;26140C&#39;, &#39;000000&#39;]
-}
+<span class="n">vis_b</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;bands&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bgb&#39;</span><span class="p">],</span>
+  <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="s1">&#39;palette&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D6BCB1&#39;</span><span class="p">,</span> <span class="s1">&#39;AB8574&#39;</span><span class="p">,</span> <span class="s1">&#39;784E3D&#39;</span><span class="p">,</span> <span class="s1">&#39;3D2216&#39;</span><span class="p">,</span> <span class="s1">&#39;26140C&#39;</span><span class="p">,</span> <span class="s1">&#39;000000&#39;</span><span class="p">]</span>
+<span class="p">}</span>
 
-# Center map and add layers
-m.setCenter(-120.2348, 38.8744, 9)
-m.addLayer(dataset, vis_a, &#39;Aboveground biomass carbon&#39;)
-m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;)
-m
+<span class="c1"># Center map and add layers</span>
+<span class="n">m</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">120.2348</span><span class="p">,</span> <span class="mf">38.8744</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_a</span><span class="p">,</span> <span class="s1">&#39;Aboveground biomass carbon&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">)</span>
+<span class="n">m</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Running that code block will result in <a class="reference internal" href="#bgb-py"><span class="std std-numref">Fig. 4.4</span></a>.</p>
 <figure class="align-default" id="bgb-py">
@@ -660,34 +632,22 @@ m
 <p class="admonition-title">Tip</p>
 <p>To run the code in a code block, click ctrl/command + enter. To run the code and add a new code block, click alt + enter.</p>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add an area of interest
-bbox = [-121.1874, 38.2931, -119.5262, 39.2884]
-bbox = ee.Geometry.Rectangle(bbox)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add an area of interest</span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">121.1874</span><span class="p">,</span> <span class="mf">38.2931</span><span class="p">,</span> <span class="o">-</span><span class="mf">119.5262</span><span class="p">,</span> <span class="mf">39.2884</span><span class="p">]</span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Then clip the carbon raster to the AOI:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Clip the dataset to the area of interest
-aoi = dataset.map(lambda image: image.clip(bbox))
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clip the dataset to the area of interest</span>
+<span class="n">aoi</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">image</span><span class="p">:</span> <span class="n">image</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bbox</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Now add the clipped rasters:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add the clipped dataset to the map
-m.addLayer(aoi, vis_b, &#39;AOI belowground biomass carbon&#39;)
-m.addLayer(aoi, vis_a, &#39;AOI aboveground biomass carbon&#39;)
-m
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the clipped dataset to the map</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">aoi</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s1">&#39;AOI belowground biomass carbon&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">aoi</span><span class="p">,</span> <span class="n">vis_a</span><span class="p">,</span> <span class="s1">&#39;AOI aboveground biomass carbon&#39;</span><span class="p">)</span>
+<span class="n">m</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>If you turn off the aboveground and belowground maps, a map with the clipped aboveground biomass carbon layer will result (<a class="reference internal" href="#clip"><span class="std std-numref">Fig. 4.6</span></a>).</p>
 <figure class="align-default" id="clip">
@@ -697,15 +657,11 @@ m
 </figcaption>
 </figure>
 <p>Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map, you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to the code block to</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Center map and add layers
-m.setCenter(-120.2348, 38.8744, 9)
-m.addLayer(dataset, vis_a, &#39;Aboveground biomass carbon&#39;, False)
-m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Center map and add layers</span>
+<span class="n">m</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">120.2348</span><span class="p">,</span> <span class="mf">38.8744</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_a</span><span class="p">,</span> <span class="s1">&#39;Aboveground biomass carbon&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Adding ‘False’ after the layer name still adds the layers to the map but turns them off by default.</p>
 <div class="admonition-lambda-function admonition">
@@ -716,56 +672,48 @@ m.addLayer(dataset, vis_b, &#39;Belowground biomass carbon&#39;, False)
 <section id="easier-bboxing">
 <h2><span class="section-number">4.4. </span>Easier bboxing<a class="headerlink" href="#easier-bboxing" title="Link to this heading">#</a></h2>
 <p>Boots and cats, boots and cats, boots and cats. Yeah! No wait, it’s bounding boxing, not beat boxing! As you can see in both examples, adding the code for a bounding box can be semi-painful. The <a class="reference external" href="https://www.keene.edu/campus/maps/tool">Polyline Tool</a> allows you to create the needed code when you right-click each point in a polygon.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import geemap and initialize earth engine
-import ee
-import geemap
-geemap.ee_initialize()
-m = geemap.Map()
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import geemap and initialize earth engine</span>
+<span class="kn">import</span> <span class="nn">ee</span>
+<span class="kn">import</span> <span class="nn">geemap</span>
+<span class="n">geemap</span><span class="o">.</span><span class="n">ee_initialize</span><span class="p">()</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>In the Polyline Tool, I’ve right-clicked 3 points around Cape Cod, Massachusetts, in the United States, then clicked close shape to get a square. Then, I copied the curly brackets and the geojson coordinates in between and assigned them to a variable. Then, convert the geojson coordinates to an earth engine geometry type and map.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add the coordinates from the Polyline tool and assign to a variable
-capecod = {
-    &quot;coordinates&quot;: [
-        [
-            [
-                -70.4525757,
-                42.0916883
-            ],
-            [
-                -70.423462,
-                41.4974371
-            ],
-            [
-                -69.7763673,
-                41.5036664
-            ],
-            [
-                -69.7939453,
-                42.1075947
-            ],
-            [
-                -70.4525757,
-                42.0916883
-            ]
-        ]
-    ],
-    &quot;type&quot;: &quot;Polygon&quot;
-}
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the coordinates from the Polyline tool and assign to a variable</span>
+<span class="n">capecod</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="o">-</span><span class="mf">70.4525757</span><span class="p">,</span>
+                <span class="mf">42.0916883</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+                <span class="o">-</span><span class="mf">70.423462</span><span class="p">,</span>
+                <span class="mf">41.4974371</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+                <span class="o">-</span><span class="mf">69.7763673</span><span class="p">,</span>
+                <span class="mf">41.5036664</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+                <span class="o">-</span><span class="mf">69.7939453</span><span class="p">,</span>
+                <span class="mf">42.1075947</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+                <span class="o">-</span><span class="mf">70.4525757</span><span class="p">,</span>
+                <span class="mf">42.0916883</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span>
+<span class="p">}</span>
 
-# Convert the geojson coordinates to ee.Geometry and map
-bbox = ee.Geometry(capecod)
-m.addLayer(bbox, {}, &#39;Cape Cod&#39;)
-m
+<span class="c1"># Convert the geojson coordinates to ee.Geometry and map</span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="p">(</span><span class="n">capecod</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;Cape Cod&#39;</span><span class="p">)</span>
+<span class="n">m</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>You may need to zoom into Cape Cod to see the box. This somewhat lengthy method allows you to create any global polygon with as many points as you like.</p>
 </section>
