@@ -31,9 +31,9 @@ Where TPA = trees/acre and DBH = diameter breast height {cite}`north`; {cite}`wo
 To examine forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the forested areas randomly sampled from the New Forest National Park, United Kingdom. The sample data shown is from the first three measured plots at Norleywood Enclosure.
 
 ## Field data
-({numref}`start`) shows the Kobo Collect start screen
+{numref}`start` shows the Kobo Collect start screen
 
-```{figure} /figures/survey/start.jpg
+```{figure} /figures/survey/start.png
 :height: 500px
 :name: start
 Kobo Collect start screen.
