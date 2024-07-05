@@ -75,7 +75,7 @@ If you select the Reports tab, you'll get descriptive statistics for each survey
 
 ```{figure} /figures/survey/report.png
 :height: 400px
-:name: pics
+:name: report
 KoboToolbox Data/Report tab.
 ```
 
