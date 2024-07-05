@@ -28,7 +28,16 @@ $$
 Where TPA = trees/acre and DBH = diameter breast height {cite}`north`; {cite}`woodall`; {cite}`reineke`. SDI is used by foresters and ecologists and can be used as a relative measure of how crowded a stand is, show competition between trees, or as an overall measure of forest health {cite}`north`.
 
 ## Methodology
-To examine forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the Norleywood Enclosure in the New Forest National Park, United Kingdom. The dataset shown is from the first three plots measured.
+To examine forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the forested areas randomly sampled from the New Forest National Park, United Kingdom. The sample data shown is from the first three measured plots at Norleywood Enclosure.
+
+## Field data
+({numref}`start`) shows the Kobo Collect start screen
+
+```{figure} /figures/survey/start.jpg
+:height: 500px
+:name: start
+Kobo Collect start screen.
+```
 
 ## Resources
 - **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and setup. It's really a form app that syncs to the cloud so you need export the csv or geojson files then load into your geospatial analysis software of choice.
