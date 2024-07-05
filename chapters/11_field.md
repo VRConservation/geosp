@@ -34,7 +34,7 @@ To examine forest health in a local forest stand, I measured trees > 30 cm in db
 {numref}`start` shows the Kobo Collect start screen
 
 ```{figure} /figures/survey/start.png
-:height: 300px
+:height: 400px
 :name: start
 Kobo Collect start screen.
 ```
