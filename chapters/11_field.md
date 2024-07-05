@@ -79,7 +79,7 @@ If you select the Reports tab you'll get descriptive statistics for each questio
 KoboToolbox Data/Report tab.
 ```
 
-Clicking the Gallery gives you all of the photos you took in sequential order. You can download and save each one by clicking on the photo. Look at those beautiful tree trunks in the forest ({numref}`pics`).
+Clicking the Gallery gives you all of the photos you took in sequential order. You can download and save each one by clicking on the photo. {numref}`pics` Look at those beautiful tree trunks in the forest ({numref}`pics`).
 
 ```{figure} /figures/survey/pics.png
 :height: 400px
