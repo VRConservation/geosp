@@ -79,7 +79,7 @@ If you select the Reports tab you'll get descriptive statistics for each questio
 KoboToolbox Data/Report tab.
 ```
 
-Clicking the Gallery gives you all of the photos you took in sequential order. You can download and save each one by clicking on it. Look at those beautiful tree trunks in the forest ({numref}`pics`)!
+Clicking the Gallery gives you all of the photos you took in sequential order. You can download and save each one by clicking on it. Look at those beautiful tree trunks in the forest ({numref}`pics`).
 
 ```{figure} /figures/survey/pics.png
 :height: 400px
@@ -106,12 +106,12 @@ Let's look at a simpler/nearly instantaneous way to view and stylize the points.
 2. Click the 3 buttons next Fill Color and in Color Based On replace the default value with Species or Circumference. You can change the coloramp here as well. Color based on circumference gives you a visual on the size distribution.
 3. The Label value lets you select any field if you want to add a label to each point.
 
-{numref}`kepler` gives you a rather handsome map, even using the defaults.
+{numref}`kepler` the rather handsome map with the ability to add additional layers and change or customize the symbology.
 
 ```{figure} /figures/survey/kepler.png
 :height: 400px
 :name: kepler
-A fast dash kepler.gl map of the points using Geo Data Viewer and Visual Studio Code.
+The kepler.gl map of the points using Geo Data Viewer and Visual Studio Code.
 ```
 
 There's your start from collection to visualization. Hopefully this will inspire you to go forth and collect some needed data for your organization, agency, or dissertation! There are some additional resources below.
