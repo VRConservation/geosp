@@ -79,7 +79,7 @@ If you select the Reports tab you'll get descriptive statistics for each questio
 KoboToolbox Data/Report tab.
 ```
 
-Clicking the Gallery gives you all of the photos you took in sequential order. You can download and save each one by clicking on it. Look at those beautiful tree trunks in the forest ({numref}`pics`).
+Clicking the Gallery gives you all of the photos you took in sequential order. You can download and save each one by clicking on the photo. Look at those beautiful tree trunks in the forest ({numref}`pics`).
 
 ```{figure} /figures/survey/pics.png
 :height: 400px
@@ -87,7 +87,7 @@ Clicking the Gallery gives you all of the photos you took in sequential order. Y
 KoboToolbox Data/Gallery tab.
 ```
 
-The Downloads tab does 'exactly what it says on the tin' as some English folks are wont to say. I downloaded the data first as an excel sheet, edited it, then saved as a CSV that's in the repo under /test/norley2.csv. Make sure you change the lat lon columns to a clear name such as Latitude, Longitude to make them easier to pick up with the software you use. 
+The Downloads tab does 'exactly what it says on the tin' as some English folks are wont to say. I downloaded the data first as an excel sheet, edited it, then saved as a CSV that's in the repo under the file /test/norley2.csv. Make sure you change the lat lon columns to a clear name such as Latitude, Longitude to make them easier to pick up with the software you use. 
 
 ## Visualization
 I didn't completely figure out the geojson download. It was a bit clunky in that it converts the data to geojoson and opens it in a web browser instead of downloading as a geojson file. The coding looked correct, however.
