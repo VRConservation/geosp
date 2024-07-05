@@ -86,9 +86,11 @@ Clicking the Gallery gives you all of the photos you took in sequential order. Y
 :name: pics
 KoboToolbox Data/Gallery tab.
 ```
+
 The Downloads tab does 'exactly what it says on the tin' as some English folks are wont to say. I downloaded the data first as an excel sheet, edited it, then saved as a CSV that's in the repo under /test/norley2.csv. Make sure you change the lat lon columns to a clear name such as Latitude, Longitude to make them easier to pick up with the software you use. 
 
-I didn't cimpletely figure out the geojson download. It was a bit clunky in that it converts the data to geojoson and opens it in a web browser instead of downloading as a geojson file. The coding looked correct, however.
+## Visualization
+I didn't completely figure out the geojson download. It was a bit clunky in that it converts the data to geojoson and opens it in a web browser instead of downloading as a geojson file. The coding looked correct, however.
 
 You can then upload and analyze data using Python libraries, QGIS, or other software. If you add via QGIS:
 
@@ -98,9 +100,24 @@ You can then upload and analyze data using Python libraries, QGIS, or other soft
 4. At the Geometry CRS make sure the imported table is the same Coordinate Reference System as the QGIS project.
 5. You should see a sample table at the bottom. Click add and the points should be added to the project. If you don't see them where they're supposed to be or they ended up in West Africa, you need to reconcile the projections.
 
-Let's look at a simpler and quicker way to
+Let's look at a simpler/nearly instantaneous way to view and stylize the points. Make sure you have the Geo Data Viewer installed in Visual Studio Code. Right click on the norley2.csv and select view map. This brings up the dataset using kepler.gl. It looks pretty good right away. Here are a couple of quick changes:
+
+1. Click the down arrow on the point layer to expand it. Reduce the Radius size to 8.
+2. Click the 3 buttons next Fill Color and in Color Based On replace the default value with Species or Circumference. You can change the coloramp here as well. Color based on circumference gives you a visual on the size distribution.
+3. The Label value lets you select any field if you want to add a label to each point.
+
+{numref}`kepler` gives you a rather handsome map, even using the defaults.
+
+```{figure} /figures/survey/kepler.png
+:height: 400px
+:name: kepler
+A fast dash kepler.gl map of the points using Geo Data Viewer and Visual Studio Code.
+```
+
+There's your start from collection to visualization. Hopefully this will inspire you to go forth and collect some needed data for your organization, agency, or dissertation! There are some additional resources below.
 
 ## Resources
 - **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and setup. It's really a form app that syncs to the cloud so you need export the csv or geojson files then load into your geospatial analysis software of choice.
 - **[ODK](https://getodk.org)**. Free if you can self host and support.
 - **[QField](https://qfield.org)**. Survey and digitize data mobile app that syncs to QGIS. The QField setup tutorial from [GISGeography](https://gisgeography.com/qfield/) runs you through the basics to get up and running. QField would be amazing if it was easy to set up and use. Unfortunately, I found setup and use not easy to use. The cloud sync works but does not allow much storage. You can pay for increased storage, however. Great idea, but needs a lot more work to be easier to use.
+- **[Survey123](https://survey123.arcgis.com/)**. This is a paid software, but it works very well and syncs flawlessly with ArcGIS Online or ArcGIS pro. It does require additional credit purchase to store large amounts of data and add maps but perhaps you can keep that at a minimum by just using the forms. Hopefully over time QField catches up or Kobo provides additional geospatial capabilities.
