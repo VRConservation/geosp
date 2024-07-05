@@ -87,7 +87,7 @@ Clicking the Gallery gives you all of the photos you took sequentially. You can 
 KoboToolbox Data/Gallery tab.
 ```
 
-The Downloads tab does 'exactly what it says on the tin,' as some English folks are wont to say. I downloaded the data first as an Excel sheet, edited it, and then saved it as a CSV that's in the repo under the file /test/norley2.csv. Make sure you change the lat/lon columns to a clear name, such as Latitude or longitude, to make them easier to pick up with the software you use. 
+The Downloads tab does 'exactly what it says on the tin', as some English folks are wont to say. I downloaded the data first as an Excel sheet, edited it, and then saved it as a CSV that's in the repo under the file /test/norley2.csv. Make sure you change the lat/lon columns to a clear name, such as Latitude or longitude, to make them easier to pick up with the software you use. 
 
 ## Visualization
 I didn't completely figure out the geojson download. It was a bit clunky because it converted the data to geojson and opened it in a web browser instead of downloading it as a geojson file. The coding looked correct, however.

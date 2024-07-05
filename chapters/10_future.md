@@ -44,8 +44,3 @@ I didn't cover the Geospatial Data Abstraction Library, or GDAL, in this version
 
 ## Go forth and geospatialify!
 The bottom line is to keep learning and practicing your geospatial skills. Try something out, share it, get feedback, and learn! I'm curious to hear about your journeys. Please let me know what you think about the book, what could be added, and your journey in the GitHub discussion connected to the repo where FOSS Geospatial tools are hosted. Thanks!
-
-
-This is a test of {numref}`report`
-
-```
