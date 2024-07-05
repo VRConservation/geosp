@@ -31,7 +31,7 @@ Where TPA = trees/acre and DBH = diameter breast height {cite}`north`; {cite}`wo
 To examine forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the forested areas randomly sampled from the New Forest National Park, United Kingdom. The sample data shown is from the first three measured plots at Norleywood Enclosure.
 
 ## Field data
-{numref}`start` shows the Kobo Collect start screen
+{numref}`start` shows the Kobo Collect start screen. Before you travel to the field, make sure to click on Download Form so you have the survey uploaded to your phone. 
 
 ```{figure} /figures/survey/start.png
 :height: 400px
@@ -39,6 +39,21 @@ To examine forest health in a local forest stand, I measured trees > 30 cm in db
 Kobo Collect start screen.
 ```
 
+Click + Start new form at the top of the screen, bringing up the next screen shown in {numref}'newform'.
+
+```{figure} /figures/survey/newform.png
+:height: 400px
+:name: newform
+New form screen.
+```
+Click the survey you're working on that, in our case, brings up location, the first data entry point ({numre}`location`)
+
+```{figure} /figures/survey/location.png
+:height: 400px
+:name: location
+Location screen.
+```
+Click Start
 ## Resources
 - **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and setup. It's really a form app that syncs to the cloud so you need export the csv or geojson files then load into your geospatial analysis software of choice.
 - **[ODK](https://getodk.org)**. Free if you can self host and support.
