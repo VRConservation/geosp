@@ -17,8 +17,8 @@ parts:
       - file: chapters/07_qgis
       - file: chapters/08_aiml
       - file: chapters/09_R
-      - file: chapters/10_field
-      - file: chapters/11_future
+      - file: chapters/11_field
+      - file: chapters/10_future
   - caption: Appendices
     chapters:
       - file: z_appendices/appendix1
