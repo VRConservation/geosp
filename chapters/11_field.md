@@ -25,7 +25,7 @@ $$
 \sum_{i=1}^n TPA (DBH/25.4)^{1.6} 
 $$
 
- and where TPA = trees/acre and DBH = diameter breast height {cite}`north`; {cite}`woodall`; {cite}`reineke`. This SDI formula uses the summation method, sums individual tree diameters rather than the quadratic mean diameter common in the original equation, and can be applied to uneven-age stands ({cite}`north`; {cite}`shaw`).
+and where TPA = trees/acre and DBH = diameter breast height {cite}`north`; {cite}`woodall`; {cite}`reineke`. This SDI formula uses the summation method, sums individual tree diameters rather than the quadratic mean diameter common in the original equation, and can be applied to uneven-age stands ({cite}`north`; {cite}`shaw`).
 
 Foresters and ecologists use SDI and can be used as a relative measure of how crowded a stand is, shows competition between trees, or as an overall measure of forest health {cite}`north`.
 
