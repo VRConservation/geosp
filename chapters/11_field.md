@@ -39,21 +39,22 @@ To examine forest health in a local forest stand, I measured trees > 30 cm in db
 Kobo Collect start screen.
 ```
 
-Click + Start new form at the top of the screen, bringing up the next screen shown in {numref}'newform'.
+Click + Start new form at the top of the screen, bringing up the next screen shown in {numref}`newform`.
 
 ```{figure} /figures/survey/newform.png
 :height: 400px
 :name: newform
 New form screen.
 ```
-Click the survey you're working on that, in our case, brings up location, the first data entry point ({numre}`location`)
+Click the survey you're working on that, in our case, brings up location, the first data entry point ({numref}`location`)
 
 ```{figure} /figures/survey/location.png
 :height: 400px
 :name: location
 Location screen.
 ```
-Click Start
+Click Start GeoPoint. The app will start searching for location and give you a confirmation once it gets to 5m or less. It may take a few minutes and if you're in a forested area you may need to point the phone to an open space in the canopy.
+
 ## Resources
 - **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and setup. It's really a form app that syncs to the cloud so you need export the csv or geojson files then load into your geospatial analysis software of choice.
 - **[ODK](https://getodk.org)**. Free if you can self host and support.
