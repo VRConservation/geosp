@@ -1,7 +1,5 @@
-# Field Surveys
-Your guide to open source field surveys
-
-Coming soon!
+# Field
+Guide to conducting field surveys using open-source tools
 
 ## Background
 Using field surveys to create geospatial data is a common practice but can require costly hardware, subscriptions for cloud data, and syncing. I've found that QField, which syncs with QGIS, could be great, but the forms are clunky, and the cloud setup is not easy. I got it to work, but I wouldn't say I liked entering the data. ESRI's Survey 123 is a paid software, part of a subscription to Arc or other software. It is very easy to set up and sync data, plus you have instant maps of recorded data in the field. Survey 123 was the quickest to pinpoint GPS location. It comes at a cost, but it may be worth it if you do a lot of field surveys. The data is accessible after you send it in the Portal tab of the catalog window. Very seamless.
@@ -18,16 +16,16 @@ Even if you conduct many surveys, the Kobo Toolbox is brilliant. Survey forms ar
 7. Download the data in Excel, csv, or geojson. I found the Excel download best, then converted that file to csv after modifying unnecessary columns. Note that you don't need to add date, unique field, or time as fields to the form since they are automatically added.
 8. Import the csv into a notebook, QGIS, or Kepler to view it.
 
-## SDI
-The stand density index is a measure of forest health. The stand density index (SDI) is the calculation of the size (DBH) and number of trees or trees/acre in a stand and is calculated with the following equation:
+## Stand Density Index
+Foresters have long used stand density index (SDI) to measure forest stocking levels since it is calculated from size and number of trees per unit area {cite}`reineke`. Since it also measures inter-specific tree competition and how crowded a stand is {cite}`north` used it as a proxy estimate for forest health using the summation method:
 
-$$ 
-\sum_{i=1}^n TPA (DBH/25.4)^{1.6} 
+$$
+\sum TPH_1\left( \frac{DBH_i}{25.4}\right)^{\!1.6}
 $$
 
-and where TPA = trees/acre and DBH = diameter breast height {cite}`north`; {cite}`woodall`; {cite}`reineke`. This SDI formula uses the summation method, sums individual tree diameters rather than the quadratic mean diameter common in the original equation, and can be applied to uneven-age stands ({cite}`north`; {cite}`shaw`).
+where TPA = trees ha<sup>-1</sup> of tree<sub>i</sub> and DBH<sub>i</sub> = diameter breast height (cm) of tree<sub>i</sub>.
 
-Foresters and ecologists use SDI and can be used as a relative measure of how crowded a stand is, shows competition between trees, or as an overall measure of forest health {cite}`north`.
+The summation method is recommended for uneven-age or irregular structure stands {cit}`shaw`. It is appropriate to stands found in the New Forest, a mixture of non-native plantation species such as Scot Pine (_Pinus sylvestris_) and Douglas fir (_Pseudotsuga menziesii_) with native species such as English Oak (_Quercus robur_), beech (_Fagus sylvatica_), and holly (_Ilex aquifolium_).
 
 ## Methodology
 To examine forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the forested areas randomly sampled from the New Forest National Park, United Kingdom. The sample data shown is from the first three measured plots at Norleywood Enclosure.

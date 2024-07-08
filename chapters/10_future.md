@@ -1,5 +1,5 @@
 # Future
-Where your geospatial journey may lead you and the future of open-source geospatial software.
+Where your geospatial journey may lead and the future of open-source geospatial software.
 
 
 ## Future

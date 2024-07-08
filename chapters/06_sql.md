@@ -1,6 +1,6 @@
 # SQL
 
-The language you must learn for geospatial analysis!
+The language to learn for geospatial analysis!
 
 ## New
 

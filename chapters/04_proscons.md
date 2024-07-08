@@ -1,4 +1,5 @@
 # Pros & Cons
+Pluses and minuses of using open-source geospatial software
 
 ## Open source vs. paid
 Navigating the world of open-source and subscription-based geospatial tools is challenging. Paying for software, imagery, and technicians to conduct your analyses can also be costly. Increasingly, for-profit companies are monetizing software and imagery use that is proprietary to their products. Increased costs and limited access make it difficult for nonprofits, communities, and individuals to access important geospatial data and decrease the democratization and use of this information in a world where it needs to be freely available and accessible.

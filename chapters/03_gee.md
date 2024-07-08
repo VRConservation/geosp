@@ -13,9 +13,9 @@ jupyter:
 ---
 
 <!-- #region -->
-# Google Earth Engine
+# GEE
 
-Your introduction to geospatial analysis in the cloud
+Introduction to geospatial analysis in the cloud using Google Earth Engine
 
 ## TL;DR
 
