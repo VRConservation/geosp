@@ -20,12 +20,12 @@ Even if you conduct many surveys, the Kobo Toolbox is brilliant. Survey forms ar
 Foresters have long used stand density index (SDI) to measure forest stocking levels since it is calculated from size and number of trees per unit area {cite}`reineke`. Since it also measures inter-specific tree competition and how crowded a stand is {cite}`north` used it as a proxy estimate for forest health using the summation method:
 
 $$
-\sum TPH_1\left( \frac{DBH_i}{25.4}\right)^{\!1.6}
+\sum TPH_i\left( \frac{DBH_i}{25.4}\right)^{\!1.6}
 $$
 
-where TPA = trees ha<sup>-1</sup> of tree<sub>i</sub> and DBH<sub>i</sub> = diameter breast height (cm) of tree<sub>i</sub>.
+where TPH = trees ha<sup>-1</sup> of tree<sub>i</sub> and DBH<sub>i</sub> = diameter breast height (cm) of tree<sub>i</sub>.
 
-The summation method is recommended for uneven-age or irregular structure stands {cit}`shaw`. It is appropriate to stands found in the New Forest, a mixture of non-native plantation species such as Scot Pine (_Pinus sylvestris_) and Douglas fir (_Pseudotsuga menziesii_) with native species such as English Oak (_Quercus robur_), beech (_Fagus sylvatica_), and holly (_Ilex aquifolium_).
+The summation method is recommended for uneven-age or irregular structure stands {cite}`shaw`. It is appropriate to stands found in the New Forest, a mixture of non-native plantation species such as Scot Pine (_Pinus sylvestris_) and Douglas fir (_Pseudotsuga menziesii_) with native species such as English Oak (_Quercus robur_), beech (_Fagus sylvatica_), and holly (_Ilex aquifolium_).
 
 ## Methodology
 To examine forest health in a local forest stand, I measured trees > 30 cm in dbh circumference within 500 m<sup>2</sup> plots at the forested areas randomly sampled from the New Forest National Park, United Kingdom. The sample data shown is from the first three measured plots at Norleywood Enclosure.
@@ -100,8 +100,8 @@ You can then upload and analyze data using Python libraries, QGIS, or other soft
 
 Let's look at a simpler/nearly instantaneous way to view and stylize the points. Make sure you have the Geo Data Viewer installed in Visual Studio Code. Right-click on the norley2.csv and select View Map. This brings up the dataset using kepler.gl. It looks pretty good right away. Here are a couple of quick changes:
 
-1. Click the down arrow on the point layer to expand it. Reduce the Radius size to 8.
-2. Click the three buttons next to Fill Color, and in Color Based On, replace the default value with Species or Circumference. You can also change the coloramp here. Color based on circumference gives you a visual of the size distribution.
+1. Click the down arrow on the point layer to expand it. Reduce the Radius of the points if you wish to see them more clearly.
+2. Click the three buttons next to Fill Color, and in Color Based On, replace the default value with Species or Diameter. You can also change the coloramp here. Color based on circumference gives you a visual of the size distribution.
 3. The Label value lets you select any field to add a label to each point.
 
 {numref}`kepler` shows a rather handsome map that can add additional layers and change or customize the symbology.
@@ -111,8 +111,10 @@ Let's look at a simpler/nearly instantaneous way to view and stylize the points.
 :name: kepler
 The kepler.gl map of the points using Geo Data Viewer and Visual Studio Code.
 ```
+## SDI
+The total trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 347. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will give a a better indication of the health of this stand over time.
 
-Here's your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! There are some additional resources below.
+There's your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! There are some additional resources below.
 
 ## Resources
 - **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and set up. It's really a form app that syncs to the cloud so you need to export the csv or geojson files and then load them into your geospatial analysis software of choice.
