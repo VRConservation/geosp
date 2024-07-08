@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>9. Field Surveys &#8212; FOSS Resources</title>
+    <title>9. Field &#8212; FOSS Resources</title>
   
   
   
@@ -180,14 +180,14 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="02_foss.html">1. FOSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_gee.html">2. Google Earth Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_gee.html">2. GEE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_proscons.html">3. Pros &amp; Cons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_python.html">4. Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_sql.html">5. SQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_qgis.html">6. QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_aiml.html">7. AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_R.html">8. R</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Field Surveys</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_future.html">10. Future</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
@@ -449,7 +449,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Field Surveys</h1>
+    <h1>Field</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,7 +461,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">9.1. Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">9.2. Quick start</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sdi">9.3. SDI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stand-density-index">9.3. Stand Density Index</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">9.4. Methodology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-data">9.5. Field data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">9.6. Visualization</a></li>
@@ -477,10 +477,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="field-surveys">
-<h1><span class="section-number">9. </span>Field Surveys<a class="headerlink" href="#field-surveys" title="Link to this heading">#</a></h1>
-<p>Your guide to open source field surveys</p>
-<p>Coming soon!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="field">
+<h1><span class="section-number">9. </span>Field<a class="headerlink" href="#field" title="Link to this heading">#</a></h1>
+<p>Guide to conducting field surveys using open-source tools</p>
 <section id="background">
 <h2><span class="section-number">9.1. </span>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
 <p>Using field surveys to create geospatial data is a common practice but can require costly hardware, subscriptions for cloud data, and syncing. I’ve found that QField, which syncs with QGIS, could be great, but the forms are clunky, and the cloud setup is not easy. I got it to work, but I wouldn’t say I liked entering the data. ESRI’s Survey 123 is a paid software, part of a subscription to Arc or other software. It is very easy to set up and sync data, plus you have instant maps of recorded data in the field. Survey 123 was the quickest to pinpoint GPS location. It comes at a cost, but it may be worth it if you do a lot of field surveys. The data is accessible after you send it in the Portal tab of the catalog window. Very seamless.</p>
@@ -499,15 +498,15 @@ document.write(`
 <li><p>Import the csv into a notebook, QGIS, or Kepler to view it.</p></li>
 </ol>
 </section>
-<section id="sdi">
-<h2><span class="section-number">9.3. </span>SDI<a class="headerlink" href="#sdi" title="Link to this heading">#</a></h2>
-<p>The stand density index is a measure of forest health. The stand density index (SDI) is the calculation of the size (DBH) and number of trees or trees/acre in a stand and is calculated with the following equation:</p>
+<section id="stand-density-index">
+<h2><span class="section-number">9.3. </span>Stand Density Index<a class="headerlink" href="#stand-density-index" title="Link to this heading">#</a></h2>
+<p>Foresters have long used stand density index (SDI) to measure forest stocking levels since it is calculated from size and number of trees per unit area <span id="id1">[<a class="reference internal" href="bibliography.html#id11" title="Lester Henry Reineke. Perfecting a stand-density index for even-aged forests. Journal of Agricultural Research, 1933.">Reineke, 1933</a>]</span>. Since it also measures inter-specific tree competition and how crowded a stand is <span id="id2">[<a class="reference internal" href="bibliography.html#id10" title="Malcolm P North, Ryan E Tompkins, Alexis A Bernal, Brandon M Collins, Scott L Stephens, and Robert A York. Operational resilience in western us frequent-fire forests. Forest Ecology and Management, 507:120004, 2022.">North <em>et al.</em>, 2022</a>]</span> used it as a proxy estimate for forest health using the summation method:</p>
 <div class="math notranslate nohighlight">
-\[ 
-\sum_{i=1}^n TPA (DBH/25.4)^{1.6} 
+\[
+\sum TPH_1\left( \frac{DBH_i}{25.4}\right)^{\!1.6}
 \]</div>
-<p>and where TPA = trees/acre and DBH = diameter breast height <span id="id1">[<a class="reference internal" href="bibliography.html#id10" title="Malcolm P North, Ryan E Tompkins, Alexis A Bernal, Brandon M Collins, Scott L Stephens, and Robert A York. Operational resilience in western us frequent-fire forests. Forest Ecology and Management, 507:120004, 2022.">North <em>et al.</em>, 2022</a>]</span>; <span id="id2">[<a class="reference internal" href="bibliography.html#id14" title="Chris W Woodall, Patrick D Miles, and John S Vissage. Determining maximum stand density index in mixed species stands for strategic-scale stocking assessments. Forest Ecology and Management, 216(1-3):367–377, 2005.">Woodall <em>et al.</em>, 2005</a>]</span>; <span id="id3">[<a class="reference internal" href="bibliography.html#id11" title="Lester Henry Reineke. Perfecting a stand-density index for even-aged forests. Journal of Agricultural Research, 1933.">Reineke, 1933</a>]</span>. This SDI formula uses the summation method, sums individual tree diameters rather than the quadratic mean diameter common in the original equation, and can be applied to uneven-age stands (<span id="id4">[<a class="reference internal" href="bibliography.html#id10" title="Malcolm P North, Ryan E Tompkins, Alexis A Bernal, Brandon M Collins, Scott L Stephens, and Robert A York. Operational resilience in western us frequent-fire forests. Forest Ecology and Management, 507:120004, 2022.">North <em>et al.</em>, 2022</a>]</span>; <span id="id5">[<a class="reference internal" href="bibliography.html#id13" title="John D Shaw. Application of stand density index to irregularly structured stands. CABI Digital Library, 2000.">Shaw, 2000</a>]</span>).</p>
-<p>Foresters and ecologists use SDI and can be used as a relative measure of how crowded a stand is, shows competition between trees, or as an overall measure of forest health <span id="id6">[<a class="reference internal" href="bibliography.html#id10" title="Malcolm P North, Ryan E Tompkins, Alexis A Bernal, Brandon M Collins, Scott L Stephens, and Robert A York. Operational resilience in western us frequent-fire forests. Forest Ecology and Management, 507:120004, 2022.">North <em>et al.</em>, 2022</a>]</span>.</p>
+<p>where TPA = trees ha<sup>-1</sup> of tree<sub>i</sub> and DBH<sub>i</sub> = diameter breast height (cm) of tree<sub>i</sub>.</p>
+<p>The summation method is recommended for uneven-age or irregular structure stands . It is appropriate to stands found in the New Forest, a mixture of non-native plantation species such as Scot Pine (<em>Pinus sylvestris</em>) and Douglas fir (<em>Pseudotsuga menziesii</em>) with native species such as English Oak (<em>Quercus robur</em>), beech (<em>Fagus sylvatica</em>), and holly (<em>Ilex aquifolium</em>).</p>
 </section>
 <section id="methodology">
 <h2><span class="section-number">9.4. </span>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
@@ -669,7 +668,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">9.1. Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">9.2. Quick start</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sdi">9.3. SDI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stand-density-index">9.3. Stand Density Index</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">9.4. Methodology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-data">9.5. Field data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">9.6. Visualization</a></li>
