@@ -536,7 +536,7 @@ document.write(`
 <p><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Survey form screens.</span><a class="headerlink" href="#forms" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>It is worth keeping questions and answers brief in each section. Note that I just put short common names for tree species in the order of their abundance to make filling out the species section easier. Once you’ve completed the forms you’ll be prompted to finalize the form. (<a class="reference internal" href="#send"><span class="std std-numref">Fig. 9.4</span></a>)</p>
+<p>It is worth keeping questions and answers brief in each section. Note that I just put short common names for tree species in the order of their abundance to make filling out the species section easier. Once you’ve completed the forms, you’ll be prompted to finalize and send. (<a class="reference internal" href="#send"><span class="std std-numref">Fig. 9.4</span></a>)</p>
 <figure class="align-default" id="send">
 <a class="reference internal image-reference" href="../_images/send.png"><img alt="../_images/send.png" src="../_images/send.png" style="height: 400px;" /></a>
 <figcaption>
@@ -580,7 +580,7 @@ document.write(`
 </ol>
 <p>Let’s look at a simpler/nearly instantaneous way to view and stylize the points. Make sure you have the Geo Data Viewer installed in Visual Studio Code. Right-click on the norley2.csv and select View Map. This brings up the dataset using <a class="reference external" href="http://kepler.gl">kepler.gl</a>. It looks pretty good right away. Here are a couple of quick changes:</p>
 <ol class="arabic simple">
-<li><p>Click the down arrow on the point layer to expand it. Reduce the Radius of the points if you wish to see them more clearly.</p></li>
+<li><p>Click the down arrow on the point layer to expand it. Reduce the Radius of the points to see them more clearly.</p></li>
 <li><p>Click the three buttons next to Fill Color, and in Color Based On, replace the default value with Species or Diameter. You can also change the coloramp here. Color based on circumference gives you a visual of the size distribution.</p></li>
 <li><p>The Label value lets you select any field to add a label to each point.</p></li>
 </ol>
@@ -594,13 +594,13 @@ document.write(`
 </section>
 <section id="sdi">
 <h2><span class="section-number">9.7. </span>SDI<a class="headerlink" href="#sdi" title="Link to this heading">#</a></h2>
-<p>The total trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 347. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will give a a better indication of the health of this stand over time.</p>
-<p>There’s your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! There are some additional resources below.</p>
+<p>The total number of trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 347. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will better indicate this stand’s comparative health.</p>
+<p>There’s your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! Additional resources are provided below.</p>
 </section>
 <section id="resources">
 <h2><span class="section-number">9.8. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://www.kobotoolbox.org">Kobo Toolbox</a></strong>. Open source data collection platform that’s easy to use and set up. It’s really a form app that syncs to the cloud so you need to export the csv or geojson files and then load them into your geospatial analysis software of choice.</p></li>
+<li><p><strong><a class="reference external" href="https://www.kobotoolbox.org">Kobo Toolbox</a></strong>. An open-source data collection platform that’s easy to use and set up. Kobo is a form-based app that syncs to the cloud so you need to export the csv or geojson files and then load them into your geospatial analysis software of choice.</p></li>
 <li><p><strong><a class="reference external" href="https://getodk.org">ODK</a></strong>. Free if you can self-host and support.</p></li>
 <li><p><strong><a class="reference external" href="https://qfield.org">QField</a></strong>. Survey and digitize data mobile app that syncs to QGIS. The QField setup tutorial from <a class="reference external" href="https://gisgeography.com/qfield/">GISGeography</a> runs you through the basics to get up and running. QField would be amazing if it were easy to set up and use. Unfortunately, its use is more difficult than anticipated. The cloud sync works but does not allow much storage. You can pay for increased storage, however. It’s a great idea, but it needs a lot more work to be easier.</p></li>
 </ul>
