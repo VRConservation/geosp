@@ -53,7 +53,7 @@ Click Start GeoPoint. The app will start searching for location and give you a c
 :name: forms
 Survey form screens.
 ```
-It is worth keeping questions and answers brief in each section. Note that I just put short common names for tree species in the order of their abundance to make filling out the species section easier. Once you've completed the forms you'll be prompted to finalize the form. ({numref}`send`)
+It is worth keeping questions and answers brief in each section. Note that I just put short common names for tree species in the order of their abundance to make filling out the species section easier. Once you've completed the forms, you'll be prompted to finalize and send. ({numref}`send`)
 
 ```{figure} /figures/survey/send.png
 :height: 400px
@@ -100,7 +100,7 @@ You can then upload and analyze data using Python libraries, QGIS, or other soft
 
 Let's look at a simpler/nearly instantaneous way to view and stylize the points. Make sure you have the Geo Data Viewer installed in Visual Studio Code. Right-click on the norley2.csv and select View Map. This brings up the dataset using kepler.gl. It looks pretty good right away. Here are a couple of quick changes:
 
-1. Click the down arrow on the point layer to expand it. Reduce the Radius of the points if you wish to see them more clearly.
+1. Click the down arrow on the point layer to expand it. Reduce the Radius of the points to see them more clearly.
 2. Click the three buttons next to Fill Color, and in Color Based On, replace the default value with Species or Diameter. You can also change the coloramp here. Color based on circumference gives you a visual of the size distribution.
 3. The Label value lets you select any field to add a label to each point.
 
@@ -112,12 +112,12 @@ Let's look at a simpler/nearly instantaneous way to view and stylize the points.
 The kepler.gl map of the points using Geo Data Viewer and Visual Studio Code.
 ```
 ## SDI
-The total trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 347. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will give a a better indication of the health of this stand over time.
+The total number of trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 347. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will better indicate this stand's comparative health.
 
-There's your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! There are some additional resources below.
+There's your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! Additional resources are provided below.
 
 ## Resources
-- **[Kobo Toolbox](https://www.kobotoolbox.org)**. Open source data collection platform that's easy to use and set up. It's really a form app that syncs to the cloud so you need to export the csv or geojson files and then load them into your geospatial analysis software of choice.
+- **[Kobo Toolbox](https://www.kobotoolbox.org)**. An open-source data collection platform that's easy to use and set up. Kobo is a form-based app that syncs to the cloud so you need to export the csv or geojson files and then load them into your geospatial analysis software of choice.
 - **[ODK](https://getodk.org)**. Free if you can self-host and support.
 - **[QField](https://qfield.org)**. Survey and digitize data mobile app that syncs to QGIS. The QField setup tutorial from [GISGeography](https://gisgeography.com/qfield/) runs you through the basics to get up and running. QField would be amazing if it were easy to set up and use. Unfortunately, its use is more difficult than anticipated. The cloud sync works but does not allow much storage. You can pay for increased storage, however. It's a great idea, but it needs a lot more work to be easier.
 

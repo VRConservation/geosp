@@ -144,7 +144,7 @@ Getting back to the original request, you can clip the dataset to an area of int
 Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe ({numref}`tahoe`).
 
 ```{figure} /figures/gee/tahoe.png
-:height: 500px
+:height: 400px
 :name: tahoe
 Zooming to an area of interest. Note the highlighted rectangle/polygon buttons to add geometry vector layers.
 ```
@@ -152,7 +152,7 @@ Zooming to an area of interest. Note the highlighted rectangle/polygon buttons t
 Enter a search in the box at the top of Earth Engine, such as 'South Lake Tahoe, CA, USA'. In the map pane, click on the square 'Draw a Rectangle' button highlighted and drag a square in the area ({numref}`aoi`).
 
 ```{figure} /figures/gee/aoi.png
-:height: 500px
+:height: 400px
 :name: aoi
 Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.
 ```
@@ -194,8 +194,8 @@ snazzy.addStyle("https://snazzymaps.com/style/15/subtle-grayscale", "Gray");
 Once you hit enter, you will have 'Gray' as an additional map option in the middle right portion of your screen to go along with the default 'Map' and 'Satellite' options. Earth Engine has other defaults you can add without much code and can be found [here](http://gg.gg/1ats42). After adding the gray basemap the basemap selection bar changes ({numref}`gray`).
 
 ```{figure} /figures/gee/gray.png
-:height: 200px
-:width: 600px
+:height: 100px
+:width: 300px
 :name: gray
 Gray basemap bar after adding the grayscale map.
 ```
