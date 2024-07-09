@@ -33,7 +33,7 @@ Yes! You've heard of this and think Google Earth will be easy. But when you chec
 
 This scenario applies even if you don't have a GIS guy down the hall with the defunct plotter! So, how do you DIY the donor's needs? 
 
-Google Earth Engine may be one of the most ubiquitous free and open-source software packages. Technically, It isn't free or open-source, but using it as an individual, nonprofit, or student is free. Its extensive library and ability to run computations in the cloud make it an exceptional resource for use anywhere you have an internet connection on any computer. And it's not that difficult to start despite the use of Javascript!
+Google Earth Engine may be one of the most ubiquitous free and open-source software packages for remote sensing and geospatial analysis. Technically, It isn't free or open-source, but using it as an individual, nonprofit, or student is free. Its extensive library and ability to run computations in the cloud make it an exceptional resource for use anywhere you have an internet connection on any computer. And it's not that difficult to start despite the use of Javascript!
 
 The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
 
