@@ -25,8 +25,8 @@ The book will contain (some chapters are still being drafted) the following chap
 6. 🌐**QGIS**. An introduction to get started with this powerful desktop GIS.
 7. 🤖/🛠**AIML**. Artificial intelligence (AI) and machine learning (ML) are popular right now, right? Here's how to use these tools to complement, not replace, your work.
 8. 📶**R**. A programming language universally adopted by academics, R is easy to use and start with and has many statistical computing, data visualization, and geospatial packages.
-9. 🔮**Future**. Where your journey might lead with other established free and open-source geospatial software. We'll also explore the future of free and open-source geospatial software.
-10. 🔎**Field Surveys**. Your guide to open-source field data collection.
+9. 🔎**Field Surveys**. Your guide to open-source field data collection.
+10. 🔮**Future**. Where your journey might lead with other established free and open-source geospatial software. We'll also explore the future of free and open-source geospatial software.
 
 ## Github, Colab & Binder
 Free and Open Source Geospatial Tools is hosted in a GitHub repository, accessible by clicking the GitHub logo above. Each chapter is also available in Binder and Colab to make running the code easier if you do not have an integrated development environment (IDE), such as Visual Studio Code, set up. I recommend setting up VS Code to run software; guidance for how to do so can be found in the Appendices.
