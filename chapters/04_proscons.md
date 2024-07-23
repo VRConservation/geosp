@@ -8,7 +8,7 @@ Navigating the world of open-source and subscription-based geospatial tools is c
 In truth, it's a false dichotomy to pit FOSS vs. paid geospatial tools. Your workflow may involve data analysis in GEE, then importing datasets into ArcGIS Pro for further analysis and creating layouts, web apps, or online maps. You may find that working with many government agencies requires the use of Arc products because it's what their employees know or the agency has a license (*Cf. the [Modern Geospatial](https://mapscaping.com/podcast/modern-geospatial/) Mapscaping Podcast on using FOSS with different clients*).  See Chapter 1: FOSS for more discussion on using multiple tools.
 
 ## Table
-Table 1 is a non-exhaustive and brief summary of the more commonly used geospatial software products.
+A non-exhaustive summary of the more commonly used geospatial software products is provided below (Table 1).
 
 Table 1. Pros and cons of select geospatial software providers.
 
