@@ -506,10 +506,10 @@ LIMIT</p>
 <p>First, import the dependencies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># import dependencies
-import duckdb
-import leafmap
-import pandas as pd
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import dependencies</span>
+<span class="kn">import</span> <span class="nn">duckdb</span>
+<span class="kn">import</span> <span class="nn">leafmap</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
@@ -517,12 +517,12 @@ import pandas as pd
 <p>Then, connect to the duckdb database and install httpfs and spatial extensions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Connect database install httpfs, spatial
-con = duckdb.connect()
-con.install_extension(&quot;httpfs&quot;)
-con.load_extension(&quot;httpfs&quot;)
-con.install_extension(&quot;spatial&quot;)
-con.load_extension(&quot;spatial&quot;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connect database install httpfs, spatial</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -530,12 +530,12 @@ con.load_extension(&quot;spatial&quot;)
 <p>Read the sawmill .shp file and create the sawmill table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Create sawmill table from shp file and show table
-con.sql(&#39;&#39;&#39;
-    CREATE TABLE IF NOT EXISTS sawmill as
-    SELECT * FROM ST_Read(&#39;./wood.shp&#39;)
-&#39;&#39;&#39;)
-con.table(&#39;sawmill&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create sawmill table from shp file and show table</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE IF NOT EXISTS sawmill as</span>
+<span class="s1">    SELECT * FROM ST_Read(&#39;./wood.shp&#39;)</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;sawmill&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -554,10 +554,10 @@ con.table(&#39;sawmill&#39;)
 </figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># View sawmill table schema
-con.sql(&#39;&#39;&#39;
-    DESCRIBE sawmill
-&#39;&#39;&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View sawmill table schema</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    DESCRIBE sawmill</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -571,13 +571,13 @@ con.sql(&#39;&#39;&#39;
 <p>Let’s run a query that sums sawmills by county (<a class="reference internal" href="#county"><span class="std std-numref">Fig. 5.3</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Sum sawmills by county
-con.sql(&#39;&#39;&#39;
-    SELECT County, COUNT(*) as Count
-    FROM sawmill
-    GROUP BY County
-    ORDER BY count DESC
-&#39;&#39;&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum sawmills by county</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    SELECT County, COUNT(*) as Count</span>
+<span class="s1">    FROM sawmill</span>
+<span class="s1">    GROUP BY County</span>
+<span class="s1">    ORDER BY count DESC</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -591,20 +591,20 @@ con.sql(&#39;&#39;&#39;
 <p>Import the biomass database, then create and show the table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import the Biomass dataset
-con.sql(&quot;SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)&quot;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Biomass dataset</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Create biomass table from the shp file and show table
-con.sql(&#39;&#39;&#39;
-    CREATE TABLE IF NOT EXISTS biomass as
-    SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)
-&#39;&#39;&#39;)
-con.table(&#39;biomass&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create biomass table from the shp file and show table</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE IF NOT EXISTS biomass as</span>
+<span class="s1">    SELECT * FROM ST_Read(&#39;./biomass.shp&#39;)</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;biomass&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -612,25 +612,25 @@ con.table(&#39;biomass&#39;)
 <p>View the biomass table schema, then sum the total megawatts of the plants by county, rounding the total to one decimal (<a class="reference internal" href="#mw"><span class="std std-numref">Fig. 5.4</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># View biomass table schema
-con.sql(&#39;&#39;&#39;
-    DESCRIBE biomass
-&#39;&#39;&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># View biomass table schema</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    DESCRIBE biomass</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Sum the total MW_Grid by county round to 1 decimal
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum the total MW_Grid by county round to 1 decimal</span>
 
-con.sql(&#39;&#39;&#39;
-    SELECT County, ROUND(SUM(CAST(MW_Grid AS FLOAT)), 1) as Total_MW_Grid
-    FROM biomass
-    GROUP BY County
-    ORDER BY Total_MW_Grid DESC
-    LIMIT 15
-&#39;&#39;&#39;)
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    SELECT County, ROUND(SUM(CAST(MW_Grid AS FLOAT)), 1) as Total_MW_Grid</span>
+<span class="s1">    FROM biomass</span>
+<span class="s1">    GROUP BY County</span>
+<span class="s1">    ORDER BY Total_MW_Grid DESC</span>
+<span class="s1">    LIMIT 15</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -661,15 +661,15 @@ con.sql(&#39;&#39;&#39;
 <p>To analyze the woodpecker data, import the packages and connect to DuckDB.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Import and connect
-import duckdb
-import leafmap
-import pandas as pd
-con = duckdb.connect()
-con.install_extension(&quot;httpfs&quot;)
-con.load_extension(&quot;httpfs&quot;)
-con.install_extension(&quot;spatial&quot;)
-con.load_extension(&quot;spatial&quot;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import and connect</span>
+<span class="kn">import</span> <span class="nn">duckdb</span>
+<span class="kn">import</span> <span class="nn">leafmap</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;httpfs&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">install_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;spatial&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -677,17 +677,17 @@ con.load_extension(&quot;spatial&quot;)
 <p>The Lewis’s csv file is quite large, but DuckDB quickly runs through its ~140k rows. Create a table called lewo, short for Lewis’s Woodpecker. The csv file is in the repo’s test folder. Note using ST_Point to assign the latitude and longitude columns to geometry.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Create lewo table and assign points lat lon points to geometry
-sql = (&quot;&quot;&quot;
-    CREATE TABLE lewo AS
-    SELECT *,
-        ST_Point(LONGITUDE, LATITUDE) as geometry
-    FROM &quot;./lewo/lewo.csv&quot; 
-&quot;&quot;&quot;)
-con.execute(sql)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create lewo table and assign points lat lon points to geometry</span>
+<span class="n">sql</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    CREATE TABLE lewo AS</span>
+<span class="s2">    SELECT *,</span>
+<span class="s2">        ST_Point(LONGITUDE, LATITUDE) as geometry</span>
+<span class="s2">    FROM &quot;./lewo/lewo.csv&quot; </span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
 
-# show the table
-con.table(&quot;lewo&quot;)
+<span class="c1"># show the table</span>
+<span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;lewo&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -696,14 +696,14 @@ con.table(&quot;lewo&quot;)
 <p>Then, count the total observations by state (<a class="reference internal" href="#lewo-state"><span class="std std-numref">Fig. 5.7</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Count by state
-con.sql(&#39;&#39;&#39;
-    SELECT STATE, COUNT(OBJECTID) as Count
-    FROM lewo
-    GROUP BY STATE
-    ORDER BY Count DESC
-    LIMIT 10
-&#39;&#39;&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count by state</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    SELECT STATE, COUNT(OBJECTID) as Count</span>
+<span class="s1">    FROM lewo</span>
+<span class="s1">    GROUP BY STATE</span>
+<span class="s1">    ORDER BY Count DESC</span>
+<span class="s1">    LIMIT 10</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -717,13 +717,13 @@ con.sql(&#39;&#39;&#39;
 <p>Select the Washington observations and name the new table ‘wash’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Select Washington state points and name the table wash
-con.sql(&#39;&#39;&#39;
-    CREATE TABLE wash AS
-    SELECT *
-    FROM lewo
-    WHERE STATE = &#39;Washington&#39;
-&#39;&#39;&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select Washington state points and name the table wash</span>
+<span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE wash AS</span>
+<span class="s1">    SELECT *</span>
+<span class="s1">    FROM lewo</span>
+<span class="s1">    WHERE STATE = &#39;Washington&#39;</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -731,11 +731,11 @@ con.sql(&#39;&#39;&#39;
 <p>Export the new table as a csv by converting it to a data frame and save in the test folder.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Fetch the data from the wash table into a data frame
-wash_df = con.execute(&quot;SELECT * FROM wash&quot;).fetchdf()
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch the data from the wash table into a data frame</span>
+<span class="n">wash_df</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM wash&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchdf</span><span class="p">()</span>
 
-# Export the dataframe to a csv file in the test folder
-wash_df.to_csv(&#39;test/wash.csv&#39;, index=False)
+<span class="c1"># Export the dataframe to a csv file in the test folder</span>
+<span class="n">wash_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;test/wash.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
