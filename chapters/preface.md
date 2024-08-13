@@ -1,4 +1,4 @@
-# Preface by Qiusheng Wu
+# Forward
 
 The geospatial landscape has undergone a remarkable transformation in recent years, driven by the rise of free and open-source software (FOSS) tools and the emergence of cloud-native geospatial technologies. Innovative solutions like Cloud Optimized GeoTIFF (COG), SpatioTemporal Asset Catalog (STAC), GeoParquet, and PMTiles have democratized the field, empowering individuals, communities, and organizations to harness the power of spatial data regardless of their financial resources or technical expertise.
 
