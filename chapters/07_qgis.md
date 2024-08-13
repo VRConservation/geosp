@@ -4,7 +4,7 @@ A powerful desktop GIS software infinitely customizable with plugins
 ## Background
 QGIS is a fantastic alternative to ArcGIS Pro, especially since it's free, updated regularly, and has a supportive community surrounding it. It is a desktop package and has additional packages that come with it for download, such as GRASS GIS, which are worth checking out. QGIS is a challenging tutorial because there are so many resources available to learn how to use it. This chapter assumes you have downloaded QGIS and know how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter. 
 
-### Applied case study
+### Muringato case study
 QGIS is used IRL! See the dropdown case on land use change in Kenya using QGIS analytical tools conducted by scientists at the Remote Sensing Research Group, Institute of Geomatics, GIS and Remote Sensing, Dedan Kimathi University of Technology. This is an abridged version of the article and study.
 
 ```{admonition} Muringato Land Use Change Case Study
@@ -33,6 +33,11 @@ Land Use Land Classification analysis was undertaken to establish the changes in
 
 Forest cover comprised 121 km2 of the Muringato catchment area in 1990 (Fig. 2). This decreased to 90 km2 in 2000, signifying a 25% reduction in forest cover. The forest cover 2010 was 85 km2, a 29% reduction compared to 1990. In 2020, the forest cover was 80 km2. This was a 33% reduction to 1990. The reduction in forest land was attributed to the conversion into range and built-up lands. The overall classification accuracies for the images ranged from 79.06% to 89.09%, and the kappa coefficient ranged from 72.32 -85.73. The analysis of climate elements revealed that the average climatic changes in the basin rose 1.36°C and 0.94°C in max and min temperature, respectively.
 
+```{figure} /figures/qgis/layers.png
+:height: 500px
+:name: layers
+QGIS Layers panel.
+```
 
 
 ```
