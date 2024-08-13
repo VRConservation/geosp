@@ -273,7 +273,7 @@ The Sierra species richness tutorial should give you a flavor of QGIS' capabilit
 
 
 
-```{note}
+```{admonition} **Muringato Land Use Change Case Study**
 :class: dropdown
 
 This admonition has been collapsed,
