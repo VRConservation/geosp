@@ -4,6 +4,39 @@ A powerful desktop GIS software infinitely customizable with plugins
 ## Background
 QGIS is a fantastic alternative to ArcGIS Pro, especially since it's free, updated regularly, and has a supportive community surrounding it. It is a desktop package and has additional packages that come with it for download, such as GRASS GIS, which are worth checking out. QGIS is a challenging tutorial because there are so many resources available to learn how to use it. This chapter assumes you have downloaded QGIS and know how to use it. If you do not, see the Introduction to QGIS and Map Academy tutorials listed in the Resources section of this chapter. 
 
+### Applied case study
+QGIS is used IRL! See the dropdown case on land use change in Kenya using QGIS analytical tools conducted by scientists at the Remote Sensing Research Group, Institute of Geomatics, GIS and Remote Sensing, Dedan Kimathi University of Technology. This is an abridged version of the article and study.
+
+```{admonition} Muringato Land Use Change Case Study
+:class: dropdown
+
+**Monitoring the degradation of the Aberdare Ranges in the Muringato Catchment area, Kenya, Using Earth Observation Techniques**
+
+Authors: Simon Wachira Muthee, Martin Wainaina Chege,  Bartholomew Thiong’o Kuria
+
+**TAKEAWAYS**
+
+1. The continued degradation of forest land within the Muringato basin, Kenya, is driven by anthropogenic factors such as deforestation, wetland conversion, climate change, and population growth.
+2. The authors used Land Use Land Classification analysis to establish the climatic conditions changes that had occurred within the Muringato basin. The analysis was completed using QGIS software.
+3. study established the relationship between Land Use and Land Cover (LULC) changes and the climatic elements in the Muringato basin. Understanding the LULC dynamics amid changing climatic conditions can catalyze the community to the need for sustainable resource utilization.
+4. Free and open-source geospatial tools were critical to this study because they provided a freely accessible platform supporting the manipulation of the data 
+
+**INTRODUCTION**
+
+This study was undertaken in the Muringato basin, in the Upper Tana River Basin, Kenya. The basin covers an area of approximately 225 km2 (Fig. 1). The continued degradation of the forest land within the basin, has been greatly influenced by anthropogenic factors, key among them being deforestation, and conversion of wetlands into agricultural land (Muringato WRUA, 2014). This research therefore aimed at characterizing the changes in part of the Aberdare forest cover from 1990 to 2020.
+
+**METHODS**
+
+Land Use Land Classification analysis was undertaken to establish the changes in climatic conditions within the Muringato basin. This was achieved through a time series analysis of Landsat 4, 5, 7, and 8 satellite Imagery acquired between 1990 and 2020 (Liu et al., 2009). The imagery was pre-processed, and a LULC classification was performed using the Support Vector Machine Classifier. This classifier was preferred since it works well with even and uneven structured data (Rudrapal et al., 2015). Please see the Muringato Appendix for a more detailed workflow.
+
+**RESULTS**
+
+Forest cover comprised 121 km2 of the Muringato catchment area in 1990 (Fig. 2). This decreased to 90 km2 in 2000, signifying a 25% reduction in forest cover. The forest cover 2010 was 85 km2, a 29% reduction compared to 1990. In 2020, the forest cover was 80 km2. This was a 33% reduction to 1990. The reduction in forest land was attributed to the conversion into range and built-up lands. The overall classification accuracies for the images ranged from 79.06% to 89.09%, and the kappa coefficient ranged from 72.32 -85.73. The analysis of climate elements revealed that the average climatic changes in the basin rose 1.36°C and 0.94°C in max and min temperature, respectively.
+
+
+
+```
+
 ## Sierra species richness
 For this tutorial, we'll examine species richness by hexagon, known as tessellation, in the Sierra Nevada, California. Ensure you regularly save the project by typing control/command S or Project/Save.
 
@@ -269,14 +302,3 @@ The Sierra species richness tutorial should give you a flavor of QGIS' capabilit
 - **[Hans Van der Kwast](https://www.youtube.com/@HansvanderKwast)**. It is particularly good for QGIS hydrological applications but also has Lidar, image analysis, and raster analysis.
 - **[Burd GIS](https://www.youtube.com/@burdGIS)**. Many practical videos on QGIS.
 - **[Geospatial School](https://www.youtube.com/@geospatialschool)**. Great combination of Python and QGIS. They offer full courses at [geospatialschool.com](https://geospatialschool.com/).
-
-
-
-
-```{admonition} **Muringato Land Use Change Case Study**
-:class: dropdown
-
-This admonition has been collapsed,
-meaning you can add longer form content here,
-without it taking up too much space on the page.
-```
