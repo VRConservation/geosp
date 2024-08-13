@@ -269,3 +269,14 @@ The Sierra species richness tutorial should give you a flavor of QGIS' capabilit
 - **[Hans Van der Kwast](https://www.youtube.com/@HansvanderKwast)**. It is particularly good for QGIS hydrological applications but also has Lidar, image analysis, and raster analysis.
 - **[Burd GIS](https://www.youtube.com/@burdGIS)**. Many practical videos on QGIS.
 - **[Geospatial School](https://www.youtube.com/@geospatialschool)**. Great combination of Python and QGIS. They offer full courses at [geospatialschool.com](https://geospatialschool.com/).
+
+
+
+
+```{note}
+:class: dropdown
+
+This admonition has been collapsed,
+meaning you can add longer form content here,
+without it taking up too much space on the page.
+```
