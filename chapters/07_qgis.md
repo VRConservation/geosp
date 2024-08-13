@@ -29,7 +29,8 @@ This study was undertaken in the Muringato basin, in the Upper Tana River Basin,
 :height: 75px
 :name: muringato
 Location of the Muringato Basin, Upper Tana River Basin, Kenya.
-
+```
+```
 
 **METHODS**
 
