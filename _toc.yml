@@ -3,6 +3,7 @@ root: index
 parts:
   - caption: Introduction
     chapters:
+      - file: chapters/preface
       - file: chapters/01_intro
       - file: chapters/author
   - caption: Chapters
