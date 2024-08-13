@@ -504,11 +504,11 @@ document.write(`
 <p><strong>METHODS</strong></p>
 <p>Land Use Land Classification analysis was undertaken to establish the changes in climatic conditions within the Muringato basin. This was achieved through a time series analysis of Landsat 4, 5, 7, and 8 satellite Imagery acquired between 1990 and 2020 (Liu et al., 2009). The imagery was pre-processed, and a LULC classification was performed using the Support Vector Machine Classifier. This classifier was preferred since it works well with even and uneven structured data (Rudrapal et al., 2015). Please see the Muringato Appendix for a more detailed workflow.</p>
 <p><strong>RESULTS</strong></p>
-<p>Forest cover comprised 121 km2 of the Muringato catchment area in 1990 (Fig. 2). This decreased to 90 km2 in 2000, signifying a 25% reduction in forest cover. The forest cover 2010 was 85 km2, a 29% reduction compared to 1990. In 2020, the forest cover was 80 km2. This was a 33% reduction to 1990. The reduction in forest land was attributed to the conversion into range and built-up lands. The overall classification accuracies for the images ranged from 79.06% to 89.09%, and the kappa coefficient ranged from 72.32 -85.73. The analysis of climate elements revealed that the average climatic changes in the basin rose 1.36°C and 0.94°C in max and min temperature, respectively.</p>
-<figure class="align-default" id="layers">
-<a class="reference internal image-reference" href="../_images/layers1.png"><img alt="../_images/layers1.png" src="../_images/layers1.png" style="height: 500px;" /></a>
+<p>Forest cover comprised 121 km2 of the Muringato catchment area in 1990 <a class="reference internal" href="#lulc"><span class="std std-numref">Fig. 6.1</span></a>. This decreased to 90 km2 in 2000, signifying a 25% reduction in forest cover. The forest cover 2010 was 85 km2, a 29% reduction compared to 1990. In 2020, the forest cover was 80 km2. This was a 33% reduction to 1990. The reduction in forest land was attributed to the conversion into range and built-up lands. The overall classification accuracies for the images ranged from 79.06% to 89.09%, and the kappa coefficient ranged from 72.32 -85.73. The analysis of climate elements revealed that the average climatic changes in the basin rose 1.36°C and 0.94°C in max and min temperature, respectively.</p>
+<figure class="align-default" id="lulc">
+<a class="reference internal image-reference" href="../_images/lulc.png"><img alt="../_images/lulc.png" src="../_images/lulc.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">QGIS Layers panel.</span><a class="headerlink" href="#layers" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Muringato Land Use and Land Cover time series analysis from image scenes.</span><a class="headerlink" href="#lulc" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -536,11 +536,11 @@ We will follow the following workflow to examine species richness:
 Grayscale raster of wildlife species richness imported into QGIS.
 </pre></div>
 </div>
-<p>Let’s change the gray color of the raster to something easier to view. Click on the Open Layer Styling panel in the upper left corner (or F7) in the layers panel. The wildlife species richness layer will become active after you click it (<a class="reference internal" href="05_python.html#layers"><span class="std std-numref">Fig. 4.5</span></a>).</p>
-<figure class="align-default" id="id1">
+<p>Let’s change the gray color of the raster to something easier to view. Click on the Open Layer Styling panel in the upper left corner (or F7) in the layers panel. The wildlife species richness layer will become active after you click it (<a class="reference internal" href="#layers"><span class="std std-numref">Fig. 6.2</span></a>).</p>
+<figure class="align-default" id="layers">
 <a class="reference internal image-reference" href="../_images/layers1.png"><img alt="../_images/layers1.png" src="../_images/layers1.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">QGIS Layers panel.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">QGIS Layers panel.</span><a class="headerlink" href="#layers" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This opens the styling panel. Underneath the layer name, click the Singleband gray to Singleband pseudocolor. Then select magma—when you’re selecting magma, say MAGMA to yourself in a mysterious, authoritarian <a class="reference external" href="https://giphy.com/gifs/evil-BZlNhp9L5WINi">Dr. Evil voice</a>. <a class="reference internal" href="#pseudo"><span class="std std-numref">Fig. 6.3</span></a> is the resulting change in the raster.</p>
