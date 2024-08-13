@@ -39,8 +39,6 @@ Forest cover comprised 121 km2 of the Muringato catchment area in 1990 {numref}`
 Muringato Land Use and Land Cover time series analysis from image scenes.
 ```
 
-```
-
 ## Sierra species richness
 For this tutorial, we'll examine species richness by hexagon, known as tessellation, in the Sierra Nevada, California. Ensure you regularly save the project by typing control/command S or Project/Save.
 
