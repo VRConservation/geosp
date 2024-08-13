@@ -26,7 +26,7 @@ Authors: Simon Wachira Muthee, Martin Wainaina Chege,  Bartholomew Thiong’o Ku
 This study was undertaken in the Muringato basin, in the Upper Tana River Basin, Kenya. The basin covers an area of approximately 225 km2 {numref}`muringato`. The continued degradation of the forest land within the basin, has been greatly influenced by anthropogenic factors, key among them being deforestation, and conversion of wetlands into agricultural land (Muringato WRUA, 2014). This research therefore aimed at characterizing the changes in part of the Aberdare forest cover from 1990 to 2020.
 
 ```{figure} /figures/qgis/muringato.png
-:height: 100px
+:height: 75px
 :name: muringato
 Location of the Muringato Basin, Upper Tana River Basin, Kenya.
 
