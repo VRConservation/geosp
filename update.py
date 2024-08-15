@@ -25,7 +25,7 @@ subprocess.run(["ghp-import", "-n", "-p", "-f", "_build/html"], check=True)
 
 # Push and sync the repository to GitHub
 subprocess.run(["git", "add", "."], check=True)
-subprocess.run(["git", "commit", "-m", "QGIS adding Kenya case"], check=True)
+subprocess.run(["git", "commit", "-m", "testing new env"], check=True)
 subprocess.run(["git", "push"], check=True)
 
 # run the script in the terminal with the command python update.py
