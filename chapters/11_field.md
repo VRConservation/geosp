@@ -112,7 +112,7 @@ Let's look at a simpler/nearly instantaneous way to view and stylize the points.
 The kepler.gl map of the points using Geo Data Viewer and Visual Studio Code.
 ```
 ## SDI
-The total number of trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 347. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will better indicate this stand's comparative health.
+The total number of trees sampled for the size stand is not sufficient, but with the figures in hand, the SDI estimate would be approximately 123. Sampling additional stands across the New Forest and comparing them to historical National Forest Inventory values will better indicate this stand's comparative health.
 
 There's your start from collection to visualization. Hopefully, this will inspire you to collect some needed data for your organization, agency, or dissertation! Additional resources are provided below.
 
