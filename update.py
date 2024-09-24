@@ -29,7 +29,7 @@ subprocess.run(["git", "commit", "-m", "correct SDI calc for field"], check=True
 subprocess.run(["git", "push"], check=True)
 
 # Define the path to the intro.html file
-file_path = 'file://D:\OneDrive\1_Consulting\Spatial\geosp-bibtest\_build\html\index.html'
+file_path = 'D:\OneDrive\1_Consulting\Spatial\geosp-bibtest\_build\html\index.html'
 
 # Define the command to open the file in Brave or Chrome
 # For Brave
