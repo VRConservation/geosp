@@ -28,4 +28,17 @@ subprocess.run(["git", "add", "."], check=True)
 subprocess.run(["git", "commit", "-m", "correct SDI calc for field"], check=True)
 subprocess.run(["git", "push"], check=True)
 
+# Define the path to the intro.html file
+file_path = 'file://D:\OneDrive\1_Consulting\Spatial\geosp-bibtest\_build\html\index.html'
+
+# Define the command to open the file in Brave or Chrome
+# For Brave
+command_brave = f'start brave "{file_path}"'
+
+# For Chrome
+# command_chrome = f'start chrome "{file_path}"'
+
+# Execute the command in Brave. Use command_chrome for Chrome
+subprocess.run(command_brave, shell=True)  # Use command_chrome for Chrome
+
 # run the script in the terminal with the command python update.py
