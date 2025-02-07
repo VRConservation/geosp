@@ -36,7 +36,7 @@ if region is None:
     region = ee.Geometry.BBox(-64.6523439, -25.9007305, -63.1115113, -24.8390856)
 m.centerObject(region)
 ```
-Then we'll set the date ranges for a before and after image then sentinel and dynamic world composites.
+Then we'll set the date ranges for before and after image
 
 ```python
 # Set the 1st date range
@@ -47,6 +47,8 @@ end_date = "2017-01-01"
 start_date2 = "2023-01-01"
 end_date2 = "2024-01-01"
 ```
+
+Then create Sentinel and Dynamic World composites
 
 ```python
 # Create a Sentinel-2 image composite
@@ -92,7 +94,7 @@ m
 
 ![schwing](https://i.imgur.com/jMFTsrB.jpeg)
 
-Schwing! To export the first map as a geotiff add this code
+Schwing! To export the first map as a geotiff use this codeblock
 
 ```python
 # Save Dynamic World data in GeoTIFF format
