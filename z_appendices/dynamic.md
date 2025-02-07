@@ -36,7 +36,7 @@ if region is None:
     region = ee.Geometry.BBox(-64.6523439, -25.9007305, -63.1115113, -24.8390856)
 m.centerObject(region)
 ```
-Then we'll set the date ranges for before and after image
+Then we'll set the date ranges for before and after image.
 
 ```python
 # Set the 1st date range
@@ -48,7 +48,7 @@ start_date2 = "2023-01-01"
 end_date2 = "2024-01-01"
 ```
 
-Then create Sentinel and Dynamic World composites
+And then create Sentinel and Dynamic World composites.
 
 ```python
 # Create a Sentinel-2 image composite
@@ -81,7 +81,7 @@ right_layer = geemap.ee_tile_layer(landcover2, {}, "Land Cover2")
 m = geemap.Map()
 m.split_map(left_layer, right_layer)
 ```
-And then a legend and text
+And then a legend and text.
 
 ```python
 # Add legend and explanatory text
@@ -94,7 +94,7 @@ m
 
 ![schwing](https://i.imgur.com/jMFTsrB.jpeg)
 
-Schwing! To export the first map as a geotiff use this codeblock
+Schwing! To export the first map as a geotiff use this codeblock:
 
 ```python
 # Save Dynamic World data in GeoTIFF format
