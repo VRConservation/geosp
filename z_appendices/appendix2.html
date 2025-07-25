@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -461,6 +461,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-variables-setup">Environment Variables Setup</a></li>
 </ul>
             </nav>
         </div>
@@ -493,28 +494,34 @@ document.write(`
 <li><p>Python</p></li>
 </ol>
 <p>Optional extensions include github copilot (requires a subscription) and chatgpt (requires a subscription for some versions). I highly recommend considering copilot as the chat and autocomplete, for it often suggests code that works or can help you resolve errors in your code when searches or your own editing don’t work. It will also greatly speed up the process of producing code and seems to be improving rapidly. Copilot is free to students and possibly free through select nonprofit organizations.</p>
-<p>```{tip} Run jupyter notebooks in your browser by navigating to the file where you want to run the notebooks or have existing notebooks. Right click on a blank space in the file navigator then select Open in Terminal. Enter <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">yourenv</span></code> substituting yourenv for your virtual environment name. Then run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>. This will open a locahost window in your default web browser where you can edit existing or open new notebooks.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-## Environment Variables Setup
-In many cases VS Code isn&#39;t properly set up with the terminal, usually in Windows. Open the terminal by clicking the Terminal Window in the top bar of VS Code and select &#39;New Terminal&#39;. In the command line, enter `conda`. If you get a red error message, follow these steps:
-
-1. Click the windows button on your computer, type &#39;env,&#39; and select &#39;Edit the System Environment Variables&#39;.
-2. In the system properties window, select &#39;Environment Variables&#39;
-3. In the Environment Variables window under &#39;System variables&#39;, double click &#39;Path&#39;
-4. In the Edit environment variable window, you should have a variable called &#39;C:\Users\yourusername\anaconda3\Scripts\conda.exe&#39;. anaconda3 may be replaced by miniconda if you installed miniconda.
-5. If that doesn&#39;t exist, open internet explorer and go to the Scripts file:
-    1. Select &#39;This PC&#39; in the left pane of explorer
-    2. Open &#39;Users&#39;
-    3. Open your username file, likely your first name
-    4. Scroll down and open miniconda or anaconda3 (don&#39;t open the files such as .anaconda; keep scrolling until you find the file)
-    5. Open &#39;Scripts&#39;
-    6. Find the conda.exe file. It could appear solely as &#39;conda&#39;. Right-click on the file and select &#39;Copy as path&#39;.
-    7. Go back to the Edit environment variable, double-click at the bottom, and then type control V on your keyboard to paste the conda file path into the variables. Ok, your way out of each of the open windows.
-    8. Close Visual Studio Code
-6. Open the VS Code and type the conda into the terminal. You should no longer get an error.
-7. What a pain in the butt! To watch how to do this, go to minute 34:20 of the [Introducing Visual Studio Code](http://gg.gg/1av3xn) video. Or this might convince you to purchase a machine with a linux OS where none of this configuration faffing is necessary!
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Run jupyter notebooks in your browser by navigating to the file where you want to run the notebooks or have existing notebooks. Right click on a blank space in the file navigator then select Open in Terminal. Enter <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">yourenv</span></code> substituting yourenv for your virtual environment name. Then run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>. This will open a locahost window in your default web browser where you can edit existing or open new notebooks.</p>
 </div>
+</section>
+<section id="environment-variables-setup">
+<h2>Environment Variables Setup<a class="headerlink" href="#environment-variables-setup" title="Link to this heading">#</a></h2>
+<p>In many cases VS Code isn’t properly set up with the terminal, usually in Windows. Open the terminal by clicking the Terminal Window in the top bar of VS Code and select ‘New Terminal’. In the command line, enter <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If you get a red error message, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Click the windows button on your computer, type ‘env,’ and select ‘Edit the System Environment Variables’.</p></li>
+<li><p>In the system properties window, select ‘Environment Variables’</p></li>
+<li><p>In the Environment Variables window under ‘System variables’, double click ‘Path’</p></li>
+<li><p>In the Edit environment variable window, you should have a variable called ‘C:\Users\yourusername\anaconda3\Scripts\conda.exe’. anaconda3 may be replaced by miniconda if you installed miniconda.</p></li>
+<li><p>If that doesn’t exist, open internet explorer and go to the Scripts file:</p>
+<ol class="arabic simple">
+<li><p>Select ‘This PC’ in the left pane of explorer</p></li>
+<li><p>Open ‘Users’</p></li>
+<li><p>Open your username file, likely your first name</p></li>
+<li><p>Scroll down and open miniconda or anaconda3 (don’t open the files such as .anaconda; keep scrolling until you find the file)</p></li>
+<li><p>Open ‘Scripts’</p></li>
+<li><p>Find the conda.exe file. It could appear solely as ‘conda’. Right-click on the file and select ‘Copy as path’.</p></li>
+<li><p>Go back to the Edit environment variable, double-click at the bottom, and then type control V on your keyboard to paste the conda file path into the variables. Ok, your way out of each of the open windows.</p></li>
+<li><p>Close Visual Studio Code</p></li>
+</ol>
+</li>
+<li><p>Open the VS Code and type the conda into the terminal. You should no longer get an error.</p></li>
+<li><p>What a pain in the butt! To watch how to do this, go to minute 34:20 of the <a class="reference external" href="http://gg.gg/1av3xn">Introducing Visual Studio Code</a> video. Or this might convince you to purchase a machine with a linux OS where none of this configuration faffing is necessary!</p></li>
+</ol>
 </section>
 </section>
 
@@ -583,6 +590,7 @@ In many cases VS Code isn&#39;t properly set up with the terminal, usually in Wi
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-variables-setup">Environment Variables Setup</a></li>
 </ul>
   </nav></div>
 
