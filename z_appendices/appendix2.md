@@ -44,4 +44,4 @@ In many cases VS Code isn't properly set up with the terminal, usually in Window
    7. Go back to the Edit environment variable, double-click at the bottom, and then type control V on your keyboard to paste the conda file path into the variables. Ok, your way out of each of the open windows.
    8. Close Visual Studio Code
 6. Open the VS Code and type the conda into the terminal. You should no longer get an error.
-7. What a pain in the butt! To watch how to do this, go to minute 34:20 of the [Introducing Visual Studio Code](http://gg.gg/1av3xn) video. Or this might convince you to purchase a machine with a linux OS where none of this configuration faffing is necessary!
+7. What a pain in the butt! To watch how to do this, go to ~ minute 34:20 of the [Introducing Visual Studio Code](https://www.youtube.com/watch?v=MDtlHMQi7uk&t=2264s) video from Open Geospatial Solutions. The fix might convince you to switch to a linux OS where none of this configuration faffing is necessary!

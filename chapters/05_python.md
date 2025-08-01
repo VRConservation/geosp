@@ -21,7 +21,7 @@ Then I found Geemap and Leafmap—incredible, user-friendly Python packages deve
 
 ## Getting Started
 
-To be honest, getting started using a Windows computer was a total pain in the ass. So, if you're using Linux or Apple OS, setting things up will be much easier. It will take a few hours from scratch, but a great resource is at the [Geog-414](http://gg.gg/1ats9t) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
+To be honest, getting started using a Windows computer was a total pain in the ass. So, if you're using Linux or Apple OS, setting things running will be much easier. It will take a few hours from scratch, but a great resource is at the University of Tennessee, Knoxville [Geog-414](https://geog-414.gishub.org/book/preface/software.html) course software web page. Scroll through the page to familiarize yourself with the commands. Near the bottom of the page is a series of videos to get you started, which is worth viewing and following. For some reason, I found that Miniconda didn't work well on my machine with Windows 11, but everything worked with Anaconda. 
 
 ```{important} Getting started quick guides can be found in the Virtual Environment, Visual Studio Code, and Github appendices.
 ```
@@ -307,5 +307,4 @@ There are many more Python libraries focused on geospatial analysis. Go to githu
 - [RiverREM](https://github.com/OpenTopography/RiverREM). A super cool Python package for automatically generating river relative elevation model (REM).
 - [lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
 - [Python for Ecologists](https://datacarpentry.org/python-ecology-lesson). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but it is a useful set of tutorials.
-- [Unlocking the Depths](http://gg.gg/1az3jj). A useful tutorial for mapping bathymetry and calculating lake volume, although it may be behind a paywall.
-<!-- #endregion -->
+- [Unlocking the Depths](https://medium.com/@kavyajeetbora/unlocking-the-depths-a-guide-to-estimating-lake-volume-with-google-earth-engine-and-python-ef36b842fa2a). A useful tutorial by Kavyajeet Bora for mapping bathymetry and calculating lake volume using Geemap.

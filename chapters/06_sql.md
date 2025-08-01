@@ -22,11 +22,11 @@ In this chapter, we will use [DuckDB](https://duckdb.org/) as the SQL software p
 
 ## Installation
 
-Installation is straightforward: follow the instructions for the command line or Python at the DuckDB installation [page](http://gg.gg/1at9tp).
+Installation is straightforward: follow the instructions for the command line or Python at the DuckDB installation [page](https://duckdb.org/docs/stable/guides/python/install.html).
 
 ## Wood processing
 
-Let's move to an example from the University of California's Woody Biomass Utilization Group's Biomass Power Plant [Database](http://gg.gg/1as7ti). What do mills have to do with forest conservation? We're not talking about rapacious clearcutting from the past but a sustainable forest management model that reduces wildfire and returns western forests to a healthier and more resilient state. Fires threaten most forests in the western United States due to more than a century of fire suppression. 
+Let's move to an example from the University of California's Woody Biomass Utilization Group's Biomass Power Plant [Database](https://ucanr.edu/site/woody-biomass-utilization/california-forest-products-and-biomass-power-plant-map). What do mills have to do with forest conservation? We're not talking about rapacious clearcutting from the past but a sustainable forest management model that reduces wildfire and returns western forests to a healthier and more resilient state. Fires threaten most forests in the western United States due to more than a century of fire suppression. 
 
 Through ecological thinning and prescribed fire, unhealthy forests can return to a natural range of variation by lowering competition across stands. This approach can reduce compounding stresses from drought, insect infestations, and wildfire and create more resilient forests {cite}`north`. Thinning will produce large amounts of forest biomass that can be processed through community-based mills and biomass plants. Developing this infrastructure is one way to help solve the wildfire crisis threatening biodiversity and people.
 
