@@ -308,3 +308,4 @@ There are many more Python libraries focused on geospatial analysis. Go to githu
 - [lonboard](https://developmentseed.org/blog/2023-10-23-lonboard). Python library for fast geospatial vector data visualization.
 - [Python for Ecologists](https://datacarpentry.org/python-ecology-lesson). The Datacarpentry.org tutorial focused on data analysis and visualization using Python and Jupyter notebooks. This is more data than geospatial, but it is a useful set of tutorials.
 - [Unlocking the Depths](https://medium.com/@kavyajeetbora/unlocking-the-depths-a-guide-to-estimating-lake-volume-with-google-earth-engine-and-python-ef36b842fa2a). A useful tutorial by Kavyajeet Bora for mapping bathymetry and calculating lake volume using Geemap.
+<!-- #endregion -->
