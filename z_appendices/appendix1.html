@@ -479,13 +479,13 @@ document.write(`
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <p>Installation instructions are for a PC, but Mac and Linux are similar and probably much easier than windows.</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="http://gg.gg/1av3h1">Install</a> conda by downloading miniconda or anaconda for your os. The documentation provides an overview of which package will work for you. I installed anaconda after miniconda would not work on my machine. I suggest trying miniconda first, but install the full anaconda if miniconda doesn’t work. If you hate the command line, anaconda is a better option since the anaconda navigator allows you to install environments using the interface without command lines. But then you miss out on reliving computer use in the 70s or 80s when you don’t go to the command prompt.</p></li>
+<li><p>Install <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">conda</a> by downloading miniconda or anaconda for your os. The documentation provides an overview of which package will work for you. I installed anaconda after miniconda would not work on my machine. I suggest trying miniconda first, but install the full anaconda if miniconda doesn’t work. If you hate the command line, anaconda is a better option since the anaconda navigator allows you to install environments using the interface without command lines. But then you miss out on reliving computer use in the 70s or 80s when you don’t go to the command prompt.</p></li>
 <li><p>Open the conda command prompt by clicking the windows button and typing anaconda or miniconda then selecting the prompt. You should see the following</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">yourusername</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>If you don’t see this in the command prompt (also known as command line interface or CLI), try going to your Users\username file right clicking in the file and selecting ‘open in terminal’, and following the instructions below. If the windows powershell gives you an error or conda won’t work, see the <a class="reference external" href="http://gg.gg/1av2oy">Setting UP Powershell for VS Code</a> video to fix the issue.</p>
+<p>If you don’t see this in the command prompt (also known as command line interface or CLI), try going to your Users\username file right clicking in the file and selecting ‘open in terminal’, and following the instructions below. If the windows powershell gives you an error or conda won’t work, see the <a class="reference external" href="https://www.youtube.com/watch?v=RivMBCGQz_c&amp;amp;t=2s">Setting UP Powershell for VS Code</a> video from Open Geospatial Solutions to fix the issue.</p>
 <p>Note that you hit enter after typing or pasting every command into the terminal.</p>
 <ol class="arabic simple" start="3">
 <li><p>Create a conda environment. It’s preferable to create a new environment for each project or set of tasks you complete to avoid conflicts between packages. We’ll call this one ‘geo’ but name it whatever you like, making sure to use a short 3-4 letter abbreviation or name.</p></li>
@@ -524,7 +524,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geemap</span>
 </pre></div>
 </div>
-<p>Alternatively, you can install a suite of commonly used packages for geospatial analysis using <a class="reference external" href="https://geospatial.gishub.org/">geospatial</a>. This requires a substantial amount of memory, but it will also mean you need to do one installation for nearly every package you need, including leafmap, geemap, h3,whitebox, xarray, and many others:</p>
+<p>Alternatively, you can install a suite of commonly used packages for geospatial analysis using <a class="reference external" href="https://geospatial.gishub.org/">geospatial</a>. This requires a substantial amount of memory, but you only need to do one installation for the packages you will need including leafmap, geemap, h3,whitebox, xarray, and many others:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geospatial</span>
 </pre></div>
 </div>
