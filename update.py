@@ -18,17 +18,12 @@ for folder in folders:
     try:
         # Run jupytext with the folder as working directory without changing the script's cwd
         # Sync from .md to .ipynb (since we edit the markdown files)
+        # Don't capture output so we can see errors directly
         result = subprocess.run("jupytext --sync *.md", shell=True,
-                                check=True, capture_output=True, text=True, cwd=folder)
+                                check=True, cwd=folder)
         print(f"Success in {folder}")
-        if result.stdout:
-            print(f"Output: {result.stdout}")
     except subprocess.CalledProcessError as e:
         print(f"Error in {folder}: {e}")
-        if e.stdout:
-            print(f"Stdout: {e.stdout}")
-        if e.stderr:
-            print(f"Stderr: {e.stderr}")
         # Continue to next folder instead of stopping
         continue
 
