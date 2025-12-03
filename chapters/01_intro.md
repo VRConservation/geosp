@@ -2,7 +2,7 @@
 Welcome to Free and Open Source Geospatial Tools. This book provides resources and examples of open-source geospatial software and solutions. 
 
 ## Support
-This book is free to use for anyone. If you want to support, donate, or buy me a coffee, please visit my [paypal](https://paypal.me/3pointxyz) site. I will be adding chapters and resources in the future. Please share the book with others who might benefit from it. I appreciate your support!
+This book is free to use for anyone. If you want to support, donate, or buy me a coffee, please visit my [paypal](https://paypal.me/3pointxyz) site. I will be adding chapters and resources in the future. Please share the book with others who might benefit from reading it. I appreciate your support!
 
 ## Why this book
 Accessing, processing, and analyzing geospatial data can be daunting, often hindered by data accessibility, compatibility, and cost constraints. There are many geospatial resources, tutorials, and books available, but most focus on specific tools, such as Spatial SQL {cite}`forrest2023`, the Cloud-Based Remote Sensing with Google Earth Engine remote sensing {cite:p}`eefa` or Qiusheng Wu's excellent geospatial data analysis book using Geemap and Earth Engine {cite}`geemap`. Inspired by the Free and Open Source Software for Geospatial (FOSS4G) conference started by the Open Source Geospatial Foundation, Free and Open Source Geospatial Tools provides a beginner's guide to starting with open-source geospatial software packages.
