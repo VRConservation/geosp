@@ -29,10 +29,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -540,21 +540,24 @@ document.write(`
 </div>
 <p>Running the head(cacao) line produces the top 6 rows and all columns in the console (<a class="reference internal" href="#head"><span class="std std-numref">Fig. 8.2</span></a>).</p>
 <figure class="align-default" id="head">
-<a class="reference internal image-reference" href="../_images/head.png"><img alt="../_images/head.png" src="../_images/head.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/head.png"><img alt="../_images/head.png" src="../_images/head.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.2 </span><span class="caption-text">Results from running <code class="docutils literal notranslate"><span class="pre">head(cacao)</span></code>.</span><a class="headerlink" href="#head" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>It’s messy, but at least it confirms the dataset loaded. The summary command gives more information (<a class="reference internal" href="#sum"><span class="std std-numref">Fig. 8.3</span></a>).</p>
 <figure class="align-default" id="sum">
-<a class="reference internal image-reference" href="../_images/sum.png"><img alt="../_images/sum.png" src="../_images/sum.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/sum.png"><img alt="../_images/sum.png" src="../_images/sum.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.3 </span><span class="caption-text">Results from the <code class="docutils literal notranslate"><span class="pre">summary(cacao)</span></code> command.</span><a class="headerlink" href="#sum" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>A better visual summary can be produced using <code class="docutils literal notranslate"><span class="pre">plot_intro(cacao)</span></code> (<a class="reference internal" href="#plot"><span class="std std-numref">Fig. 8.4</span></a>).</p>
 <figure class="align-default" id="plot">
-<a class="reference internal image-reference" href="../_images/plot.png"><img alt="../_images/plot.png" src="../_images/plot.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/plot.png"><img alt="../_images/plot.png" src="../_images/plot.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.4 </span><span class="caption-text">Results from the <code class="docutils literal notranslate"><span class="pre">plot_intro(cacao)</span></code> command.</span><a class="headerlink" href="#plot" title="Link to this image">#</a></p>
 </figcaption>
@@ -591,14 +594,16 @@ document.write(`
 </div>
 <p>For instance, the histogram plot shows distribution values for all the continuous variables. In this case, most cocoa percents are in the 70s, and ratings cluster around three (<a class="reference internal" href="#histo"><span class="std std-numref">Fig. 8.5</span></a>).</p>
 <figure class="align-default" id="histo">
-<a class="reference internal image-reference" href="../_images/histo.png"><img alt="../_images/histo.png" src="../_images/histo.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/histo.png"><img alt="../_images/histo.png" src="../_images/histo.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.5 </span><span class="caption-text">Histogram plot.</span><a class="headerlink" href="#histo" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The simplified correlation analysis grouping Review.Dat shows a weak relationship between Rating and Cocoa.Percent (<a class="reference internal" href="#correlation"><span class="std std-numref">Fig. 8.6</span></a>).</p>
 <figure class="align-default" id="correlation">
-<a class="reference internal image-reference" href="../_images/correlation.png"><img alt="../_images/correlation.png" src="../_images/correlation.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/correlation.png"><img alt="../_images/correlation.png" src="../_images/correlation.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.6 </span><span class="caption-text">Variable correlation plot.</span><a class="headerlink" href="#correlation" title="Link to this image">#</a></p>
 </figcaption>
@@ -623,7 +628,8 @@ document.write(`
 </div>
 <p>This will give you a popup window showing this dataset’s 3D point cloud of the lidar return, with the highest values in red and the lowest in blue (<a class="reference internal" href="#model"><span class="std std-numref">Fig. 8.7</span></a>). Since the point cloud appears to be of a forest stand, you can discern tree outlines. If you left-click on the point cloud model, you can rotate the point cloud in 3 dimensions. Far out, man!</p>
 <figure class="align-default" id="model">
-<a class="reference internal image-reference" href="../_images/model.png"><img alt="../_images/model.png" src="../_images/model.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/model.png"><img alt="../_images/model.png" src="../_images/model.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.7 </span><span class="caption-text">Model of trees in 3d from las file.</span><a class="headerlink" href="#model" title="Link to this image">#</a></p>
 </figcaption>
@@ -640,7 +646,8 @@ document.write(`
 </div>
 </div>
 <figure class="align-default" id="rasterize">
-<a class="reference internal image-reference" href="../_images/rasterize.png"><img alt="../_images/rasterize.png" src="../_images/rasterize.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/rasterize.png"><img alt="../_images/rasterize.png" src="../_images/rasterize.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.8 </span><span class="caption-text">Rasterized canopy height model.</span><a class="headerlink" href="#rasterize" title="Link to this image">#</a></p>
 </figcaption>
@@ -656,7 +663,8 @@ document.write(`
 </div>
 </div>
 <figure class="align-default" id="centers">
-<a class="reference internal image-reference" href="../_images/centers.png"><img alt="../_images/centers.png" src="../_images/centers.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/centers.png"><img alt="../_images/centers.png" src="../_images/centers.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Treetop centers in the rasterized canopy height model.</span><a class="headerlink" href="#centers" title="Link to this image">#</a></p>
 </figcaption>
@@ -671,7 +679,8 @@ document.write(`
 </div>
 </div>
 <figure class="align-default" id="tops">
-<a class="reference internal image-reference" href="../_images/tops.png"><img alt="../_images/tops.png" src="../_images/tops.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/tops.png"><img alt="../_images/tops.png" src="../_images/tops.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.10 </span><span class="caption-text">Screenshot of the tree centers video in the 3d model.</span><a class="headerlink" href="#tops" title="Link to this image">#</a></p>
 </figcaption>
@@ -687,7 +696,8 @@ document.write(`
 </div>
 </div>
 <figure class="align-default" id="convex">
-<a class="reference internal image-reference" href="../_images/convex.png"><img alt="../_images/convex.png" src="../_images/convex.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/convex.png"><img alt="../_images/convex.png" src="../_images/convex.png" style="height: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 8.11 </span><span class="caption-text">Convex hulls of each tree in the canopy height model shaded by height.</span><a class="headerlink" href="#convex" title="Link to this image">#</a></p>
 </figcaption>

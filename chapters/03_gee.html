@@ -29,10 +29,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -500,7 +500,8 @@ document.write(`
 <p>The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>.</p>
 <p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select See example (<a class="reference internal" href="#globalabg"><span class="std std-numref">Fig. 2.1</span></a>).</p>
 <figure class="align-default" id="globalabg">
-<a class="reference internal image-reference" href="../_images/globalabg.png"><img alt="../_images/globalabg.png" src="../_images/globalabg.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/globalabg.png"><img alt="../_images/globalabg.png" src="../_images/globalabg.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Global above and belowground biomass carbon dataset.</span><a class="headerlink" href="#globalabg" title="Link to this image">#</a></p>
 </figcaption>
@@ -522,14 +523,16 @@ document.write(`
 </div>
 <p>Clicking Run in the upper right of the interface will give you a basic map of aboveground biomass (<a class="reference internal" href="#abg"><span class="std std-numref">Fig. 2.2</span></a>).</p>
 <figure class="align-default" id="abg">
-<a class="reference internal image-reference" href="../_images/abg.png"><img alt="../_images/abg.png" src="../_images/abg.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/abg.png"><img alt="../_images/abg.png" src="../_images/abg.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Aboveground biomass output.</span><a class="headerlink" href="#abg" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>You can zoom in or out and click the layer on or off. Selecting the Inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed (<a class="reference internal" href="#inspector"><span class="std std-numref">Fig. 2.3</span></a>).</p>
 <figure class="align-default" id="inspector">
-<a class="reference internal image-reference" href="../_images/inspector.png"><img alt="../_images/inspector.png" src="../_images/inspector.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/inspector.png"><img alt="../_images/inspector.png" src="../_images/inspector.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Using the inspector tab in the console to get pixel information.</span><a class="headerlink" href="#inspector" title="Link to this image">#</a></p>
 </figcaption>
@@ -574,7 +577,8 @@ document.write(`
 </pre></div>
 </div>
 <figure class="align-default" id="bgb-world">
-<a class="reference internal image-reference" href="../_images/bgb_world.png"><img alt="../_images/bgb_world.png" src="../_images/bgb_world.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/bgb_world.png"><img alt="../_images/bgb_world.png" src="../_images/bgb_world.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Adding carbon density map at the world level.</span><a class="headerlink" href="#bgb-world" title="Link to this image">#</a></p>
 </figcaption>
@@ -590,14 +594,16 @@ document.write(`
 <p>Getting back to the original request, you can clip the dataset to an area of interest, in this case, around Lake Tahoe. You can clip the map to datasets such as Tiger Lines for states or by country. Clipping by specific shape files requires you to upload the vector as a shape file into Earth Engine. This is fiddly and not as easy as dragging/dropping into Arc, QGIS, or online software such as Felt or Earth Blox. We’ll keep this to a simple box.</p>
 <p>Turn off the map layers and zoom into your area of interest AOI, in this case near Lake Tahoe (<a class="reference internal" href="#tahoe"><span class="std std-numref">Fig. 2.5</span></a>).</p>
 <figure class="align-default" id="tahoe">
-<a class="reference internal image-reference" href="../_images/tahoe.png"><img alt="../_images/tahoe.png" src="../_images/tahoe.png" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/tahoe.png"><img alt="../_images/tahoe.png" src="../_images/tahoe.png" style="height: 400px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Zooming to an area of interest. Note the highlighted rectangle/polygon buttons to add geometry vector layers.</span><a class="headerlink" href="#tahoe" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Enter a search in the box at the top of Earth Engine, such as ‘South Lake Tahoe, CA, USA’. In the map pane, click on the square ‘Draw a Rectangle’ button highlighted and drag a square in the area (<a class="reference internal" href="#aoi"><span class="std std-numref">Fig. 2.6</span></a>).</p>
 <figure class="align-default" id="aoi">
-<a class="reference internal image-reference" href="../_images/aoi.png"><img alt="../_images/aoi.png" src="../_images/aoi.png" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/aoi.png"><img alt="../_images/aoi.png" src="../_images/aoi.png" style="height: 400px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Rectangle drawn to the area of interest. The default name will be geometry, here it is already re-named bbox.</span><a class="headerlink" href="#aoi" title="Link to this image">#</a></p>
 </figcaption>
@@ -618,7 +624,8 @@ document.write(`
 </div>
 <p>Alternatively, change the line to Map.centerObject(bbox, 9) for a more memorable way to center. In the map pane, hover over Geometry Imports and unclick bbox. Run the code again (<a class="reference internal" href="#clipped-bg"><span class="std std-numref">Fig. 2.7</span></a>).</p>
 <figure class="align-default" id="clipped-bg">
-<a class="reference internal image-reference" href="../_images/clipped_bg.png"><img alt="../_images/clipped_bg.png" src="../_images/clipped_bg.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/clipped_bg.png"><img alt="../_images/clipped_bg.png" src="../_images/clipped_bg.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Belowground biomass clipped to the area of interest.</span><a class="headerlink" href="#clipped-bg" title="Link to this image">#</a></p>
 </figcaption>
@@ -631,14 +638,16 @@ document.write(`
 </div>
 <p>Once you hit enter, you will have ‘Gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other customization you can add without much code that can be found <a class="reference external" href="https://developers.google.com/earth-engine/tutorials/community/customizing-base-map-styles">here</a>, although the snazzymap customization is far easier to execute. After adding the gray basemap the basemap selection bar changes (<a class="reference internal" href="#gray"><span class="std std-numref">Fig. 2.8</span></a>).</p>
 <figure class="align-default" id="gray">
-<a class="reference internal image-reference" href="../_images/gray.png"><img alt="../_images/gray.png" src="../_images/gray.png" style="width: 300px; height: 100px;" /></a>
+<a class="reference internal image-reference" href="../_images/gray.png"><img alt="../_images/gray.png" src="../_images/gray.png" style="width: 300px; height: 100px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Gray basemap bar after adding the grayscale map.</span><a class="headerlink" href="#gray" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Altogether, the map now looks like <a class="reference internal" href="#abg-tahoe"><span class="std std-numref">Fig. 2.9</span></a> once the belowground layer is turned off.</p>
 <figure class="align-default" id="abg-tahoe">
-<a class="reference internal image-reference" href="../_images/abg_tahoe.png"><img alt="../_images/abg_tahoe.png" src="../_images/abg_tahoe.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/abg_tahoe.png"><img alt="../_images/abg_tahoe.png" src="../_images/abg_tahoe.png" style="height: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Gray basemap bar after adding the grayscale map.</span><a class="headerlink" href="#abg-tahoe" title="Link to this image">#</a></p>
 </figcaption>
