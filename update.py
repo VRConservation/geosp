@@ -37,7 +37,7 @@ subprocess.run(["ghp-import", "-n", "-p", "-f", "_build/html"], check=True)
 
 # Push and sync the repository to GitHub
 subprocess.run(["git", "add", "."], check=True)
-subprocess.run(["git", "commit", "-m", "Fixing gg.gg removal"], check=True)
+subprocess.run(["git", "commit", "-m", "Intro chapter first para error sync"], check=True)
 subprocess.run(["git", "push"], check=True)
 
 # Define the path to the intro.html file
