@@ -12,12 +12,13 @@ appendices = r'D:\OneDrive\1_Consulting\Spatial\geosp\z_appendices'
 
 folders = [bibtest, chapters, appendices]
 
-# Loop through the folders and run the command 'jupytext --sync *.ipynb'
+# Loop through the folders and run the command 'jupytext --sync *.md'
 for folder in folders:
     print(f"Processing folder: {folder}")
     try:
         # Run jupytext with the folder as working directory without changing the script's cwd
-        result = subprocess.run("jupytext --sync *.ipynb", shell=True,
+        # Sync from .md to .ipynb (since we edit the markdown files)
+        result = subprocess.run("jupytext --sync *.md", shell=True,
                                 check=True, capture_output=True, text=True, cwd=folder)
         print(f"Success in {folder}")
         if result.stdout:
@@ -28,6 +29,8 @@ for folder in folders:
             print(f"Stdout: {e.stdout}")
         if e.stderr:
             print(f"Stderr: {e.stderr}")
+        # Continue to next folder instead of stopping
+        continue
 
 # Run the command jb build --all . after the loop
 subprocess.run(["jb", "build", "--all", "."], check=True)
